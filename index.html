@@ -40,20 +40,29 @@
   .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
     padding:16px 18px;margin-bottom:14px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
   .card.due{border-left:4px solid var(--weak);}
-  .card .src{font-size:13px;color:var(--muted);margin-bottom:10px;
-    display:flex;justify-content:space-between;align-items:center;gap:8px;}
-  .cat{border-radius:7px;padding:3px 9px;font-size:11px;white-space:nowrap;font-weight:600;}
+  .card-head{display:flex;align-items:baseline;gap:10px;margin-bottom:14px;
+    padding-bottom:12px;border-bottom:2px solid var(--line);}
+  .card-head .title{font-size:18px;font-weight:800;line-height:1.35;color:var(--ink);
+    letter-spacing:.2px;flex:1;}
+  .cat{border-radius:7px;padding:3px 9px;font-size:11px;white-space:nowrap;font-weight:600;
+    flex-shrink:0;align-self:center;}
   .cat.外刊{background:var(--tag-wk);color:#2f7d4f;}
   .cat.播客{background:var(--tag-pd);color:#3a5fb0;}
-  .ctx{background:linear-gradient(135deg,#fafaff,#f4f3fc);border-left:3px solid var(--accent);
-    border-radius:10px;padding:12px 14px;font-size:14.5px;margin:10px 0;border:1px solid #efedfb;}
-  .ctx .en{font-style:normal;color:#33303a;letter-spacing:0;line-height:1.4;
+  .para{margin:11px 0;line-height:1.5;position:relative;}
+  .para:first-child{margin-top:2px;}
+  .para:last-child{margin-bottom:2px;}
+  .para .en{font-style:normal;color:#33303a;letter-spacing:0;line-height:1.4;
     font-family:"Verdana","Geneva",sans-serif;display:inline;}
-  .ctx .cn{color:#8a8593;font-size:13px;margin-top:10px;display:block;line-height:1.7;}
+  .para .cn{color:#8a8593;font-size:13px;margin-top:8px;display:block;line-height:1.7;}
   .cn-toggle{display:inline-block;vertical-align:middle;margin-left:8px;font-size:11px;color:var(--accent);
     background:#fff;border:1px solid var(--line);border-radius:8px;padding:2px 10px;cursor:pointer;
     transition:.15s;font-weight:600;}
   .cn-toggle:hover{border-color:var(--accent);box-shadow:0 2px 6px rgba(124,108,240,.15);}
+  .para-items{background:#faf9fc;border:1px solid #f0eef7;border-left:3px solid var(--accent-2);
+    border-radius:0 12px 12px 0;padding:4px 14px;margin:4px 0 16px;}
+  .para-items .ph{font-size:11px;color:var(--muted);font-weight:600;letter-spacing:.5px;
+    margin:9px 0 2px;display:flex;align-items:center;gap:6px;}
+  .para-items .ph::before{content:"";width:14px;height:2px;background:var(--accent-2);border-radius:2px;}
   .item{padding:11px 0;border-top:1px solid #f1f0f4;}
   .item:first-of-type{border-top:none;}
   .item .t{font-weight:600;color:var(--accent);font-size:15px;}
@@ -85,9 +94,10 @@
     .tabs{gap:6px;margin:14px 0 18px;}
     .tab{padding:9px 16px;font-size:15px;}
     .card{padding:15px 14px;}
-    .ctx{font-size:16.5px;padding:14px;}
-    .ctx .en{font-size:17px;line-height:1.45;}
-    .ctx .cn{font-size:15px;margin-top:10px;}
+    .card-head{margin-bottom:12px;padding-bottom:10px;}
+    .card-head .title{font-size:19px;}
+    .para .en{font-size:17px;line-height:1.45;}
+    .para .cn{font-size:15px;margin-top:10px;}
     .cn-toggle{font-size:12px;padding:3px 11px;}
     .item .t{font-size:16.5px;}
     .item .u{font-size:15px;line-height:1.65;}
@@ -127,7 +137,7 @@
   </div>
   <div id="status-list"></div>
 
-  <div class="sec-title"><span class="dot"></span>知识库（全部语块）</div>
+  <div class="sec-title"><span class="dot"></span>知识库（全部文章）</div>
   <div id="kb-list"></div>
 
   <div class="note">
@@ -166,23 +176,23 @@ function itemDone(it){
   return it.review && it.review.reviews > 0 && itemNextDue(it) > TODAY;
 }
 function itemDue(it){ return itemNextDue(it) && itemNextDue(it) <= TODAY && !itemDone(it); }
-function blockDue(b){ return b.items.some(itemDue); }
+function articleDue(a){ return a.items.some(itemDue); }
 
-function strengthOfBlock(b){
+function strengthOfArticle(a){
   const order = {"weak":0,"learning":1,"strong":2};
   let mn = 2;
-  for (const it of b.items) mn = Math.min(mn, order[itemStrength(it)]);
+  for (const it of a.items) mn = Math.min(mn, order[itemStrength(it)]);
   return ["weak","learning","strong"][mn];
 }
 function strengthColor(s){ return s==="strong"?"var(--strong)":s==="learning"?"var(--learning)":"var(--weak)"; }
 
-function filtered(arr){ return currentCat==="all" ? arr : arr.filter(b=>b.category===currentCat); }
+function filtered(arr){ return currentCat==="all" ? arr : arr.filter(a=>a.category===currentCat); }
 
 function renderStats(){
-  const all = DATA.blocks;
+  const all = DATA.articles;
   const list = filtered(all);
   let total=0, due=0, done=0;
-  for (const b of list) for (const it of b.items){
+  for (const a of list) for (const it of a.items){
     total++;
     if (itemDue(it)) due++;
     if (itemDone(it)) done++;
@@ -192,56 +202,82 @@ function renderStats(){
   document.getElementById("s-grad").textContent = done;
   document.getElementById("s-rate").textContent = total ? Math.round(done/total*100)+"%" : "0%";
   document.getElementById("c-all").textContent = all.length;
-  document.getElementById("c-wk").textContent = all.filter(b=>b.category==="外刊").length;
-  document.getElementById("c-pd").textContent = all.filter(b=>b.category==="播客").length;
+  document.getElementById("c-wk").textContent = all.filter(a=>a.category==="外刊").length;
+  document.getElementById("c-pd").textContent = all.filter(a=>a.category==="播客").length;
 }
 
-function cardHTML(b, withBtns){
-  const due = blockDue(b);
-  const items = b.items.map(it=>{
-    const loc = pending[it.id];
-    const done = itemDone(it);
-    const f = loc || (done ? "remember" : null);
-    const doneTag = done ? `<span class="done">✓ 已记住</span>` : "";
-    const btns = withBtns ? `<div class="btns">
-        <button class="btn r ${f==='remember'?'on':''}" onclick="markItem('${b.id}','${it.id}','remember')">记住</button>
-        <button class="btn fz ${f==='fuzzy'?'on':''}" onclick="markItem('${b.id}','${it.id}','fuzzy')">模糊</button>
-        <button class="btn fg ${f==='forget'?'on':''}" onclick="markItem('${b.id}','${it.id}','forget')">忘了</button>
-      </div>` : "";
-    return `<div class="item ${done?'remembered':''}"><div class="t">${it.text}${doneTag}</div><div class="u">${it.understanding}</div>${btns}</div>`;
-  }).join("");
-  const cnShown = cnOpen[b.id];
-  return `<div class="card ${due?'due':''}" data-bid="${b.id}">
-    <div class="src"><span>${b.source}</span><span class="cat ${b.category}">${b.category}</span></div>
-    <div class="ctx"><span class="en">${b.context}</span><button class="cn-toggle" onclick="toggleCn(this)">${cnShown?'隐藏':'翻译'}</button><div class="cn" style="display:${cnShown?'':'none'}">${b.contextCn}</div></div>
-    ${items}
+function itemHTML(it, withBtns, aid){
+  const loc = pending[it.id];
+  const done = itemDone(it);
+  const f = loc || (done ? "remember" : null);
+  const doneTag = done ? `<span class="done">✓ 已记住</span>` : "";
+  const btns = withBtns ? `<div class="btns">
+      <button class="btn r ${f==='remember'?'on':''}" onclick="markItem('${aid}','${it.id}','remember')">记住</button>
+      <button class="btn fz ${f==='fuzzy'?'on':''}" onclick="markItem('${aid}','${it.id}','fuzzy')">模糊</button>
+      <button class="btn fg ${f==='forget'?'on':''}" onclick="markItem('${aid}','${it.id}','forget')">忘了</button>
+    </div>` : "";
+  return `<div class="item ${done?'remembered':''}"><div class="t">${it.text}${doneTag}</div><div class="u">${it.understanding}</div>${btns}</div>`;
+}
+
+function cardHTML(a, withBtns){
+  const due = articleDue(a);
+  // 按段归集词汇点（paraIdx 对应 paragraphs 下标）
+  const byPara = {};
+  a.items.forEach(it=>{
+    const pi = (typeof it.paraIdx === "number") ? it.paraIdx : a.paragraphs.length;
+    (byPara[pi] = byPara[pi] || []).push(it);
+  });
+  let body = "";
+  a.paragraphs.forEach((pg, pi)=>{
+    const hasCn = pg.cn && pg.cn.trim();
+    const cnShown = cnOpen[a.id+"_"+pi];
+    const btn = hasCn ? `<button class="cn-toggle" onclick="toggleCn(this)">${cnShown?'隐藏':'翻译'}</button>` : "";
+    const cnHtml = hasCn ? `<div class="cn" style="display:${cnShown?'':'none'}">${pg.cn}</div>` : "";
+    body += `<div class="para" data-pidx="${pi}"><span class="en">${pg.en}</span>${btn}${cnHtml}</div>`;
+    const its = byPara[pi] || [];
+    if (its.length){
+      body += `<div class="para-items"><div class="ph">本段词汇（${its.length}）</div>` +
+              its.map(it=>itemHTML(it, withBtns, a.id)).join("") + `</div>`;
+    }
+  });
+  // 兜底：无对应段落的词汇点放到末尾
+  const orphan = byPara[a.paragraphs.length] || [];
+  if (orphan.length){
+    body += `<div class="para-items"><div class="ph">词汇讲解（${orphan.length}）</div>` +
+            orphan.map(it=>itemHTML(it, withBtns, a.id)).join("") + `</div>`;
+  }
+  return `<div class="card ${due?'due':''}" data-bid="${a.id}">
+    <div class="card-head"><span class="cat ${a.category}">${a.category}</span><span class="title">${a.source}</span></div>
+    ${body}
   </div>`;
 }
 
 function renderDue(){
-  const list = filtered(DATA.blocks).filter(blockDue);
+  const list = filtered(DATA.articles).filter(articleDue);
   const el = document.getElementById("due-list");
-  el.innerHTML = list.length ? list.map(b=>cardHTML(b,true)).join("")
+  el.innerHTML = list.length ? list.map(a=>cardHTML(a,true)).join("")
     : `<div class="empty">这一类今天没有到期内容 🎉</div>`;
 }
 function renderStatus(){
-  const list = filtered(DATA.blocks);
+  const list = filtered(DATA.articles);
   const el = document.getElementById("status-list");
-  el.innerHTML = list.map(b=>{
-    const s = strengthOfBlock(b);
+  el.innerHTML = list.map(a=>{
+    const s = strengthOfArticle(a);
     const pct = s==="strong"?100:s==="learning"?60:30;
+    const prev = a.paragraphs[0] ? a.paragraphs[0].en.slice(0,18) : "";
     return `<div class="card" style="padding:11px 14px;">
-      <div class="src"><span>${b.source} · ${b.context.slice(0,18)}…</span>
-        <span class="cat ${b.category}">${s}</span></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px;">
+        <span style="font-size:14px;font-weight:700;color:var(--ink);">${a.source}</span>
+        <span class="cat ${a.category}">${s}</span></div>
       <div class="bar"><span style="width:${pct}%;background:${strengthColor(s)}"></span></div>
     </div>`;
   }).join("");
 }
-function renderKB(){ document.getElementById("kb-list").innerHTML = filtered(DATA.blocks).map(b=>cardHTML(b,false)).join(""); }
+function renderKB(){ document.getElementById("kb-list").innerHTML = filtered(DATA.articles).map(a=>cardHTML(a,false)).join(""); }
 function renderAll(){ renderStats(); renderDue(); renderStatus(); renderKB(); }
 
 /* ── 标记 + 自动回写 ── */
-function markItem(bid, iid, val){
+function markItem(aid, iid, val){
   const k = iid;                       // 用全局 item id 作为回写键
   pending[k] = (pending[k]===val) ? undefined : val;
   if (!pending[k]) delete pending[k];
@@ -275,12 +311,14 @@ async function flushPending(){
 }
 
 function toggleCn(btn){
-  const card = btn.closest(".card");
-  const bid = card && card.dataset.bid;
-  cnOpen[bid] = !cnOpen[bid];
-  const cn = btn.parentElement.querySelector(".cn");
-  cn.style.display = cnOpen[bid] ? "" : "none";
-  btn.textContent = cnOpen[bid] ? "隐藏" : "翻译";
+  const para = btn.closest(".para");
+  const bid = para.closest(".card").dataset.bid;
+  const pi = para.dataset.pidx;
+  const cn = para.querySelector(".cn");
+  const show = cn.style.display === "none";
+  cn.style.display = show ? "" : "none";
+  btn.textContent = show ? "隐藏" : "翻译";
+  cnOpen[bid+"_"+pi] = show;
 }
 
 document.getElementById("tabs").addEventListener("click", e=>{
