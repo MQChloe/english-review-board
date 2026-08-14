@@ -32,8 +32,7 @@
   .sec-title .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);}
   .today-title{font-size:19px;font-weight:800;color:var(--ink);letter-spacing:.2px;margin:8px 0 14px;}
   .today-title .dot{width:8px;height:8px;}
-  #study-view .stats{margin-top:18px;margin-bottom:0;}
-  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:4px;}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0 4px;}
   .stat{background:var(--card);border:1px solid var(--line);border-radius:14px;
     padding:14px 8px;text-align:center;box-shadow:var(--shadow);}
   .stat .n{font-size:25px;font-weight:800;
@@ -114,6 +113,13 @@
   .w-str.learning{background:#fdf0db;color:var(--learning);}
   .w-str.strong{background:#e3f5ec;color:var(--strong);}
 
+  /* ── 知识库：按文章分组 ── */
+  .kb-group{margin-bottom:18px;}
+  .kb-head{display:flex;align-items:center;gap:9px;margin:24px 0 10px;padding-bottom:8px;border-bottom:2px solid var(--line);}
+  .kb-head:first-of-type{margin-top:6px;}
+  .kb-head .title{font-size:15px;font-weight:700;color:var(--ink);letter-spacing:.1px;flex:1;line-height:1.35;}
+  .kb-head .cnt{font-size:12px;color:var(--muted);white-space:nowrap;}
+
   /* ── 手机端：放大阅读字号，不影响桌面 ── */
   @media (max-width:600px){
     body{padding:16px 14px;}
@@ -155,12 +161,13 @@
   <div id="study-view">
     <div class="sec-title today-title"><span class="dot"></span>今日复习<span id="due-count" class="sec-count"></span></div>
     <div id="due-list"></div>
-    <div class="stats">
-      <div class="stat"><div class="n" id="s-total">0</div><div class="l">累计可学点</div></div>
-      <div class="stat"><div class="n" id="s-due">0</div><div class="l">今日待复习</div></div>
-      <div class="stat"><div class="n" id="s-grad">0</div><div class="l">已掌握</div></div>
-      <div class="stat"><div class="n" id="s-rate">0%</div><div class="l">掌握率</div></div>
-    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="n" id="s-total">0</div><div class="l">累计可学点</div></div>
+    <div class="stat"><div class="n" id="s-due">0</div><div class="l">今日待复习</div></div>
+    <div class="stat"><div class="n" id="s-grad">0</div><div class="l">已掌握</div></div>
+    <div class="stat"><div class="n" id="s-rate">0%</div><div class="l">掌握率</div></div>
   </div>
 
   <div id="kb-view" style="display:none"></div>
@@ -218,7 +225,7 @@ function filtered(arr){ return currentCat==="all" ? arr : arr.filter(a=>a.catego
 
 function renderStats(){
   const all = DATA.articles;
-  const list = filtered(all);
+  const list = (mode === "study") ? filtered(all) : all;
   let total=0, due=0, done=0;
   for (const a of list) for (const it of a.items){
     total++;
@@ -357,16 +364,31 @@ function wordCard(a, it){
 }
 function renderWords(){
   const isMem = (mode === "memory");
-  let rows = [];
-  DATA.articles.forEach(a=>{ a.items.forEach(it=> rows.push({a, it})); });
+  const el = document.getElementById("kb-view");
   if (isMem){
+    let rows = [];
+    DATA.articles.forEach(a=>{ a.items.forEach(it=> rows.push({a, it})); });
     const order = {"weak":0,"learning":1,"strong":2};
     rows.sort((x,y)=> order[itemStrength(x.it)] - order[itemStrength(y.it)]);
+    el.innerHTML = rows.length
+      ? rows.map(r=>wordCard(r.a, r.it)).join("")
+      : `<div class="empty">暂无内容</div>`;
+  } else {
+    // 知识库：按文章分组，每篇文章一个组
+    let html = "";
+    DATA.articles.forEach(a=>{
+      if (!a.items.length) return;
+      html += `<div class="kb-group">
+        <div class="kb-head">
+          <span class="cat ${a.category}">${a.category}</span>
+          <span class="title">${a.source}</span>
+          <span class="cnt">${a.items.length} 词</span>
+        </div>
+        ${a.items.map(it=>wordCard(a,it)).join("")}
+      </div>`;
+    });
+    el.innerHTML = html || `<div class="empty">暂无内容</div>`;
   }
-  const el = document.getElementById("kb-view");
-  el.innerHTML = rows.length
-    ? rows.map(r=>wordCard(r.a, r.it)).join("")
-    : `<div class="empty">暂无内容</div>`;
 }
 function renderAll(){ renderStats(); if (mode==="study"){ renderDue(); } else { renderWords(); } }
 
