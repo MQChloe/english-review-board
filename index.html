@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>英语复习看板——每日英语学习</title>
+<style>
+  :root{
+    --bg:#f5f4f1; --card:#ffffff; --ink:#2d2a32; --muted:#9b96a3;
+    --line:#ececec; --accent:#7c6cf0; --accent-2:#a78bfa;
+    --weak:#f0707a; --learning:#f0a93b; --strong:#46b083;
+    --tag-wk:#e3f3e8; --tag-pd:#e6ecfb;
+    --shadow:0 1px 3px rgba(40,30,80,.05),0 6px 16px rgba(40,30,80,.04);
+    --radius:16px;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    line-height:1.65;padding:22px 20px;max-width:760px;margin:0 auto;-webkit-font-smoothing:antialiased;}
+  h1{font-size:23px;margin:0 0 4px;font-weight:700;letter-spacing:.3px;}
+  .sub{color:var(--muted);font-size:13px;margin:0;}
+  .tabs{display:flex;gap:8px;margin:18px 0 22px;flex-wrap:wrap;}
+  .tab{padding:8px 18px;border-radius:999px;border:1px solid var(--line);
+    background:var(--card);color:var(--muted);font-size:14px;cursor:pointer;
+    transition:.2s;user-select:none;box-shadow:var(--shadow);font-weight:500;}
+  .tab:hover{color:var(--ink);}
+  .tab.active{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;
+    border-color:transparent;box-shadow:0 4px 12px rgba(124,108,240,.3);}
+  .tab .cnt{opacity:.7;font-size:12px;margin-left:4px;}
+  .sec-title{font-size:13px;font-weight:700;margin:24px 0 12px;letter-spacing:.6px;
+    display:flex;align-items:center;gap:8px;color:#79748a;}
+  .sec-title .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:4px;}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:14px 8px;text-align:center;box-shadow:var(--shadow);}
+  .stat .n{font-size:25px;font-weight:800;
+    background:linear-gradient(135deg,var(--accent),var(--accent-2));
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+  .stat .l{font-size:11.5px;color:var(--muted);margin-top:3px;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:16px 18px;margin-bottom:14px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .card.due{border-left:4px solid var(--weak);}
+  .card .src{font-size:13px;color:var(--muted);margin-bottom:10px;
+    display:flex;justify-content:space-between;align-items:center;gap:8px;}
+  .cat{border-radius:7px;padding:3px 9px;font-size:11px;white-space:nowrap;font-weight:600;}
+  .cat.外刊{background:var(--tag-wk);color:#2f7d4f;}
+  .cat.播客{background:var(--tag-pd);color:#3a5fb0;}
+  .ctx{background:linear-gradient(135deg,#fafaff,#f4f3fc);border-left:3px solid var(--accent);
+    border-radius:10px;padding:12px 14px;font-size:14.5px;margin:10px 0;border:1px solid #efedfb;}
+  .ctx .en{font-style:normal;color:#33303a;letter-spacing:.2px;line-height:1.7;
+    font-family:"Georgia","Times New Roman",Georgia,serif;display:inline;}
+  .ctx .cn{color:#8a8593;font-size:13px;margin-top:10px;display:block;line-height:1.7;}
+  .cn-toggle{display:inline-block;vertical-align:middle;margin-left:8px;font-size:11px;color:var(--accent);
+    background:#fff;border:1px solid var(--line);border-radius:8px;padding:2px 10px;cursor:pointer;
+    transition:.15s;font-weight:600;}
+  .cn-toggle:hover{border-color:var(--accent);box-shadow:0 2px 6px rgba(124,108,240,.15);}
+  .item{padding:11px 0;border-top:1px solid #f1f0f4;}
+  .item:first-of-type{border-top:none;}
+  .item .t{font-weight:600;color:var(--accent);font-size:15px;}
+  .item .u{font-size:13.5px;color:#5b5660;margin-top:4px;line-height:1.6;}
+  .item.remembered{opacity:.55;}
+  .item.remembered .t{color:var(--strong);}
+  .item .done{font-size:11px;color:var(--strong);margin-left:6px;font-weight:400;}
+  .btns{display:flex;gap:8px;margin-top:10px;}
+  .btn{flex:1;padding:8px 0;border-radius:10px;border:1px solid var(--line);
+    background:#fff;font-size:13px;cursor:pointer;transition:.15s;color:var(--ink);font-weight:600;}
+  .btn:hover{border-color:var(--accent);color:var(--accent);}
+  .btn.r.on{background:var(--strong);color:#fff;border-color:var(--strong);box-shadow:0 3px 8px rgba(70,176,131,.3);}
+  .btn.fz.on{background:var(--learning);color:#fff;border-color:var(--learning);box-shadow:0 3px 8px rgba(240,169,59,.3);}
+  .btn.fg.on{background:var(--weak);color:#fff;border-color:var(--weak);box-shadow:0 3px 8px rgba(240,112,122,.3);}
+  .legend{display:flex;gap:14px;font-size:12px;color:var(--muted);margin:6px 0 14px;flex-wrap:wrap;}
+  .legend i{width:10px;height:10px;border-radius:3px;display:inline-block;margin-right:4px;vertical-align:middle;}
+  .bar{height:6px;border-radius:4px;background:#eee;overflow:hidden;margin-top:6px;}
+  .bar > span{display:block;height:100%;border-radius:4px;}
+  .empty{color:var(--muted);font-size:13px;padding:14px 4px;text-align:center;}
+  .note{font-size:12px;color:var(--muted);margin-top:18px;line-height:1.6;background:var(--card);
+    border:1px solid var(--line);border-radius:12px;padding:12px 14px;box-shadow:var(--shadow);}
+</style>
+</head>
+<body>
+  <h1>英语复习看板——每日英语学习</h1>
+  <div class="sub">GetNote 自动同步 · 间隔重复（学后 1 / 3 / 7 / 14 / 30 天）</div>
+
+  <div class="tabs" id="tabs">
+    <div class="tab active" data-cat="all">全部 <span class="cnt" id="c-all"></span></div>
+    <div class="tab" data-cat="外刊">外刊 <span class="cnt" id="c-wk"></span></div>
+    <div class="tab" data-cat="播客">播客 <span class="cnt" id="c-pd"></span></div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="n" id="s-total">0</div><div class="l">累计可学点</div></div>
+    <div class="stat"><div class="n" id="s-due">0</div><div class="l">今日待复习</div></div>
+    <div class="stat"><div class="n" id="s-grad">0</div><div class="l">已掌握</div></div>
+    <div class="stat"><div class="n" id="s-rate">0%</div><div class="l">掌握率</div></div>
+  </div>
+
+  <div class="sec-title"><span class="dot"></span>今日复习</div>
+  <div id="due-list"></div>
+
+  <div class="sec-title"><span class="dot"></span>记忆状态</div>
+  <div class="legend">
+    <span><i style="background:var(--weak)"></i>快忘了（weak）</span>
+    <span><i style="background:var(--learning)"></i>巩固中（learning）</span>
+    <span><i style="background:var(--strong)"></i>牢固（strong）</span>
+  </div>
+  <div id="status-list"></div>
+
+  <div class="sec-title"><span class="dot"></span>知识库（全部语块）</div>
+  <div id="kb-list"></div>
+
+  <div class="note">
+    说明：点了「记住」的可学点会从“今日待复习”中扣减，并计入“已掌握/掌握率”。
+    这些反馈目前存在你浏览器里（本地演示），刷新页面不会丢；
+    真实同步时，复习完告诉我（如"b4 记住、b6 模糊"），我更新 data.json 并重部署，
+    手机端即可看到最新状态。<br>
+    每日往 GetNote 补 1–2 篇后，跟我说"同步"，我会拉新笔记 → AI 提取 → 更新看板。
+  </div>
+
+<script>
+const LS_KEY = "eng_review_feedback_v1";
+let DATA = null, currentCat = "all";
+let feedback = {};
+let cnOpen = {};
+
+try { feedback = JSON.parse(localStorage.getItem(LS_KEY) || "{}"); } catch(e){}
+
+function d2s(d){ return d.toISOString().slice(0,10); }
+function parse(s){ return new Date(s + "T00:00:00"); }
+function addDays(s, n){ const d = parse(s); d.setDate(d.getDate()+n); return d2s(d); }
+
+function nextReview(b){
+  const iv = DATA.intervals;
+  const idx = Math.min(b.reviews.length, iv.length - 1);
+  return addDays(b.firstLearned, iv[idx]);
+}
+function isDue(b){ return nextReview(b) <= DATA.today; }
+function strengthOf(b){
+  const n = b.reviews.length + (feedback[b.id] === "remember" ? 1 : 0)
+           - (feedback[b.id] === "forget" ? 1 : 0);
+  if (n >= 4) return "strong";
+  if (n >= 2) return "learning";
+  return "weak";
+}
+function strengthColor(s){ return s==="strong"?"var(--strong)":s==="learning"?"var(--learning)":"var(--weak)"; }
+
+function filtered(arr){ return currentCat==="all" ? arr : arr.filter(b=>b.category===currentCat); }
+
+function renderStats(){
+  const all = DATA.blocks;
+  const list = filtered(all);
+  const totalItems = list.reduce((s,b)=>s+b.items.length, 0);
+  const dueItems = list.filter(isDue).reduce((s,b)=>s+b.items.length, 0);
+  const rememberedItems = list.reduce((s,b)=>s+b.items.filter(it=>feedback[b.id+"_"+it.id]==="remember").length, 0);
+  const rememberedDue = list.filter(isDue).reduce((s,b)=>s+b.items.filter(it=>feedback[b.id+"_"+it.id]==="remember").length, 0);
+  document.getElementById("s-total").textContent = totalItems;
+  document.getElementById("s-due").textContent = Math.max(0, dueItems - rememberedDue);
+  document.getElementById("s-grad").textContent = rememberedItems;
+  document.getElementById("s-rate").textContent = totalItems ? Math.round(rememberedItems/totalItems*100)+"%" : "0%";
+  document.getElementById("c-all").textContent = all.length;
+  document.getElementById("c-wk").textContent = all.filter(b=>b.category==="外刊").length;
+  document.getElementById("c-pd").textContent = all.filter(b=>b.category==="播客").length;
+}
+
+function cardHTML(b, withBtns){
+  const due = isDue(b);
+  const items = b.items.map(it=>{
+    const f = feedback[b.id + "_" + it.id];
+    const remembered = f === "remember";
+    const doneTag = remembered ? `<span class="done">✓ 已记住</span>` : "";
+    const btns = withBtns ? `<div class="btns">
+        <button class="btn r ${remembered?'on':''}" onclick="markItem('${b.id}','${it.id}','remember')">记住</button>
+        <button class="btn fz ${f==='fuzzy'?'on':''}" onclick="markItem('${b.id}','${it.id}','fuzzy')">模糊</button>
+        <button class="btn fg ${f==='forget'?'on':''}" onclick="markItem('${b.id}','${it.id}','forget')">忘了</button>
+      </div>` : "";
+    return `<div class="item ${remembered?'remembered':''}"><div class="t">${it.text}${doneTag}</div><div class="u">${it.understanding}</div>${btns}</div>`;
+  }).join("");
+  const cnShown = cnOpen[b.id];
+  return `<div class="card ${due?'due':''}" data-bid="${b.id}">
+    <div class="src"><span>${b.source}</span><span class="cat ${b.category}">${b.category}</span></div>
+    <div class="ctx"><span class="en">${b.context}</span><button class="cn-toggle" onclick="toggleCn(this)">${cnShown?'隐藏':'翻译'}</button><div class="cn" style="display:${cnShown?'':'none'}">${b.contextCn}</div></div>
+    ${items}
+  </div>`;
+}
+
+function renderDue(){
+  const list = filtered(DATA.blocks).filter(isDue);
+  const el = document.getElementById("due-list");
+  el.innerHTML = list.length ? list.map(b=>cardHTML(b,true)).join("")
+    : `<div class="empty">这一类今天没有到期内容 🎉</div>`;
+}
+
+function renderStatus(){
+  const list = filtered(DATA.blocks);
+  const el = document.getElementById("status-list");
+  el.innerHTML = list.map(b=>{
+    const s = strengthOf(b);
+    const pct = s==="strong"?100:s==="learning"?60:30;
+    return `<div class="card" style="padding:11px 14px;">
+      <div class="src"><span>${b.source} · ${b.context.slice(0,18)}…</span>
+        <span class="cat ${b.category}">${s}</span></div>
+      <div class="bar"><span style="width:${pct}%;background:${strengthColor(s)}"></span></div>
+    </div>`;
+  }).join("");
+}
+
+function renderKB(){
+  const el = document.getElementById("kb-list");
+  el.innerHTML = filtered(DATA.blocks).map(b=>cardHTML(b,false)).join("");
+}
+
+function renderAll(){ renderStats(); renderDue(); renderStatus(); renderKB(); }
+
+function markItem(bid, iid, val){
+  const k = bid + "_" + iid;
+  feedback[k] = (feedback[k]===val) ? undefined : val;
+  if (!feedback[k]) delete feedback[k];
+  localStorage.setItem(LS_KEY, JSON.stringify(feedback));
+  renderAll();
+}
+
+function toggleCn(btn){
+  const card = btn.closest(".card");
+  const bid = card && card.dataset.bid;
+  cnOpen[bid] = !cnOpen[bid];
+  const cn = btn.parentElement.querySelector(".cn");
+  cn.style.display = cnOpen[bid] ? "" : "none";
+  btn.textContent = cnOpen[bid] ? "隐藏" : "翻译";
+}
+
+document.getElementById("tabs").addEventListener("click", e=>{
+  const t = e.target.closest(".tab"); if(!t) return;
+  currentCat = t.dataset.cat;
+  document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));
+  t.classList.add("active");
+  renderAll();
+});
+
+fetch("data.json").then(r=>r.json()).then(d=>{ DATA=d; renderAll(); })
+  .catch(()=>{ document.body.insertAdjacentHTML("afterbegin",
+    '<p style="color:red">data.json 加载失败，请通过本地服务(http://localhost:8123)打开。</p>'); });
+</script>
+</body>
+</html>
