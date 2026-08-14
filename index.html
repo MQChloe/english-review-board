@@ -30,6 +30,9 @@
   .sec-title{font-size:13px;font-weight:700;margin:24px 0 12px;letter-spacing:.6px;
     display:flex;align-items:center;gap:8px;color:#79748a;}
   .sec-title .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);}
+  .today-title{font-size:19px;font-weight:800;color:var(--ink);letter-spacing:.2px;margin:8px 0 14px;}
+  .today-title .dot{width:8px;height:8px;}
+  #study-view .stats{margin-top:18px;margin-bottom:0;}
   .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:4px;}
   .stat{background:var(--card);border:1px solid var(--line);border-radius:14px;
     padding:14px 8px;text-align:center;box-shadow:var(--shadow);}
@@ -93,9 +96,8 @@
   .card:not(.collapsed) .card-head .chev{transform:rotate(90deg);}
   .sec-count{font-size:12px;font-weight:600;color:var(--muted);margin-left:6px;letter-spacing:0;}
 
-  /* ── 第二行 Tab（知识库 / 记忆状态） ── */
+  /* ── 第二行 Tab（知识库 / 记忆状态），大小与第一行统一 ── */
   .tabs2{margin:2px 0 20px;}
-  .tabs2 .tab{font-size:13px;padding:7px 16px;}
 
   /* ── 词语卡片（知识库 / 记忆状态 视图） ── */
   .wcard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
@@ -132,6 +134,7 @@
     .stat .n{font-size:23px;}
     .stat .l{font-size:11px;}
     .sec-title{font-size:13px;}
+    .today-title{font-size:17px;}
   }
 </style>
 </head>
@@ -149,16 +152,15 @@
     <div class="tab" data-view="memory">记忆状态</div>
   </div>
 
-  <div class="stats">
-    <div class="stat"><div class="n" id="s-total">0</div><div class="l">累计可学点</div></div>
-    <div class="stat"><div class="n" id="s-due">0</div><div class="l">今日待复习</div></div>
-    <div class="stat"><div class="n" id="s-grad">0</div><div class="l">已掌握</div></div>
-    <div class="stat"><div class="n" id="s-rate">0%</div><div class="l">掌握率</div></div>
-  </div>
-
   <div id="study-view">
-    <div class="sec-title"><span class="dot"></span>今日复习<span id="due-count" class="sec-count"></span></div>
+    <div class="sec-title today-title"><span class="dot"></span>今日复习<span id="due-count" class="sec-count"></span></div>
     <div id="due-list"></div>
+    <div class="stats">
+      <div class="stat"><div class="n" id="s-total">0</div><div class="l">累计可学点</div></div>
+      <div class="stat"><div class="n" id="s-due">0</div><div class="l">今日待复习</div></div>
+      <div class="stat"><div class="n" id="s-grad">0</div><div class="l">已掌握</div></div>
+      <div class="stat"><div class="n" id="s-rate">0%</div><div class="l">掌握率</div></div>
+    </div>
   </div>
 
   <div id="kb-view" style="display:none"></div>
