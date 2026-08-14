@@ -27,6 +27,15 @@
   .tab.active{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;
     border-color:transparent;box-shadow:0 4px 12px rgba(124,108,240,.3);}
   .tab .cnt{opacity:.7;font-size:12px;margin-left:4px;}
+  /* ── 记忆状态视图内的 strength 筛选器 ── */
+  .mem-filter{display:flex;gap:8px;margin:14px 0 20px;flex-wrap:wrap;}
+  .mf{padding:7px 16px;border-radius:999px;border:1px solid var(--line);
+    background:var(--card);color:var(--muted);font-size:14px;cursor:pointer;
+    transition:.2s;user-select:none;box-shadow:var(--shadow);font-weight:500;}
+  .mf:hover{color:var(--ink);}
+  .mf.active{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;
+    border-color:transparent;box-shadow:0 4px 12px rgba(124,108,240,.3);}
+  .mf .cnt{opacity:.7;font-size:12px;margin-left:4px;}
   .sec-title{font-size:13px;font-weight:700;margin:24px 0 12px;letter-spacing:.6px;
     display:flex;align-items:center;gap:8px;color:#79748a;}
   .sec-title .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);}
@@ -185,6 +194,7 @@ const SECRET  = "eng-review-shared-2026";  // 与 Worker 端一致（仅防随�
 
 let DATA = null, currentCat = "all", TODAY = "";
 let mode = "study";   // "study" = 全部/外刊/播客 视图；"kb" = 知识库目录视图
+let memFilter = "all";   // 记忆状态视图的筛选：all / weak / learning / strong
 let cnOpen = {};
 let pending = {};   // id -> verdict，尚未成功回写服务端
 try { pending = JSON.parse(localStorage.getItem(LS_KEY) || "{}"); } catch(e){}
@@ -363,16 +373,21 @@ function wordCard(a, it){
   </div>`;
 }
 function renderWords(){
-  const isMem = (mode === "memory");
   const el = document.getElementById("kb-view");
-  if (isMem){
+  if (mode === "memory"){
     let rows = [];
     DATA.articles.forEach(a=>{ a.items.forEach(it=> rows.push({a, it})); });
     const order = {"weak":0,"learning":1,"strong":2};
     rows.sort((x,y)=> order[itemStrength(x.it)] - order[itemStrength(y.it)]);
-    el.innerHTML = rows.length
-      ? rows.map(r=>wordCard(r.a, r.it)).join("")
-      : `<div class="empty">暂无内容</div>`;
+    // strength 计数（用于筛选器角标）
+    const cnt = {weak:0, learning:0, strong:0};
+    rows.forEach(r=> cnt[itemStrength(r.it)]++);
+    const mf = (k, lbl) => `<div class="mf ${memFilter===k?'active':''}" onclick="setMemFilter('${k}')">${lbl}<span class="cnt">${k==='all' ? rows.length : cnt[k]}</span></div>`;
+    const bar = `<div class="mem-filter">${mf('all','全部')}${mf('weak','快忘了')}${mf('learning','巩固中')}${mf('strong','牢固')}</div>`;
+    const shown = (memFilter === "all") ? rows : rows.filter(r=> itemStrength(r.it) === memFilter);
+    el.innerHTML = bar + (shown.length
+      ? shown.map(r=>wordCard(r.a, r.it)).join("")
+      : `<div class="empty">这个分类暂时还没有词</div>`);
   } else {
     // 知识库：按文章分组，每篇文章一个组
     let html = "";
@@ -389,6 +404,10 @@ function renderWords(){
     });
     el.innerHTML = html || `<div class="empty">暂无内容</div>`;
   }
+}
+function setMemFilter(k){
+  memFilter = k;
+  renderWords();
 }
 function renderAll(){ renderStats(); if (mode==="study"){ renderDue(); } else { renderWords(); } }
 
