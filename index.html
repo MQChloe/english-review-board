@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>英语复习看板——每日英语学习</title>
+<title>每日英语学习</title>
 <style>
   :root{
     --bg:#f5f4f1; --card:#ffffff; --ink:#2d2a32; --muted:#9b96a3;
@@ -62,8 +62,8 @@
   .item.remembered .t{color:var(--strong);}
   .item .done{font-size:11px;color:var(--strong);margin-left:6px;font-weight:400;}
   .btns{display:flex;gap:8px;margin-top:10px;}
-  .btn{flex:1;padding:8px 0;border-radius:10px;border:1px solid var(--line);
-    background:#fff;font-size:13px;cursor:pointer;transition:.15s;color:var(--ink);font-weight:600;}
+  .btn{flex:1;padding:6px 0;border-radius:10px;border:1px solid var(--line);
+    background:#fff;font-size:12px;cursor:pointer;transition:.15s;color:var(--ink);font-weight:600;}
   .btn:hover{border-color:var(--accent);color:var(--accent);}
   .btn.r.on{background:var(--strong);color:#fff;border-color:var(--strong);box-shadow:0 3px 8px rgba(70,176,131,.3);}
   .btn.fz.on{background:var(--learning);color:#fff;border-color:var(--learning);box-shadow:0 3px 8px rgba(240,169,59,.3);}
@@ -75,6 +75,7 @@
   .empty{color:var(--muted);font-size:13px;padding:14px 4px;text-align:center;}
   .note{font-size:12px;color:var(--muted);margin-top:18px;line-height:1.6;background:var(--card);
     border:1px solid var(--line);border-radius:12px;padding:12px 14px;box-shadow:var(--shadow);}
+  .sync-tag{font-size:11px;color:var(--strong);margin-left:6px;}
 
   /* ── 手机端：放大阅读字号，不影响桌面 ── */
   @media (max-width:600px){
@@ -90,7 +91,7 @@
     .cn-toggle{font-size:12px;padding:3px 11px;}
     .item .t{font-size:16.5px;}
     .item .u{font-size:15px;line-height:1.65;}
-    .btn{padding:11px 0;font-size:14.5px;}
+    .btn{padding:7px 0;font-size:12.5px;}
     .stats{gap:7px;}
     .stat .n{font-size:23px;}
     .stat .l{font-size:11px;}
@@ -99,8 +100,8 @@
 </style>
 </head>
 <body>
-  <h1>英语复习看板——每日英语学习</h1>
-  <div class="sub">GetNote 自动同步 · 间隔重复（学后 1 / 3 / 7 / 14 / 30 天）</div>
+  <h1>每日英语学习</h1>
+  <div class="sub">GetNote 自动同步 · 间隔重复（学后 1 / 3 / 7 / 14 / 30 天）· <span id="sync-state">已自动回写</span></div>
 
   <div class="tabs" id="tabs">
     <div class="tab active" data-cat="all">全部 <span class="cnt" id="c-all"></span></div>
@@ -130,37 +131,48 @@
   <div id="kb-list"></div>
 
   <div class="note">
-    说明：点了「记住」的可学点会从“今日待复习”中扣减，并计入“已掌握/掌握率”。
-    这些反馈目前存在你浏览器里（本地演示），刷新页面不会丢；
-    真实同步时，复习完告诉我（如"b4 记住、b6 模糊"），我更新 data.json 并重部署，
-    手机端即可看到最新状态。<br>
+    你在手机/电脑上点「记住 / 模糊 / 忘了」，结果会<b>自动回写</b>到看板数据（经由服务端，无需再单独告诉我）。
+    断网时会先存在本机，联网后自动补传。<br>
     每日往 GetNote 补 1–2 篇后，跟我说"同步"，我会拉新笔记 → AI 提取 → 更新看板。
   </div>
 
 <script>
-const LS_KEY = "eng_review_feedback_v1";
-let DATA = null, currentCat = "all";
-let feedback = {};
+const LS_KEY = "eng_review_fb_v2";
+const ENDPOINT = "%%WORKER_URL%%";          // 部署 Worker 后填入
+const SECRET  = "eng-review-shared-2026";  // 与 Worker 端一致（仅防随意调用，非敏感）
+
+let DATA = null, currentCat = "all", TODAY = "";
 let cnOpen = {};
+let pending = {};   // id -> verdict，尚未成功回写服务端
+try { pending = JSON.parse(localStorage.getItem(LS_KEY) || "{}"); } catch(e){}
 
-try { feedback = JSON.parse(localStorage.getItem(LS_KEY) || "{}"); } catch(e){}
-
-function d2s(d){ return d.toISOString().slice(0,10); }
-function parse(s){ return new Date(s + "T00:00:00"); }
-function addDays(s, n){ const d = parse(s); d.setDate(d.getDate()+n); return d2s(d); }
-
-function nextReview(b){
-  const iv = DATA.intervals;
-  const idx = Math.min(b.reviews.length, iv.length - 1);
-  return addDays(b.firstLearned, iv[idx]);
+function todayStr(){
+  const d = new Date();
+  const p = n => String(n).padStart(2,"0");
+  return `${d.getFullYear()}-${p(d.getMonth()+1)}-${p(d.getDate())}`;
 }
-function isDue(b){ return nextReview(b) <= DATA.today; }
-function strengthOf(b){
-  const n = b.reviews.length + (feedback[b.id] === "remember" ? 1 : 0)
-           - (feedback[b.id] === "forget" ? 1 : 0);
-  if (n >= 4) return "strong";
-  if (n >= 2) return "learning";
-  return "weak";
+function parse(s){ return new Date(s + "T00:00:00"); }
+function addDays(s, n){ const d = parse(s); d.setDate(d.getDate()+n); return d.toISOString().slice(0,10); }
+
+function itemNextDue(it){ return it.review ? it.review.nextDue : null; }
+function itemStrength(it){ return it.review ? it.review.strength : "weak"; }
+function itemReviews(it){ return it.review ? it.review.reviews : 0; }
+
+/* 一个 item 当前是否算"已掌握/本次完成"：本地标过 remember，或服务端已复习且下次到期在未来 */
+function itemDone(it){
+  const loc = pending[it.id];
+  if (loc === "remember") return true;
+  if (loc === "forget")   return false;
+  return it.review && it.review.reviews > 0 && itemNextDue(it) > TODAY;
+}
+function itemDue(it){ return itemNextDue(it) && itemNextDue(it) <= TODAY && !itemDone(it); }
+function blockDue(b){ return b.items.some(itemDue); }
+
+function strengthOfBlock(b){
+  const order = {"weak":0,"learning":1,"strong":2};
+  let mn = 2;
+  for (const it of b.items) mn = Math.min(mn, order[itemStrength(it)]);
+  return ["weak","learning","strong"][mn];
 }
 function strengthColor(s){ return s==="strong"?"var(--strong)":s==="learning"?"var(--learning)":"var(--weak)"; }
 
@@ -169,31 +181,34 @@ function filtered(arr){ return currentCat==="all" ? arr : arr.filter(b=>b.catego
 function renderStats(){
   const all = DATA.blocks;
   const list = filtered(all);
-  const totalItems = list.reduce((s,b)=>s+b.items.length, 0);
-  const dueItems = list.filter(isDue).reduce((s,b)=>s+b.items.length, 0);
-  const rememberedItems = list.reduce((s,b)=>s+b.items.filter(it=>feedback[b.id+"_"+it.id]==="remember").length, 0);
-  const rememberedDue = list.filter(isDue).reduce((s,b)=>s+b.items.filter(it=>feedback[b.id+"_"+it.id]==="remember").length, 0);
-  document.getElementById("s-total").textContent = totalItems;
-  document.getElementById("s-due").textContent = Math.max(0, dueItems - rememberedDue);
-  document.getElementById("s-grad").textContent = rememberedItems;
-  document.getElementById("s-rate").textContent = totalItems ? Math.round(rememberedItems/totalItems*100)+"%" : "0%";
+  let total=0, due=0, done=0;
+  for (const b of list) for (const it of b.items){
+    total++;
+    if (itemDue(it)) due++;
+    if (itemDone(it)) done++;
+  }
+  document.getElementById("s-total").textContent = total;
+  document.getElementById("s-due").textContent = due;
+  document.getElementById("s-grad").textContent = done;
+  document.getElementById("s-rate").textContent = total ? Math.round(done/total*100)+"%" : "0%";
   document.getElementById("c-all").textContent = all.length;
   document.getElementById("c-wk").textContent = all.filter(b=>b.category==="外刊").length;
   document.getElementById("c-pd").textContent = all.filter(b=>b.category==="播客").length;
 }
 
 function cardHTML(b, withBtns){
-  const due = isDue(b);
+  const due = blockDue(b);
   const items = b.items.map(it=>{
-    const f = feedback[b.id + "_" + it.id];
-    const remembered = f === "remember";
-    const doneTag = remembered ? `<span class="done">✓ 已记住</span>` : "";
+    const loc = pending[it.id];
+    const done = itemDone(it);
+    const f = loc || (done ? "remember" : null);
+    const doneTag = done ? `<span class="done">✓ 已记住</span>` : "";
     const btns = withBtns ? `<div class="btns">
-        <button class="btn r ${remembered?'on':''}" onclick="markItem('${b.id}','${it.id}','remember')">记住</button>
+        <button class="btn r ${f==='remember'?'on':''}" onclick="markItem('${b.id}','${it.id}','remember')">记住</button>
         <button class="btn fz ${f==='fuzzy'?'on':''}" onclick="markItem('${b.id}','${it.id}','fuzzy')">模糊</button>
         <button class="btn fg ${f==='forget'?'on':''}" onclick="markItem('${b.id}','${it.id}','forget')">忘了</button>
       </div>` : "";
-    return `<div class="item ${remembered?'remembered':''}"><div class="t">${it.text}${doneTag}</div><div class="u">${it.understanding}</div>${btns}</div>`;
+    return `<div class="item ${done?'remembered':''}"><div class="t">${it.text}${doneTag}</div><div class="u">${it.understanding}</div>${btns}</div>`;
   }).join("");
   const cnShown = cnOpen[b.id];
   return `<div class="card ${due?'due':''}" data-bid="${b.id}">
@@ -204,17 +219,16 @@ function cardHTML(b, withBtns){
 }
 
 function renderDue(){
-  const list = filtered(DATA.blocks).filter(isDue);
+  const list = filtered(DATA.blocks).filter(blockDue);
   const el = document.getElementById("due-list");
   el.innerHTML = list.length ? list.map(b=>cardHTML(b,true)).join("")
     : `<div class="empty">这一类今天没有到期内容 🎉</div>`;
 }
-
 function renderStatus(){
   const list = filtered(DATA.blocks);
   const el = document.getElementById("status-list");
   el.innerHTML = list.map(b=>{
-    const s = strengthOf(b);
+    const s = strengthOfBlock(b);
     const pct = s==="strong"?100:s==="learning"?60:30;
     return `<div class="card" style="padding:11px 14px;">
       <div class="src"><span>${b.source} · ${b.context.slice(0,18)}…</span>
@@ -223,20 +237,41 @@ function renderStatus(){
     </div>`;
   }).join("");
 }
-
-function renderKB(){
-  const el = document.getElementById("kb-list");
-  el.innerHTML = filtered(DATA.blocks).map(b=>cardHTML(b,false)).join("");
-}
-
+function renderKB(){ document.getElementById("kb-list").innerHTML = filtered(DATA.blocks).map(b=>cardHTML(b,false)).join(""); }
 function renderAll(){ renderStats(); renderDue(); renderStatus(); renderKB(); }
 
+/* ── 标记 + 自动回写 ── */
 function markItem(bid, iid, val){
-  const k = bid + "_" + iid;
-  feedback[k] = (feedback[k]===val) ? undefined : val;
-  if (!feedback[k]) delete feedback[k];
-  localStorage.setItem(LS_KEY, JSON.stringify(feedback));
+  const k = iid;                       // 用全局 item id 作为回写键
+  pending[k] = (pending[k]===val) ? undefined : val;
+  if (!pending[k]) delete pending[k];
+  localStorage.setItem(LS_KEY, JSON.stringify(pending));
   renderAll();
+  flushPending();
+}
+
+/* 把尚未成功回写的标记推给 Worker */
+async function flushPending(){
+  const ids = Object.keys(pending);
+  if (!ids.length) return;
+  const batch = ids.map(id=>({ id, verdict: pending[id] }));
+  document.getElementById("sync-state").textContent = "回写中…";
+  try {
+    const r = await fetch(ENDPOINT + "/feedback", {
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body: JSON.stringify({ secret: SECRET, today: TODAY, feedback: batch })
+    });
+    if (r.ok){
+      for (const id of ids) delete pending[id];
+      localStorage.setItem(LS_KEY, JSON.stringify(pending));
+      document.getElementById("sync-state").textContent = "已自动回写";
+    } else {
+      document.getElementById("sync-state").textContent = "回写失败，稍后重试";
+    }
+  } catch(e){
+    document.getElementById("sync-state").textContent = "离线，已存本机";
+  }
 }
 
 function toggleCn(btn){
@@ -256,9 +291,14 @@ document.getElementById("tabs").addEventListener("click", e=>{
   renderAll();
 });
 
-fetch("data.json").then(r=>r.json()).then(d=>{ DATA=d; renderAll(); })
-  .catch(()=>{ document.body.insertAdjacentHTML("afterbegin",
-    '<p style="color:red">data.json 加载失败，请通过本地服务(http://localhost:8123)打开。</p>'); });
+TODAY = todayStr();
+fetch("data.json").then(r=>r.json()).then(d=>{
+  DATA = d; renderAll();
+  flushPending();   // 加载时补传离线期间的标记
+}).catch(()=>{
+  document.body.insertAdjacentHTML("afterbegin",
+    '<p style="color:red">data.json 加载失败，请通过本地服务(http://localhost:8123)打开。</p>');
+});
 </script>
 </body>
 </html>
