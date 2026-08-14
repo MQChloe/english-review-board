@@ -1,5 +1,11 @@
 {
-  "intervals": [1, 3, 7, 14, 30],
+  "intervals": [
+    1,
+    3,
+    7,
+    14,
+    30
+  ],
   "today": "2026-08-14",
   "blocks": [
     {
@@ -10,11 +16,35 @@
       "context": "Companies these days are quick to stick “A.I.” in news releases, in earnings calls, in product names, in job postings and in titles at the top of their organizations. The real question is what strategy sits behind the abbreviation. A title costs nothing, but it doesn’t produce anything, either.",
       "contextCn": "如今许多公司热衷于在新闻稿、财报电话会议、产品名称、招聘信息，甚至高层职位名称中都加上“A.I.”这个标签。但真正的问题在于：这个缩写背后到底有何种战略作支撑？一个头衔没什么成本，但它同样也不会创造任何价值。",
       "items": [
-        {"id": "b1-1", "text": "stick A in B", "understanding": "把 A 硬塞进 B——这里指生硬地把 AI 标签贴到各处。写文案/做汇报时可用：别光把某个热词 stick in everywhere，要想清楚背后是什么。"},
-        {"id": "b1-2", "text": "produce anything / produce value", "understanding": "创造价值。原文反讽：一个头衔 doesn’t produce anything——好记，用来形容“只挂名不产出”的事。"}
+        {
+          "id": "b1-1",
+          "text": "stick A in B",
+          "understanding": "把 A 硬塞进 B——这里指生硬地把 AI 标签贴到各处。写文案/做汇报时可用：别光把某个热词 stick in everywhere，要想清楚背后是什么。",
+          "review": {
+            "reviews": 1,
+            "lapses": 0,
+            "last": "2026-08-13",
+            "strength": "weak",
+            "nextDue": "2026-08-15"
+          }
+        },
+        {
+          "id": "b1-2",
+          "text": "produce anything / produce value",
+          "understanding": "创造价值。原文反讽：一个头衔 doesn’t produce anything——好记，用来形容“只挂名不产出”的事。",
+          "review": {
+            "reviews": 1,
+            "lapses": 0,
+            "last": "2026-08-13",
+            "strength": "weak",
+            "nextDue": "2026-08-15"
+          }
+        }
       ],
       "firstLearned": "2026-08-12",
-      "reviews": ["2026-08-13"]
+      "reviews": [
+        "2026-08-13"
+      ]
     },
     {
       "id": "b2",
@@ -24,11 +54,35 @@
       "context": "Talented technologists promised to crack business problems that were too complicated and expensive to solve before. This was the beginning of what I call A.I. wishing: the belief by company leaders that A.I. is magic, that you can wave its wand toward a hard problem and skip the work of solving it.",
       "contextCn": "优秀的技术专家们曾许诺能解决那些过去因过于复杂、成本太高而无法解决的商业难题。这正是我所谓“AI 许愿”的开始：公司领导相信 AI 是一种魔法，只要对着棘手问题挥挥魔杖，就能跳过解决问题所需付出的努力。",
       "items": [
-        {"id": "b2-1", "text": "wave one’s wand (toward)", "understanding": "挥魔杖——比喻想“魔法般轻松解决”。搭配 skip the work of (doing)：跳过本该付出的努力。教学可用：区分 magic thinking 和 real work。"},
-        {"id": "b2-2", "text": "skip the work of (doing)", "understanding": "跳过做某事的功夫/努力。很口语也好用：don’t skip the work of learning the basics（别跳过打基础这步）。"}
+        {
+          "id": "b2-1",
+          "text": "wave one’s wand (toward)",
+          "understanding": "挥魔杖——比喻想“魔法般轻松解决”。搭配 skip the work of (doing)：跳过本该付出的努力。教学可用：区分 magic thinking 和 real work。",
+          "review": {
+            "reviews": 1,
+            "lapses": 0,
+            "last": "2026-08-13",
+            "strength": "weak",
+            "nextDue": "2026-08-15"
+          }
+        },
+        {
+          "id": "b2-2",
+          "text": "skip the work of (doing)",
+          "understanding": "跳过做某事的功夫/努力。很口语也好用：don’t skip the work of learning the basics（别跳过打基础这步）。",
+          "review": {
+            "reviews": 1,
+            "lapses": 0,
+            "last": "2026-08-13",
+            "strength": "weak",
+            "nextDue": "2026-08-15"
+          }
+        }
       ],
       "firstLearned": "2026-08-12",
-      "reviews": ["2026-08-13"]
+      "reviews": [
+        "2026-08-13"
+      ]
     },
     {
       "id": "b3",
@@ -38,11 +92,35 @@
       "context": "This brings me to A.I. washing. The insidious cousin of A.I. wishing, it is when a company — under pressure to immediately show results — claims to be doing more with A.I. than it actually is.",
       "contextCn": "这就引出了“AI 漂洗”这个概念。它是“AI 许愿”的阴险近亲，指一家公司在迫于压力、需要立刻展示成果时，宣称自己正用 AI 做很多事，实际却没达到所说的程度。",
       "items": [
-        {"id": "b3-1", "text": "A.I. washing", "understanding": "AI 漂洗——仿 greenwashing（绿洗），指夸大 AI 能力做公关。可连接：帮自己/学生识别营销话术，别被标签骗。"},
-        {"id": "b3-2", "text": "insidious", "understanding": "阴险的、暗中为害的。形容看似无害、实则慢慢侵蚀的东西（如 insidious cousin）。写作里形容隐性风险很好用。"}
+        {
+          "id": "b3-1",
+          "text": "A.I. washing",
+          "understanding": "AI 漂洗——仿 greenwashing（绿洗），指夸大 AI 能力做公关。可连接：帮自己/学生识别营销话术，别被标签骗。",
+          "review": {
+            "reviews": 1,
+            "lapses": 0,
+            "last": "2026-08-13",
+            "strength": "weak",
+            "nextDue": "2026-08-15"
+          }
+        },
+        {
+          "id": "b3-2",
+          "text": "insidious",
+          "understanding": "阴险的、暗中为害的。形容看似无害、实则慢慢侵蚀的东西（如 insidious cousin）。写作里形容隐性风险很好用。",
+          "review": {
+            "reviews": 1,
+            "lapses": 0,
+            "last": "2026-08-13",
+            "strength": "weak",
+            "nextDue": "2026-08-15"
+          }
+        }
       ],
       "firstLearned": "2026-08-12",
-      "reviews": ["2026-08-13"]
+      "reviews": [
+        "2026-08-13"
+      ]
     },
     {
       "id": "b4",
@@ -52,9 +130,42 @@
       "context": "I wake up in the morning and I want to reach for my phone, but I know that even if I were to crank up the brightness on that phone screen, it’s not bright enough to trigger that cortisol spike and for me to be at my most alert and focused throughout the day and to optimize my sleep at night.",
       "contextCn": "我早上醒来想伸手拿手机，但我知道，即便把手机屏幕亮度拉到最高，也不够亮到触发皮质醇峰值，让我一整天最清醒专注，也无法优化夜间睡眠。所以我起床出门晒太阳。",
       "items": [
-        {"id": "b4-1", "text": "crank up", "understanding": "把…调到最大（使劲拧到头的感觉）。crank up the brightness / volume / heat——提升亮度/音量/暖气。"},
-        {"id": "b4-2", "text": "trigger (a spike / response)", "understanding": "触发。trigger that cortisol spike 触发皮质醇峰值；trigger a response 触发反应。描述因果很顺手。"},
-        {"id": "b4-3", "text": "optimize", "understanding": "使达到最优。optimize sleep / diet——让睡眠/饮食达到最佳状态。"}
+        {
+          "id": "b4-1",
+          "text": "crank up",
+          "understanding": "把…调到最大（使劲拧到头的感觉）。crank up the brightness / volume / heat——提升亮度/音量/暖气。",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-14"
+          }
+        },
+        {
+          "id": "b4-2",
+          "text": "trigger (a spike / response)",
+          "understanding": "触发。trigger that cortisol spike 触发皮质醇峰值；trigger a response 触发反应。描述因果很顺手。",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-14"
+          }
+        },
+        {
+          "id": "b4-3",
+          "text": "optimize",
+          "understanding": "使达到最优。optimize sleep / diet——让睡眠/饮食达到最佳状态。",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-14"
+          }
+        }
       ],
       "firstLearned": "2026-08-13",
       "reviews": []
@@ -67,8 +178,30 @@
       "context": "…especially on cloudy days, you want to get outside and get as much light energy or photons in your eyes.",
       "contextCn": "……尤其在阴天，你更该出门，让尽可能多的光能或光子进入眼睛。",
       "items": [
-        {"id": "b5-1", "text": "photon", "understanding": "光子（light energy 或 photons）。科普/播客里常见，记一次就通。"},
-        {"id": "b5-2", "text": "You want to do", "understanding": "温和建议句式：“你会想要…”，区别于 you should 的外部施压感，更像善意提醒。教口语可用这个区别帮学生拿捏语气。"}
+        {
+          "id": "b5-1",
+          "text": "photon",
+          "understanding": "光子（light energy 或 photons）。科普/播客里常见，记一次就通。",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-14"
+          }
+        },
+        {
+          "id": "b5-2",
+          "text": "You want to do",
+          "understanding": "温和建议句式：“你会想要…”，区别于 you should 的外部施压感，更像善意提醒。教口语可用这个区别帮学生拿捏语气。",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-14"
+          }
+        }
       ],
       "firstLearned": "2026-08-13",
       "reviews": []
@@ -81,9 +214,42 @@
       "context": "As a woman who’s always believed that my life purpose is synonymous not with my fecundity or my homemaking prowess but with my artistic ambitions, I’m decidedly not the audience for this kind of content.",
       "contextCn": "我一直坚信，自己的人生价值不在于生育能力，也不在于持家本领，而在于艺术理想。因此，我显然绝不是这类内容的受众。",
       "items": [
-        {"id": "b6-1", "text": "synonymous with", "understanding": "等同于、与…同义。be synonymous with——X is synonymous with Y（X 等同于 Y），写作替换 be the same as 更地道。"},
-        {"id": "b6-2", "text": "prowess", "understanding": "高超的本领、造诣。homemaking prowess 持家本领；athletic prowess 运动天赋。"},
-        {"id": "b6-3", "text": "decidedly", "understanding": "明确地、断然地。decidedly not the audience——明确不是受众。加强语气很好用。"}
+        {
+          "id": "b6-1",
+          "text": "synonymous with",
+          "understanding": "等同于、与…同义。be synonymous with——X is synonymous with Y（X 等同于 Y），写作替换 be the same as 更地道。",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-14"
+          }
+        },
+        {
+          "id": "b6-2",
+          "text": "prowess",
+          "understanding": "高超的本领、造诣。homemaking prowess 持家本领；athletic prowess 运动天赋。",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-14"
+          }
+        },
+        {
+          "id": "b6-3",
+          "text": "decidedly",
+          "understanding": "明确地、断然地。decidedly not the audience——明确不是受众。加强语气很好用。",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-14"
+          }
+        }
       ],
       "firstLearned": "2026-08-13",
       "reviews": []
@@ -96,8 +262,30 @@
       "context": "But maybe it was the moment when I was slicing strawberries and scooping homemade coconut-almond granola into my son’s Greek yogurt that a startling revelation dawned on me. I’m definitely not a tradwife — but maybe I’m a little tradwife-curious? Maybe I have a few latent tradwife tendencies?",
       "contextCn": "但就在我切草莓、把自制椰香杏仁格兰诺拉舀进儿子希腊酸奶的那一刻，我突然有了惊人感悟。我绝对不是传统主妇——但我会不会对这种生活心生向往？我身上会不会潜藏着一些传统主妇特质？",
       "items": [
-        {"id": "b7-1", "text": "a revelation dawned on me", "understanding": "我突然恍然大悟。revelation 顿悟；dawn on 渐渐明白。比 I suddenly realized 更有画面感。"},
-        {"id": "b7-2", "text": "latent", "understanding": "潜在的、潜伏的。latent tendencies / latent talent——潜在特质/潜质。描述“还没显形但存在”的东西。"}
+        {
+          "id": "b7-1",
+          "text": "a revelation dawned on me",
+          "understanding": "我突然恍然大悟。revelation 顿悟；dawn on 渐渐明白。比 I suddenly realized 更有画面感。",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-14"
+          }
+        },
+        {
+          "id": "b7-2",
+          "text": "latent",
+          "understanding": "潜在的、潜伏的。latent tendencies / latent talent——潜在特质/潜质。描述“还没显形但存在”的东西。",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-14"
+          }
+        }
       ],
       "firstLearned": "2026-08-13",
       "reviews": []
@@ -110,8 +298,30 @@
       "context": "But spending time around that ferry has made me wonder if modern life has undersold inconvenience. We treat waiting as wasted time. But sometimes waiting does something useful: It forces people into the same place long enough for conversation to begin.",
       "contextCn": "但在渡轮那里待了一段时间后，我开始怀疑：现代生活是不是低估了“不便”的价值。我们总把等待当浪费的时间。但有时等待也有用：它强制人们在同一地方待够久，让对话得以开始。",
       "items": [
-        {"id": "b8-1", "text": "undersell", "understanding": "低估…的价值（反义 oversell 高估/过度宣传）。undersold inconvenience 低估了“不便”的价值——连接右右：适度不便反而催生互动。"},
-        {"id": "b8-2", "text": "force sb into", "understanding": "迫使某人进入（某种状态/地方）。forces people into the same place——强制把人凑到一处，才能起对话。"}
+        {
+          "id": "b8-1",
+          "text": "undersell",
+          "understanding": "低估…的价值（反义 oversell 高估/过度宣传）。undersold inconvenience 低估了“不便”的价值——连接右右：适度不便反而催生互动。",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-15"
+          }
+        },
+        {
+          "id": "b8-2",
+          "text": "force sb into",
+          "understanding": "迫使某人进入（某种状态/地方）。forces people into the same place——强制把人凑到一处，才能起对话。",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-15"
+          }
+        }
       ],
       "firstLearned": "2026-08-14",
       "reviews": []
@@ -124,10 +334,54 @@
       "context": "Which brings me back to that ridiculously inconvenient ferry and what I call the friction theory of friendship. Some inconveniences aren’t merely costs. They are the hidden scaffolding of social life. … friendship = (proximity × repetition) + (idle time × low stakes) + shared irritation.",
       "contextCn": "由此说回那艘极不便的渡轮，以及我所谓的“友谊摩擦理论”。有些不便不只是代价，它们是社交生活隐秘的脚手架。……友谊 =（距离近 × 重复遇见）+（闲暇 × 低利害情境）+ 共同的不满。",
       "items": [
-        {"id": "b9-1", "text": "friction theory of friendship", "understanding": "友谊摩擦理论。friction 原指摩擦/阻力，这里指“不便”反而催生友谊。可复用在我和右右的亲子互动：适度不便反而增进连接。"},
-        {"id": "b9-2", "text": "scaffolding", "understanding": "脚手架。the hidden scaffolding of social life——社交生活隐秘的支撑结构。比喻“看不见但撑着整体”的东西。"},
-        {"id": "b9-3", "text": "low stakes", "understanding": "低利害、低压力。idle time × low stakes——闲暇 × 无压力情境，友谊更容易长出来。"},
-        {"id": "b9-4", "text": "shared irritation", "understanding": "共同的不满/一起吐槽。朋友间一起抱怨反而拉近距离——连接右右：一起对某事“吐槽”也是亲密。"}
+        {
+          "id": "b9-1",
+          "text": "friction theory of friendship",
+          "understanding": "友谊摩擦理论。friction 原指摩擦/阻力，这里指“不便”反而催生友谊。可复用在我和右右的亲子互动：适度不便反而增进连接。",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-15"
+          }
+        },
+        {
+          "id": "b9-2",
+          "text": "scaffolding",
+          "understanding": "脚手架。the hidden scaffolding of social life——社交生活隐秘的支撑结构。比喻“看不见但撑着整体”的东西。",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-15"
+          }
+        },
+        {
+          "id": "b9-3",
+          "text": "low stakes",
+          "understanding": "低利害、低压力。idle time × low stakes——闲暇 × 无压力情境，友谊更容易长出来。",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-15"
+          }
+        },
+        {
+          "id": "b9-4",
+          "text": "shared irritation",
+          "understanding": "共同的不满/一起吐槽。朋友间一起抱怨反而拉近距离——连接右右：一起对某事“吐槽”也是亲密。",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-15"
+          }
+        }
       ],
       "firstLearned": "2026-08-14",
       "reviews": []
