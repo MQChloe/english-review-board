@@ -57,7 +57,11 @@
           },
           "paraIdx": 1,
           "hl": "stick",
-          "phonetic": "/stɪk/"
+          "phonetic": "/stɪk/",
+          "hlWords": [
+            "stick",
+            "in"
+          ]
         },
         {
           "id": "a1-2",
