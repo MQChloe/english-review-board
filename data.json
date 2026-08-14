@@ -457,6 +457,122 @@
           "paraIdx": 4
         }
       ]
+    },
+    {
+      "id": "a5",
+      "source": "消费普遍谨慎的当下，中国人为什么愿意为运动买单？",
+      "category": "外刊",
+      "date": "2026-08-14",
+      "paragraphs": [
+        {
+          "en": "Running, Rock Climbing and Other Sports Are Taking Off in China. Pricey Workout Clothes, Too.",
+          "cn": "跑步、攀岩等运动正在中国蓬勃兴起。价格不菲的运动服装也是如此。"
+        },
+        {
+          "en": "Yangshuo in southern China has long been a rock-climbing destination for American and European tourists. But lately, a different demographic has flocked to its limestone cliffs: office workers from China’s big cities.",
+          "cn": "位于中国南部的阳朔长期以来一直是欧美游客的攀岩圣地。但最近，另一类人群也涌向了这里的石灰岩峭壁：来自中国各大城市的上班族。"
+        },
+        {
+          "en": "“I needed some exercise and outdoor activities to cope with the high-pressure work environment,” Chen Xue, a 28-year-old auditor, said.",
+          "cn": "“我需要一些运动和户外活动来应对高压的工作环境。”28岁的审计师陈雪（音译）说。"
+        },
+        {
+          "en": "China’s rock-climbing boom is part of a larger fitness craze that has taken over the country. The number of marathon participants has doubled since 2017 to more than a million people, and Hyrox had 55,000 participants in China this past year, up from 7,300 a year earlier.",
+          "cn": "中国攀岩热潮不过只是席卷全国的健身热潮的一部分。自2017年以来，马拉松参赛人数已翻了一番，逾100万人；而去年，Hyrox赛事在中国吸引了5.5万名参赛者，较前一年的7300人有了大幅增长。"
+        },
+        {
+          "en": "And alongside the fitness boom, hiking shoes and yoga pants and other types of athletic gear have become aspirational styles for China’s middle class. While foreign automakers and luxury brands are struggling against tough domestic competition in China, athletic apparel is a rare market where Western companies such as Lululemon, Hoka and Adidas are increasing sales.",
+          "cn": "随着这股健身热潮的兴起，徒步鞋、瑜伽裤及其他各类运动装备，已然成为中国中产阶级向往的穿搭风格。外国车企和奢侈品牌尚在中国激烈的本土竞争中苦苦挣扎，运动服饰却成了一方罕见的市场，像Lululemon、Hoka和阿迪达斯这样的西方品牌，销售反而有所增长。"
+        },
+        {
+          "en": "“Health is kind of the new wealth in China,” said Rebecca Cai, Asia-Pacific general manager for Swiss premium running shoe brand On. The brand said in a May earnings call that quarterly sales in Greater China exceeded the Asia-Pacific regional growth figure of 44%.",
+          "cn": "“在中国，健康可以说是一种新的财富，”瑞士高端跑鞋品牌“昂跑”（On）的亚太区总经理蔡以佳表示。该品牌在5月的财报电话会议上称，大中华区的季度销售额超过了亚太地区44%的整体增长率。"
+        },
+        {
+          "en": "Some consumers trace the fitness trend to a postpandemic cultural shift. “After Covid, everything changed,” said Xu Lin, the owner of Prakasa, a popular yoga studio in Shanghai, “Everyone wants to have a better life, not just money, money, money, work, work, work.”",
+          "cn": "一些消费者将这一健身热潮归结于后疫情时期的文化转变。“新冠疫情之后，一切都变了，”上海一家热门瑜伽工作室“Prakasa”的老板徐琳（音译）说道，“每个人都希望过上更好的生活，而不只是‘钱、钱、钱，工作、工作、工作’。”"
+        }
+      ],
+      "items": [
+        {
+          "id": "a5-1",
+          "text": "take off",
+          "understanding": "变得非常流行 / 迅速发展。原文标题 'Sports Are Taking Off in China'；也常说 Her channel took off。描述趋势爆发很好用。",
+          "paraIdx": 0,
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-15"
+          }
+        },
+        {
+          "id": "a5-2",
+          "text": "flock to",
+          "understanding": "蜂拥而至、成群涌向某地。原文 'a different demographic has flocked to its limestone cliffs'。比 go to 画面感强，写人群聚集时可用。",
+          "paraIdx": 1,
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-15"
+          }
+        },
+        {
+          "id": "a5-3",
+          "text": "cope with something",
+          "understanding": "应对（压力/困难）。原文 'cope with the high-pressure work environment'。强调在压力下撑住、维持正常状态，比 deal with 多一层‘艰难撑住’的意味。",
+          "paraIdx": 2,
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-15"
+          }
+        },
+        {
+          "id": "a5-4",
+          "text": "boom",
+          "understanding": "（行业/趋势的）迅猛发展、热潮。原文 'rock-climbing boom is part of a larger fitness craze'。常说 economic boom / baby boom / fitness boom。",
+          "paraIdx": 3,
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-15"
+          }
+        },
+        {
+          "id": "a5-5",
+          "text": "aspirational",
+          "understanding": "令人向往的、代表理想生活方式的。原文 'athletic gear have become aspirational styles'。形容一种‘让人看了想拥有/想变成’的东西，比 popular 更精准。",
+          "paraIdx": 4,
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-15"
+          }
+        },
+        {
+          "id": "a5-6",
+          "text": "trace something to something",
+          "understanding": "将……归因于 / 追溯到。原文 'trace the fitness trend to a postpandemic cultural shift'。写分析因果时很顺手：trace X to Y。",
+          "paraIdx": 6,
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-15"
+          }
+        }
+      ]
     }
   ]
 }
