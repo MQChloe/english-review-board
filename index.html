@@ -27,7 +27,7 @@
   .tab.active{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;
     border-color:transparent;box-shadow:0 4px 12px rgba(124,108,240,.3);}
   .tab .cnt{opacity:.7;font-size:12px;margin-left:4px;}
-  /* ── 记忆状态视图内的 strength 筛选器 ── */
+  /* ── 语料库视图内的 strength 筛选器 ── */
   .mem-filter{display:flex;gap:8px;margin:14px 0 20px;flex-wrap:wrap;}
   .mf{padding:7px 16px;border-radius:999px;border:1px solid var(--line);
     background:var(--card);color:var(--muted);font-size:14px;cursor:pointer;
@@ -41,6 +41,9 @@
   .sec-title .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);}
   .today-title{font-size:19px;font-weight:800;color:var(--ink);letter-spacing:.2px;margin:8px 0 14px;}
   .today-title .dot{width:8px;height:8px;}
+  .today-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin:8px 0 14px;}
+  .today-head .today-title{margin:0;}
+  .today-head .tabs{margin:0;}
   .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0 4px;}
   .stat{background:var(--card);border:1px solid var(--line);border-radius:14px;
     padding:14px 8px;text-align:center;box-shadow:var(--shadow);}
@@ -104,10 +107,10 @@
   .card:not(.collapsed) .card-head .chev{transform:rotate(90deg);}
   .sec-count{font-size:12px;font-weight:600;color:var(--muted);margin-left:6px;letter-spacing:0;}
 
-  /* ── 第二行 Tab（知识库 / 记忆状态），大小与第一行统一 ── */
+  /* ── 第二行 Tab（知识库 / 语料库），大小与第一行统一 ── */
   .tabs2{margin:2px 0 20px;}
 
-  /* ── 词语卡片（知识库 / 记忆状态 视图） ── */
+  /* ── 词语卡片（语料库 视图） ── */
   .wcard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
     padding:14px 16px;margin-bottom:12px;box-shadow:var(--shadow);}
   .w-head{display:flex;align-items:center;gap:9px;flex-wrap:wrap;}
@@ -122,12 +125,16 @@
   .w-str.learning{background:#fdf0db;color:var(--learning);}
   .w-str.strong{background:#e3f5ec;color:var(--strong);}
 
-  /* ── 知识库：按文章分组 ── */
-  .kb-group{margin-bottom:18px;}
-  .kb-head{display:flex;align-items:center;gap:9px;margin:24px 0 10px;padding-bottom:8px;border-bottom:2px solid var(--line);}
-  .kb-head:first-of-type{margin-top:6px;}
-  .kb-head .title{font-size:15px;font-weight:700;color:var(--ink);letter-spacing:.1px;flex:1;line-height:1.35;}
-  .kb-head .cnt{font-size:12px;color:var(--muted);white-space:nowrap;}
+  /* ── 知识库：文件夹目录 ── */
+  .folder{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:14px 16px;margin-bottom:10px;cursor:pointer;box-shadow:var(--shadow);transition:.15s;}
+  .folder:hover{border-color:var(--accent);}
+  .folder .f-icon{font-size:18px;}
+  .folder .f-name{font-weight:700;flex:1;color:var(--ink);}
+  .folder .f-cnt{font-size:12px;color:var(--muted);}
+  .folder .f-chev{margin-left:auto;font-size:13px;color:var(--muted);transition:transform .2s;}
+  .folder.open .f-chev{transform:rotate(90deg);}
+  .folder-list{padding-left:8px;margin-bottom:6px;}
 
   /* ── 手机端：放大阅读字号，不影响桌面 ── */
   @media (max-width:600px){
@@ -157,26 +164,27 @@
   <h1>每日英语学习</h1>
   <div class="sub">GetNote 自动同步 · 间隔重复（学后 1 / 3 / 7 / 14 / 30 天）· <span id="sync-state">已连接</span></div>
 
-  <div class="tabs" id="tabs1">
-    <div class="tab active" data-cat="all">全部 <span class="cnt" id="c-all"></span></div>
-    <div class="tab" data-cat="外刊">外刊 <span class="cnt" id="c-wk"></span></div>
-    <div class="tab" data-cat="播客">播客 <span class="cnt" id="c-pd"></span></div>
-  </div>
   <div class="tabs tabs2" id="tabs2">
     <div class="tab" data-view="kb">知识库</div>
-    <div class="tab" data-view="memory">记忆状态</div>
+    <div class="tab" data-view="memory">语料库</div>
   </div>
 
   <div id="study-view">
-    <div class="sec-title today-title"><span class="dot"></span>今日复习<span id="due-count" class="sec-count"></span></div>
+    <div class="today-head">
+      <div class="sec-title today-title"><span class="dot"></span>今日复习</div>
+      <div class="tabs" id="tabs1">
+        <div class="tab active" data-cat="all">全部 <span class="cnt" id="c-all"></span></div>
+        <div class="tab" data-cat="外刊">外刊 <span class="cnt" id="c-wk"></span></div>
+        <div class="tab" data-cat="播客">播客 <span class="cnt" id="c-pd"></span></div>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="n" id="s-total">0</div><div class="l">累计可学点</div></div>
+      <div class="stat"><div class="n" id="s-due">0</div><div class="l">今日待复习</div></div>
+      <div class="stat"><div class="n" id="s-grad">0</div><div class="l">已掌握</div></div>
+      <div class="stat"><div class="n" id="s-rate">0%</div><div class="l">掌握率</div></div>
+    </div>
     <div id="due-list"></div>
-  </div>
-
-  <div class="stats">
-    <div class="stat"><div class="n" id="s-total">0</div><div class="l">累计可学点</div></div>
-    <div class="stat"><div class="n" id="s-due">0</div><div class="l">今日待复习</div></div>
-    <div class="stat"><div class="n" id="s-grad">0</div><div class="l">已掌握</div></div>
-    <div class="stat"><div class="n" id="s-rate">0%</div><div class="l">掌握率</div></div>
   </div>
 
   <div id="kb-view" style="display:none"></div>
@@ -194,12 +202,17 @@ const SECRET  = "eng-review-shared-2026";  // 与 Worker 端一致（仅防随�
 
 let DATA = null, currentCat = "all", TODAY = "";
 let mode = "study";   // "study" = 全部/外刊/播客 视图；"kb" = 知识库目录视图
-let memFilter = "all";   // 记忆状态视图的筛选：all / weak / learning / strong
+let memFilter = "all";   // 语料库视图的筛选：all / weak / learning / strong
 let cnOpen = {};
 let pending = {};   // id -> verdict，尚未成功回写服务端
 try { pending = JSON.parse(localStorage.getItem(LS_KEY) || "{}"); } catch(e){}
 let collapsedMap = {};   // articleId -> true(折叠) / false(展开)；默认折叠
 try { collapsedMap = JSON.parse(localStorage.getItem("eng_review_collapse_v1") || "{}"); } catch(e){}
+let folderMap = {};   // 知识库文件夹展开状态
+function loadFolderMap(){
+  try { folderMap = JSON.parse(localStorage.getItem("eng_review_folder_v1") || "{}"); } catch(e){ folderMap = {}; }
+}
+loadFolderMap();
 
 function todayStr(){
   const d = new Date();
@@ -340,18 +353,6 @@ function renderDue(){
   const el = document.getElementById("due-list");
   el.innerHTML = list.length ? list.map(a=>cardHTML(a,true)).join("")
     : `<div class="empty">这一类今天没有到期内容 🎉</div>`;
-  updateDueCount();
-}
-function updateDueCount(){
-  const due = DATA.articles.filter(articleDue);
-  const list = filtered(due);
-  const wk = list.filter(a=>a.category==="外刊").length;
-  const pd = list.filter(a=>a.category==="播客").length;
-  let sfx = "";
-  if (currentCat === "all")      sfx = `（${wk}篇外刊、${pd}篇播客）`;
-  else if (currentCat === "外刊") sfx = `（${wk}篇外刊）`;
-  else                           sfx = `（${pd}篇播客）`;
-  document.getElementById("due-count").textContent = sfx;
 }
 function strengthLabel(s){ return s==="strong"?"牢固":s==="learning"?"巩固中":"快忘了"; }
 
@@ -374,42 +375,53 @@ function wordCard(a, it){
 }
 function renderWords(){
   const el = document.getElementById("kb-view");
-  if (mode === "memory"){
-    let rows = [];
-    DATA.articles.forEach(a=>{ a.items.forEach(it=> rows.push({a, it})); });
-    const order = {"weak":0,"learning":1,"strong":2};
-    rows.sort((x,y)=> order[itemStrength(x.it)] - order[itemStrength(y.it)]);
-    // strength 计数（用于筛选器角标）
-    const cnt = {weak:0, learning:0, strong:0};
-    rows.forEach(r=> cnt[itemStrength(r.it)]++);
-    const mf = (k, lbl) => `<div class="mf ${memFilter===k?'active':''}" onclick="setMemFilter('${k}')">${lbl}<span class="cnt">${k==='all' ? rows.length : cnt[k]}</span></div>`;
-    const bar = `<div class="mem-filter">${mf('all','全部')}${mf('weak','快忘了')}${mf('learning','巩固中')}${mf('strong','牢固')}</div>`;
-    const shown = (memFilter === "all") ? rows : rows.filter(r=> itemStrength(r.it) === memFilter);
-    el.innerHTML = bar + (shown.length
-      ? shown.map(r=>wordCard(r.a, r.it)).join("")
-      : `<div class="empty">这个分类暂时还没有词</div>`);
-  } else {
-    // 知识库：按文章分组，每篇文章一个组
-    let html = "";
-    DATA.articles.forEach(a=>{
-      if (!a.items.length) return;
-      html += `<div class="kb-group">
-        <div class="kb-head">
-          <span class="cat ${a.category}">${a.category}</span>
-          <span class="title">${a.source}</span>
-          <span class="cnt">${a.items.length} 词</span>
-        </div>
-        ${a.items.map(it=>wordCard(a,it)).join("")}
-      </div>`;
-    });
-    el.innerHTML = html || `<div class="empty">暂无内容</div>`;
-  }
+  let rows = [];
+  DATA.articles.forEach(a=>{ a.items.forEach(it=> rows.push({a, it})); });
+  const order = {"weak":0,"learning":1,"strong":2};
+  rows.sort((x,y)=> order[itemStrength(x.it)] - order[itemStrength(y.it)]);
+  // strength 计数（用于筛选器角标）
+  const cnt = {weak:0, learning:0, strong:0};
+  rows.forEach(r=> cnt[itemStrength(r.it)]++);
+  const mf = (k, lbl) => `<div class="mf ${memFilter===k?'active':''}" onclick="setMemFilter('${k}')">${lbl}<span class="cnt">${k==='all' ? rows.length : cnt[k]}</span></div>`;
+  const bar = `<div class="mem-filter">${mf('all','全部')}${mf('weak','快忘了')}${mf('learning','巩固中')}${mf('strong','牢固')}</div>`;
+  const shown = (memFilter === "all") ? rows : rows.filter(r=> itemStrength(r.it) === memFilter);
+  el.innerHTML = bar + (shown.length
+    ? shown.map(r=>wordCard(r.a, r.it)).join("")
+    : `<div class="empty">这个分类暂时还没有词</div>`);
 }
 function setMemFilter(k){
   memFilter = k;
   renderWords();
 }
-function renderAll(){ renderStats(); if (mode==="study"){ renderDue(); } else { renderWords(); } }
+
+/* ── 知识库：文件夹目录 + 完整文章卡 ── */
+function toggleFolder(key){
+  folderMap[key] = !folderMap[key];
+  localStorage.setItem("eng_review_folder_v1", JSON.stringify(folderMap));
+  renderKBDir();
+}
+function renderKBDir(){
+  const folders = {
+    "外刊": DATA.articles.filter(a=>a.category==="外刊"),
+    "播客": DATA.articles.filter(a=>a.category==="播客")
+  };
+  let html = "";
+  for (const [name, list] of Object.entries(folders)){
+    const open = !!folderMap[name];
+    html += `<div class="folder ${open?'open':''}" data-folder="${name}" onclick="toggleFolder('${name}')">
+      <span class="f-icon">${open?'📂':'📁'}</span>
+      <span class="f-name">${name}</span>
+      <span class="f-cnt">${list.length} 篇</span>
+      <span class="f-chev">▸</span>
+    </div>`;
+    if (open){
+      html += `<div class="folder-list">${list.map(a=>cardHTML(a,false)).join("")}</div>`;
+    }
+  }
+  document.getElementById("kb-view").innerHTML = html || `<div class="empty">暂无内容</div>`;
+}
+
+function renderAll(){ renderStats(); if (mode==="study"){ renderDue(); } else if (mode==="kb"){ renderKBDir(); } else { renderWords(); } }
 
 /* ── 卡片折叠（记住状态） ── */
 function toggleCard(bid){
