@@ -40,8 +40,8 @@
   .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
     padding:16px 18px;margin-bottom:14px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
   .card.due{border-left:4px solid var(--weak);}
-  .card-head{display:flex;align-items:baseline;gap:10px;margin-bottom:14px;
-    padding-bottom:12px;border-bottom:2px solid var(--line);}
+  .card-head{display:flex;align-items:center;gap:10px;margin-bottom:14px;
+    padding-bottom:12px;border-bottom:2px solid var(--line);cursor:pointer;}
   .card-head .title{font-size:18px;font-weight:800;line-height:1.35;color:var(--ink);
     letter-spacing:.2px;flex:1;}
   .cat{border-radius:7px;padding:3px 9px;font-size:11px;white-space:nowrap;font-weight:600;
@@ -86,6 +86,29 @@
     border:1px solid var(--line);border-radius:12px;padding:12px 14px;box-shadow:var(--shadow);}
   .sync-tag{font-size:11px;color:var(--strong);margin-left:6px;}
 
+  /* ── 文章卡片折叠 ── */
+  .card-head .chev{margin-left:auto;font-size:13px;color:var(--muted);
+    transition:transform .2s;flex-shrink:0;}
+  .card.collapsed .card-body{display:none;}
+  .card:not(.collapsed) .card-head .chev{transform:rotate(90deg);}
+  .sec-count{font-size:12px;font-weight:600;color:var(--muted);margin-left:6px;letter-spacing:0;}
+
+  /* ── 知识库目录（外刊/播客 文件夹） ── */
+  .kb-dir{margin-top:4px;}
+  .kb-folder{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    margin-bottom:12px;box-shadow:var(--shadow);overflow:hidden;}
+  .kb-folder-head{display:flex;align-items:center;gap:9px;padding:14px 16px;cursor:pointer;user-select:none;}
+  .kb-folder-head .kb-ico{font-size:16px;}
+  .kb-folder-head .kb-name{font-size:16px;font-weight:700;color:var(--ink);flex:1;}
+  .kb-folder-head .kb-cnt{font-size:12px;color:var(--muted);background:#f1f0f4;
+    border-radius:999px;padding:2px 9px;}
+  .kb-folder-head .chev{font-size:13px;color:var(--muted);transition:transform .2s;}
+  .kb-folder.open .kb-folder-head .chev{transform:rotate(90deg);}
+  .kb-folder-body{display:none;padding:0 14px 14px;}
+  .kb-folder.open .kb-folder-body{display:block;}
+  .kb-folder-body .card{margin-bottom:10px;}
+  .kb-folder-body .card:last-child{margin-bottom:0;}
+
   /* ── 手机端：放大阅读字号，不影响桌面 ── */
   @media (max-width:600px){
     body{padding:16px 14px;}
@@ -117,6 +140,7 @@
     <div class="tab active" data-cat="all">全部 <span class="cnt" id="c-all"></span></div>
     <div class="tab" data-cat="外刊">外刊 <span class="cnt" id="c-wk"></span></div>
     <div class="tab" data-cat="播客">播客 <span class="cnt" id="c-pd"></span></div>
+    <div class="tab" data-view="kb">知识库</div>
   </div>
 
   <div class="stats">
@@ -126,19 +150,20 @@
     <div class="stat"><div class="n" id="s-rate">0%</div><div class="l">掌握率</div></div>
   </div>
 
-  <div class="sec-title"><span class="dot"></span>今日复习</div>
-  <div id="due-list"></div>
+  <div id="study-view">
+    <div class="sec-title"><span class="dot"></span>今日复习<span id="due-count" class="sec-count"></span></div>
+    <div id="due-list"></div>
 
-  <div class="sec-title"><span class="dot"></span>记忆状态</div>
-  <div class="legend">
-    <span><i style="background:var(--weak)"></i>快忘了（weak）</span>
-    <span><i style="background:var(--learning)"></i>巩固中（learning）</span>
-    <span><i style="background:var(--strong)"></i>牢固（strong）</span>
+    <div class="sec-title"><span class="dot"></span>记忆状态</div>
+    <div class="legend">
+      <span><i style="background:var(--weak)"></i>快忘了（weak）</span>
+      <span><i style="background:var(--learning)"></i>巩固中（learning）</span>
+      <span><i style="background:var(--strong)"></i>牢固（strong）</span>
+    </div>
+    <div id="status-list"></div>
   </div>
-  <div id="status-list"></div>
 
-  <div class="sec-title"><span class="dot"></span>知识库（全部文章）</div>
-  <div id="kb-list"></div>
+  <div id="kb-view" style="display:none"></div>
 
   <div class="note">
     你在手机/电脑上点「记住 / 模糊 / 忘了」，结果会<b>自动回写</b>到看板数据（经由服务端，无需再单独告诉我）。
@@ -152,9 +177,14 @@ const ENDPOINT = "https://english-review-board.mqchloe-eng-review.workers.dev"; 
 const SECRET  = "eng-review-shared-2026";  // 与 Worker 端一致（仅防随意调用，非敏感）
 
 let DATA = null, currentCat = "all", TODAY = "";
+let mode = "study";   // "study" = 全部/外刊/播客 视图；"kb" = 知识库目录视图
 let cnOpen = {};
 let pending = {};   // id -> verdict，尚未成功回写服务端
 try { pending = JSON.parse(localStorage.getItem(LS_KEY) || "{}"); } catch(e){}
+let collapsedMap = {};   // articleId -> true(折叠) / false(展开)；默认折叠
+try { collapsedMap = JSON.parse(localStorage.getItem("eng_review_collapse_v1") || "{}"); } catch(e){}
+let folderMap = {};      // "外刊"/"播客" -> true(展开) / false(折叠)；默认折叠
+try { folderMap = JSON.parse(localStorage.getItem("eng_review_folder_v1") || "{}"); } catch(e){}
 
 function todayStr(){
   const d = new Date();
@@ -245,8 +275,10 @@ function highlight(en, items){
   return out;
 }
 
-function cardHTML(a, withBtns){
+function cardHTML(a, withBtns, opts){
+  opts = opts || {};
   const due = articleDue(a);
+  const isCol = collapsedMap[a.id] !== false;   // 默认折叠
   // 按段归集词汇点（paraIdx 对应 paragraphs 下标）
   const byPara = {};
   a.items.forEach(it=>{
@@ -273,9 +305,14 @@ function cardHTML(a, withBtns){
     body += `<div class="para-items">` +
             orphan.map(it=>itemHTML(it, withBtns, a.id)).join("") + `</div>`;
   }
-  return `<div class="card ${due?'due':''}" data-bid="${a.id}">
-    <div class="card-head"><span class="cat ${a.category}">${a.category}</span><span class="title">${a.source}</span></div>
-    ${body}
+  if (opts.bodyTop) body = opts.bodyTop + body;
+  return `<div class="card ${due?'due':''} ${isCol?'collapsed':''}" data-bid="${a.id}">
+    <div class="card-head" onclick="toggleCard('${a.id}')">
+      <span class="cat ${a.category}">${a.category}</span>
+      <span class="title">${a.source}</span>
+      <span class="chev">▸</span>
+    </div>
+    <div class="card-body">${body}</div>
   </div>`;
 }
 
@@ -284,6 +321,18 @@ function renderDue(){
   const el = document.getElementById("due-list");
   el.innerHTML = list.length ? list.map(a=>cardHTML(a,true)).join("")
     : `<div class="empty">这一类今天没有到期内容 🎉</div>`;
+  updateDueCount();
+}
+function updateDueCount(){
+  const due = DATA.articles.filter(articleDue);
+  const list = filtered(due);
+  const wk = list.filter(a=>a.category==="外刊").length;
+  const pd = list.filter(a=>a.category==="播客").length;
+  let sfx = "";
+  if (currentCat === "all")      sfx = `（${wk}篇外刊、${pd}篇播客）`;
+  else if (currentCat === "外刊") sfx = `（${wk}篇外刊）`;
+  else                           sfx = `（${pd}篇播客）`;
+  document.getElementById("due-count").textContent = sfx;
 }
 function renderStatus(){
   const list = filtered(DATA.articles);
@@ -291,17 +340,50 @@ function renderStatus(){
   el.innerHTML = list.map(a=>{
     const s = strengthOfArticle(a);
     const pct = s==="strong"?100:s==="learning"?60:30;
-    const prev = a.paragraphs[0] ? a.paragraphs[0].en.slice(0,18) : "";
-    return `<div class="card" style="padding:11px 14px;">
-      <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px;">
-        <span style="font-size:14px;font-weight:700;color:var(--ink);">${a.source}</span>
-        <span class="cat ${a.category}">${s}</span></div>
-      <div class="bar"><span style="width:${pct}%;background:${strengthColor(s)}"></span></div>
+    const label = s==="strong"?"牢固":s==="learning"?"巩固中":"快忘了";
+    const bodyTop = `<div class="bar" style="margin:2px 0 4px;"><span style="width:${pct}%;background:${strengthColor(s)}"></span></div>
+      <div style="font-size:12px;color:var(--muted);margin-bottom:6px;">掌握度：${label}</div>`;
+    return cardHTML(a, false, {bodyTop});
+  }).join("");
+}
+function renderKBDir(){
+  const cats = ["外刊","播客"];
+  const el = document.getElementById("kb-view");
+  el.innerHTML = cats.map(cat=>{
+    const arts = DATA.articles.filter(a=>a.category===cat);
+    const open = folderMap[cat] === true;
+    const cards = arts.map(a=>cardHTML(a,false)).join("");
+    return `<div class="kb-folder ${open?'open':''}" data-cat="${cat}">
+      <div class="kb-folder-head" onclick="toggleFolder('${cat}')">
+        <span class="kb-ico">📁</span>
+        <span class="kb-name">${cat}</span>
+        <span class="kb-cnt">${arts.length}</span>
+        <span class="chev">▸</span>
+      </div>
+      <div class="kb-folder-body">${cards}</div>
     </div>`;
   }).join("");
 }
-function renderKB(){ document.getElementById("kb-list").innerHTML = filtered(DATA.articles).map(a=>cardHTML(a,false)).join(""); }
-function renderAll(){ renderStats(); renderDue(); renderStatus(); renderKB(); }
+function renderAll(){ renderStats(); if (mode==="kb") renderKBDir(); else { renderDue(); renderStatus(); } }
+
+/* ── 卡片折叠（记住状态） ── */
+function toggleCard(bid){
+  const card = document.querySelector(`.card[data-bid="${bid}"]`);
+  if (!card) return;
+  const nowCol = !card.classList.contains("collapsed");
+  card.classList.toggle("collapsed", nowCol);
+  collapsedMap[bid] = nowCol;
+  localStorage.setItem("eng_review_collapse_v1", JSON.stringify(collapsedMap));
+}
+
+/* ── 知识库文件夹展开/折叠（记住状态） ── */
+function toggleFolder(cat){
+  const f = document.querySelector(`.kb-folder[data-cat="${cat}"]`);
+  if (!f) return;
+  const open = f.classList.toggle("open");
+  folderMap[cat] = open;
+  localStorage.setItem("eng_review_folder_v1", JSON.stringify(folderMap));
+}
 
 /* ── 标记 + 自动回写 ── */
 function markItem(aid, iid, val){
@@ -350,10 +432,20 @@ function toggleCn(btn){
 
 document.getElementById("tabs").addEventListener("click", e=>{
   const t = e.target.closest(".tab"); if(!t) return;
-  currentCat = t.dataset.cat;
   document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));
   t.classList.add("active");
-  renderAll();
+  if (t.dataset.view === "kb"){
+    mode = "kb";
+    document.getElementById("study-view").style.display = "none";
+    document.getElementById("kb-view").style.display = "block";
+    renderKBDir();
+  } else {
+    mode = "study";
+    currentCat = t.dataset.cat;
+    document.getElementById("study-view").style.display = "block";
+    document.getElementById("kb-view").style.display = "none";
+    renderDue(); renderStatus();
+  }
 });
 
 TODAY = todayStr();
