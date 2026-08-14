@@ -7,17 +7,45 @@
     30
   ],
   "today": "2026-08-14",
-  "blocks": [
+  "articles": [
     {
-      "id": "b1",
+      "id": "a1",
       "source": "AI 究竟是企业的魔法，还是一场自欺欺人的表演？",
       "category": "外刊",
       "date": "2026-08-12",
-      "context": "Companies these days are quick to stick “A.I.” in news releases, in earnings calls, in product names, in job postings and in titles at the top of their organizations. The real question is what strategy sits behind the abbreviation. A title costs nothing, but it doesn’t produce anything, either.",
-      "contextCn": "如今许多公司热衷于在新闻稿、财报电话会议、产品名称、招聘信息，甚至高层职位名称中都加上“A.I.”这个标签。但真正的问题在于：这个缩写背后到底有何种战略作支撑？一个头衔没什么成本，但它同样也不会创造任何价值。",
+      "paragraphs": [
+        {
+          "en": "I Helped Run Lululemon. Companies Need to Stop Kidding Themselves About A.I.",
+          "cn": "我曾参与管理Lululemon，想说在AI问题上，公司可别再自欺欺人了"
+        },
+        {
+          "en": "Companies these days are quick to stick “A.I.” in news releases, in earnings calls, in product names, in job postings and in titles at the top of their organizations. The real question is what strategy sits behind the abbreviation. A title costs nothing, but it doesn’t produce anything, either.",
+          "cn": "如今许多公司热衷于在新闻稿、财报电话会议、产品名称、招聘信息，甚至高层职位名称中都加上“A.I.”这个标签。但真正的问题在于：这个缩写背后到底有何种战略作支撑？一个头衔没什么成本，但它同样也不会创造任何价值。"
+        },
+        {
+          "en": "Talented technologists promised to crack business problems that were too complicated and expensive to solve before. This was the beginning of what I call A.I. wishing: the belief by company leaders that A.I. is magic, that you can wave its wand toward a hard problem and skip the work of solving it.",
+          "cn": "优秀的技术专家们曾许诺，说他们能够解决那些过去因为过于复杂、成本太高而无法解决的商业难题。这正是我所谓“AI许愿”的开始：公司领导相信 AI是一种魔法，只要对着一个棘手的问题挥挥它的魔杖，就能直接跳过解决问题所需付出的努力过程。"
+        },
+        {
+          "en": "The demo looked like magic. But the tool wanted clean, connected data and decisions made in consistent, repeatable ways. Ours lived in a dozen systems that did not agree, layered with decades of exceptions and workarounds.",
+          "cn": "演示小样看着是很炫酷，但AI需要的是经过整理的、有关联的数据，还有以一致的逻辑、可重复的方式做出的决策。而我们的数据却分散在十几个彼此对不上号的系统中，还叠加了几十年来积累的各种例外案例和临时解决方案。"
+        },
+        {
+          "en": "This brings me to A.I. washing. The insidious cousin of A.I. wishing, it is when a company — under pressure to immediately show results — claims to be doing more with A.I. than it actually is.",
+          "cn": "这就引出了“AI漂洗”这个概念。它是“AI许愿”的阴险近亲，指一家公司在迫于压力、需要立刻展示成果的情况下，宣称自己正在利用 AI 做很多事情，但实际上没有达到所说的程度。"
+        },
+        {
+          "en": "Perhaps the best-known version of A.I. washing is the most tragic one: the A.I. layoff. A company proclaims it needs fewer people because A.I. made its operations more efficient. Often the efficiency doesn’t exist yet. The cut is really about freeing up cash, sometimes to spend more on A.I.",
+          "cn": "也许最广为人知，也是最惨烈的一种AI漂洗就是“AI裁员”。公司会宣称，由于AI提高了其运营效率，因此不再需要那么多员工。很多时候，这种效率提升其实尚未实现。裁员的真正目的，是为了释放现金流，有时甚至是为了加大对AI的投入。"
+        },
+        {
+          "en": "A.I. is a genuinely powerful technology that still needs people, and putting it to use is slow, human work. The sooner we are honest about that with our boards, our employees, our investors and the public, the sooner we can stop performing A.I. and start building something with it.",
+          "cn": "AI确实是一项极其强大的技术，但它依然需要人的参与，能把AI真正用起来，是一个缓慢且依赖人力的过程。我们越早对董事会、员工、投资者以及公众坦诚这一点，就越能尽早停止“表演AI”，转而开始真正用它去创造一些东西。"
+        }
+      ],
       "items": [
         {
-          "id": "b1-1",
+          "id": "a1-1",
           "text": "stick A in B",
           "understanding": "把 A 硬塞进 B——这里指生硬地把 AI 标签贴到各处。写文案/做汇报时可用：别光把某个热词 stick in everywhere，要想清楚背后是什么。",
           "review": {
@@ -26,10 +54,11 @@
             "last": "2026-08-13",
             "strength": "weak",
             "nextDue": "2026-08-15"
-          }
+          },
+          "paraIdx": 1
         },
         {
-          "id": "b1-2",
+          "id": "a1-2",
           "text": "produce anything / produce value",
           "understanding": "创造价值。原文反讽：一个头衔 doesn’t produce anything——好记，用来形容“只挂名不产出”的事。",
           "review": {
@@ -38,24 +67,11 @@
             "last": "2026-08-13",
             "strength": "weak",
             "nextDue": "2026-08-15"
-          }
-        }
-      ],
-      "firstLearned": "2026-08-12",
-      "reviews": [
-        "2026-08-13"
-      ]
-    },
-    {
-      "id": "b2",
-      "source": "AI 究竟是企业的魔法，还是一场自欺欺人的表演？",
-      "category": "外刊",
-      "date": "2026-08-12",
-      "context": "Talented technologists promised to crack business problems that were too complicated and expensive to solve before. This was the beginning of what I call A.I. wishing: the belief by company leaders that A.I. is magic, that you can wave its wand toward a hard problem and skip the work of solving it.",
-      "contextCn": "优秀的技术专家们曾许诺能解决那些过去因过于复杂、成本太高而无法解决的商业难题。这正是我所谓“AI 许愿”的开始：公司领导相信 AI 是一种魔法，只要对着棘手问题挥挥魔杖，就能跳过解决问题所需付出的努力。",
-      "items": [
+          },
+          "paraIdx": 1
+        },
         {
-          "id": "b2-1",
+          "id": "a1-3",
           "text": "wave one’s wand (toward)",
           "understanding": "挥魔杖——比喻想“魔法般轻松解决”。搭配 skip the work of (doing)：跳过本该付出的努力。教学可用：区分 magic thinking 和 real work。",
           "review": {
@@ -64,10 +80,11 @@
             "last": "2026-08-13",
             "strength": "weak",
             "nextDue": "2026-08-15"
-          }
+          },
+          "paraIdx": 2
         },
         {
-          "id": "b2-2",
+          "id": "a1-4",
           "text": "skip the work of (doing)",
           "understanding": "跳过做某事的功夫/努力。很口语也好用：don’t skip the work of learning the basics（别跳过打基础这步）。",
           "review": {
@@ -76,24 +93,11 @@
             "last": "2026-08-13",
             "strength": "weak",
             "nextDue": "2026-08-15"
-          }
-        }
-      ],
-      "firstLearned": "2026-08-12",
-      "reviews": [
-        "2026-08-13"
-      ]
-    },
-    {
-      "id": "b3",
-      "source": "AI 究竟是企业的魔法，还是一场自欺欺人的表演？",
-      "category": "外刊",
-      "date": "2026-08-12",
-      "context": "This brings me to A.I. washing. The insidious cousin of A.I. wishing, it is when a company — under pressure to immediately show results — claims to be doing more with A.I. than it actually is.",
-      "contextCn": "这就引出了“AI 漂洗”这个概念。它是“AI 许愿”的阴险近亲，指一家公司在迫于压力、需要立刻展示成果时，宣称自己正用 AI 做很多事，实际却没达到所说的程度。",
-      "items": [
+          },
+          "paraIdx": 2
+        },
         {
-          "id": "b3-1",
+          "id": "a1-5",
           "text": "A.I. washing",
           "understanding": "AI 漂洗——仿 greenwashing（绿洗），指夸大 AI 能力做公关。可连接：帮自己/学生识别营销话术，别被标签骗。",
           "review": {
@@ -102,10 +106,11 @@
             "last": "2026-08-13",
             "strength": "weak",
             "nextDue": "2026-08-15"
-          }
+          },
+          "paraIdx": 4
         },
         {
-          "id": "b3-2",
+          "id": "a1-6",
           "text": "insidious",
           "understanding": "阴险的、暗中为害的。形容看似无害、实则慢慢侵蚀的东西（如 insidious cousin）。写作里形容隐性风险很好用。",
           "review": {
@@ -114,24 +119,45 @@
             "last": "2026-08-13",
             "strength": "weak",
             "nextDue": "2026-08-15"
-          }
+          },
+          "paraIdx": 4
         }
-      ],
-      "firstLearned": "2026-08-12",
-      "reviews": [
-        "2026-08-13"
       ]
     },
     {
-      "id": "b4",
+      "id": "a2",
       "source": "E01 一个晨间习惯，瞬间提升睡眠质量（播客）",
       "category": "播客",
       "date": "2026-08-13",
-      "context": "I wake up in the morning and I want to reach for my phone, but I know that even if I were to crank up the brightness on that phone screen, it’s not bright enough to trigger that cortisol spike and for me to be at my most alert and focused throughout the day and to optimize my sleep at night.",
-      "contextCn": "我早上醒来想伸手拿手机，但我知道，即便把手机屏幕亮度拉到最高，也不够亮到触发皮质醇峰值，让我一整天最清醒专注，也无法优化夜间睡眠。所以我起床出门晒太阳。",
+      "paragraphs": [
+        {
+          "en": "How to Feel Energized & Sleep Better With One Morning Activity",
+          "cn": ""
+        },
+        {
+          "en": "I wake up in the morning and I want to reach for my phone, but I know that even if I were to crank up the brightness on that phone screen, it's not bright enough to trigger that cortisol spike and for me to be at my most alert and focused throughout the day and to optimize my sleep at night. So what I do is I get out of bed and I go outside.",
+          "cn": ""
+        },
+        {
+          "en": "And if it's a bright, clear day and the sun is low in the sky or the sun is starting to get overhead, what we call low solar angle, then I know I'm getting outside at the right time. If there's cloud cover and I can't see the sun, I also know I'm doing a good thing because it turns out, especially on cloudy days, you want to get outside and get as much light energy or photons in your eyes.",
+          "cn": ""
+        },
+        {
+          "en": "So the way to get this sunlight viewing early in the day is to look toward the sun. If it's too bright to look at directly, well, then don't do that. You just look toward it, but not directly at it. It's absolutely fine to blink. In fact, I encourage you to blink whenever you feel the impulse to blink.",
+          "cn": "这段里提到的sunlight viewing，指的是：早起到户外，让视线朝向太阳的方向，这样有利于触发皮质醇峰值（trigger cortisol spike），进而让自己白天更专注，晚上睡得好。"
+        },
+        {
+          "en": "I want to share with you three critical things about this tool of morning sunlight viewing. First of all, this is not some woo-woo biology thing. This is grounded in the core of our physiology. There are literally hundreds, if not thousands, of quality peer-reviewed papers showing that light viewing early in the day is the most powerful stimulus for wakefulness throughout the day, and it has a powerful positive impact on your ability to fall and stay asleep at night.",
+          "cn": ""
+        },
+        {
+          "en": "So there's this asymmetry in our retinal, our eye biology, and in our brain's biology, whereby early in the day, right around waking, you need a lot of light, a lot of photons, a lot of light energy, and artificial lights generally just won't accomplish what you need them to accomplish. But at night, even a little bit of artificial light can really mess up your so-called circadian, your 24-hour clocks and all these mechanisms that we're talking about.",
+          "cn": ""
+        }
+      ],
       "items": [
         {
-          "id": "b4-1",
+          "id": "a2-1",
           "text": "crank up",
           "understanding": "把…调到最大（使劲拧到头的感觉）。crank up the brightness / volume / heat——提升亮度/音量/暖气。",
           "review": {
@@ -140,10 +166,11 @@
             "last": null,
             "strength": "weak",
             "nextDue": "2026-08-14"
-          }
+          },
+          "paraIdx": 1
         },
         {
-          "id": "b4-2",
+          "id": "a2-2",
           "text": "trigger (a spike / response)",
           "understanding": "触发。trigger that cortisol spike 触发皮质醇峰值；trigger a response 触发反应。描述因果很顺手。",
           "review": {
@@ -152,10 +179,11 @@
             "last": null,
             "strength": "weak",
             "nextDue": "2026-08-14"
-          }
+          },
+          "paraIdx": 1
         },
         {
-          "id": "b4-3",
+          "id": "a2-3",
           "text": "optimize",
           "understanding": "使达到最优。optimize sleep / diet——让睡眠/饮食达到最佳状态。",
           "review": {
@@ -164,22 +192,11 @@
             "last": null,
             "strength": "weak",
             "nextDue": "2026-08-14"
-          }
-        }
-      ],
-      "firstLearned": "2026-08-13",
-      "reviews": []
-    },
-    {
-      "id": "b5",
-      "source": "E01 一个晨间习惯，瞬间提升睡眠质量（播客）",
-      "category": "播客",
-      "date": "2026-08-13",
-      "context": "…especially on cloudy days, you want to get outside and get as much light energy or photons in your eyes.",
-      "contextCn": "……尤其在阴天，你更该出门，让尽可能多的光能或光子进入眼睛。",
-      "items": [
+          },
+          "paraIdx": 1
+        },
         {
-          "id": "b5-1",
+          "id": "a2-4",
           "text": "photon",
           "understanding": "光子（light energy 或 photons）。科普/播客里常见，记一次就通。",
           "review": {
@@ -188,10 +205,11 @@
             "last": null,
             "strength": "weak",
             "nextDue": "2026-08-14"
-          }
+          },
+          "paraIdx": 2
         },
         {
-          "id": "b5-2",
+          "id": "a2-5",
           "text": "You want to do",
           "understanding": "温和建议句式：“你会想要…”，区别于 you should 的外部施压感，更像善意提醒。教口语可用这个区别帮学生拿捏语气。",
           "review": {
@@ -200,22 +218,49 @@
             "last": null,
             "strength": "weak",
             "nextDue": "2026-08-14"
-          }
+          },
+          "paraIdx": 2
         }
-      ],
-      "firstLearned": "2026-08-13",
-      "reviews": []
+      ]
     },
     {
-      "id": "b6",
+      "id": "a3",
       "source": "“救命，我可能是个传统主妇”：一个职业女性的厨房自白",
       "category": "外刊",
       "date": "2026-08-13",
-      "context": "As a woman who’s always believed that my life purpose is synonymous not with my fecundity or my homemaking prowess but with my artistic ambitions, I’m decidedly not the audience for this kind of content.",
-      "contextCn": "我一直坚信，自己的人生价值不在于生育能力，也不在于持家本领，而在于艺术理想。因此，我显然绝不是这类内容的受众。",
+      "paragraphs": [
+        {
+          "en": "Help! I Might Be a Tradwife!",
+          "cn": "救命！我可能是个传统家庭主妇！"
+        },
+        {
+          "en": "When I heard that Netflix was rebooting “Little House on the Prairie,” I was hopeful, if a little wary.  The “Little House” reboot arrives in the midst of a tradwife moment.",
+          "cn": "当得知网飞将要翻拍《草原上的小木屋》时，我心怀期待，却也略带警惕。这场《草原上的小木屋》的翻拍热潮，恰逢传统主妇风潮盛行的当下。"
+        },
+        {
+          "en": "As a woman who’s always believed that my life purpose is synonymous not with my fecundity or my homemaking prowess but with my artistic ambitions, I’m decidedly not the audience for this kind of content.",
+          "cn": "我一直坚信，自己的人生价值不在于生育能力，也不在于持家本领，而在于艺术理想。因此，我显然绝不是这类内容的受众。"
+        },
+        {
+          "en": "But maybe it was the moment when I was slicing strawberries and scooping homemade coconut-almond granola into my son’s Greek yogurt that a startling revelation dawned on me. I’m definitely not a tradwife — but maybe I’m a little tradwife-curious? Maybe I have a few latent tradwife tendencies?",
+          "cn": "但就在我切着草莓、把自制的椰香杏仁格兰诺拉麦片舀进儿子的希腊酸奶里的那一刻，我突然有了一个惊人的感悟。我绝对不是一个传统主妇——但我会不会对这种生活心生向往？我身上会不会潜藏着一些传统主妇的特质？"
+        },
+        {
+          "en": "How can I renounce the regressive side of tradwives while blissfully kneading my own milk bread dough? How can I deny the appeal of the Hannah Neelemans of the world when my own household habits help balance my workaholism, keep me present and mindful in my body?",
+          "cn": "我该如何一边满心愉悦地揉制牛奶面包面团，一边摒弃传统主妇观念中保守落后的一面？当我的居家日常能够克制我的工作狂倾向，让我专注当下、身心沉静时，我又怎能否认汉娜·尼勒曼这类生活博主的独特吸引力呢？"
+        },
+        {
+          "en": "So, like many others, I’m learning to reassess the value of so-called grandma hobbies, those frontier-adjacent activities that — surprise, surprise — don’t also require you to be a religious zealot or an antisuffragist.",
+          "cn": "所以，和很多人一样，我开始重新评估那些所谓“奶奶辈爱好”的价值。那些贴近拓荒时代的生活活动，说来意外，它们并不需要你成为宗教狂热者，也不需要你反对女性选举权。"
+        },
+        {
+          "en": "I imagine other people find this same kind of contemplation in sewing, or knitting, or mending. So even if I don’t live the full tradwife lifestyle — for anyone else’s consumption, or my own — I can still venerate those tasks that remind me that who I am meant to be is fluid and multitudinous. It can be expressed in how I stir a wooden spoon through water and flour to make the tangzhong that is the starter for my son’s favorite milk bread, and also in a poem I might write, born of my fascination with the same word.",
+          "cn": "我想，其他人也能在缝纫、编织、缝补这类小事中获得同样的沉思与治愈。所以，即便我不会为了取悦他人或满足自我，完全复刻传统主妇的生活方式，我依然敬重这些琐事。它们让我明白，人的自我定位是流动且多元的。这份自我，既可以体现在我手持木勺、搅拌水和面粉，制作出儿子最爱的牛奶面包所需的烫种里，也可以体现在我提笔写下的诗句中，而这首诗正源于我对同一个词汇的着迷。"
+        }
+      ],
       "items": [
         {
-          "id": "b6-1",
+          "id": "a3-1",
           "text": "synonymous with",
           "understanding": "等同于、与…同义。be synonymous with——X is synonymous with Y（X 等同于 Y），写作替换 be the same as 更地道。",
           "review": {
@@ -224,10 +269,11 @@
             "last": null,
             "strength": "weak",
             "nextDue": "2026-08-14"
-          }
+          },
+          "paraIdx": 2
         },
         {
-          "id": "b6-2",
+          "id": "a3-2",
           "text": "prowess",
           "understanding": "高超的本领、造诣。homemaking prowess 持家本领；athletic prowess 运动天赋。",
           "review": {
@@ -236,10 +282,11 @@
             "last": null,
             "strength": "weak",
             "nextDue": "2026-08-14"
-          }
+          },
+          "paraIdx": 2
         },
         {
-          "id": "b6-3",
+          "id": "a3-3",
           "text": "decidedly",
           "understanding": "明确地、断然地。decidedly not the audience——明确不是受众。加强语气很好用。",
           "review": {
@@ -248,22 +295,11 @@
             "last": null,
             "strength": "weak",
             "nextDue": "2026-08-14"
-          }
-        }
-      ],
-      "firstLearned": "2026-08-13",
-      "reviews": []
-    },
-    {
-      "id": "b7",
-      "source": "“救命，我可能是个传统主妇”：一个职业女性的厨房自白",
-      "category": "外刊",
-      "date": "2026-08-13",
-      "context": "But maybe it was the moment when I was slicing strawberries and scooping homemade coconut-almond granola into my son’s Greek yogurt that a startling revelation dawned on me. I’m definitely not a tradwife — but maybe I’m a little tradwife-curious? Maybe I have a few latent tradwife tendencies?",
-      "contextCn": "但就在我切草莓、把自制椰香杏仁格兰诺拉舀进儿子希腊酸奶的那一刻，我突然有了惊人感悟。我绝对不是传统主妇——但我会不会对这种生活心生向往？我身上会不会潜藏着一些传统主妇特质？",
-      "items": [
+          },
+          "paraIdx": 2
+        },
         {
-          "id": "b7-1",
+          "id": "a3-4",
           "text": "a revelation dawned on me",
           "understanding": "我突然恍然大悟。revelation 顿悟；dawn on 渐渐明白。比 I suddenly realized 更有画面感。",
           "review": {
@@ -272,10 +308,11 @@
             "last": null,
             "strength": "weak",
             "nextDue": "2026-08-14"
-          }
+          },
+          "paraIdx": 3
         },
         {
-          "id": "b7-2",
+          "id": "a3-5",
           "text": "latent",
           "understanding": "潜在的、潜伏的。latent tendencies / latent talent——潜在特质/潜质。描述“还没显形但存在”的东西。",
           "review": {
@@ -284,22 +321,65 @@
             "last": null,
             "strength": "weak",
             "nextDue": "2026-08-14"
-          }
+          },
+          "paraIdx": 3
         }
-      ],
-      "firstLearned": "2026-08-13",
-      "reviews": []
+      ]
     },
     {
-      "id": "b8",
+      "id": "a4",
       "source": "哈佛教授的“友谊经济学”：为什么我们交不到朋友了",
       "category": "外刊",
       "date": "2026-08-14",
-      "context": "But spending time around that ferry has made me wonder if modern life has undersold inconvenience. We treat waiting as wasted time. But sometimes waiting does something useful: It forces people into the same place long enough for conversation to begin.",
-      "contextCn": "但在渡轮那里待了一段时间后，我开始怀疑：现代生活是不是低估了“不便”的价值。我们总把等待当浪费的时间。但有时等待也有用：它强制人们在同一地方待够久，让对话得以开始。",
+      "paragraphs": [
+        {
+          "en": "The Economics of Friendship",
+          "cn": "友谊的经济学"
+        },
+        {
+          "en": "The ferry crossing from Chappaquiddick to Edgartown, Mass., is only 527 feet long. But no matter how rich or important you are, you have to wait to get on the boat. Someone complains about the line, the weather, politics. Someone else laughs. A conversation begins.",
+          "cn": "从马萨诸塞州查帕奎迪克（Chappaquiddick）到埃德加敦（Edgartown）的渡轮，航程只有527英尺。但是，无论你多有钱、多重要，你都得排队等船。有人抱怨队伍、抱怨天气、抱怨政治。然后有人笑起来。一段对话，就这样开始了。"
+        },
+        {
+          "en": "But spending time around that ferry has made me wonder if modern life has undersold inconvenience. We treat waiting as wasted time. But sometimes waiting does something useful: It forces people into the same place long enough for conversation to begin.",
+          "cn": "但在渡轮那里待了一段时间后，我开始怀疑：现代生活是不是低估了\"不便\"的价值。我们总把等待当作浪费的时间。但有时候，等待也有它的用处：它强制人们在同一个地方待上足够长的时间，从而让一段对话得以开始。"
+        },
+        {
+          "en": "Loneliness has become one of the stranger problems of modern life. In 2023 the U.S. surgeon general called loneliness a public-health problem.",
+          "cn": "孤独已成为现代生活中一个颇为奇特的问题。2023年，美国卫生总监将孤独定义为一个公共卫生问题。"
+        },
+        {
+          "en": "Which brings me back to that ridiculously inconvenient ferry and what I call the friction theory of friendship. Some inconveniences aren't merely costs. They are the hidden scaffolding of social life. If I had to estimate my own production function for friendship, it would look something like this: friendship = (proximity × repetition) + (idle time × low stakes) + shared irritation.",
+          "cn": "由此我们可以说回到那艘极其不便的渡轮，以及我所谓的\"友谊摩擦理论\"。有些\"不便\"，并不只是代价。它们是社交生活隐秘的脚手架。如果要我估算自己的\"友谊生产函数\"，它看起来大概会是这个样子：友谊 =(距离近 × 重复遇见)+（闲暇时间×低利害情境）+共同的不满。"
+        },
+        {
+          "en": "Proximity matters most when it recurs. Idle time matters most when nobody is trying to impress anyone. Shared irritation helps, but with diminishing returns: A delayed ferry creates conversation; a broken ferry creates rage.",
+          "cn": "距离近，在反复出现时最起作用。闲暇，在没人刻意表现自己的时候，最有价值。共同的不满有帮助，但效用递减：延误的渡轮，催生交谈；坏掉的渡轮，只会制造愤怒。"
+        },
+        {
+          "en": "This is why friendship is often a product of something else: work, school, church, children, sports, errands, waiting rooms. Modern life has spent decades eliminating that friction. We can work without offices, shop without stores, exercise without gyms and communicate without looking anyone in the eye. Together they have made interaction with other people increasingly optional.",
+          "cn": "正因如此，友谊往往是其他事物的副产品：工作、学校、教堂、孩子、体育运动、跑腿办事、候诊室等等。然而几十年来，现代生活一直在消除这种摩擦。我们可以不用办公室工作，不用实体店购物，不用健身房锻炼，也不用与人四目相对就能交流。这些便利加在一起，让人与人之间的交往，变得越来越可有可无。"
+        },
+        {
+          "en": "The solution isn't to make life harder for its own sake. But we should ask what social infrastructure is being lost.",
+          "cn": "解决之道，不是刻意把生活变难。但我们应该追问：我们正在失去什么样的社会基础设施。"
+        },
+        {
+          "en": "Schools, for example, aren't only human-capital institutions. They are social-capital institutions. Much of what we call \"community\" used to be produced by institutions as a byproduct.",
+          "cn": "例如，学校不仅仅是人力资本机构。它还是社会资本机构。我们所说的\"社区\"，在很大程度上，曾经是各类机构无意之中生产的副产品。"
+        },
+        {
+          "en": "That is why I've come to love the Chappaquiddick ferry. It gives people nothing to do for a few minutes except notice one another.",
+          "cn": "这就是为什么，我渐渐爱上了查帕奎迪克渡轮。在那几分钟里，人们除了互相打量之外，别无他事可做。"
+        },
+        {
+          "en": "Convenience has saved us time. The hidden price is that it has also saved us from one another.",
+          "cn": "便利为我们节省了时间。但代价是，它也让我们丢失了彼此。"
+        }
+      ],
       "items": [
         {
-          "id": "b8-1",
+          "id": "a4-1",
           "text": "undersell",
           "understanding": "低估…的价值（反义 oversell 高估/过度宣传）。undersold inconvenience 低估了“不便”的价值——连接右右：适度不便反而催生互动。",
           "review": {
@@ -308,10 +388,11 @@
             "last": null,
             "strength": "weak",
             "nextDue": "2026-08-15"
-          }
+          },
+          "paraIdx": 2
         },
         {
-          "id": "b8-2",
+          "id": "a4-2",
           "text": "force sb into",
           "understanding": "迫使某人进入（某种状态/地方）。forces people into the same place——强制把人凑到一处，才能起对话。",
           "review": {
@@ -320,22 +401,11 @@
             "last": null,
             "strength": "weak",
             "nextDue": "2026-08-15"
-          }
-        }
-      ],
-      "firstLearned": "2026-08-14",
-      "reviews": []
-    },
-    {
-      "id": "b9",
-      "source": "哈佛教授的“友谊经济学”：为什么我们交不到朋友了",
-      "category": "外刊",
-      "date": "2026-08-14",
-      "context": "Which brings me back to that ridiculously inconvenient ferry and what I call the friction theory of friendship. Some inconveniences aren’t merely costs. They are the hidden scaffolding of social life. … friendship = (proximity × repetition) + (idle time × low stakes) + shared irritation.",
-      "contextCn": "由此说回那艘极不便的渡轮，以及我所谓的“友谊摩擦理论”。有些不便不只是代价，它们是社交生活隐秘的脚手架。……友谊 =（距离近 × 重复遇见）+（闲暇 × 低利害情境）+ 共同的不满。",
-      "items": [
+          },
+          "paraIdx": 2
+        },
         {
-          "id": "b9-1",
+          "id": "a4-3",
           "text": "friction theory of friendship",
           "understanding": "友谊摩擦理论。friction 原指摩擦/阻力，这里指“不便”反而催生友谊。可复用在我和右右的亲子互动：适度不便反而增进连接。",
           "review": {
@@ -344,10 +414,11 @@
             "last": null,
             "strength": "weak",
             "nextDue": "2026-08-15"
-          }
+          },
+          "paraIdx": 4
         },
         {
-          "id": "b9-2",
+          "id": "a4-4",
           "text": "scaffolding",
           "understanding": "脚手架。the hidden scaffolding of social life——社交生活隐秘的支撑结构。比喻“看不见但撑着整体”的东西。",
           "review": {
@@ -356,10 +427,11 @@
             "last": null,
             "strength": "weak",
             "nextDue": "2026-08-15"
-          }
+          },
+          "paraIdx": 4
         },
         {
-          "id": "b9-3",
+          "id": "a4-5",
           "text": "low stakes",
           "understanding": "低利害、低压力。idle time × low stakes——闲暇 × 无压力情境，友谊更容易长出来。",
           "review": {
@@ -368,10 +440,11 @@
             "last": null,
             "strength": "weak",
             "nextDue": "2026-08-15"
-          }
+          },
+          "paraIdx": 4
         },
         {
-          "id": "b9-4",
+          "id": "a4-6",
           "text": "shared irritation",
           "understanding": "共同的不满/一起吐槽。朋友间一起抱怨反而拉近距离——连接右右：一起对某事“吐槽”也是亲密。",
           "review": {
@@ -380,11 +453,10 @@
             "last": null,
             "strength": "weak",
             "nextDue": "2026-08-15"
-          }
+          },
+          "paraIdx": 4
         }
-      ],
-      "firstLearned": "2026-08-14",
-      "reviews": []
+      ]
     }
   ]
 }
