@@ -550,8 +550,16 @@ fetch("data.json").then(r=>r.json()).then(async d=>{
 async function loadRemoteProgress(){
   // 1) B 方案：Worker 即时读取（部署后自动启用，无速率限制，可轮询）
   try {
-    const r = await fetch(ENDPOINT + "/progress", { cache:"no-store" });
-    if (r.ok){ const j = await r.json(); if (j && j.progress){ progressSrc = "worker"; return j.progress; } }
+    const ctrl = new AbortController();
+    const to = setTimeout(()=>ctrl.abort(), 4000);   // 默认域名 *.workers.dev 国内可能慢，4s 超时立即回退
+    const r = await fetch(ENDPOINT + "/progress", { cache:"no-store", signal: ctrl.signal });
+    clearTimeout(to);
+    if (r.ok){ const j = await r.json(); if (j && j.progress){
+      progressSrc = "worker";
+      setSyncSrc("worker");
+      if (Object.keys(j.progress).length === 0) bootstrapImport();  // DO 首次为空 → 从 GitHub 灌入已有进度
+      return j.progress;
+    } }
   } catch(e){}
   // 2) 回退：公开仓库最新 data.json（无需部署，约提交后 1–2 秒生效；受 60 次/小时限制，仅在打开/切回时读取）
   try {
@@ -564,11 +572,29 @@ async function loadRemoteProgress(){
       for (let i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
       const d = JSON.parse(new TextDecoder("utf-8").decode(bytes));
       progressSrc = "github";
+      setSyncSrc("github");
       return buildReviewMap(d);
     }
   } catch(e){}
   progressSrc = "unknown";
   return null;
+}
+/* 首次使用：把 GitHub data.json 里已有的 review 进度灌入 Durable Object（幂等 upsert），使 DO 成为唯一真相源 */
+let bootstrapped = false;
+async function bootstrapImport(){
+  if (bootstrapped || !DATA) return;
+  bootstrapped = true;
+  const progress = {};
+  (DATA.articles || []).forEach(a => (a.items || []).forEach(it => { if (it.id && it.review) progress[it.id] = it.review; }));
+  try {
+    await fetch(ENDPOINT + "/import", { method:"POST", headers:{"Content-Type":"application/json"},
+      body: JSON.stringify({ secret: SECRET, progress }) });
+  } catch(e){ bootstrapped = false; }
+}
+function setSyncSrc(src){
+  const el = document.getElementById("sync-state");
+  if (!el) return;
+  el.textContent = src === "worker" ? "即时同步 · Cloudflare" : (src === "github" ? "回退同步 · GitHub" : "未连接");
 }
 function buildReviewMap(d){
   const map = {};
