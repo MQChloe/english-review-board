@@ -178,8 +178,6 @@
     .today-title{font-size:17px;}
   }
 </style>
-<!-- 纯前端 TTS 引擎 meSpeak：用于手机微信等不支持 speechSynthesis 的环境兜底朗读 -->
-<script defer src="lib/mespeak/mespeak.js"></script>
 </head>
 <body>
   <h1>每日英语学习</h1>
@@ -336,78 +334,49 @@ function spkHint(btn, msg){
   btn.insertAdjacentElement("afterend", s);
   setTimeout(()=> s.remove(), 5000);
 }
-/* meSpeak（纯前端 TTS）初始化与朗读：用于手机微信等无 speechSynthesis 的环境兜底 */
-let meSpeakReady = false;
-function initMeSpeak(){
-  if (!window.meSpeak) return;
+/* 预生成音频朗读：所有单词发音已离线生成到 audio/，喇叭直接播放 <audio>，
+   手机微信等环境也能稳定发声；桌面端优先用浏览器内置自然语音，失败自动回退到预生成音频 */
+const AUDIO_MAP = {"stick A in B":"30c246e95852.wav","produce anything / produce value":"32d23091c7b5.wav","wave one’s wand (toward)":"25a1ae257f8b.wav","skip the work of (doing)":"1e7e320753fc.wav","A.I. washing":"740d0c623085.wav","insidious":"e65ef900b84d.wav","run":"a53108f7543b.wav","kid oneself":"890f2c9e35b5.wav","news releases":"0db08ee25565.wav","earnings calls":"768d22dd10e9.wav","sit behind":"b76c2f496559.wav","abbreviation":"c70297aef4aa.wav","technologist":"8929a050a9ea.wav","crack":"463c8a7593a8.wav","wand":"642fd86b013d.wav","demo":"fe01ce2a7fba.wav","agree":"6a6334b47828.wav","exception":"42552b1f133f.wav","workaround":"a93a1977bf85.wav","this brings me to":"590cf179f3cc.wav","layoff":"52f4cebac942.wav","proclaim":"f7c9b4226c83.wav","free up":"f4ef5b06bc01.wav","the sooner…the sooner…":"88d904488320.wav","perform":"f4081916a1ea.wav","crank up":"e0082a1ac894.wav","trigger (a spike / response)":"a94e3d218ca5.wav","optimize":"c14f7a753888.wav","photon":"730b4badf792.wav","You want to do":"5856864426bc.wav","mess up":"9510655ec5e8.wav","mechanism":"fcc62b55e7cf.wav","woo-woo":"b9fcac4c6155.wav","be grounded in":"b0c961099b03.wav","peer-reviewed papers":"8814dbc1367a.wav","synonymous with":"26f360bed17c.wav","prowess":"c97eb0eaa2ac.wav","decidedly":"7670ad1f7579.wav","a revelation dawned on me":"5f97c5bf1277.wav","latent":"05afe865d1bb.wav","tradwife":"b9467b48acbf.wav","wary":"c68c7362642b.wav","reboot":"2b755b30293f.wav","not with A, but with B":"e4c393d9c815.wav","fecundity":"939a8395f2d3.wav","homemaking":"c06fde5f1980.wav","artistic ambitions":"ca8798666157.wav","startling":"128d55e66ae0.wav","dawn on":"d23b7ae00f63.wav","-curious":"200c50291bf5.wav","renounce":"22df3d486578.wav","regressive":"86fd63e52643.wav","blissfully":"7c6962a858c5.wav","knead dough":"bc00f5ca8076.wav","deny the appeal of":"6ebbd02952ad.wav","workaholism":"5a568571046e.wav","present":"47ed49958e25.wav","mindful":"ff8dfd670c9c.wav","reassess":"152312fd145f.wav","so-called":"fa55bd101013.wav","adjacent":"b367c0426f17.wav","zealot":"432342989252.wav","antisuffragist":"bf858d31974c.wav","contemplation":"4955ed75c60e.wav","for anyone else’s consumption":"a65ff215afeb.wav","venerate":"1dbadabe3c04.wav","fluid":"5cfea13ba139.wav","multitudinous":"6aa9e1f10574.wav","tangzhong":"95c95fc7d016.wav","undersell":"ae1f6abb11d3.wav","force sb into":"25fe3deba9e6.wav","friction theory of friendship":"5edbc7d4ce79.wav","scaffolding":"b927cb9ad203.wav","low stakes":"b19d7b99b718.wav","shared irritation":"cbbcefeb2133.wav","the economics of something":"3379b5c01e6c.wav","treat A as B":"b4354d6483ae.wav","stranger problems":"b259499a5e68.wav","surgeon general":"891eae01ac38.wav","production function":"4dd2e6806c45.wav","A multiplied by B":"75c8431f208f.wav","proximity":"579463e94b67.wav","repetition":"6d786dc72762.wav","idle":"ec2f993aec2c.wav","irritation":"17c86772a9c9.wav","recur":"9744fda67473.wav","diminishing returns":"06d571f83c4f.wav","rage":"f1661c9daa56.wav","errand":"50797943bd4e.wav","waiting room":"87a8e81f406d.wav","eliminate":"78a830428704.wav","optional":"d57c24f3fe52.wav","for its own sake":"44b2c8ef0dc6.wav","social infrastructure":"38d02986c4ef.wav","human-capital":"875b2cce48e1.wav","social-capital":"d9e3081e5856.wav","byproduct":"a698eeeb0375.wav","come to do something":"dc364955cd88.wav","notice":"efd2af60c850.wav","save time":"5aeebfb93d32.wav","take off":"e54f0f6c95f9.wav","flock to":"e600c827734a.wav","cope with something":"685ab6399433.wav","boom":"65079b006e85.wav","aspirational":"886aa00f4b7f.wav","trace something to something":"e5672c703ad4.wav","pricey":"96cfa2c88421.wav","destination":"6990a54322d9.wav","demographic":"125e8e9bbe92.wav","limestone":"90ce7743ffdc.wav","auditor":"f7d07071ed94.wav","craze":"508278081ad9.wav","gear":"fae005cf393a.wav","automaker":"3ae29513b7cb.wav","domestic competition":"3b7c8a7ae214.wav","apparel":"2fcbff5f9416.wav","kind of":"afde9b0b8796.wav","premium":"a288195832f8.wav","postpandemic":"3d31f65b8424.wav","cultural shift":"17456f82aa24.wav","sugar consumption":"aacaa22fa7ce.wav","blood glucose":"03431c034e99.wav","pathway":"ecb126681ddd.wav","not A, but rather B":"867d7cf208d7.wav","satiety":"affd5039e2dc.wav","indulge":"3898bf9e18af.wav","craving":"bb7dcf6e8a0c.wav","ingest":"207c30567ab6.wav","you would be better off doing something":"fcd2c9d0ed64.wav","blunt":"a4a216eba2a7.wav","spike":"a60e78221901.wav"};
+
+function playAudio(url, btn){
   try {
-    meSpeak.loadConfig("lib/mespeak/mespeak_config.json");
-    meSpeak.loadVoice("lib/mespeak/voices/en/en-us.json", function(ok){
-      meSpeakReady = !!ok;
-      if (!ok) console.warn("[mespeak] voice load failed");
-    });
-  } catch(e){ console.warn("[mespeak] init error", e); }
-}
-function meSpeakSpeak(text, btn){
-  if (!window.meSpeak || !meSpeakReady){
-    spkHint(btn, "语音库加载中…");
-    let n = 0;
-    const t = setInterval(()=>{
-      if (meSpeakReady){ clearInterval(t); meSpeakSpeak(text, btn); }
-      else if (++n > 40){ clearInterval(t); spkHint(btn, "语音库加载失败，请刷新重试"); }  // ~8s 超时
-    }, 200);
-    return;
-  }
-  try {
-    meSpeak.speak(text, { amplitude: 100, pitch: 50, speed: 175, wordgap: 0 });
-  } catch(e){
-    spkHint(btn, "朗读失败：" + ((e && e.message) || e));
-    console.warn("[mespeak] speak error", e);
-  }
+    const a = new Audio(url);
+    const p = a.play();
+    if (p && p.catch) p.catch((e)=> spkHint(btn, "音频加载失败：" + ((e && e.message) || e)));
+  } catch(e){ spkHint(btn, "音频播放失败：" + ((e && e.message) || e)); }
 }
 function speakWord(text, btn){
   if (!text || typeof text !== "string") return;
-  // 优先 Web Speech API（音质好，电脑端 Chrome/Edge/Safari 可用）
+  const fname = AUDIO_MAP && AUDIO_MAP[text];
+  const url = fname ? ("audio/" + fname) : null;
+  // 桌面端优先用浏览器内置自然语音（Web Speech API），失败/不支持则回退到预生成音频
   if ("speechSynthesis" in window){
-    const synth = window.speechSynthesis;
-    const tryWeb = ()=>{
+    try {
+      const synth = window.speechSynthesis;
       const voices = _loadSpkVoices();
-      synth.cancel();                       // 打断上一条，避免排队
+      synth.cancel();
       const u = new SpeechSynthesisUtterance(text);
-      u.lang = "en-US"; u.rate = 0.95; u.volume = 1; u.pitch = 1;
+      u.lang = "en-US"; u.rate = 0.95; u.volume = 1;
       const en = voices.find(v => /en[-_]US/i.test(v.lang))
               || voices.find(v => /^en/i.test(v.lang))
               || voices[0];
       if (en){ u.voice = en; u.lang = en.lang || "en-US"; }
-      let failed = false;
-      u.onerror = (ev)=>{ failed = true; console.warn("[speak] error:", ev && ev.error); };
+      let started = false;
+      u.onstart = ()=> started = true;
+      u.onend = ()=> started = true;
+      u.onerror = ()=>{};
       synth.speak(u);
-      // 若 Web Speech 未能真正启动（设备无语音包/被禁用），自动转 meSpeak 兜底
-      setTimeout(()=>{
-        if (synth.speaking) return;
-        if (failed && !window.meSpeak){ spkHint(btn, "朗读失败：" + "设备无可用语音"); return; }
-        if (!synth.speaking){
-          if (window.meSpeak) meSpeakSpeak(text, btn);
-          else spkHint(btn, "未启动朗读：可能本设备缺语音包/被浏览器禁用，建议用电脑 Chrome");
-        }
-      }, 600);
-    };
-    if (_loadSpkVoices().length === 0){
-      let done = false;
-      const onReady = ()=>{ if (done) return; done = true; synth.removeEventListener("voiceschanged", onReady); tryWeb(); };
-      synth.addEventListener("voiceschanged", onReady);
-      setTimeout(onReady, 1000);            // 兜底：超时也尝试一次
-    } else {
-      tryWeb();
-    }
-    return;
+      // 若 Web Speech 未能真正发声（常见于手机微信），自动回退到预生成音频
+      if (url) setTimeout(()=>{ if (!started) playAudio(url, btn); }, 500);
+      else setTimeout(()=>{ if (!started) spkHint(btn, "本设备暂不支持语音朗读"); }, 500);
+      return;
+    } catch(e){ /* Web Speech 异常，落到下方预生成音频 */ }
   }
-  // 无 Web Speech → meSpeak 纯前端兜底（手机微信等环境）
-  if (window.meSpeak){ meSpeakSpeak(text, btn); return; }
-  spkHint(btn, "本设备暂不支持语音朗读");
+  // 无 Web Speech（手机微信等）→ 直接播放预生成音频
+  if (url) playAudio(url, btn);
+  else spkHint(btn, "本设备暂不支持语音朗读");
 }
-// 页面资源（含 defer 的 meSpeak 引擎）加载完成后初始化语音库
-window.addEventListener("load", function(){ if (window.meSpeak) initMeSpeak(); });
+
 // 预热：页面加载即触发语音列表加载，避免首次点击静默
 if ("speechSynthesis" in window){
   _loadSpkVoices();
