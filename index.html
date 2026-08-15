@@ -118,6 +118,13 @@
   .w-term{font-weight:700;color:var(--accent);font-size:16px;}
   .spk{margin-left:6px;border:1px solid var(--line,#e3e6ec);background:transparent;color:var(--accent,#3a7afe);cursor:pointer;font-size:13px;line-height:1;padding:3px 6px;border-radius:7px;transition:.15s;}
   .spk:hover{background:var(--hover,#f0f4ff);transform:scale(1.06);}
+  .login-bar{display:flex;gap:8px;align-items:center;margin:4px 0 12px;flex-wrap:wrap;font-size:13px;}
+  .login-bar input{padding:6px 9px;border:1px solid var(--line,#e3e6ec);border-radius:8px;font-size:13px;outline:none;}
+  .login-bar input:focus{border-color:var(--accent,#3a7afe);}
+  .login-bar button{padding:6px 14px;border:none;background:var(--accent,#3a7afe);color:#fff;border-radius:8px;cursor:pointer;font-size:13px;}
+  .login-bar button.ghost{background:transparent;color:var(--accent,#3a7afe);border:1px solid var(--line,#e3e6ec);}
+  .login-bar .info{color:var(--muted,#8a90a2);}
+  .login-bar .info b{color:var(--accent,#3a7afe);}
   .w-u{font-size:13.5px;color:#5b5660;margin-top:7px;line-height:1.65;}
   .w-sent{margin-top:9px;font-size:13px;color:var(--muted);}
   .w-sent .en{font-family:"Verdana","Geneva",sans-serif;color:#33303a;line-height:1.5;
@@ -166,6 +173,8 @@
 <body>
   <h1>每日英语学习</h1>
   <div class="sub">GetNote 自动同步 · 间隔重复（学后 1 / 3 / 7 / 14 / 30 天）· <span id="sync-state">已连接</span></div>
+
+  <div class="login-bar" id="login-bar"></div>
 
   <div class="tabs tabs2" id="tabs2">
     <div class="tab active" data-view="study">今日复习</div>
@@ -217,6 +226,11 @@ try { pending = JSON.parse(localStorage.getItem(LS_KEY) || "{}"); } catch(e){}
 let collapsedMap = {};   // articleId -> true(折叠) / false(展开)；默认折叠
 try { collapsedMap = JSON.parse(localStorage.getItem("eng_review_collapse_v1") || "{}"); } catch(e){}
 let folderMap = {};   // 知识库文件夹展开状态
+
+// ── 账号：进度按账号隔离，数据跟着账号走 ──
+const ACCT_KEY = "eng_account", PW_KEY = "eng_pw_hash";
+function curAccount(){ const a = localStorage.getItem(ACCT_KEY); return a && a.trim() ? a.trim() : "_guest"; }
+function hashPW(pw){ try { return btoa(unescape(encodeURIComponent(pw || ""))); } catch(e){ return ""; } }
 function loadFolderMap(){
   try { folderMap = JSON.parse(localStorage.getItem("eng_review_folder_v1") || "{}"); } catch(e){ folderMap = {}; }
 }
@@ -316,7 +330,7 @@ function itemHTML(it, withBtns, aid){
       <button class="btn fg ${f==='forget'?'on':''}" onclick="markItem('${aid}','${it.id}','forget')">忘了</button>
     </div>` : "";
   const spk = `<button class="spk" type="button" title="朗读发音" data-spk="${escAttr(it.text)}">🔊</button>`;
-  return `<div class="item ${done?'remembered':''}"><div class="t">${spk}${it.text}${ph}${doneTag}</div><div class="u">${it.understanding}</div>${btns}</div>`;
+  return `<div class="item ${done?'remembered':''}"><div class="t">${it.text}${spk}${ph}${doneTag}</div><div class="u">${it.understanding}</div>${btns}</div>`;
 }
 
 /* 在段落原文中高亮本段词汇点：按 hl 字段定位，降序插入避免索引错位，重叠则跳过内层 */
@@ -500,7 +514,7 @@ async function flushPending(){
       method:"POST",
       headers:{"Content-Type":"application/json"},
       signal: ctrl.signal,
-      body: JSON.stringify({ secret: SECRET, today: TODAY, feedback: batch })
+      body: JSON.stringify({ secret: SECRET, today: TODAY, account: curAccount(), feedback: batch })
     });
     clearTimeout(to);
     if (r.ok){
@@ -557,7 +571,8 @@ document.getElementById("tabs2").addEventListener("click", e=>{
 TODAY = todayStr();
 fetch("data.json").then(r=>r.json()).then(async d=>{
   DATA = d;
-  const n = applyProgress(await loadRemoteProgress());   // 合并多端进度（Worker 即时 / GitHub 回退）
+  await autoLogin();   // 用本地凭证自动登录（无凭证则保持游客）
+  const n = applyProgress(await loadRemoteProgress());   // 合并当前账号进度（Worker 即时 / GitHub 回退）
   setSyncSrc(progressSrc);
   if (n > 0){
     const el = document.getElementById("sync-state");
@@ -578,7 +593,7 @@ async function loadRemoteProgress(){
   try {
     const ctrl = new AbortController();
     const to = setTimeout(()=>ctrl.abort(), 3000);
-    const r = await fetch(ENDPOINT + "/progress", { cache:"no-store", signal: ctrl.signal });
+    const r = await fetch(ENDPOINT + "/progress?account=" + encodeURIComponent(curAccount()), { cache:"no-store", signal: ctrl.signal });
     clearTimeout(to);
     if (r.ok){ const j = await r.json(); if (j && j.progress){
       progressSrc = "worker";
@@ -617,13 +632,70 @@ async function bootstrapImport(){
   (DATA.articles || []).forEach(a => (a.items || []).forEach(it => { if (it.id && it.review) progress[it.id] = it.review; }));
   try {
     await fetch(ENDPOINT + "/import", { method:"POST", headers:{"Content-Type":"application/json"},
-      body: JSON.stringify({ secret: SECRET, progress }) });
+      body: JSON.stringify({ secret: SECRET, account: curAccount(), progress }) });
   } catch(e){ bootstrapped = false; }
 }
 function setSyncSrc(src){
   const el = document.getElementById("sync-state");
   if (!el) return;
   el.textContent = src === "worker" ? "即时同步 · Cloudflare" : (src === "github" ? "GitHub 同步 · 约1–2秒" : "未连接");
+}
+/* ── 简易账号登录：账号+密码（密码经前端 hashPW 后传输/存储），进度按账号隔离 ── */
+function renderLoginBar(){
+  const bar = document.getElementById("login-bar");
+  if (!bar) return;
+  const a = curAccount();
+  if (a === "_guest"){
+    bar.innerHTML = `<input id="login-account" placeholder="昵称 / 账号" maxlength="40" />
+      <input id="login-pw" type="password" placeholder="密码（首次即注册）" maxlength="60" />
+      <button onclick="doLogin()">登录</button>
+      <span class="info" id="login-info">未登录 · 当前为游客进度（多设备共享）</span>`;
+  } else {
+    bar.innerHTML = `<span class="info">已登录：<b>${escAttr(a)}</b></span>
+      <button class="ghost" onclick="doLogout()">退出</button>`;
+  }
+}
+async function doLogin(){
+  const acct = document.getElementById("login-account").value.trim();
+  const pw = document.getElementById("login-pw").value;
+  if (!acct){ alert("请输入昵称 / 账号"); return; }
+  const info = document.getElementById("login-info");
+  info.textContent = "登录中…";
+  try {
+    const r = await fetch(ENDPOINT + "/login", { method:"POST", headers:{"Content-Type":"application/json"},
+      body: JSON.stringify({ account: acct, password: hashPW(pw) }) });
+    const j = await r.json().catch(()=>({}));
+    if (r.ok && j.ok){
+      localStorage.setItem(ACCT_KEY, acct);
+      if (pw) localStorage.setItem(PW_KEY, hashPW(pw));
+      renderLoginBar();
+      const n = applyProgress(await loadRemoteProgress());
+      renderAll();
+    } else if (j.error === "bad password"){
+      info.textContent = "密码错误，请重试";
+    } else {
+      info.textContent = "登录失败";
+    }
+  } catch(e){ info.textContent = "网络错误，Worker 不可达"; }
+}
+function doLogout(){
+  localStorage.removeItem(ACCT_KEY);
+  localStorage.removeItem(PW_KEY);
+  location.reload();
+}
+async function autoLogin(){
+  const a = localStorage.getItem(ACCT_KEY);
+  const p = localStorage.getItem(PW_KEY);
+  if (!a || !p){ renderLoginBar(); return; }
+  try {
+    const r = await fetch(ENDPOINT + "/login", { method:"POST", headers:{"Content-Type":"application/json"},
+      body: JSON.stringify({ account: a, password: p }) });
+    const j = await r.json().catch(()=>({}));
+    if (r.ok && j.ok){ renderLoginBar(); return; }
+  } catch(e){}
+  localStorage.removeItem(ACCT_KEY);
+  localStorage.removeItem(PW_KEY);
+  renderLoginBar();
 }
 function buildReviewMap(d){
   const map = {};
