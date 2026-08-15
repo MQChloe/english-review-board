@@ -116,6 +116,8 @@
     padding:14px 16px;margin-bottom:12px;box-shadow:var(--shadow);}
   .w-head{display:flex;align-items:center;gap:9px;flex-wrap:wrap;}
   .w-term{font-weight:700;color:var(--accent);font-size:16px;}
+  .spk{margin-left:6px;border:1px solid var(--line,#e3e6ec);background:transparent;color:var(--accent,#3a7afe);cursor:pointer;font-size:13px;line-height:1;padding:3px 6px;border-radius:7px;transition:.15s;}
+  .spk:hover{background:var(--hover,#f0f4ff);transform:scale(1.06);}
   .w-u{font-size:13.5px;color:#5b5660;margin-top:7px;line-height:1.65;}
   .w-sent{margin-top:9px;font-size:13px;color:var(--muted);}
   .w-sent .en{font-family:"Verdana","Geneva",sans-serif;color:#33303a;line-height:1.5;
@@ -283,6 +285,25 @@ function renderStats(){
   document.getElementById("c-pd").textContent = all.filter(a=>a.category==="播客").length;
 }
 
+function escAttr(s){ return String(s==null?"":s).replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+/* 点击喇叭朗读英文：浏览器内置 Web Speech API，无需后端/音频文件 */
+function speakWord(text){
+  if (!text || typeof text !== "string") return;
+  try {
+    if (!("speechSynthesis" in window)) return;
+    window.speechSynthesis.cancel();   // 打断上一条，避免排队
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = "en-US"; u.rate = 0.95;
+    const vs = window.speechSynthesis.getVoices();
+    const en = vs.find(v => /en[-_]US/i.test(v.lang)) || vs.find(v => /^en/i.test(v.lang));
+    if (en) u.voice = en;
+    window.speechSynthesis.speak(u);
+  } catch(e){}
+}
+document.addEventListener("click", function(e){
+  const b = e.target.closest(".spk");
+  if (b) speakWord(b.dataset.spk);
+});
 function itemHTML(it, withBtns, aid){
   const loc = pending[it.id];
   const done = itemDone(it);
@@ -294,7 +315,8 @@ function itemHTML(it, withBtns, aid){
       <button class="btn fz ${f==='fuzzy'?'on':''}" onclick="markItem('${aid}','${it.id}','fuzzy')">模糊</button>
       <button class="btn fg ${f==='forget'?'on':''}" onclick="markItem('${aid}','${it.id}','forget')">忘了</button>
     </div>` : "";
-  return `<div class="item ${done?'remembered':''}"><div class="t">${it.text}${ph}${doneTag}</div><div class="u">${it.understanding}</div>${btns}</div>`;
+  const spk = `<button class="spk" type="button" title="朗读发音" data-spk="${escAttr(it.text)}">🔊</button>`;
+  return `<div class="item ${done?'remembered':''}"><div class="t">${spk}${it.text}${ph}${doneTag}</div><div class="u">${it.understanding}</div>${btns}</div>`;
 }
 
 /* 在段落原文中高亮本段词汇点：按 hl 字段定位，降序插入避免索引错位，重叠则跳过内层 */
@@ -385,7 +407,7 @@ function wordCard(a, it){
   return `<div class="wcard">
     <div class="w-head">
       <span class="cat ${a.category}">${a.category}</span>
-      <span class="w-term">${it.text}</span>
+      <span class="w-term">${it.text}</span><button class="spk" type="button" title="朗读发音" data-spk="${escAttr(it.text)}">🔊</button>
       ${ph}${str}
     </div>
     <div class="w-u">${it.understanding || ""}</div>
