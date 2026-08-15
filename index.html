@@ -178,6 +178,8 @@
     .today-title{font-size:17px;}
   }
 </style>
+<!-- 纯前端 TTS 引擎 meSpeak：用于手机微信等不支持 speechSynthesis 的环境兜底朗读 -->
+<script defer src="lib/mespeak/mespeak.js"></script>
 </head>
 <body>
   <h1>每日英语学习</h1>
@@ -334,38 +336,78 @@ function spkHint(btn, msg){
   btn.insertAdjacentElement("afterend", s);
   setTimeout(()=> s.remove(), 5000);
 }
-function speakWord(text, btn){
-  if (!text || typeof text !== "string") return;
-  if (!("speechSynthesis" in window)){
-    spkHint(btn, "浏览器不支持语音朗读");
+/* meSpeak（纯前端 TTS）初始化与朗读：用于手机微信等无 speechSynthesis 的环境兜底 */
+let meSpeakReady = false;
+function initMeSpeak(){
+  if (!window.meSpeak) return;
+  try {
+    meSpeak.loadConfig("lib/mespeak/mespeak_config.json");
+    meSpeak.loadVoice("lib/mespeak/voices/en/en-us.json", function(ok){
+      meSpeakReady = !!ok;
+      if (!ok) console.warn("[mespeak] voice load failed");
+    });
+  } catch(e){ console.warn("[mespeak] init error", e); }
+}
+function meSpeakSpeak(text, btn){
+  if (!window.meSpeak || !meSpeakReady){
+    spkHint(btn, "语音库加载中…");
+    let n = 0;
+    const t = setInterval(()=>{
+      if (meSpeakReady){ clearInterval(t); meSpeakSpeak(text, btn); }
+      else if (++n > 40){ clearInterval(t); spkHint(btn, "语音库加载失败，请刷新重试"); }  // ~8s 超时
+    }, 200);
     return;
   }
-  const synth = window.speechSynthesis;
-  const trySpeak = ()=>{
-    const voices = _loadSpkVoices();
-    synth.cancel();                       // 打断上一条，避免排队
-    const u = new SpeechSynthesisUtterance(text);
-    u.lang = "en-US"; u.rate = 0.95; u.volume = 1; u.pitch = 1;
-    // 优先 en-US，其次任意英文 voice，再退回到第一个可用 voice（保证至少发声）
-    const en = voices.find(v => /en[-_]US/i.test(v.lang))
-            || voices.find(v => /^en/i.test(v.lang))
-            || voices[0];
-    if (en){ u.voice = en; u.lang = en.lang || "en-US"; }
-    u.onerror = (ev)=>{ spkHint(btn, "朗读失败：" + ((ev && ev.error) || "未知")); console.warn("[speak] error:", ev && ev.error); };
-    synth.speak(u);
-    // 检测是否真的开始朗读；未开始多半是设备无语音包或被禁用
-    setTimeout(()=>{ if (!synth.speaking) spkHint(btn, "未启动朗读：可能本设备缺语音包/被浏览器禁用，建议用电脑 Chrome 或安装系统英语语音"); }, 600);
-  };
-  // Chrome 首次：语音列表异步加载，未就绪时等 voiceschanged 再朗读（否则第一声静默）
-  if (_loadSpkVoices().length === 0){
-    let done = false;
-    const onReady = ()=>{ if (done) return; done = true; synth.removeEventListener("voiceschanged", onReady); trySpeak(); };
-    synth.addEventListener("voiceschanged", onReady);
-    setTimeout(onReady, 1000);            // 兜底：超时也尝试一次
-  } else {
-    trySpeak();
+  try {
+    meSpeak.speak(text, { amplitude: 100, pitch: 50, speed: 175, wordgap: 0 });
+  } catch(e){
+    spkHint(btn, "朗读失败：" + ((e && e.message) || e));
+    console.warn("[mespeak] speak error", e);
   }
 }
+function speakWord(text, btn){
+  if (!text || typeof text !== "string") return;
+  // 优先 Web Speech API（音质好，电脑端 Chrome/Edge/Safari 可用）
+  if ("speechSynthesis" in window){
+    const synth = window.speechSynthesis;
+    const tryWeb = ()=>{
+      const voices = _loadSpkVoices();
+      synth.cancel();                       // 打断上一条，避免排队
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = "en-US"; u.rate = 0.95; u.volume = 1; u.pitch = 1;
+      const en = voices.find(v => /en[-_]US/i.test(v.lang))
+              || voices.find(v => /^en/i.test(v.lang))
+              || voices[0];
+      if (en){ u.voice = en; u.lang = en.lang || "en-US"; }
+      let failed = false;
+      u.onerror = (ev)=>{ failed = true; console.warn("[speak] error:", ev && ev.error); };
+      synth.speak(u);
+      // 若 Web Speech 未能真正启动（设备无语音包/被禁用），自动转 meSpeak 兜底
+      setTimeout(()=>{
+        if (synth.speaking) return;
+        if (failed && !window.meSpeak){ spkHint(btn, "朗读失败：" + "设备无可用语音"); return; }
+        if (!synth.speaking){
+          if (window.meSpeak) meSpeakSpeak(text, btn);
+          else spkHint(btn, "未启动朗读：可能本设备缺语音包/被浏览器禁用，建议用电脑 Chrome");
+        }
+      }, 600);
+    };
+    if (_loadSpkVoices().length === 0){
+      let done = false;
+      const onReady = ()=>{ if (done) return; done = true; synth.removeEventListener("voiceschanged", onReady); tryWeb(); };
+      synth.addEventListener("voiceschanged", onReady);
+      setTimeout(onReady, 1000);            // 兜底：超时也尝试一次
+    } else {
+      tryWeb();
+    }
+    return;
+  }
+  // 无 Web Speech → meSpeak 纯前端兜底（手机微信等环境）
+  if (window.meSpeak){ meSpeakSpeak(text, btn); return; }
+  spkHint(btn, "本设备暂不支持语音朗读");
+}
+// 页面资源（含 defer 的 meSpeak 引擎）加载完成后初始化语音库
+window.addEventListener("load", function(){ if (window.meSpeak) initMeSpeak(); });
 // 预热：页面加载即触发语音列表加载，避免首次点击静默
 if ("speechSynthesis" in window){
   _loadSpkVoices();
