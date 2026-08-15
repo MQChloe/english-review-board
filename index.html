@@ -199,7 +199,7 @@
 
 <script>
 const LS_KEY = "eng_review_fb_v2";
-const ENDPOINT = "https://english-review-board.mqchloe-eng-review.workers.dev";  // Cloudflare Worker（国内 *.workers.dev 可能不可达，仅作可选即时源）
+const ENDPOINT = "https://mqchloe.ccwu.cc";  // Cloudflare Worker 自定义域名（经 Cloudflare 边缘，国内可达，即时读写 Durable Object）
 const SECRET  = "eng-review-shared-2026";  // 与 Worker 端一致（仅防随意调用，非敏感）
 const GITHUB_API = "https://api.github.com/repos/MQChloe/english-review-board/contents/data.json"; // 公开仓库最新 data.json（回退源）
 
@@ -470,7 +470,7 @@ async function flushPending(){
   const batch = ids.map(id=>({ id, verdict: pending[id] }));
   document.getElementById("sync-state").textContent = "回写中…";
 
-  // 1) 优先尝试 Cloudflare Worker（若 *.workers.dev 可达则即时）
+  // 1) 优先尝试 Cloudflare Worker 自定义域名（mqchloe.ccwu.cc，即时写入 DO）
   try {
     const ctrl = new AbortController();
     const to = setTimeout(()=>ctrl.abort(), 3000);
@@ -550,9 +550,9 @@ fetch("data.json").then(r=>r.json()).then(async d=>{
 });
 
 /* ── 多端进度同步 ── */
-/* 优先 Worker(DO) → 其次 GitHub progress.json（国内可达） → 最后 data.json */
+/* 优先 Worker(DO, mqchloe.ccwu.cc) → 回退 GitHub data.json（公开仓库） */
 async function loadRemoteProgress(){
-  // 1) Worker 即时读取（*.workers.dev 国内可能不可达，3s 超时立即回退）
+  // 1) Worker 即时读取（mqchloe.ccwu.cc 经 Cloudflare 边缘，国内可达；3s 超时回退 GitHub）
   try {
     const ctrl = new AbortController();
     const to = setTimeout(()=>ctrl.abort(), 3000);
