@@ -267,22 +267,20 @@ function liveReview(it){
   const loc = pending[it.id];
   if (!loc) return base;
   const r = {...base};
-  if (loc === "remember"){ r.reviews=(base.reviews||0)+1; r.strength=(base.level||0)>=2?"strong":"learning"; r.nextDue=addDays(TODAY,7); r.last=TODAY; }
-  else if (loc === "fuzzy"){ r.strength="learning"; r.nextDue=addDays(TODAY,2); }
-  else if (loc === "forget"){ r.strength="weak"; r.nextDue=addDays(TODAY,1); }
+  if (loc === "remember"){ const nl=(base.level||0)+1; r.level=nl; r.reviews=(base.reviews||0)+1; r.strength= nl>=3?"strong":"learning"; r.nextDue=addDays(TODAY,7); r.last=TODAY; }
+  else if (loc === "fuzzy"){ const nl=Math.max((base.level||0)-1,0); r.level=nl; r.strength= nl>=3?"strong":nl>=1?"learning":"weak"; r.nextDue=addDays(TODAY,2); }
+  else if (loc === "forget"){ r.level=0; r.strength="weak"; r.nextDue=addDays(TODAY,1); }
   return r;
 }
 function itemNextDue(it){ return liveReview(it).nextDue; }
 function itemStrength(it){ return liveReview(it).strength; }
 function itemReviews(it){ return liveReview(it).reviews; }
 
-/* 是否已掌握/本次完成：本地标过 remember，或服务端已复习且下次到期在未来 */
+/* 是否已掌握/本次完成：以掌握等级 level 判定（与 Worker 端一致）。
+   level>=1 表示至少"记住"过一次且未被模糊/忘了降级，才视为已记住；
+   模糊会把 level-1、忘了会把 level 清零，因此不会再误判为已记住。 */
 function itemDone(it){
-  const loc = pending[it.id];
-  if (loc === "remember") return true;
-  if (loc === "forget")   return false;
-  const r = liveReview(it);
-  return r.reviews > 0 && r.nextDue && r.nextDue > TODAY;
+  return (liveReview(it).level || 0) >= 1;
 }
 function itemDue(it){ const nd=itemNextDue(it); return nd && nd <= TODAY && !itemDone(it); }
 function articleDue(a){ return a.items.some(itemDue); }
@@ -716,7 +714,7 @@ async function autoLogin(){
       body: JSON.stringify({ account: a, password: p }) });
     const j = await r.json().catch(()=>({}));
     if (r.ok && j.ok){ renderLoginBar(); applyGate(); return; }
-    if (j.error === "no account"){   // 账号已被移除 → 清本地凭证
+    if (j.error === "no account" || j.error === "bad password"){   // 账号不存在或密码错误 → 清本地凭证，回到锁定态
       localStorage.removeItem(ACCT_KEY);
       localStorage.removeItem(PW_KEY);
       renderLoginBar(); applyGate(); return;
