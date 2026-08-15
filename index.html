@@ -430,6 +430,45 @@ function highlight(en, items){
   return out;
 }
 
+/* ── 例句只显示含该词的“单句”，不再展示整段上下文 ── */
+const SENT_ABBR = ['A.I.','U.S.','U.K.','e.g.','i.e.','Mr.','Mrs.','Ms.','Dr.','St.','vs.','etc.','Inc.','Corp.','Co.','No.','A.M.','P.M.','Ph.D.'];
+function splitSentences(text){
+  let t = text;
+  SENT_ABBR.forEach((ab,i)=>{ t = t.split(ab).join(''+i+''); });
+  const parts = t.split(/([.!?])\s+/);
+  const sents = []; let cur = '';
+  for(let i=0;i<parts.length;i++){ const p=parts[i];
+    if(p==='.'||p==='!'||p==='?'){ cur+=p; if(cur.trim()) sents.push(cur.trim()); cur=''; }
+    else { cur += (cur?' ':'') + p; }
+  }
+  if(cur.trim()) sents.push(cur.trim());
+  return sents.map(s=> s.replace(/(\d+)/g, (m,idx)=> SENT_ABBR[+idx]));
+}
+function matchTokens(it){
+  if(it.hlWords && it.hlWords.length) return it.hlWords;
+  if(it.hl) return [it.hl];
+  // 兜底：对缺少 hl 的词条，从 text 推导候选（仅用于定位句子）
+  let t = (it.text||'').replace(/\([^)]*\)/g,'').trim();
+  const out = [];
+  t.split('/').forEach(seg=>{
+    let s = seg.replace(/\b[A-Z]\b/g,'').replace(/\s+/g,' ').trim();
+    s = s.replace(/\s*,\s*/g,' ').replace(/\s+/g,' ').trim();
+    if(s && s.length>=3) out.push(s);
+  });
+  return out;
+}
+function pickSentence(en, it){
+  const sents = splitSentences(en);
+  const toks = matchTokens(it);
+  for(const s of sents){
+    for(const tk of toks){
+      if(!tk || tk.length<3) continue;
+      if(s.toLowerCase().indexOf(tk.toLowerCase()) >= 0) return s;
+    }
+  }
+  return en; // 兜底：整段（个别词在段落中找不到时）
+}
+
 function cardHTML(a, withBtns, opts){
   opts = opts || {};
   const due = articleDue(a);
@@ -482,7 +521,7 @@ function strengthLabel(s){ return s==="strong"?"牢固":s==="learning"?"巩固�
 
 function wordCard(a, it){
   const para = (typeof it.paraIdx === "number" && a.paragraphs[it.paraIdx]) ? a.paragraphs[it.paraIdx] : a.paragraphs[0];
-  const enHtml = highlight(para.en, [it]);
+  const enHtml = highlight(pickSentence(para.en, it), [it]);  // 例句只显示含该词的单句
   const ph = it.phonetic ? `<span class="ph">${it.phonetic}</span>` : "";
   const str = (mode === "memory")
     ? `<span class="w-str ${itemStrength(it)}">${strengthLabel(itemStrength(it))}</span>` : "";
