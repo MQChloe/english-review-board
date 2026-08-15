@@ -1,1939 +1,2140 @@
 {
- "intervals": [
-  1,
-  3,
-  7,
-  14,
-  30
- ],
- "today": "2026-08-14",
- "articles": [
-  {
-   "id": "a1",
-   "source": "AI 究竟是企业的魔法，还是一场自欺欺人的表演？",
-   "category": "外刊",
-   "date": "2026-08-12",
-   "paragraphs": [
+  "intervals": [
+    1,
+    3,
+    7,
+    14,
+    30
+  ],
+  "today": "2026-08-14",
+  "articles": [
     {
-     "en": "I Helped Run Lululemon. Companies Need to Stop Kidding Themselves About A.I.",
-     "cn": "我曾参与管理Lululemon，想说在AI问题上，公司可别再自欺欺人了"
+      "id": "a1",
+      "source": "AI 究竟是企业的魔法，还是一场自欺欺人的表演？",
+      "category": "外刊",
+      "date": "2026-08-12",
+      "paragraphs": [
+        {
+          "en": "I Helped Run Lululemon. Companies Need to Stop Kidding Themselves About A.I.",
+          "cn": "我曾参与管理Lululemon，想说在AI问题上，公司可别再自欺欺人了"
+        },
+        {
+          "en": "Companies these days are quick to stick “A.I.” in news releases, in earnings calls, in product names, in job postings and in titles at the top of their organizations. The real question is what strategy sits behind the abbreviation. A title costs nothing, but it doesn’t produce anything, either.",
+          "cn": "如今许多公司热衷于在新闻稿、财报电话会议、产品名称、招聘信息，甚至高层职位名称中都加上“A.I.”这个标签。但真正的问题在于：这个缩写背后到底有何种战略作支撑？一个头衔没什么成本，但它同样也不会创造任何价值。"
+        },
+        {
+          "en": "Talented technologists promised to crack business problems that were too complicated and expensive to solve before. This was the beginning of what I call A.I. wishing: the belief by company leaders that A.I. is magic, that you can wave its wand toward a hard problem and skip the work of solving it.",
+          "cn": "优秀的技术专家们曾许诺，说他们能够解决那些过去因为过于复杂、成本太高而无法解决的商业难题。这正是我所谓“AI许愿”的开始：公司领导相信 AI是一种魔法，只要对着一个棘手的问题挥挥它的魔杖，就能直接跳过解决问题所需付出的努力过程。"
+        },
+        {
+          "en": "The demo looked like magic. But the tool wanted clean, connected data and decisions made in consistent, repeatable ways. Ours lived in a dozen systems that did not agree, layered with decades of exceptions and workarounds.",
+          "cn": "演示小样看着是很炫酷，但AI需要的是经过整理的、有关联的数据，还有以一致的逻辑、可重复的方式做出的决策。而我们的数据却分散在十几个彼此对不上号的系统中，还叠加了几十年来积累的各种例外案例和临时解决方案。"
+        },
+        {
+          "en": "This brings me to A.I. washing. The insidious cousin of A.I. wishing, it is when a company — under pressure to immediately show results — claims to be doing more with A.I. than it actually is.",
+          "cn": "这就引出了“AI漂洗”这个概念。它是“AI许愿”的阴险近亲，指一家公司在迫于压力、需要立刻展示成果的情况下，宣称自己正在利用 AI 做很多事情，但实际上没有达到所说的程度。"
+        },
+        {
+          "en": "Perhaps the best-known version of A.I. washing is the most tragic one: the A.I. layoff. A company proclaims it needs fewer people because A.I. made its operations more efficient. Often the efficiency doesn’t exist yet. The cut is really about freeing up cash, sometimes to spend more on A.I.",
+          "cn": "也许最广为人知，也是最惨烈的一种AI漂洗就是“AI裁员”。公司会宣称，由于AI提高了其运营效率，因此不再需要那么多员工。很多时候，这种效率提升其实尚未实现。裁员的真正目的，是为了释放现金流，有时甚至是为了加大对AI的投入。"
+        },
+        {
+          "en": "A.I. is a genuinely powerful technology that still needs people, and putting it to use is slow, human work. The sooner we are honest about that with our boards, our employees, our investors and the public, the sooner we can stop performing A.I. and start building something with it.",
+          "cn": "AI确实是一项极其强大的技术，但它依然需要人的参与，能把AI真正用起来，是一个缓慢且依赖人力的过程。我们越早对董事会、员工、投资者以及公众坦诚这一点，就越能尽早停止“表演AI”，转而开始真正用它去创造一些东西。"
+        }
+      ],
+      "items": [
+        {
+          "id": "a1-1",
+          "text": "stick A in B",
+          "understanding": "把 A 硬塞进 B——这里指生硬地把 AI 标签贴到各处。写文案/做汇报时可用：别光把某个热词 stick in everywhere，要想清楚背后是什么。",
+          "review": {
+            "reviews": 1,
+            "lapses": 0,
+            "last": "2026-08-13",
+            "strength": "weak",
+            "nextDue": "2026-08-15"
+          },
+          "paraIdx": 1,
+          "hl": "stick",
+          "phonetic": "[stɪk]",
+          "hlWords": [
+            "stick",
+            "in"
+          ]
+        },
+        {
+          "id": "a1-2",
+          "text": "produce anything / produce value",
+          "understanding": "创造价值。原文反讽：一个头衔 doesn’t produce anything——好记，用来形容“只挂名不产出”的事。",
+          "review": {
+            "reviews": 1,
+            "lapses": 0,
+            "last": "2026-08-13",
+            "strength": "weak",
+            "nextDue": "2026-08-15"
+          },
+          "paraIdx": 1,
+          "hl": "produce",
+          "phonetic": "[prəˈdjuːs]"
+        },
+        {
+          "id": "a1-3",
+          "text": "wave one’s wand (toward)",
+          "understanding": "挥魔杖——比喻想“魔法般轻松解决”。搭配 skip the work of (doing)：跳过本该付出的努力。教学可用：区分 magic thinking 和 real work。",
+          "review": {
+            "reviews": 1,
+            "lapses": 0,
+            "last": "2026-08-13",
+            "strength": "weak",
+            "nextDue": "2026-08-15"
+          },
+          "paraIdx": 2,
+          "hl": "wave its wand",
+          "phonetic": "[weɪv/ /wɒnd]"
+        },
+        {
+          "id": "a1-4",
+          "text": "skip the work of (doing)",
+          "understanding": "跳过做某事的功夫/努力。很口语也好用：don’t skip the work of learning the basics（别跳过打基础这步）。",
+          "review": {
+            "reviews": 1,
+            "lapses": 0,
+            "last": "2026-08-13",
+            "strength": "weak",
+            "nextDue": "2026-08-15"
+          },
+          "paraIdx": 2,
+          "hl": "skip the work of",
+          "phonetic": "[skɪp]"
+        },
+        {
+          "id": "a1-5",
+          "text": "A.I. washing",
+          "understanding": "AI 漂洗——仿 greenwashing（绿洗），指夸大 AI 能力做公关。可连接：帮自己/学生识别营销话术，别被标签骗。",
+          "review": {
+            "reviews": 1,
+            "lapses": 0,
+            "last": "2026-08-13",
+            "strength": "weak",
+            "nextDue": "2026-08-15"
+          },
+          "paraIdx": 4,
+          "hl": "A.I. washing",
+          "phonetic": "[ˈwɒʃɪŋ]"
+        },
+        {
+          "id": "a1-6",
+          "text": "insidious",
+          "understanding": "阴险的、暗中为害的。形容看似无害、实则慢慢侵蚀的东西（如 insidious cousin）。写作里形容隐性风险很好用。",
+          "review": {
+            "reviews": 1,
+            "lapses": 0,
+            "last": "2026-08-13",
+            "strength": "weak",
+            "nextDue": "2026-08-15"
+          },
+          "paraIdx": 4,
+          "hl": "insidious",
+          "phonetic": "[ɪnˈsɪdiəs]"
+        },
+        {
+          "id": "a1-n1",
+          "text": "run",
+          "understanding": "v. 经营，管理  例：run a small coffee shop in Brooklyn 在布鲁克林经营一家小咖啡店",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-16"
+          },
+          "paraIdx": 0,
+          "phonetic": "[rʌn]",
+          "hl": "Run"
+        },
+        {
+          "id": "a1-n2",
+          "text": "kid oneself",
+          "understanding": "自我欺骗，自欺欺人（to fool or deceive your own mind）  例：If you think you can pass a hard test without studying, you are kidding yourself.",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-17"
+          },
+          "paraIdx": 0,
+          "hl": "Kidding"
+        },
+        {
+          "id": "a1-n3",
+          "text": "news releases",
+          "understanding": "新闻稿",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-18"
+          },
+          "paraIdx": 1,
+          "hl": "news releases"
+        },
+        {
+          "id": "a1-n4",
+          "text": "earnings calls",
+          "understanding": "财报电话会议",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-19"
+          },
+          "paraIdx": 1,
+          "hl": "earnings calls"
+        },
+        {
+          "id": "a1-n5",
+          "text": "sit behind",
+          "understanding": "某事背后的支撑，作为背后的逻辑、理由  例：What political interests sit behind this decision?这个决定背后有哪些政治利益？",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-20"
+          },
+          "paraIdx": 1,
+          "hl": "sits"
+        },
+        {
+          "id": "a1-n6",
+          "text": "abbreviation",
+          "understanding": "n. 缩写",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-21"
+          },
+          "paraIdx": 1,
+          "phonetic": "[əˌbriːviˈeɪʃn]",
+          "hl": "abbreviation"
+        },
+        {
+          "id": "a1-n7",
+          "text": "technologist",
+          "understanding": "n. 技术专家  例：Silicon Valley technologists believe AI will transform healthcare.硅谷技术专家相信AI将改变医疗行业。",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-22"
+          },
+          "paraIdx": 2,
+          "phonetic": "[tekˈnɒlədʒɪst]",
+          "hl": "technologist"
+        },
+        {
+          "id": "a1-n8",
+          "text": "crack",
+          "understanding": "v. 解决，破解；破裂  例：crack a walnut 砸开一个核桃",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-23"
+          },
+          "paraIdx": 2,
+          "phonetic": "[kræk]",
+          "hl": "crack"
+        },
+        {
+          "id": "a1-n9",
+          "text": "wand",
+          "understanding": "n. 魔杖  例：In Harry Potter, it’s the wand that chooses the wizard.在《哈利波特》里，是魔杖选择巫师。",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-24"
+          },
+          "paraIdx": 2,
+          "phonetic": "[wɒnd]",
+          "hl": "wand"
+        },
+        {
+          "id": "a1-n10",
+          "text": "demo",
+          "understanding": "n. 演示小样，试用版本(demonstration)  例：a software demo 软件试用版",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-25"
+          },
+          "paraIdx": 3,
+          "phonetic": "[ˈdeməʊ]",
+          "hl": "demo"
+        },
+        {
+          "id": "a1-n11",
+          "text": "agree",
+          "understanding": "v. 一致，匹配，相符  例：The figures from the two reports don’t agree.两份报告里的数据不一致。",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-26"
+          },
+          "paraIdx": 3,
+          "phonetic": "[əˈɡriː]",
+          "hl": "agree"
+        },
+        {
+          "id": "a1-n12",
+          "text": "exception",
+          "understanding": "n. 例外",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-27"
+          },
+          "paraIdx": 3,
+          "phonetic": "[ɪkˈsepʃn]",
+          "hl": "exception"
+        },
+        {
+          "id": "a1-n13",
+          "text": "workaround",
+          "understanding": "n. 变通、替代办法  例：We found a workaround for the software bug.",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-28"
+          },
+          "paraIdx": 3,
+          "phonetic": "[ˈwɜːkəraʊnd]",
+          "hl": "workaround"
+        },
+        {
+          "id": "a1-n14",
+          "text": "this brings me to",
+          "understanding": "这就让我引入、说到  例：This brings me to my next point.",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-29"
+          },
+          "paraIdx": 4,
+          "hl": "This brings me"
+        },
+        {
+          "id": "a1-n15",
+          "text": "layoff",
+          "understanding": "n. 裁员，解雇  例：lay off someone 裁员",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-16"
+          },
+          "paraIdx": 5,
+          "phonetic": "[ˈleɪɒf]",
+          "hl": "layoff"
+        },
+        {
+          "id": "a1-n16",
+          "text": "proclaim",
+          "understanding": "v. 对外、正式宣告  例：pro-向外的，claim宣称。The president proclaimed victory after the election.总统在选举后宣告胜利。",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-17"
+          },
+          "paraIdx": 5,
+          "phonetic": "[prəˈkleɪm]",
+          "hl": "proclaim"
+        },
+        {
+          "id": "a1-n17",
+          "text": "free up",
+          "understanding": "腾出，释放  例：Many people move to smaller homes at retirement age in order to free up cash.很多人在退休之后会搬到更小的房子里，以此来腾出现金。",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-18"
+          },
+          "paraIdx": 5,
+          "hl": "freeing"
+        },
+        {
+          "id": "a1-n18",
+          "text": "the sooner…the sooner…",
+          "understanding": "越早……就越能尽快……  例：常见句式：the+比较级…the+比较级…",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-19"
+          },
+          "paraIdx": 6,
+          "hl": "sooner"
+        },
+        {
+          "id": "a1-n19",
+          "text": "perform",
+          "understanding": "v. 表演，假装  例：perform her own music 演奏她自己的音乐",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-20"
+          },
+          "paraIdx": 6,
+          "phonetic": "[pəˈfɔːm]",
+          "hl": "perform"
+        }
+      ]
     },
     {
-     "en": "Companies these days are quick to stick “A.I.” in news releases, in earnings calls, in product names, in job postings and in titles at the top of their organizations. The real question is what strategy sits behind the abbreviation. A title costs nothing, but it doesn’t produce anything, either.",
-     "cn": "如今许多公司热衷于在新闻稿、财报电话会议、产品名称、招聘信息，甚至高层职位名称中都加上“A.I.”这个标签。但真正的问题在于：这个缩写背后到底有何种战略作支撑？一个头衔没什么成本，但它同样也不会创造任何价值。"
+      "id": "a2",
+      "source": "E01 一个晨间习惯，瞬间提升睡眠质量（播客）",
+      "category": "播客",
+      "date": "2026-08-13",
+      "paragraphs": [
+        {
+          "en": "I wake up in the morning and I want to reach for my phone, but I know that even if I were to crank up the brightness on that phone screen, it's not bright enough to trigger that cortisol spike and for me to be at my most alert and focused throughout the day and to optimize my sleep at night. So what I do is I get out of bed and I go outside.",
+          "cn": ""
+        },
+        {
+          "en": "And if it's a bright, clear day and the sun is low in the sky or the sun is starting to get overhead, what we call low solar angle, then I know I'm getting outside at the right time. If there's cloud cover and I can't see the sun, I also know I'm doing a good thing because it turns out, especially on cloudy days, you want to get outside and get as much light energy or photons in your eyes.",
+          "cn": ""
+        },
+        {
+          "en": "So the way to get this sunlight viewing early in the day is to look toward the sun. If it's too bright to look at directly, well, then don't do that. You just look toward it, but not directly at it. It's absolutely fine to blink. In fact, I encourage you to blink whenever you feel the impulse to blink.",
+          "cn": ""
+        },
+        {
+          "en": "I want to share with you three critical things about this tool of morning sunlight viewing. First of all, this is not some woo-woo biology thing. This is grounded in the core of our physiology. There are literally hundreds, if not thousands, of quality peer-reviewed papers showing that light viewing early in the day is the most powerful stimulus for wakefulness throughout the day, and it has a powerful positive impact on your ability to fall and stay asleep at night.",
+          "cn": ""
+        },
+        {
+          "en": "So there's this asymmetry in our retinal, our eye biology, and in our brain's biology, whereby early in the day, right around waking, you need a lot of light, a lot of photons, a lot of light energy, and artificial lights generally just won't accomplish what you need them to accomplish. But at night, even a little bit of artificial light can really mess up your so-called circadian, your 24-hour clocks and all these mechanisms that we're talking about.",
+          "cn": ""
+        }
+      ],
+      "items": [
+        {
+          "id": "a2-1",
+          "text": "crank up",
+          "understanding": "把…调到最大（使劲拧旋钮转到头的感觉）。crank up the brightness / volume / heat——拉高亮度/音量/暖气。近义 turn up。文中 crank up the brightness on the phone screen 提升手机屏幕亮度。",
+          "paraIdx": 0,
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-14"
+          }
+        },
+        {
+          "id": "a2-2",
+          "text": "trigger (a spike / response)",
+          "understanding": "v. 触发。trigger that cortisol spike 触发皮质醇峰值；trigger a response 触发反应；trigger the release of a hormone 触发荷尔蒙分泌。A trigger B 表因果，科普高频。",
+          "paraIdx": 0,
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-14"
+          }
+        },
+        {
+          "id": "a2-3",
+          "text": "optimize",
+          "understanding": "v. 使达到最优。\"optimize + 名词\" 让某事达最佳状态：optimize sleep 让睡眠达最好 / optimize diet 让饮食达最优。",
+          "paraIdx": 0,
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-14"
+          }
+        },
+        {
+          "id": "a2-4",
+          "text": "photon",
+          "understanding": "n. 光子（light energy / photons）。科普播客里常见，记一次就通。",
+          "paraIdx": 1,
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-14"
+          }
+        },
+        {
+          "id": "a2-5",
+          "text": "You want to do",
+          "understanding": "温和建议句式\"你会想要…\"，区别于 you should 的外部施压感，更像善意提醒。教口语可用这区别帮学生拿捏语气。",
+          "paraIdx": 1,
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-14"
+          }
+        },
+        {
+          "id": "a2-6",
+          "text": "mess up",
+          "understanding": "口语）把…搞乱。mess up your sleep 搞乱睡眠；mess up your schedule 搞乱日程。书面近义 disrupt / interfere。",
+          "paraIdx": 4,
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-21"
+          }
+        },
+        {
+          "id": "a2-7",
+          "text": "mechanism",
+          "understanding": "n.（一件事的）运作原理、机制。和 trigger / optimize 一样是科普绝对高频词。",
+          "paraIdx": 4,
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-22"
+          }
+        },
+        {
+          "id": "a2-8",
+          "text": "woo-woo",
+          "understanding": "adj.（美式口语）没事实根据、空穴来风的。This sounds sort of woo-woo, but it actually works. 听起来不切实际，但确实有效。",
+          "paraIdx": 3,
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-16"
+          }
+        },
+        {
+          "id": "a2-9",
+          "text": "be grounded in",
+          "understanding": "以…为根基/依据。be grounded in science 以科学为依据；be grounded in evidence 有实证支撑。",
+          "paraIdx": 3,
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-16"
+          }
+        },
+        {
+          "id": "a2-10",
+          "text": "peer-reviewed papers",
+          "understanding": "同行评审论文。peer 同行；review 评审。科普里常用来佐证结论可靠。",
+          "paraIdx": 3,
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-16"
+          }
+        }
+      ]
     },
     {
-     "en": "Talented technologists promised to crack business problems that were too complicated and expensive to solve before. This was the beginning of what I call A.I. wishing: the belief by company leaders that A.I. is magic, that you can wave its wand toward a hard problem and skip the work of solving it.",
-     "cn": "优秀的技术专家们曾许诺，说他们能够解决那些过去因为过于复杂、成本太高而无法解决的商业难题。这正是我所谓“AI许愿”的开始：公司领导相信 AI是一种魔法，只要对着一个棘手的问题挥挥它的魔杖，就能直接跳过解决问题所需付出的努力过程。"
+      "id": "a3",
+      "source": "“救命，我可能是个传统主妇”：一个职业女性的厨房自白",
+      "category": "外刊",
+      "date": "2026-08-13",
+      "paragraphs": [
+        {
+          "en": "Help! I Might Be a Tradwife!",
+          "cn": "救命！我可能是个传统家庭主妇！"
+        },
+        {
+          "en": "When I heard that Netflix was rebooting “Little House on the Prairie,” I was hopeful, if a little wary.  The “Little House” reboot arrives in the midst of a tradwife moment.",
+          "cn": "当得知网飞将要翻拍《草原上的小木屋》时，我心怀期待，却也略带警惕。这场《草原上的小木屋》的翻拍热潮，恰逢传统主妇风潮盛行的当下。"
+        },
+        {
+          "en": "As a woman who’s always believed that my life purpose is synonymous not with my fecundity or my homemaking prowess but with my artistic ambitions, I’m decidedly not the audience for this kind of content.",
+          "cn": "我一直坚信，自己的人生价值不在于生育能力，也不在于持家本领，而在于艺术理想。因此，我显然绝不是这类内容的受众。"
+        },
+        {
+          "en": "But maybe it was the moment when I was slicing strawberries and scooping homemade coconut-almond granola into my son’s Greek yogurt that a startling revelation dawned on me. I’m definitely not a tradwife — but maybe I’m a little tradwife-curious? Maybe I have a few latent tradwife tendencies?",
+          "cn": "但就在我切着草莓、把自制的椰香杏仁格兰诺拉麦片舀进儿子的希腊酸奶里的那一刻，我突然有了一个惊人的感悟。我绝对不是一个传统主妇——但我会不会对这种生活心生向往？我身上会不会潜藏着一些传统主妇的特质？"
+        },
+        {
+          "en": "How can I renounce the regressive side of tradwives while blissfully kneading my own milk bread dough? How can I deny the appeal of the Hannah Neelemans of the world when my own household habits help balance my workaholism, keep me present and mindful in my body?",
+          "cn": "我该如何一边满心愉悦地揉制牛奶面包面团，一边摒弃传统主妇观念中保守落后的一面？当我的居家日常能够克制我的工作狂倾向，让我专注当下、身心沉静时，我又怎能否认汉娜·尼勒曼这类生活博主的独特吸引力呢？"
+        },
+        {
+          "en": "So, like many others, I’m learning to reassess the value of so-called grandma hobbies, those frontier-adjacent activities that — surprise, surprise — don’t also require you to be a religious zealot or an antisuffragist.",
+          "cn": "所以，和很多人一样，我开始重新评估那些所谓“奶奶辈爱好”的价值。那些贴近拓荒时代的生活活动，说来意外，它们并不需要你成为宗教狂热者，也不需要你反对女性选举权。"
+        },
+        {
+          "en": "I imagine other people find this same kind of contemplation in sewing, or knitting, or mending. So even if I don’t live the full tradwife lifestyle — for anyone else’s consumption, or my own — I can still venerate those tasks that remind me that who I am meant to be is fluid and multitudinous. It can be expressed in how I stir a wooden spoon through water and flour to make the tangzhong that is the starter for my son’s favorite milk bread, and also in a poem I might write, born of my fascination with the same word.",
+          "cn": "我想，其他人也能在缝纫、编织、缝补这类小事中获得同样的沉思与治愈。所以，即便我不会为了取悦他人或满足自我，完全复刻传统主妇的生活方式，我依然敬重这些琐事。它们让我明白，人的自我定位是流动且多元的。这份自我，既可以体现在我手持木勺、搅拌水和面粉，制作出儿子最爱的牛奶面包所需的烫种里，也可以体现在我提笔写下的诗句中，而这首诗正源于我对同一个词汇的着迷。"
+        }
+      ],
+      "items": [
+        {
+          "id": "a3-1",
+          "text": "synonymous with",
+          "understanding": "等同于、与…同义。be synonymous with——X is synonymous with Y（X 等同于 Y），写作替换 be the same as 更地道。",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-14"
+          },
+          "paraIdx": 2,
+          "hl": "synonymous not with",
+          "phonetic": "[sɪˈnɒnɪməs]"
+        },
+        {
+          "id": "a3-2",
+          "text": "prowess",
+          "understanding": "高超的本领、造诣。homemaking prowess 持家本领；athletic prowess 运动天赋。",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-14"
+          },
+          "paraIdx": 2,
+          "hl": "prowess",
+          "phonetic": "[ˈpraʊəs]"
+        },
+        {
+          "id": "a3-3",
+          "text": "decidedly",
+          "understanding": "明确地、断然地。decidedly not the audience——明确不是受众。加强语气很好用。",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-14"
+          },
+          "paraIdx": 2,
+          "hl": "decidedly",
+          "phonetic": "[dɪˈsaɪdɪdli]"
+        },
+        {
+          "id": "a3-4",
+          "text": "a revelation dawned on me",
+          "understanding": "我突然恍然大悟。revelation 顿悟；dawn on 渐渐明白。比 I suddenly realized 更有画面感。",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-14"
+          },
+          "paraIdx": 3,
+          "hl": "revelation dawned on me",
+          "phonetic": "[ˌrevəˈleɪʃn]"
+        },
+        {
+          "id": "a3-5",
+          "text": "latent",
+          "understanding": "潜在的、潜伏的。latent tendencies / latent talent——潜在特质/潜质。描述“还没显形但存在”的东西。",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-14"
+          },
+          "paraIdx": 3,
+          "hl": "latent",
+          "phonetic": "[ˈleɪtnt]"
+        },
+        {
+          "id": "a3-n1",
+          "text": "tradwife",
+          "understanding": "n. 传统全职妻子，传统家庭主妇（traditional wife的简称）  例：源自海外早期网络论坛，特指展示复古主妇生活的全职女性博主。国内也译作“北美娇妻”。",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-23"
+          },
+          "paraIdx": 0,
+          "phonetic": "[ˈtrædwaɪf]",
+          "hl": "Tradwife"
+        },
+        {
+          "id": "a3-n2",
+          "text": "wary",
+          "understanding": "adj. 谨慎的，提防的，有所防备的",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-24"
+          },
+          "paraIdx": 1,
+          "phonetic": "[ˈweəri]",
+          "hl": "wary"
+        },
+        {
+          "id": "a3-n3",
+          "text": "reboot",
+          "understanding": "v.（本文）翻拍（影视行业）； 重启  例：HBO is currently rebooting Harry Potter to attract a new generation of Hogwarts fans.HBO 正在重启哈利波特剧版，以吸引新一代霍格沃茨迷。",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-25"
+          },
+          "paraIdx": 1,
+          "phonetic": "[ˌriːˈbuːt]",
+          "hl": "reboot"
+        },
+        {
+          "id": "a3-n4",
+          "text": "not with A, but with B",
+          "understanding": "不在于A，而在于B",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-26"
+          },
+          "paraIdx": 2,
+          "hl": "not"
+        },
+        {
+          "id": "a3-n5",
+          "text": "fecundity",
+          "understanding": "n. 多产；高生育率",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-27"
+          },
+          "paraIdx": 2,
+          "phonetic": "[fɪˈkʌndəti]",
+          "hl": "fecundity"
+        },
+        {
+          "id": "a3-n6",
+          "text": "homemaking",
+          "understanding": "n. 操持家务，主持家庭  例：homemaker n. 家庭主妇",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-28"
+          },
+          "paraIdx": 2,
+          "phonetic": "[ˈhəʊmmeɪkɪŋ]",
+          "hl": "homemaking"
+        },
+        {
+          "id": "a3-n7",
+          "text": "artistic ambitions",
+          "understanding": "艺术抱负  例：career ambitions 事业抱负creative ambitions 创作抱负",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-29"
+          },
+          "paraIdx": 2,
+          "hl": "artistic ambitions"
+        },
+        {
+          "id": "a3-n8",
+          "text": "startling",
+          "understanding": "adj. 令人吃惊的",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-16"
+          },
+          "paraIdx": 3,
+          "phonetic": "[ˈstɑːtlɪŋ]",
+          "hl": "startling"
+        },
+        {
+          "id": "a3-n9",
+          "text": "dawn on",
+          "understanding": "猛然醒悟，渐渐明白  例：dawn n. 日出",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-17"
+          },
+          "paraIdx": 3,
+          "hl": "dawned"
+        },
+        {
+          "id": "a3-n10",
+          "text": "-curious",
+          "understanding": "后缀，表示对某种生活方式或文化感兴趣、好奇，想尝试但尚未完全融入  例：sober-curious 清醒好奇，指尝试少喝酒或不喝酒的生活方式",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-18"
+          },
+          "paraIdx": 3,
+          "hl": "-curious"
+        },
+        {
+          "id": "a3-n11",
+          "text": "renounce",
+          "understanding": "v.（本文）宣布放弃；与……断绝关系；公开谴责  例：renounce family ties 断绝亲属关系renounce family inheritance 放弃家族继承权",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-19"
+          },
+          "paraIdx": 4,
+          "phonetic": "[rɪˈnaʊns]",
+          "hl": "renounce"
+        },
+        {
+          "id": "a3-n12",
+          "text": "regressive",
+          "understanding": "adj. 倒退的  例：progressive adj. 进步的",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-20"
+          },
+          "paraIdx": 4,
+          "phonetic": "[rɪˈɡresɪv]",
+          "hl": "regressive"
+        },
+        {
+          "id": "a3-n13",
+          "text": "blissfully",
+          "understanding": "adv. 充满幸福感地，无比愉悦地",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-21"
+          },
+          "paraIdx": 4,
+          "phonetic": "[ˈblɪsfəli]",
+          "hl": "blissfully"
+        },
+        {
+          "id": "a3-n14",
+          "text": "knead dough",
+          "understanding": "揉面团",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-22"
+          },
+          "paraIdx": 4,
+          "hl": "kneading"
+        },
+        {
+          "id": "a3-n15",
+          "text": "deny the appeal of",
+          "understanding": "否认某项事物的吸引力",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-23"
+          },
+          "paraIdx": 4,
+          "hl": "deny"
+        },
+        {
+          "id": "a3-n16",
+          "text": "workaholism",
+          "understanding": "n. 工作狂倾向",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-24"
+          },
+          "paraIdx": 4,
+          "phonetic": "[ˌwɜːkəˈhɒlɪzəm]",
+          "hl": "workaholism"
+        },
+        {
+          "id": "a3-n17",
+          "text": "present",
+          "understanding": "adj.（本文）活在当下的；在场的  例：present tense 现在时态",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-25"
+          },
+          "paraIdx": 4,
+          "phonetic": "[ˈpreznt]",
+          "hl": "present"
+        },
+        {
+          "id": "a3-n18",
+          "text": "mindful",
+          "understanding": "adj. 有觉察的，正念的",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-26"
+          },
+          "paraIdx": 4,
+          "phonetic": "[ˈmaɪndfl]",
+          "hl": "mindful"
+        },
+        {
+          "id": "a3-n19",
+          "text": "reassess",
+          "understanding": "v. 重新评估，重新审视  例：assess v. 评估reassess our investment strategy 重新评估我们的投资策略",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-27"
+          },
+          "paraIdx": 5,
+          "phonetic": "[ˌriːəˈses]",
+          "hl": "reassess"
+        },
+        {
+          "id": "a3-n20",
+          "text": "so-called",
+          "understanding": "adj. 所谓的（带有不完全认同的语气）",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-28"
+          },
+          "paraIdx": 5,
+          "phonetic": "[ˌsəʊ ˈkɔːld]",
+          "hl": "so-called"
+        },
+        {
+          "id": "a3-n21",
+          "text": "adjacent",
+          "understanding": "adj. 邻近的，接壤的（near, next to, close to）",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-29"
+          },
+          "paraIdx": 5,
+          "phonetic": "[əˈdʒeɪsnt]",
+          "hl": "adjacent"
+        },
+        {
+          "id": "a3-n22",
+          "text": "zealot",
+          "understanding": "n. 狂热分子，偏执者",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-16"
+          },
+          "paraIdx": 5,
+          "phonetic": "[ˈzelət]",
+          "hl": "zealot"
+        },
+        {
+          "id": "a3-n23",
+          "text": "antisuffragist",
+          "understanding": "n. 反对妇女选举权的人  例：suffrage n. 选举权",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-17"
+          },
+          "paraIdx": 5,
+          "phonetic": "[ˌæntiˈsʌfrədʒɪst]",
+          "hl": "antisuffragist"
+        },
+        {
+          "id": "a3-n24",
+          "text": "contemplation",
+          "understanding": "n. 深思，沉思，静心观想  例：Contemplation helps one get into the flow state.静心让人进入心流状态。",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-18"
+          },
+          "paraIdx": 6,
+          "phonetic": "[ˌkɒntəmˈpleɪʃn]",
+          "hl": "contemplation"
+        },
+        {
+          "id": "a3-n25",
+          "text": "for anyone else’s consumption",
+          "understanding": "为了别人而作",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-19"
+          },
+          "paraIdx": 6,
+          "hl": "for anyone else’s consumption"
+        },
+        {
+          "id": "a3-n26",
+          "text": "venerate",
+          "understanding": "v. 尊崇，崇尚  例：比 respect 更深，带有神圣感。Ancient cultures used to venerate nature, treating every tree and river with deep reverence.古代文化常常尊崇自然，怀着深深的敬畏对待每一棵树和每一条河流。",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-20"
+          },
+          "paraIdx": 6,
+          "phonetic": "[ˈvenəreɪt]",
+          "hl": "venerate"
+        },
+        {
+          "id": "a3-n27",
+          "text": "fluid",
+          "understanding": "adj. 流动的，不被固化的",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-21"
+          },
+          "paraIdx": 6,
+          "phonetic": "[ˈfluːɪd]",
+          "hl": "fluid"
+        },
+        {
+          "id": "a3-n28",
+          "text": "multitudinous",
+          "understanding": "adj. 丰富多元的  例：来自 multitude n. 众多、大量",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-22"
+          },
+          "paraIdx": 6,
+          "phonetic": "[ˌmʌltɪˈtjuːdɪnəs]",
+          "hl": "multitudinous"
+        },
+        {
+          "id": "a3-n29",
+          "text": "tangzhong",
+          "understanding": "n. 汤种（烘焙术语）",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-23"
+          },
+          "paraIdx": 6,
+          "phonetic": "[tæŋˈzɒŋ]",
+          "hl": "tangzhong"
+        }
+      ]
     },
     {
-     "en": "The demo looked like magic. But the tool wanted clean, connected data and decisions made in consistent, repeatable ways. Ours lived in a dozen systems that did not agree, layered with decades of exceptions and workarounds.",
-     "cn": "演示小样看着是很炫酷，但AI需要的是经过整理的、有关联的数据，还有以一致的逻辑、可重复的方式做出的决策。而我们的数据却分散在十几个彼此对不上号的系统中，还叠加了几十年来积累的各种例外案例和临时解决方案。"
+      "id": "a4",
+      "source": "哈佛教授的“友谊经济学”：为什么我们交不到朋友了",
+      "category": "外刊",
+      "date": "2026-08-14",
+      "paragraphs": [
+        {
+          "en": "The Economics of Friendship",
+          "cn": "友谊的经济学"
+        },
+        {
+          "en": "The ferry crossing from Chappaquiddick to Edgartown, Mass., is only 527 feet long. But no matter how rich or important you are, you have to wait to get on the boat. Someone complains about the line, the weather, politics. Someone else laughs. A conversation begins.",
+          "cn": "从马萨诸塞州查帕奎迪克（Chappaquiddick）到埃德加敦（Edgartown）的渡轮，航程只有527英尺。但是，无论你多有钱、多重要，你都得排队等船。有人抱怨队伍、抱怨天气、抱怨政治。然后有人笑起来。一段对话，就这样开始了。"
+        },
+        {
+          "en": "But spending time around that ferry has made me wonder if modern life has undersold inconvenience. We treat waiting as wasted time. But sometimes waiting does something useful: It forces people into the same place long enough for conversation to begin.",
+          "cn": "但在渡轮那里待了一段时间后，我开始怀疑：现代生活是不是低估了\"不便\"的价值。我们总把等待当作浪费的时间。但有时候，等待也有它的用处：它强制人们在同一个地方待上足够长的时间，从而让一段对话得以开始。"
+        },
+        {
+          "en": "Loneliness has become one of the stranger problems of modern life. In 2023 the U.S. surgeon general called loneliness a public-health problem.",
+          "cn": "孤独已成为现代生活中一个颇为奇特的问题。2023年，美国卫生总监将孤独定义为一个公共卫生问题。"
+        },
+        {
+          "en": "Which brings me back to that ridiculously inconvenient ferry and what I call the friction theory of friendship. Some inconveniences aren't merely costs. They are the hidden scaffolding of social life. If I had to estimate my own production function for friendship, it would look something like this: friendship = (proximity × repetition) + (idle time × low stakes) + shared irritation.",
+          "cn": "由此我们可以说回到那艘极其不便的渡轮，以及我所谓的\"友谊摩擦理论\"。有些\"不便\"，并不只是代价。它们是社交生活隐秘的脚手架。如果要我估算自己的\"友谊生产函数\"，它看起来大概会是这个样子：友谊 =(距离近 × 重复遇见)+（闲暇时间×低利害情境）+共同的不满。"
+        },
+        {
+          "en": "Proximity matters most when it recurs. Idle time matters most when nobody is trying to impress anyone. Shared irritation helps, but with diminishing returns: A delayed ferry creates conversation; a broken ferry creates rage.",
+          "cn": "距离近，在反复出现时最起作用。闲暇，在没人刻意表现自己的时候，最有价值。共同的不满有帮助，但效用递减：延误的渡轮，催生交谈；坏掉的渡轮，只会制造愤怒。"
+        },
+        {
+          "en": "This is why friendship is often a product of something else: work, school, church, children, sports, errands, waiting rooms. Modern life has spent decades eliminating that friction. We can work without offices, shop without stores, exercise without gyms and communicate without looking anyone in the eye. Together they have made interaction with other people increasingly optional.",
+          "cn": "正因如此，友谊往往是其他事物的副产品：工作、学校、教堂、孩子、体育运动、跑腿办事、候诊室等等。然而几十年来，现代生活一直在消除这种摩擦。我们可以不用办公室工作，不用实体店购物，不用健身房锻炼，也不用与人四目相对就能交流。这些便利加在一起，让人与人之间的交往，变得越来越可有可无。"
+        },
+        {
+          "en": "The solution isn't to make life harder for its own sake. But we should ask what social infrastructure is being lost.",
+          "cn": "解决之道，不是刻意把生活变难。但我们应该追问：我们正在失去什么样的社会基础设施。"
+        },
+        {
+          "en": "Schools, for example, aren't only human-capital institutions. They are social-capital institutions. Much of what we call \"community\" used to be produced by institutions as a byproduct.",
+          "cn": "例如，学校不仅仅是人力资本机构。它还是社会资本机构。我们所说的\"社区\"，在很大程度上，曾经是各类机构无意之中生产的副产品。"
+        },
+        {
+          "en": "That is why I've come to love the Chappaquiddick ferry. It gives people nothing to do for a few minutes except notice one another.",
+          "cn": "这就是为什么，我渐渐爱上了查帕奎迪克渡轮。在那几分钟里，人们除了互相打量之外，别无他事可做。"
+        },
+        {
+          "en": "Convenience has saved us time. The hidden price is that it has also saved us from one another.",
+          "cn": "便利为我们节省了时间。但代价是，它也让我们丢失了彼此。"
+        }
+      ],
+      "items": [
+        {
+          "id": "a4-1",
+          "text": "undersell",
+          "understanding": "低估…的价值（反义 oversell 高估/过度宣传）。undersold inconvenience 低估了“不便”的价值——连接右右：适度不便反而催生互动。",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-15"
+          },
+          "paraIdx": 2,
+          "hl": "undersold",
+          "phonetic": "[ˌʌndəˈsel]"
+        },
+        {
+          "id": "a4-2",
+          "text": "force sb into",
+          "understanding": "迫使某人进入（某种状态/地方）。forces people into the same place——强制把人凑到一处，才能起对话。",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-15"
+          },
+          "paraIdx": 2,
+          "hl": "forces people into",
+          "phonetic": "[fɔːs]"
+        },
+        {
+          "id": "a4-3",
+          "text": "friction theory of friendship",
+          "understanding": "友谊摩擦理论。friction 原指摩擦/阻力，这里指“不便”反而催生友谊。可复用在我和右右的亲子互动：适度不便反而增进连接。",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-15"
+          },
+          "paraIdx": 4,
+          "hl": "friction theory of friendship",
+          "phonetic": "[ˈfrɪkʃən]"
+        },
+        {
+          "id": "a4-4",
+          "text": "scaffolding",
+          "understanding": "脚手架。the hidden scaffolding of social life——社交生活隐秘的支撑结构。比喻“看不见但撑着整体”的东西。",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-15"
+          },
+          "paraIdx": 4,
+          "hl": "scaffolding",
+          "phonetic": "[ˈskæfəldɪŋ]"
+        },
+        {
+          "id": "a4-5",
+          "text": "low stakes",
+          "understanding": "低利害、低压力。idle time × low stakes——闲暇 × 无压力情境，友谊更容易长出来。",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-15"
+          },
+          "paraIdx": 4,
+          "hl": "low stakes",
+          "phonetic": "[steɪks]"
+        },
+        {
+          "id": "a4-6",
+          "text": "shared irritation",
+          "understanding": "共同的不满/一起吐槽。朋友间一起抱怨反而拉近距离——连接右右：一起对某事“吐槽”也是亲密。",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-15"
+          },
+          "paraIdx": 4,
+          "hl": "Shared irritation",
+          "phonetic": "[ˌɪrɪˈteɪʃn]"
+        },
+        {
+          "id": "a4-n1",
+          "text": "the economics of something",
+          "understanding": "某件事背后的“经济账”  例：economy n.（最早的含义）管家；经济学希腊语oikos表示“家”，nomos表示“管理”the economics of raising a child 养一个孩子背后的经济账",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-24"
+          },
+          "paraIdx": 0,
+          "hl": "Economics"
+        },
+        {
+          "id": "a4-n2",
+          "text": "treat A as B",
+          "understanding": "把A当作B",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-25"
+          },
+          "paraIdx": 2,
+          "hl": "treat"
+        },
+        {
+          "id": "a4-n3",
+          "text": "stranger problems",
+          "understanding": "匪夷所思、说不太清的问题  例：Stranger Things《怪奇物语》",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-26"
+          },
+          "paraIdx": 3,
+          "hl": "stranger problems"
+        },
+        {
+          "id": "a4-n4",
+          "text": "surgeon general",
+          "understanding": "美国公共卫生体系的最高官员",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-27"
+          },
+          "paraIdx": 3,
+          "hl": "surgeon general"
+        },
+        {
+          "id": "a4-n5",
+          "text": "production function",
+          "understanding": "生产函数（描述投入和产出的关系）",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-28"
+          },
+          "paraIdx": 4,
+          "hl": "production function"
+        },
+        {
+          "id": "a4-n6",
+          "text": "A multiplied by B",
+          "understanding": "A乘以B（A times B）",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-29"
+          },
+          "paraIdx": 0
+        },
+        {
+          "id": "a4-n7",
+          "text": "proximity",
+          "understanding": "n. 接近，邻近",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-16"
+          },
+          "paraIdx": 4,
+          "phonetic": "[prɒkˈsɪməti]",
+          "hl": "proximity"
+        },
+        {
+          "id": "a4-n8",
+          "text": "repetition",
+          "understanding": "n. 重复",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-17"
+          },
+          "paraIdx": 4,
+          "phonetic": "[ˌrepəˈtɪʃn]",
+          "hl": "repetition"
+        },
+        {
+          "id": "a4-n9",
+          "text": "idle",
+          "understanding": "adj. 空闲的；闲置的  例：lazy adj. 懒的",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-18"
+          },
+          "paraIdx": 4,
+          "phonetic": "[ˈaɪdl]",
+          "hl": "idle"
+        },
+        {
+          "id": "a4-n10",
+          "text": "irritation",
+          "understanding": "n. 烦躁、不满  例：irritate v. 使烦躁",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-19"
+          },
+          "paraIdx": 4,
+          "phonetic": "[ˌɪrɪˈteɪʃn]",
+          "hl": "irritation"
+        },
+        {
+          "id": "a4-n11",
+          "text": "recur",
+          "understanding": "v. 再次发生、反复出现（to happen again）  例：My migraine recurred.我的偏头痛又犯了。",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-20"
+          },
+          "paraIdx": 5,
+          "phonetic": "[rɪˈkɜː]",
+          "hl": "recur"
+        },
+        {
+          "id": "a4-n12",
+          "text": "diminishing returns",
+          "understanding": "收益递减，边际效用递减",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-21"
+          },
+          "paraIdx": 5,
+          "hl": "diminishing returns"
+        },
+        {
+          "id": "a4-n13",
+          "text": "rage",
+          "understanding": "n. 失控的暴怒  例：anger n. 愤怒",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-22"
+          },
+          "paraIdx": 5,
+          "phonetic": "[reɪdʒ]",
+          "hl": "rage"
+        },
+        {
+          "id": "a4-n14",
+          "text": "errand",
+          "understanding": "n. 跑腿，杂事",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-23"
+          },
+          "paraIdx": 6,
+          "phonetic": "[ˈerənd]",
+          "hl": "errand"
+        },
+        {
+          "id": "a4-n15",
+          "text": "waiting room",
+          "understanding": "候诊室",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-24"
+          },
+          "paraIdx": 6,
+          "hl": "waiting room"
+        },
+        {
+          "id": "a4-n16",
+          "text": "eliminate",
+          "understanding": "v. 消除，淘汰  例：前缀e-表示“出去”词根limen在拉丁语中表示“门槛”",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-25"
+          },
+          "paraIdx": 0,
+          "phonetic": "[ɪˈlɪməneɪt]"
+        },
+        {
+          "id": "a4-n17",
+          "text": "optional",
+          "understanding": "adj. 可选择的，非强制的  例：option n. 选项",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-26"
+          },
+          "paraIdx": 6,
+          "phonetic": "[ˈɒpʃənəl]",
+          "hl": "optional"
+        },
+        {
+          "id": "a4-n18",
+          "text": "for its own sake",
+          "understanding": "为了……本身",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-27"
+          },
+          "paraIdx": 7,
+          "hl": "for its own sake"
+        },
+        {
+          "id": "a4-n19",
+          "text": "social infrastructure",
+          "understanding": "社会基础设施  例：infrastructure n. 基础设施（指道路、桥梁、电网等）",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-28"
+          },
+          "paraIdx": 7,
+          "hl": "social infrastructure"
+        },
+        {
+          "id": "a4-n20",
+          "text": "human-capital",
+          "understanding": "人力资本  例：capital n. 资本",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-29"
+          },
+          "paraIdx": 8,
+          "phonetic": "[ˈhjuːmən ˈkæpɪtl]",
+          "hl": "human-capital"
+        },
+        {
+          "id": "a4-n21",
+          "text": "social-capital",
+          "understanding": "社会资本",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-16"
+          },
+          "paraIdx": 8,
+          "phonetic": "[ˈsəʊʃl ˈkæpɪtl]",
+          "hl": "social-capital"
+        },
+        {
+          "id": "a4-n22",
+          "text": "byproduct",
+          "understanding": "n. 副产品  例：前缀by-表示“旁边的、附带的”",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-17"
+          },
+          "paraIdx": 8,
+          "phonetic": "[ˈbaɪprɒdʌkt]",
+          "hl": "byproduct"
+        },
+        {
+          "id": "a4-n23",
+          "text": "come to do something",
+          "understanding": "渐渐变成、逐渐开始",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-18"
+          },
+          "paraIdx": 9,
+          "hl": "come"
+        },
+        {
+          "id": "a4-n24",
+          "text": "notice",
+          "understanding": "v. 注意到，无意中留意到  例：see v. 看见watch v. 观看realize v. 意识到",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-19"
+          },
+          "paraIdx": 9,
+          "phonetic": "[ˈnəʊtɪs]",
+          "hl": "notice"
+        },
+        {
+          "id": "a4-n25",
+          "text": "save time",
+          "understanding": "节省时间  例：save money 省钱",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-20"
+          },
+          "paraIdx": 10,
+          "hl": "saved"
+        }
+      ]
     },
     {
-     "en": "This brings me to A.I. washing. The insidious cousin of A.I. wishing, it is when a company — under pressure to immediately show results — claims to be doing more with A.I. than it actually is.",
-     "cn": "这就引出了“AI漂洗”这个概念。它是“AI许愿”的阴险近亲，指一家公司在迫于压力、需要立刻展示成果的情况下，宣称自己正在利用 AI 做很多事情，但实际上没有达到所说的程度。"
+      "id": "a5",
+      "source": "消费普遍谨慎的当下，中国人为什么愿意为运动买单？",
+      "category": "外刊",
+      "date": "2026-08-14",
+      "paragraphs": [
+        {
+          "en": "Running, Rock Climbing and Other Sports Are Taking Off in China. Pricey Workout Clothes, Too.",
+          "cn": "跑步、攀岩等运动正在中国蓬勃兴起。价格不菲的运动服装也是如此。"
+        },
+        {
+          "en": "Yangshuo in southern China has long been a rock-climbing destination for American and European tourists. But lately, a different demographic has flocked to its limestone cliffs: office workers from China’s big cities.",
+          "cn": "位于中国南部的阳朔长期以来一直是欧美游客的攀岩圣地。但最近，另一类人群也涌向了这里的石灰岩峭壁：来自中国各大城市的上班族。"
+        },
+        {
+          "en": "“I needed some exercise and outdoor activities to cope with the high-pressure work environment,” Chen Xue, a 28-year-old auditor, said.",
+          "cn": "“我需要一些运动和户外活动来应对高压的工作环境。”28岁的审计师陈雪（音译）说。"
+        },
+        {
+          "en": "China’s rock-climbing boom is part of a larger fitness craze that has taken over the country. The number of marathon participants has doubled since 2017 to more than a million people, and Hyrox had 55,000 participants in China this past year, up from 7,300 a year earlier.",
+          "cn": "中国攀岩热潮不过只是席卷全国的健身热潮的一部分。自2017年以来，马拉松参赛人数已翻了一番，逾100万人；而去年，Hyrox赛事在中国吸引了5.5万名参赛者，较前一年的7300人有了大幅增长。"
+        },
+        {
+          "en": "And alongside the fitness boom, hiking shoes and yoga pants and other types of athletic gear have become aspirational styles for China’s middle class. While foreign automakers and luxury brands are struggling against tough domestic competition in China, athletic apparel is a rare market where Western companies such as Lululemon, Hoka and Adidas are increasing sales.",
+          "cn": "随着这股健身热潮的兴起，徒步鞋、瑜伽裤及其他各类运动装备，已然成为中国中产阶级向往的穿搭风格。外国车企和奢侈品牌尚在中国激烈的本土竞争中苦苦挣扎，运动服饰却成了一方罕见的市场，像Lululemon、Hoka和阿迪达斯这样的西方品牌，销售反而有所增长。"
+        },
+        {
+          "en": "“Health is kind of the new wealth in China,” said Rebecca Cai, Asia-Pacific general manager for Swiss premium running shoe brand On. The brand said in a May earnings call that quarterly sales in Greater China exceeded the Asia-Pacific regional growth figure of 44%.",
+          "cn": "“在中国，健康可以说是一种新的财富，”瑞士高端跑鞋品牌“昂跑”（On）的亚太区总经理蔡以佳表示。该品牌在5月的财报电话会议上称，大中华区的季度销售额超过了亚太地区44%的整体增长率。"
+        },
+        {
+          "en": "Some consumers trace the fitness trend to a postpandemic cultural shift. “After Covid, everything changed,” said Xu Lin, the owner of Prakasa, a popular yoga studio in Shanghai, “Everyone wants to have a better life, not just money, money, money, work, work, work.”",
+          "cn": "一些消费者将这一健身热潮归结于后疫情时期的文化转变。“新冠疫情之后，一切都变了，”上海一家热门瑜伽工作室“Prakasa”的老板徐琳（音译）说道，“每个人都希望过上更好的生活，而不只是‘钱、钱、钱，工作、工作、工作’。”"
+        }
+      ],
+      "items": [
+        {
+          "id": "a5-1",
+          "text": "take off",
+          "understanding": "变得非常流行 / 迅速发展。原文标题 'Sports Are Taking Off in China'；也常说 Her channel took off。描述趋势爆发很好用。",
+          "paraIdx": 0,
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-15"
+          },
+          "hl": "Taking Off",
+          "phonetic": "[teɪk ɒf]"
+        },
+        {
+          "id": "a5-2",
+          "text": "flock to",
+          "understanding": "蜂拥而至、成群涌向某地。原文 'a different demographic has flocked to its limestone cliffs'。比 go to 画面感强，写人群聚集时可用。",
+          "paraIdx": 1,
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-15"
+          },
+          "hl": "flocked to",
+          "phonetic": "[flɒk]"
+        },
+        {
+          "id": "a5-3",
+          "text": "cope with something",
+          "understanding": "应对（压力/困难）。原文 'cope with the high-pressure work environment'。强调在压力下撑住、维持正常状态，比 deal with 多一层‘艰难撑住’的意味。",
+          "paraIdx": 2,
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-15"
+          },
+          "hl": "cope with",
+          "phonetic": "[kəʊp]"
+        },
+        {
+          "id": "a5-4",
+          "text": "boom",
+          "understanding": "（行业/趋势的）迅猛发展、热潮。原文 'rock-climbing boom is part of a larger fitness craze'。常说 economic boom / baby boom / fitness boom。",
+          "paraIdx": 3,
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-15"
+          },
+          "hl": "boom",
+          "phonetic": "[buːm]"
+        },
+        {
+          "id": "a5-5",
+          "text": "aspirational",
+          "understanding": "令人向往的、代表理想生活方式的。原文 'athletic gear have become aspirational styles'。形容一种‘让人看了想拥有/想变成’的东西，比 popular 更精准。",
+          "paraIdx": 4,
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-15"
+          },
+          "hl": "aspirational",
+          "phonetic": "[ˌæspəˈreɪʃənl]"
+        },
+        {
+          "id": "a5-6",
+          "text": "trace something to something",
+          "understanding": "将……归因于 / 追溯到。原文 'trace the fitness trend to a postpandemic cultural shift'。写分析因果时很顺手：trace X to Y。",
+          "paraIdx": 6,
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-15"
+          },
+          "hl": "trace the fitness trend to",
+          "phonetic": "[treɪs]"
+        },
+        {
+          "id": "a5-n1",
+          "text": "pricey",
+          "understanding": "adj. 昂贵的、价格不菲的",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-16"
+          },
+          "paraIdx": 0,
+          "phonetic": "[ˈpraɪsi]",
+          "hl": "Pricey"
+        },
+        {
+          "id": "a5-n2",
+          "text": "destination",
+          "understanding": "n.（本文）圣地、向往之地；目的地  例：skiing destination 滑雪胜地",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-17"
+          },
+          "paraIdx": 1,
+          "phonetic": "[ˌdestɪˈneɪʃən]",
+          "hl": "destination"
+        },
+        {
+          "id": "a5-n3",
+          "text": "demographic",
+          "understanding": "n. 群体，人群（带有统计分析色彩）  例：The brand is targeted at a younger demographic.这个品牌瞄准的是更年轻的人群。",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-18"
+          },
+          "paraIdx": 1,
+          "phonetic": "[ˌdeməˈɡræfɪk]",
+          "hl": "demographic"
+        },
+        {
+          "id": "a5-n4",
+          "text": "limestone",
+          "understanding": "n. 石灰岩",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-19"
+          },
+          "paraIdx": 1,
+          "phonetic": "[ˈlaɪmstəʊn]",
+          "hl": "limestone"
+        },
+        {
+          "id": "a5-n5",
+          "text": "auditor",
+          "understanding": "n. 审计师",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-20"
+          },
+          "paraIdx": 2,
+          "phonetic": "[ˈɔːdɪtə]",
+          "hl": "auditor"
+        },
+        {
+          "id": "a5-n6",
+          "text": "craze",
+          "understanding": "n. 狂热，风潮，热潮  例：fitness craze 健身狂热",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-21"
+          },
+          "paraIdx": 3,
+          "phonetic": "[kreɪz]",
+          "hl": "craze"
+        },
+        {
+          "id": "a5-n7",
+          "text": "gear",
+          "understanding": "n. 装备，行头（比equipment 更口语化，更“酷”一点）  例：camping gear 露营装备camera gear 摄影器材athletic gear 运动装备",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-22"
+          },
+          "paraIdx": 4,
+          "phonetic": "[ɡɪər]",
+          "hl": "gear"
+        },
+        {
+          "id": "a5-n8",
+          "text": "automaker",
+          "understanding": "n. 汽车制造商（automobile manufacturer）",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-23"
+          },
+          "paraIdx": 4,
+          "phonetic": "[ˈɔːtəʊˌmeɪkər]",
+          "hl": "automaker"
+        },
+        {
+          "id": "a5-n9",
+          "text": "domestic competition",
+          "understanding": "本土竞争，国内竞争  例：international competition 国际竞争",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-24"
+          },
+          "paraIdx": 4,
+          "phonetic": "[dəˈmestɪk]",
+          "hl": "domestic competition"
+        },
+        {
+          "id": "a5-n10",
+          "text": "apparel",
+          "understanding": "n. 服装的统称（比clothing 更正式，常用于商业和时尚领域）  例：athletic apparel 运动类服装",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-25"
+          },
+          "paraIdx": 4,
+          "phonetic": "[əˈpærəl]",
+          "hl": "apparel"
+        },
+        {
+          "id": "a5-n11",
+          "text": "kind of",
+          "understanding": "有点，某种程度上",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-26"
+          },
+          "paraIdx": 5,
+          "hl": "kind"
+        },
+        {
+          "id": "a5-n12",
+          "text": "premium",
+          "understanding": "adj. 高端的，优质的，高价的  例：premium segment 高端细分市场premium pricing 高端定价premium running shoe brand 高端跑鞋品牌",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-27"
+          },
+          "paraIdx": 5,
+          "phonetic": "[ˈpriːmiəm]",
+          "hl": "premium"
+        },
+        {
+          "id": "a5-n13",
+          "text": "postpandemic",
+          "understanding": "adj. 后疫情时代的  例：前缀 post-表示在……之后pandemic n. 大流行，疫情postwar adj. 战后的post-truth n. 后真相",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-28"
+          },
+          "paraIdx": 6,
+          "hl": "postpandemic"
+        },
+        {
+          "id": "a5-n14",
+          "text": "cultural shift",
+          "understanding": "文化转变，文化变迁",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-29"
+          },
+          "paraIdx": 6,
+          "hl": "cultural shift"
+        }
+      ]
     },
     {
-     "en": "Perhaps the best-known version of A.I. washing is the most tragic one: the A.I. layoff. A company proclaims it needs fewer people because A.I. made its operations more efficient. Often the efficiency doesn’t exist yet. The cut is really about freeing up cash, sometimes to spend more on A.I.",
-     "cn": "也许最广为人知，也是最惨烈的一种AI漂洗就是“AI裁员”。公司会宣称，由于AI提高了其运营效率，因此不再需要那么多员工。很多时候，这种效率提升其实尚未实现。裁员的真正目的，是为了释放现金流，有时甚至是为了加大对AI的投入。"
-    },
-    {
-     "en": "A.I. is a genuinely powerful technology that still needs people, and putting it to use is slow, human work. The sooner we are honest about that with our boards, our employees, our investors and the public, the sooner we can stop performing A.I. and start building something with it.",
-     "cn": "AI确实是一项极其强大的技术，但它依然需要人的参与，能把AI真正用起来，是一个缓慢且依赖人力的过程。我们越早对董事会、员工、投资者以及公众坦诚这一点，就越能尽早停止“表演AI”，转而开始真正用它去创造一些东西。"
+      "id": "a6",
+      "source": "E02 如何科学控糖？（播客）",
+      "category": "播客",
+      "date": "2026-08-15",
+      "paragraphs": [
+        {
+          "en": "In the case of sugar consumption, the two parallel pathways involve one pathway related to the actual taste and the perception of sweet tastes that lead not just you, but every animal that we're aware of to seek more sweet-containing foods. The other parallel pathway is related to the nutritive component of sweet foods, meaning the degree to which a given food will raise blood glucose.",
+          "cn": ""
+        },
+        {
+          "en": "But if you understand the way that dopamine works, what you'll realize is that when this dopamine pathway is triggered, it tends to create not the sensation or the perception of satiety of feeling like something is enough, but rather to produce the sensation of wanting more. In fact, we can say that the longer it's been since you've indulged in something that you really enjoy or would like, the greater the dopamine you will experience when you finally engage in that behavior or indulge that thing, ingest that thing.",
+          "cn": ""
+        },
+        {
+          "en": "So if you really wanted to adjust your sugar cravings and you really still want to ingest some sugary foods, you probably would be better off combining fiber with that sugary or sweet food. So what we're really talking about here is trying to reduce the dopamine signal that is the consequence of ingesting sweet foods.",
+          "cn": ""
+        },
+        {
+          "en": "There are now data pointing to the fact that lemon juice and lime juice, a couple of tablespoons or so, if ingested before or even during, or even after consumption of sugary foods, or I should say foods that sharply increase blood glucose or large carbohydrate meals can actually blunt the blood glucose response.",
+          "cn": ""
+        },
+        {
+          "en": "When you ingest lemon juice or lime juice, the mechanism by which it blunts blood glucose is probably twofold. One is probably through the post-ingestive effects of glucose in the gut, meaning the way in which sugars are interacting with neurons and other components of your gut circuitry to impact things like gastric emptying time, to impact things like the firing of those neuropod cells and their signaling to the brain. But almost certainly it has something to do also with the perception of sour taste on the tongue.",
+          "cn": ""
+        },
+        {
+          "en": "Using berberine is a serious step. You should absolutely talk to your doctor about it. It is true that if you ingest berberine, your blood glucose will plummet. And I point that out because I've actually tried it before. It gave me brutal headaches and I felt really dizzy and I felt like I couldn't see straight. And actually I couldn't see straight. Why did it do that? Well, it made me hypoglycemic. It actually drove my blood glucose down too far.",
+          "cn": ""
+        }
+      ],
+      "items": [
+        {
+          "id": "a6-1",
+          "text": "sugar consumption",
+          "understanding": "糖的摄入。常搭配 caffeine consumption（咖啡因摄入）/ alcohol consumption（酒精摄入）。consumption 表\"摄入量\"。",
+          "paraIdx": 0,
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-16"
+          }
+        },
+        {
+          "id": "a6-2",
+          "text": "blood glucose",
+          "understanding": "血糖。日常也说 blood sugar，两者同义；blood glucose 更偏科学用语。延伸：glucose 葡萄糖 / fructose 果糖 / sucrose 蔗糖。",
+          "paraIdx": 0,
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-16"
+          }
+        },
+        {
+          "id": "a6-3",
+          "text": "pathway",
+          "understanding": "n. 通路、路径。神经科学常说 neural pathway（神经通路）；parallel pathways 两条并排跑、互不干扰的线路。",
+          "paraIdx": 0,
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-16"
+          }
+        },
+        {
+          "id": "a6-4",
+          "text": "not A, but rather B",
+          "understanding": "不是 A，而是 B。强调转折、突出后者（文中：not the sensation of satiety, but rather the sensation of wanting more）。",
+          "paraIdx": 1,
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-16"
+          }
+        },
+        {
+          "id": "a6-5",
+          "text": "satiety",
+          "understanding": "n. 饱足感、满足感（偏学术）。与 craving（渴望）相对。",
+          "paraIdx": 1,
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-16"
+          }
+        },
+        {
+          "id": "a6-6",
+          "text": "indulge",
+          "understanding": "v. 放纵、沉溺。indulge in something 放纵自己去享受某样东西（带点\"明知不该还是忍不住\"）。indulge in chocolate / a bad habit。",
+          "paraIdx": 1,
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-16"
+          }
+        },
+        {
+          "id": "a6-7",
+          "text": "craving",
+          "understanding": "n. 强烈渴望。健康类高频：sugar craving 馋糖 / food cravings 馋食物 / carb cravings 想吃碳水。crave v. 强烈渴望（I'm craving chocolate. 我特别馋巧克力）。",
+          "paraIdx": 2,
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-16"
+          }
+        },
+        {
+          "id": "a6-8",
+          "text": "ingest",
+          "understanding": "v. 摄入。科普里说到把东西吃进身体基本用 ingest / consume，很少用 eat / drink。ingest sugary foods 摄入含糖食物。",
+          "paraIdx": 2,
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-16"
+          }
+        },
+        {
+          "id": "a6-9",
+          "text": "you would be better off doing something",
+          "understanding": "你最好这么做、这么对你更有利。地道建议句式：You'd be better off sleeping early. 你最好早点睡 / You'd be better off talking to a doctor. 你最好去问问医生。",
+          "paraIdx": 2,
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-16"
+          }
+        },
+        {
+          "id": "a6-10",
+          "text": "blunt",
+          "understanding": "v.（本文）把劲头压下去、把锋芒磨掉。blunt the blood glucose response 把血糖反应的尖峰压平。adj. 钝的（a blunt knife 一把钝刀）。",
+          "paraIdx": 3,
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-16"
+          }
+        },
+        {
+          "id": "a6-11",
+          "text": "spike",
+          "understanding": "n. 尖峰、峰值。blood glucose spike 血糖尖峰；可与 E01 的 cortisol spike（皮质醇峰值）对照。",
+          "paraIdx": 3,
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-16"
+          }
+        }
+      ]
     }
-   ],
-   "items": [
-    {
-     "id": "a1-1",
-     "text": "stick A in B",
-     "understanding": "把 A 硬塞进 B——这里指生硬地把 AI 标签贴到各处。写文案/做汇报时可用：别光把某个热词 stick in everywhere，要想清楚背后是什么。",
-     "review": {
-      "reviews": 1,
-      "lapses": 0,
-      "last": "2026-08-13",
-      "strength": "weak",
-      "nextDue": "2026-08-15"
-     },
-     "paraIdx": 1,
-     "hl": "stick",
-     "phonetic": "[stɪk]",
-     "hlWords": [
-      "stick",
-      "in"
-     ]
-    },
-    {
-     "id": "a1-2",
-     "text": "produce anything / produce value",
-     "understanding": "创造价值。原文反讽：一个头衔 doesn’t produce anything——好记，用来形容“只挂名不产出”的事。",
-     "review": {
-      "reviews": 1,
-      "lapses": 0,
-      "last": "2026-08-13",
-      "strength": "weak",
-      "nextDue": "2026-08-15"
-     },
-     "paraIdx": 1,
-     "hl": "produce",
-     "phonetic": "[prəˈdjuːs]"
-    },
-    {
-     "id": "a1-3",
-     "text": "wave one’s wand (toward)",
-     "understanding": "挥魔杖——比喻想“魔法般轻松解决”。搭配 skip the work of (doing)：跳过本该付出的努力。教学可用：区分 magic thinking 和 real work。",
-     "review": {
-      "reviews": 1,
-      "lapses": 0,
-      "last": "2026-08-13",
-      "strength": "weak",
-      "nextDue": "2026-08-15"
-     },
-     "paraIdx": 2,
-     "hl": "wave its wand",
-     "phonetic": "[weɪv/ /wɒnd]"
-    },
-    {
-     "id": "a1-4",
-     "text": "skip the work of (doing)",
-     "understanding": "跳过做某事的功夫/努力。很口语也好用：don’t skip the work of learning the basics（别跳过打基础这步）。",
-     "review": {
-      "reviews": 1,
-      "lapses": 0,
-      "last": "2026-08-13",
-      "strength": "weak",
-      "nextDue": "2026-08-15"
-     },
-     "paraIdx": 2,
-     "hl": "skip the work of",
-     "phonetic": "[skɪp]"
-    },
-    {
-     "id": "a1-5",
-     "text": "A.I. washing",
-     "understanding": "AI 漂洗——仿 greenwashing（绿洗），指夸大 AI 能力做公关。可连接：帮自己/学生识别营销话术，别被标签骗。",
-     "review": {
-      "reviews": 1,
-      "lapses": 0,
-      "last": "2026-08-13",
-      "strength": "weak",
-      "nextDue": "2026-08-15"
-     },
-     "paraIdx": 4,
-     "hl": "A.I. washing",
-     "phonetic": "[ˈwɒʃɪŋ]"
-    },
-    {
-     "id": "a1-6",
-     "text": "insidious",
-     "understanding": "阴险的、暗中为害的。形容看似无害、实则慢慢侵蚀的东西（如 insidious cousin）。写作里形容隐性风险很好用。",
-     "review": {
-      "reviews": 1,
-      "lapses": 0,
-      "last": "2026-08-13",
-      "strength": "weak",
-      "nextDue": "2026-08-15"
-     },
-     "paraIdx": 4,
-     "hl": "insidious",
-     "phonetic": "[ɪnˈsɪdiəs]"
-    },
-    {
-     "id": "a1-n1",
-     "text": "run",
-     "understanding": "v. 经营，管理  例：run a small coffee shop in Brooklyn 在布鲁克林经营一家小咖啡店",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-16"
-     },
-     "paraIdx": 0,
-     "phonetic": "[rʌn]",
-     "hl": "Run"
-    },
-    {
-     "id": "a1-n2",
-     "text": "kid oneself",
-     "understanding": "自我欺骗，自欺欺人（to fool or deceive your own mind）  例：If you think you can pass a hard test without studying, you are kidding yourself.",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-17"
-     },
-     "paraIdx": 0,
-     "hl": "Kidding"
-    },
-    {
-     "id": "a1-n3",
-     "text": "news releases",
-     "understanding": "新闻稿",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-18"
-     },
-     "paraIdx": 1,
-     "hl": "news releases"
-    },
-    {
-     "id": "a1-n4",
-     "text": "earnings calls",
-     "understanding": "财报电话会议",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-19"
-     },
-     "paraIdx": 1,
-     "hl": "earnings calls"
-    },
-    {
-     "id": "a1-n5",
-     "text": "sit behind",
-     "understanding": "某事背后的支撑，作为背后的逻辑、理由  例：What political interests sit behind this decision?这个决定背后有哪些政治利益？",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-20"
-     },
-     "paraIdx": 1,
-     "hl": "sits"
-    },
-    {
-     "id": "a1-n6",
-     "text": "abbreviation",
-     "understanding": "n. 缩写",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-21"
-     },
-     "paraIdx": 1,
-     "phonetic": "[əˌbriːviˈeɪʃn]",
-     "hl": "abbreviation"
-    },
-    {
-     "id": "a1-n7",
-     "text": "technologist",
-     "understanding": "n. 技术专家  例：Silicon Valley technologists believe AI will transform healthcare.硅谷技术专家相信AI将改变医疗行业。",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-22"
-     },
-     "paraIdx": 2,
-     "phonetic": "[tekˈnɒlədʒɪst]",
-     "hl": "technologist"
-    },
-    {
-     "id": "a1-n8",
-     "text": "crack",
-     "understanding": "v. 解决，破解；破裂  例：crack a walnut 砸开一个核桃",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-23"
-     },
-     "paraIdx": 2,
-     "phonetic": "[kræk]",
-     "hl": "crack"
-    },
-    {
-     "id": "a1-n9",
-     "text": "wand",
-     "understanding": "n. 魔杖  例：In Harry Potter, it’s the wand that chooses the wizard.在《哈利波特》里，是魔杖选择巫师。",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-24"
-     },
-     "paraIdx": 2,
-     "phonetic": "[wɒnd]",
-     "hl": "wand"
-    },
-    {
-     "id": "a1-n10",
-     "text": "demo",
-     "understanding": "n. 演示小样，试用版本(demonstration)  例：a software demo 软件试用版",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-25"
-     },
-     "paraIdx": 3,
-     "phonetic": "[ˈdeməʊ]",
-     "hl": "demo"
-    },
-    {
-     "id": "a1-n11",
-     "text": "agree",
-     "understanding": "v. 一致，匹配，相符  例：The figures from the two reports don’t agree.两份报告里的数据不一致。",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-26"
-     },
-     "paraIdx": 3,
-     "phonetic": "[əˈɡriː]",
-     "hl": "agree"
-    },
-    {
-     "id": "a1-n12",
-     "text": "exception",
-     "understanding": "n. 例外",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-27"
-     },
-     "paraIdx": 3,
-     "phonetic": "[ɪkˈsepʃn]",
-     "hl": "exception"
-    },
-    {
-     "id": "a1-n13",
-     "text": "workaround",
-     "understanding": "n. 变通、替代办法  例：We found a workaround for the software bug.",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-28"
-     },
-     "paraIdx": 3,
-     "phonetic": "[ˈwɜːkəraʊnd]",
-     "hl": "workaround"
-    },
-    {
-     "id": "a1-n14",
-     "text": "this brings me to",
-     "understanding": "这就让我引入、说到  例：This brings me to my next point.",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-29"
-     },
-     "paraIdx": 4,
-     "hl": "This brings me"
-    },
-    {
-     "id": "a1-n15",
-     "text": "layoff",
-     "understanding": "n. 裁员，解雇  例：lay off someone 裁员",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-16"
-     },
-     "paraIdx": 5,
-     "phonetic": "[ˈleɪɒf]",
-     "hl": "layoff"
-    },
-    {
-     "id": "a1-n16",
-     "text": "proclaim",
-     "understanding": "v. 对外、正式宣告  例：pro-向外的，claim宣称。The president proclaimed victory after the election.总统在选举后宣告胜利。",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-17"
-     },
-     "paraIdx": 5,
-     "phonetic": "[prəˈkleɪm]",
-     "hl": "proclaim"
-    },
-    {
-     "id": "a1-n17",
-     "text": "free up",
-     "understanding": "腾出，释放  例：Many people move to smaller homes at retirement age in order to free up cash.很多人在退休之后会搬到更小的房子里，以此来腾出现金。",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-18"
-     },
-     "paraIdx": 5,
-     "hl": "freeing"
-    },
-    {
-     "id": "a1-n18",
-     "text": "the sooner…the sooner…",
-     "understanding": "越早……就越能尽快……  例：常见句式：the+比较级…the+比较级…",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-19"
-     },
-     "paraIdx": 6,
-     "hl": "sooner"
-    },
-    {
-     "id": "a1-n19",
-     "text": "perform",
-     "understanding": "v. 表演，假装  例：perform her own music 演奏她自己的音乐",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-20"
-     },
-     "paraIdx": 6,
-     "phonetic": "[pəˈfɔːm]",
-     "hl": "perform"
-    }
-   ]
-  },
-  {
-   "id": "a2",
-   "source": "E01 一个晨间习惯，瞬间提升睡眠质量（播客）",
-   "category": "播客",
-   "date": "2026-08-13",
-   "paragraphs": [
-    {
-     "en": "How to Feel Energized & Sleep Better With One Morning Activity",
-     "cn": ""
-    },
-    {
-     "en": "I wake up in the morning and I want to reach for my phone, but I know that even if I were to crank up the brightness on that phone screen, it's not bright enough to trigger that cortisol spike and for me to be at my most alert and focused throughout the day and to optimize my sleep at night. So what I do is I get out of bed and I go outside.",
-     "cn": ""
-    },
-    {
-     "en": "And if it's a bright, clear day and the sun is low in the sky or the sun is starting to get overhead, what we call low solar angle, then I know I'm getting outside at the right time. If there's cloud cover and I can't see the sun, I also know I'm doing a good thing because it turns out, especially on cloudy days, you want to get outside and get as much light energy or photons in your eyes.",
-     "cn": ""
-    },
-    {
-     "en": "So the way to get this sunlight viewing early in the day is to look toward the sun. If it's too bright to look at directly, well, then don't do that. You just look toward it, but not directly at it. It's absolutely fine to blink. In fact, I encourage you to blink whenever you feel the impulse to blink.",
-     "cn": "这段里提到的sunlight viewing，指的是：早起到户外，让视线朝向太阳的方向，这样有利于触发皮质醇峰值（trigger cortisol spike），进而让自己白天更专注，晚上睡得好。"
-    },
-    {
-     "en": "I want to share with you three critical things about this tool of morning sunlight viewing. First of all, this is not some woo-woo biology thing. This is grounded in the core of our physiology. There are literally hundreds, if not thousands, of quality peer-reviewed papers showing that light viewing early in the day is the most powerful stimulus for wakefulness throughout the day, and it has a powerful positive impact on your ability to fall and stay asleep at night.",
-     "cn": ""
-    },
-    {
-     "en": "So there's this asymmetry in our retinal, our eye biology, and in our brain's biology, whereby early in the day, right around waking, you need a lot of light, a lot of photons, a lot of light energy, and artificial lights generally just won't accomplish what you need them to accomplish. But at night, even a little bit of artificial light can really mess up your so-called circadian, your 24-hour clocks and all these mechanisms that we're talking about.",
-     "cn": ""
-    }
-   ],
-   "items": [
-    {
-     "id": "a2-1",
-     "text": "crank up",
-     "understanding": "把…调到最大（使劲拧到头的感觉）。crank up the brightness / volume / heat——提升亮度/音量/暖气。",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-14"
-     },
-     "paraIdx": 1,
-     "hl": "crank up",
-     "phonetic": "[kræŋk]"
-    },
-    {
-     "id": "a2-2",
-     "text": "trigger (a spike / response)",
-     "understanding": "触发。trigger that cortisol spike 触发皮质醇峰值；trigger a response 触发反应。描述因果很顺手。",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-14"
-     },
-     "paraIdx": 1,
-     "hl": "trigger",
-     "phonetic": "[ˈtrɪɡə(r)]"
-    },
-    {
-     "id": "a2-3",
-     "text": "optimize",
-     "understanding": "使达到最优。optimize sleep / diet——让睡眠/饮食达到最佳状态。",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-14"
-     },
-     "paraIdx": 1,
-     "hl": "optimize",
-     "phonetic": "[ˈɒptɪmaɪz]"
-    },
-    {
-     "id": "a2-4",
-     "text": "photon",
-     "understanding": "光子（light energy 或 photons）。科普/播客里常见，记一次就通。",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-14"
-     },
-     "paraIdx": 2,
-     "hl": "photons",
-     "phonetic": "[ˈfəʊtɒn]"
-    },
-    {
-     "id": "a2-5",
-     "text": "You want to do",
-     "understanding": "温和建议句式：“你会想要…”，区别于 you should 的外部施压感，更像善意提醒。教口语可用这个区别帮学生拿捏语气。",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-14"
-     },
-     "paraIdx": 2,
-     "hl": "you want to"
-    },
-    {
-     "id": "a2-n1",
-     "text": "mess up",
-     "understanding": "口语）把……搞乱 mess up your sleep 把睡眠搞乱 mess up your schedule 把日程搞乱",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-21"
-     },
-     "paraIdx": 5,
-     "hl": "mess up"
-    },
-    {
-     "id": "a2-n2",
-     "text": "mechanism",
-     "understanding": "一件事情的）运作原理、机制 这个词和trigger，optimize 一样，是科普内容里的绝对高频词。 听英文播客的tips · 听英文播客的一个基础方法：找到它的transcript ，即全文逐字稿，对照着听。 · 现在的播客大部分都会提供 transcript，如果没有现成的文稿，也可以用AI把音频完整地听写下来。 · 看 transcript 的过程能帮助把声音和文字绑在一起，实现“音字一体”。 *本节课中的播客素材选自Huberman Lab频道的“Essentials: Sleep Toolkit for Optimizing Sleep & Sleep-Wake Timing”一集，有兴趣的同学可自行搜索收听全集。 &nbsp;",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-22"
-     },
-     "paraIdx": 5,
-     "hl": "mechanism"
-    }
-   ]
-  },
-  {
-   "id": "a3",
-   "source": "“救命，我可能是个传统主妇”：一个职业女性的厨房自白",
-   "category": "外刊",
-   "date": "2026-08-13",
-   "paragraphs": [
-    {
-     "en": "Help! I Might Be a Tradwife!",
-     "cn": "救命！我可能是个传统家庭主妇！"
-    },
-    {
-     "en": "When I heard that Netflix was rebooting “Little House on the Prairie,” I was hopeful, if a little wary.  The “Little House” reboot arrives in the midst of a tradwife moment.",
-     "cn": "当得知网飞将要翻拍《草原上的小木屋》时，我心怀期待，却也略带警惕。这场《草原上的小木屋》的翻拍热潮，恰逢传统主妇风潮盛行的当下。"
-    },
-    {
-     "en": "As a woman who’s always believed that my life purpose is synonymous not with my fecundity or my homemaking prowess but with my artistic ambitions, I’m decidedly not the audience for this kind of content.",
-     "cn": "我一直坚信，自己的人生价值不在于生育能力，也不在于持家本领，而在于艺术理想。因此，我显然绝不是这类内容的受众。"
-    },
-    {
-     "en": "But maybe it was the moment when I was slicing strawberries and scooping homemade coconut-almond granola into my son’s Greek yogurt that a startling revelation dawned on me. I’m definitely not a tradwife — but maybe I’m a little tradwife-curious? Maybe I have a few latent tradwife tendencies?",
-     "cn": "但就在我切着草莓、把自制的椰香杏仁格兰诺拉麦片舀进儿子的希腊酸奶里的那一刻，我突然有了一个惊人的感悟。我绝对不是一个传统主妇——但我会不会对这种生活心生向往？我身上会不会潜藏着一些传统主妇的特质？"
-    },
-    {
-     "en": "How can I renounce the regressive side of tradwives while blissfully kneading my own milk bread dough? How can I deny the appeal of the Hannah Neelemans of the world when my own household habits help balance my workaholism, keep me present and mindful in my body?",
-     "cn": "我该如何一边满心愉悦地揉制牛奶面包面团，一边摒弃传统主妇观念中保守落后的一面？当我的居家日常能够克制我的工作狂倾向，让我专注当下、身心沉静时，我又怎能否认汉娜·尼勒曼这类生活博主的独特吸引力呢？"
-    },
-    {
-     "en": "So, like many others, I’m learning to reassess the value of so-called grandma hobbies, those frontier-adjacent activities that — surprise, surprise — don’t also require you to be a religious zealot or an antisuffragist.",
-     "cn": "所以，和很多人一样，我开始重新评估那些所谓“奶奶辈爱好”的价值。那些贴近拓荒时代的生活活动，说来意外，它们并不需要你成为宗教狂热者，也不需要你反对女性选举权。"
-    },
-    {
-     "en": "I imagine other people find this same kind of contemplation in sewing, or knitting, or mending. So even if I don’t live the full tradwife lifestyle — for anyone else’s consumption, or my own — I can still venerate those tasks that remind me that who I am meant to be is fluid and multitudinous. It can be expressed in how I stir a wooden spoon through water and flour to make the tangzhong that is the starter for my son’s favorite milk bread, and also in a poem I might write, born of my fascination with the same word.",
-     "cn": "我想，其他人也能在缝纫、编织、缝补这类小事中获得同样的沉思与治愈。所以，即便我不会为了取悦他人或满足自我，完全复刻传统主妇的生活方式，我依然敬重这些琐事。它们让我明白，人的自我定位是流动且多元的。这份自我，既可以体现在我手持木勺、搅拌水和面粉，制作出儿子最爱的牛奶面包所需的烫种里，也可以体现在我提笔写下的诗句中，而这首诗正源于我对同一个词汇的着迷。"
-    }
-   ],
-   "items": [
-    {
-     "id": "a3-1",
-     "text": "synonymous with",
-     "understanding": "等同于、与…同义。be synonymous with——X is synonymous with Y（X 等同于 Y），写作替换 be the same as 更地道。",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-14"
-     },
-     "paraIdx": 2,
-     "hl": "synonymous not with",
-     "phonetic": "[sɪˈnɒnɪməs]"
-    },
-    {
-     "id": "a3-2",
-     "text": "prowess",
-     "understanding": "高超的本领、造诣。homemaking prowess 持家本领；athletic prowess 运动天赋。",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-14"
-     },
-     "paraIdx": 2,
-     "hl": "prowess",
-     "phonetic": "[ˈpraʊəs]"
-    },
-    {
-     "id": "a3-3",
-     "text": "decidedly",
-     "understanding": "明确地、断然地。decidedly not the audience——明确不是受众。加强语气很好用。",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-14"
-     },
-     "paraIdx": 2,
-     "hl": "decidedly",
-     "phonetic": "[dɪˈsaɪdɪdli]"
-    },
-    {
-     "id": "a3-4",
-     "text": "a revelation dawned on me",
-     "understanding": "我突然恍然大悟。revelation 顿悟；dawn on 渐渐明白。比 I suddenly realized 更有画面感。",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-14"
-     },
-     "paraIdx": 3,
-     "hl": "revelation dawned on me",
-     "phonetic": "[ˌrevəˈleɪʃn]"
-    },
-    {
-     "id": "a3-5",
-     "text": "latent",
-     "understanding": "潜在的、潜伏的。latent tendencies / latent talent——潜在特质/潜质。描述“还没显形但存在”的东西。",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-14"
-     },
-     "paraIdx": 3,
-     "hl": "latent",
-     "phonetic": "[ˈleɪtnt]"
-    },
-    {
-     "id": "a3-n1",
-     "text": "tradwife",
-     "understanding": "n. 传统全职妻子，传统家庭主妇（traditional wife的简称）  例：源自海外早期网络论坛，特指展示复古主妇生活的全职女性博主。国内也译作“北美娇妻”。",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-23"
-     },
-     "paraIdx": 0,
-     "phonetic": "[ˈtrædwaɪf]",
-     "hl": "Tradwife"
-    },
-    {
-     "id": "a3-n2",
-     "text": "wary",
-     "understanding": "adj. 谨慎的，提防的，有所防备的",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-24"
-     },
-     "paraIdx": 1,
-     "phonetic": "[ˈweəri]",
-     "hl": "wary"
-    },
-    {
-     "id": "a3-n3",
-     "text": "reboot",
-     "understanding": "v.（本文）翻拍（影视行业）； 重启  例：HBO is currently rebooting Harry Potter to attract a new generation of Hogwarts fans.HBO 正在重启哈利波特剧版，以吸引新一代霍格沃茨迷。",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-25"
-     },
-     "paraIdx": 1,
-     "phonetic": "[ˌriːˈbuːt]",
-     "hl": "reboot"
-    },
-    {
-     "id": "a3-n4",
-     "text": "not with A, but with B",
-     "understanding": "不在于A，而在于B",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-26"
-     },
-     "paraIdx": 2,
-     "hl": "not"
-    },
-    {
-     "id": "a3-n5",
-     "text": "fecundity",
-     "understanding": "n. 多产；高生育率",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-27"
-     },
-     "paraIdx": 2,
-     "phonetic": "[fɪˈkʌndəti]",
-     "hl": "fecundity"
-    },
-    {
-     "id": "a3-n6",
-     "text": "homemaking",
-     "understanding": "n. 操持家务，主持家庭  例：homemaker n. 家庭主妇",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-28"
-     },
-     "paraIdx": 2,
-     "phonetic": "[ˈhəʊmmeɪkɪŋ]",
-     "hl": "homemaking"
-    },
-    {
-     "id": "a3-n7",
-     "text": "artistic ambitions",
-     "understanding": "艺术抱负  例：career ambitions 事业抱负creative ambitions 创作抱负",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-29"
-     },
-     "paraIdx": 2,
-     "hl": "artistic ambitions"
-    },
-    {
-     "id": "a3-n8",
-     "text": "startling",
-     "understanding": "adj. 令人吃惊的",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-16"
-     },
-     "paraIdx": 3,
-     "phonetic": "[ˈstɑːtlɪŋ]",
-     "hl": "startling"
-    },
-    {
-     "id": "a3-n9",
-     "text": "dawn on",
-     "understanding": "猛然醒悟，渐渐明白  例：dawn n. 日出",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-17"
-     },
-     "paraIdx": 3,
-     "hl": "dawned"
-    },
-    {
-     "id": "a3-n10",
-     "text": "-curious",
-     "understanding": "后缀，表示对某种生活方式或文化感兴趣、好奇，想尝试但尚未完全融入  例：sober-curious 清醒好奇，指尝试少喝酒或不喝酒的生活方式",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-18"
-     },
-     "paraIdx": 3,
-     "hl": "-curious"
-    },
-    {
-     "id": "a3-n11",
-     "text": "renounce",
-     "understanding": "v.（本文）宣布放弃；与……断绝关系；公开谴责  例：renounce family ties 断绝亲属关系renounce family inheritance 放弃家族继承权",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-19"
-     },
-     "paraIdx": 4,
-     "phonetic": "[rɪˈnaʊns]",
-     "hl": "renounce"
-    },
-    {
-     "id": "a3-n12",
-     "text": "regressive",
-     "understanding": "adj. 倒退的  例：progressive adj. 进步的",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-20"
-     },
-     "paraIdx": 4,
-     "phonetic": "[rɪˈɡresɪv]",
-     "hl": "regressive"
-    },
-    {
-     "id": "a3-n13",
-     "text": "blissfully",
-     "understanding": "adv. 充满幸福感地，无比愉悦地",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-21"
-     },
-     "paraIdx": 4,
-     "phonetic": "[ˈblɪsfəli]",
-     "hl": "blissfully"
-    },
-    {
-     "id": "a3-n14",
-     "text": "knead dough",
-     "understanding": "揉面团",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-22"
-     },
-     "paraIdx": 4,
-     "hl": "kneading"
-    },
-    {
-     "id": "a3-n15",
-     "text": "deny the appeal of",
-     "understanding": "否认某项事物的吸引力",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-23"
-     },
-     "paraIdx": 4,
-     "hl": "deny"
-    },
-    {
-     "id": "a3-n16",
-     "text": "workaholism",
-     "understanding": "n. 工作狂倾向",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-24"
-     },
-     "paraIdx": 4,
-     "phonetic": "[ˌwɜːkəˈhɒlɪzəm]",
-     "hl": "workaholism"
-    },
-    {
-     "id": "a3-n17",
-     "text": "present",
-     "understanding": "adj.（本文）活在当下的；在场的  例：present tense 现在时态",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-25"
-     },
-     "paraIdx": 4,
-     "phonetic": "[ˈpreznt]",
-     "hl": "present"
-    },
-    {
-     "id": "a3-n18",
-     "text": "mindful",
-     "understanding": "adj. 有觉察的，正念的",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-26"
-     },
-     "paraIdx": 4,
-     "phonetic": "[ˈmaɪndfl]",
-     "hl": "mindful"
-    },
-    {
-     "id": "a3-n19",
-     "text": "reassess",
-     "understanding": "v. 重新评估，重新审视  例：assess v. 评估reassess our investment strategy 重新评估我们的投资策略",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-27"
-     },
-     "paraIdx": 5,
-     "phonetic": "[ˌriːəˈses]",
-     "hl": "reassess"
-    },
-    {
-     "id": "a3-n20",
-     "text": "so-called",
-     "understanding": "adj. 所谓的（带有不完全认同的语气）",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-28"
-     },
-     "paraIdx": 5,
-     "phonetic": "[ˌsəʊ ˈkɔːld]",
-     "hl": "so-called"
-    },
-    {
-     "id": "a3-n21",
-     "text": "adjacent",
-     "understanding": "adj. 邻近的，接壤的（near, next to, close to）",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-29"
-     },
-     "paraIdx": 5,
-     "phonetic": "[əˈdʒeɪsnt]",
-     "hl": "adjacent"
-    },
-    {
-     "id": "a3-n22",
-     "text": "zealot",
-     "understanding": "n. 狂热分子，偏执者",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-16"
-     },
-     "paraIdx": 5,
-     "phonetic": "[ˈzelət]",
-     "hl": "zealot"
-    },
-    {
-     "id": "a3-n23",
-     "text": "antisuffragist",
-     "understanding": "n. 反对妇女选举权的人  例：suffrage n. 选举权",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-17"
-     },
-     "paraIdx": 5,
-     "phonetic": "[ˌæntiˈsʌfrədʒɪst]",
-     "hl": "antisuffragist"
-    },
-    {
-     "id": "a3-n24",
-     "text": "contemplation",
-     "understanding": "n. 深思，沉思，静心观想  例：Contemplation helps one get into the flow state.静心让人进入心流状态。",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-18"
-     },
-     "paraIdx": 6,
-     "phonetic": "[ˌkɒntəmˈpleɪʃn]",
-     "hl": "contemplation"
-    },
-    {
-     "id": "a3-n25",
-     "text": "for anyone else’s consumption",
-     "understanding": "为了别人而作",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-19"
-     },
-     "paraIdx": 6,
-     "hl": "for anyone else’s consumption"
-    },
-    {
-     "id": "a3-n26",
-     "text": "venerate",
-     "understanding": "v. 尊崇，崇尚  例：比 respect 更深，带有神圣感。Ancient cultures used to venerate nature, treating every tree and river with deep reverence.古代文化常常尊崇自然，怀着深深的敬畏对待每一棵树和每一条河流。",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-20"
-     },
-     "paraIdx": 6,
-     "phonetic": "[ˈvenəreɪt]",
-     "hl": "venerate"
-    },
-    {
-     "id": "a3-n27",
-     "text": "fluid",
-     "understanding": "adj. 流动的，不被固化的",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-21"
-     },
-     "paraIdx": 6,
-     "phonetic": "[ˈfluːɪd]",
-     "hl": "fluid"
-    },
-    {
-     "id": "a3-n28",
-     "text": "multitudinous",
-     "understanding": "adj. 丰富多元的  例：来自 multitude n. 众多、大量",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-22"
-     },
-     "paraIdx": 6,
-     "phonetic": "[ˌmʌltɪˈtjuːdɪnəs]",
-     "hl": "multitudinous"
-    },
-    {
-     "id": "a3-n29",
-     "text": "tangzhong",
-     "understanding": "n. 汤种（烘焙术语）",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-23"
-     },
-     "paraIdx": 6,
-     "phonetic": "[tæŋˈzɒŋ]",
-     "hl": "tangzhong"
-    }
-   ]
-  },
-  {
-   "id": "a4",
-   "source": "哈佛教授的“友谊经济学”：为什么我们交不到朋友了",
-   "category": "外刊",
-   "date": "2026-08-14",
-   "paragraphs": [
-    {
-     "en": "The Economics of Friendship",
-     "cn": "友谊的经济学"
-    },
-    {
-     "en": "The ferry crossing from Chappaquiddick to Edgartown, Mass., is only 527 feet long. But no matter how rich or important you are, you have to wait to get on the boat. Someone complains about the line, the weather, politics. Someone else laughs. A conversation begins.",
-     "cn": "从马萨诸塞州查帕奎迪克（Chappaquiddick）到埃德加敦（Edgartown）的渡轮，航程只有527英尺。但是，无论你多有钱、多重要，你都得排队等船。有人抱怨队伍、抱怨天气、抱怨政治。然后有人笑起来。一段对话，就这样开始了。"
-    },
-    {
-     "en": "But spending time around that ferry has made me wonder if modern life has undersold inconvenience. We treat waiting as wasted time. But sometimes waiting does something useful: It forces people into the same place long enough for conversation to begin.",
-     "cn": "但在渡轮那里待了一段时间后，我开始怀疑：现代生活是不是低估了\"不便\"的价值。我们总把等待当作浪费的时间。但有时候，等待也有它的用处：它强制人们在同一个地方待上足够长的时间，从而让一段对话得以开始。"
-    },
-    {
-     "en": "Loneliness has become one of the stranger problems of modern life. In 2023 the U.S. surgeon general called loneliness a public-health problem.",
-     "cn": "孤独已成为现代生活中一个颇为奇特的问题。2023年，美国卫生总监将孤独定义为一个公共卫生问题。"
-    },
-    {
-     "en": "Which brings me back to that ridiculously inconvenient ferry and what I call the friction theory of friendship. Some inconveniences aren't merely costs. They are the hidden scaffolding of social life. If I had to estimate my own production function for friendship, it would look something like this: friendship = (proximity × repetition) + (idle time × low stakes) + shared irritation.",
-     "cn": "由此我们可以说回到那艘极其不便的渡轮，以及我所谓的\"友谊摩擦理论\"。有些\"不便\"，并不只是代价。它们是社交生活隐秘的脚手架。如果要我估算自己的\"友谊生产函数\"，它看起来大概会是这个样子：友谊 =(距离近 × 重复遇见)+（闲暇时间×低利害情境）+共同的不满。"
-    },
-    {
-     "en": "Proximity matters most when it recurs. Idle time matters most when nobody is trying to impress anyone. Shared irritation helps, but with diminishing returns: A delayed ferry creates conversation; a broken ferry creates rage.",
-     "cn": "距离近，在反复出现时最起作用。闲暇，在没人刻意表现自己的时候，最有价值。共同的不满有帮助，但效用递减：延误的渡轮，催生交谈；坏掉的渡轮，只会制造愤怒。"
-    },
-    {
-     "en": "This is why friendship is often a product of something else: work, school, church, children, sports, errands, waiting rooms. Modern life has spent decades eliminating that friction. We can work without offices, shop without stores, exercise without gyms and communicate without looking anyone in the eye. Together they have made interaction with other people increasingly optional.",
-     "cn": "正因如此，友谊往往是其他事物的副产品：工作、学校、教堂、孩子、体育运动、跑腿办事、候诊室等等。然而几十年来，现代生活一直在消除这种摩擦。我们可以不用办公室工作，不用实体店购物，不用健身房锻炼，也不用与人四目相对就能交流。这些便利加在一起，让人与人之间的交往，变得越来越可有可无。"
-    },
-    {
-     "en": "The solution isn't to make life harder for its own sake. But we should ask what social infrastructure is being lost.",
-     "cn": "解决之道，不是刻意把生活变难。但我们应该追问：我们正在失去什么样的社会基础设施。"
-    },
-    {
-     "en": "Schools, for example, aren't only human-capital institutions. They are social-capital institutions. Much of what we call \"community\" used to be produced by institutions as a byproduct.",
-     "cn": "例如，学校不仅仅是人力资本机构。它还是社会资本机构。我们所说的\"社区\"，在很大程度上，曾经是各类机构无意之中生产的副产品。"
-    },
-    {
-     "en": "That is why I've come to love the Chappaquiddick ferry. It gives people nothing to do for a few minutes except notice one another.",
-     "cn": "这就是为什么，我渐渐爱上了查帕奎迪克渡轮。在那几分钟里，人们除了互相打量之外，别无他事可做。"
-    },
-    {
-     "en": "Convenience has saved us time. The hidden price is that it has also saved us from one another.",
-     "cn": "便利为我们节省了时间。但代价是，它也让我们丢失了彼此。"
-    }
-   ],
-   "items": [
-    {
-     "id": "a4-1",
-     "text": "undersell",
-     "understanding": "低估…的价值（反义 oversell 高估/过度宣传）。undersold inconvenience 低估了“不便”的价值——连接右右：适度不便反而催生互动。",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-15"
-     },
-     "paraIdx": 2,
-     "hl": "undersold",
-     "phonetic": "[ˌʌndəˈsel]"
-    },
-    {
-     "id": "a4-2",
-     "text": "force sb into",
-     "understanding": "迫使某人进入（某种状态/地方）。forces people into the same place——强制把人凑到一处，才能起对话。",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-15"
-     },
-     "paraIdx": 2,
-     "hl": "forces people into",
-     "phonetic": "[fɔːs]"
-    },
-    {
-     "id": "a4-3",
-     "text": "friction theory of friendship",
-     "understanding": "友谊摩擦理论。friction 原指摩擦/阻力，这里指“不便”反而催生友谊。可复用在我和右右的亲子互动：适度不便反而增进连接。",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-15"
-     },
-     "paraIdx": 4,
-     "hl": "friction theory of friendship",
-     "phonetic": "[ˈfrɪkʃən]"
-    },
-    {
-     "id": "a4-4",
-     "text": "scaffolding",
-     "understanding": "脚手架。the hidden scaffolding of social life——社交生活隐秘的支撑结构。比喻“看不见但撑着整体”的东西。",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-15"
-     },
-     "paraIdx": 4,
-     "hl": "scaffolding",
-     "phonetic": "[ˈskæfəldɪŋ]"
-    },
-    {
-     "id": "a4-5",
-     "text": "low stakes",
-     "understanding": "低利害、低压力。idle time × low stakes——闲暇 × 无压力情境，友谊更容易长出来。",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-15"
-     },
-     "paraIdx": 4,
-     "hl": "low stakes",
-     "phonetic": "[steɪks]"
-    },
-    {
-     "id": "a4-6",
-     "text": "shared irritation",
-     "understanding": "共同的不满/一起吐槽。朋友间一起抱怨反而拉近距离——连接右右：一起对某事“吐槽”也是亲密。",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-15"
-     },
-     "paraIdx": 4,
-     "hl": "Shared irritation",
-     "phonetic": "[ˌɪrɪˈteɪʃn]"
-    },
-    {
-     "id": "a4-n1",
-     "text": "the economics of something",
-     "understanding": "某件事背后的“经济账”  例：economy n.（最早的含义）管家；经济学希腊语oikos表示“家”，nomos表示“管理”the economics of raising a child 养一个孩子背后的经济账",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-24"
-     },
-     "paraIdx": 0,
-     "hl": "Economics"
-    },
-    {
-     "id": "a4-n2",
-     "text": "treat A as B",
-     "understanding": "把A当作B",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-25"
-     },
-     "paraIdx": 2,
-     "hl": "treat"
-    },
-    {
-     "id": "a4-n3",
-     "text": "stranger problems",
-     "understanding": "匪夷所思、说不太清的问题  例：Stranger Things《怪奇物语》",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-26"
-     },
-     "paraIdx": 3,
-     "hl": "stranger problems"
-    },
-    {
-     "id": "a4-n4",
-     "text": "surgeon general",
-     "understanding": "美国公共卫生体系的最高官员",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-27"
-     },
-     "paraIdx": 3,
-     "hl": "surgeon general"
-    },
-    {
-     "id": "a4-n5",
-     "text": "production function",
-     "understanding": "生产函数（描述投入和产出的关系）",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-28"
-     },
-     "paraIdx": 4,
-     "hl": "production function"
-    },
-    {
-     "id": "a4-n6",
-     "text": "A multiplied by B",
-     "understanding": "A乘以B（A times B）",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-29"
-     },
-     "paraIdx": 0
-    },
-    {
-     "id": "a4-n7",
-     "text": "proximity",
-     "understanding": "n. 接近，邻近",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-16"
-     },
-     "paraIdx": 4,
-     "phonetic": "[prɒkˈsɪməti]",
-     "hl": "proximity"
-    },
-    {
-     "id": "a4-n8",
-     "text": "repetition",
-     "understanding": "n. 重复",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-17"
-     },
-     "paraIdx": 4,
-     "phonetic": "[ˌrepəˈtɪʃn]",
-     "hl": "repetition"
-    },
-    {
-     "id": "a4-n9",
-     "text": "idle",
-     "understanding": "adj. 空闲的；闲置的  例：lazy adj. 懒的",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-18"
-     },
-     "paraIdx": 4,
-     "phonetic": "[ˈaɪdl]",
-     "hl": "idle"
-    },
-    {
-     "id": "a4-n10",
-     "text": "irritation",
-     "understanding": "n. 烦躁、不满  例：irritate v. 使烦躁",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-19"
-     },
-     "paraIdx": 4,
-     "phonetic": "[ˌɪrɪˈteɪʃn]",
-     "hl": "irritation"
-    },
-    {
-     "id": "a4-n11",
-     "text": "recur",
-     "understanding": "v. 再次发生、反复出现（to happen again）  例：My migraine recurred.我的偏头痛又犯了。",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-20"
-     },
-     "paraIdx": 5,
-     "phonetic": "[rɪˈkɜː]",
-     "hl": "recur"
-    },
-    {
-     "id": "a4-n12",
-     "text": "diminishing returns",
-     "understanding": "收益递减，边际效用递减",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-21"
-     },
-     "paraIdx": 5,
-     "hl": "diminishing returns"
-    },
-    {
-     "id": "a4-n13",
-     "text": "rage",
-     "understanding": "n. 失控的暴怒  例：anger n. 愤怒",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-22"
-     },
-     "paraIdx": 5,
-     "phonetic": "[reɪdʒ]",
-     "hl": "rage"
-    },
-    {
-     "id": "a4-n14",
-     "text": "errand",
-     "understanding": "n. 跑腿，杂事",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-23"
-     },
-     "paraIdx": 6,
-     "phonetic": "[ˈerənd]",
-     "hl": "errand"
-    },
-    {
-     "id": "a4-n15",
-     "text": "waiting room",
-     "understanding": "候诊室",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-24"
-     },
-     "paraIdx": 6,
-     "hl": "waiting room"
-    },
-    {
-     "id": "a4-n16",
-     "text": "eliminate",
-     "understanding": "v. 消除，淘汰  例：前缀e-表示“出去”词根limen在拉丁语中表示“门槛”",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-25"
-     },
-     "paraIdx": 0,
-     "phonetic": "[ɪˈlɪməneɪt]"
-    },
-    {
-     "id": "a4-n17",
-     "text": "optional",
-     "understanding": "adj. 可选择的，非强制的  例：option n. 选项",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-26"
-     },
-     "paraIdx": 6,
-     "phonetic": "[ˈɒpʃənəl]",
-     "hl": "optional"
-    },
-    {
-     "id": "a4-n18",
-     "text": "for its own sake",
-     "understanding": "为了……本身",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-27"
-     },
-     "paraIdx": 7,
-     "hl": "for its own sake"
-    },
-    {
-     "id": "a4-n19",
-     "text": "social infrastructure",
-     "understanding": "社会基础设施  例：infrastructure n. 基础设施（指道路、桥梁、电网等）",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-28"
-     },
-     "paraIdx": 7,
-     "hl": "social infrastructure"
-    },
-    {
-     "id": "a4-n20",
-     "text": "human-capital",
-     "understanding": "人力资本  例：capital n. 资本",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-29"
-     },
-     "paraIdx": 8,
-     "phonetic": "[ˈhjuːmən ˈkæpɪtl]",
-     "hl": "human-capital"
-    },
-    {
-     "id": "a4-n21",
-     "text": "social-capital",
-     "understanding": "社会资本",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-16"
-     },
-     "paraIdx": 8,
-     "phonetic": "[ˈsəʊʃl ˈkæpɪtl]",
-     "hl": "social-capital"
-    },
-    {
-     "id": "a4-n22",
-     "text": "byproduct",
-     "understanding": "n. 副产品  例：前缀by-表示“旁边的、附带的”",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-17"
-     },
-     "paraIdx": 8,
-     "phonetic": "[ˈbaɪprɒdʌkt]",
-     "hl": "byproduct"
-    },
-    {
-     "id": "a4-n23",
-     "text": "come to do something",
-     "understanding": "渐渐变成、逐渐开始",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-18"
-     },
-     "paraIdx": 9,
-     "hl": "come"
-    },
-    {
-     "id": "a4-n24",
-     "text": "notice",
-     "understanding": "v. 注意到，无意中留意到  例：see v. 看见watch v. 观看realize v. 意识到",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-19"
-     },
-     "paraIdx": 9,
-     "phonetic": "[ˈnəʊtɪs]",
-     "hl": "notice"
-    },
-    {
-     "id": "a4-n25",
-     "text": "save time",
-     "understanding": "节省时间  例：save money 省钱",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-20"
-     },
-     "paraIdx": 10,
-     "hl": "saved"
-    }
-   ]
-  },
-  {
-   "id": "a5",
-   "source": "消费普遍谨慎的当下，中国人为什么愿意为运动买单？",
-   "category": "外刊",
-   "date": "2026-08-14",
-   "paragraphs": [
-    {
-     "en": "Running, Rock Climbing and Other Sports Are Taking Off in China. Pricey Workout Clothes, Too.",
-     "cn": "跑步、攀岩等运动正在中国蓬勃兴起。价格不菲的运动服装也是如此。"
-    },
-    {
-     "en": "Yangshuo in southern China has long been a rock-climbing destination for American and European tourists. But lately, a different demographic has flocked to its limestone cliffs: office workers from China’s big cities.",
-     "cn": "位于中国南部的阳朔长期以来一直是欧美游客的攀岩圣地。但最近，另一类人群也涌向了这里的石灰岩峭壁：来自中国各大城市的上班族。"
-    },
-    {
-     "en": "“I needed some exercise and outdoor activities to cope with the high-pressure work environment,” Chen Xue, a 28-year-old auditor, said.",
-     "cn": "“我需要一些运动和户外活动来应对高压的工作环境。”28岁的审计师陈雪（音译）说。"
-    },
-    {
-     "en": "China’s rock-climbing boom is part of a larger fitness craze that has taken over the country. The number of marathon participants has doubled since 2017 to more than a million people, and Hyrox had 55,000 participants in China this past year, up from 7,300 a year earlier.",
-     "cn": "中国攀岩热潮不过只是席卷全国的健身热潮的一部分。自2017年以来，马拉松参赛人数已翻了一番，逾100万人；而去年，Hyrox赛事在中国吸引了5.5万名参赛者，较前一年的7300人有了大幅增长。"
-    },
-    {
-     "en": "And alongside the fitness boom, hiking shoes and yoga pants and other types of athletic gear have become aspirational styles for China’s middle class. While foreign automakers and luxury brands are struggling against tough domestic competition in China, athletic apparel is a rare market where Western companies such as Lululemon, Hoka and Adidas are increasing sales.",
-     "cn": "随着这股健身热潮的兴起，徒步鞋、瑜伽裤及其他各类运动装备，已然成为中国中产阶级向往的穿搭风格。外国车企和奢侈品牌尚在中国激烈的本土竞争中苦苦挣扎，运动服饰却成了一方罕见的市场，像Lululemon、Hoka和阿迪达斯这样的西方品牌，销售反而有所增长。"
-    },
-    {
-     "en": "“Health is kind of the new wealth in China,” said Rebecca Cai, Asia-Pacific general manager for Swiss premium running shoe brand On. The brand said in a May earnings call that quarterly sales in Greater China exceeded the Asia-Pacific regional growth figure of 44%.",
-     "cn": "“在中国，健康可以说是一种新的财富，”瑞士高端跑鞋品牌“昂跑”（On）的亚太区总经理蔡以佳表示。该品牌在5月的财报电话会议上称，大中华区的季度销售额超过了亚太地区44%的整体增长率。"
-    },
-    {
-     "en": "Some consumers trace the fitness trend to a postpandemic cultural shift. “After Covid, everything changed,” said Xu Lin, the owner of Prakasa, a popular yoga studio in Shanghai, “Everyone wants to have a better life, not just money, money, money, work, work, work.”",
-     "cn": "一些消费者将这一健身热潮归结于后疫情时期的文化转变。“新冠疫情之后，一切都变了，”上海一家热门瑜伽工作室“Prakasa”的老板徐琳（音译）说道，“每个人都希望过上更好的生活，而不只是‘钱、钱、钱，工作、工作、工作’。”"
-    }
-   ],
-   "items": [
-    {
-     "id": "a5-1",
-     "text": "take off",
-     "understanding": "变得非常流行 / 迅速发展。原文标题 'Sports Are Taking Off in China'；也常说 Her channel took off。描述趋势爆发很好用。",
-     "paraIdx": 0,
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-15"
-     },
-     "hl": "Taking Off",
-     "phonetic": "[teɪk ɒf]"
-    },
-    {
-     "id": "a5-2",
-     "text": "flock to",
-     "understanding": "蜂拥而至、成群涌向某地。原文 'a different demographic has flocked to its limestone cliffs'。比 go to 画面感强，写人群聚集时可用。",
-     "paraIdx": 1,
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-15"
-     },
-     "hl": "flocked to",
-     "phonetic": "[flɒk]"
-    },
-    {
-     "id": "a5-3",
-     "text": "cope with something",
-     "understanding": "应对（压力/困难）。原文 'cope with the high-pressure work environment'。强调在压力下撑住、维持正常状态，比 deal with 多一层‘艰难撑住’的意味。",
-     "paraIdx": 2,
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-15"
-     },
-     "hl": "cope with",
-     "phonetic": "[kəʊp]"
-    },
-    {
-     "id": "a5-4",
-     "text": "boom",
-     "understanding": "（行业/趋势的）迅猛发展、热潮。原文 'rock-climbing boom is part of a larger fitness craze'。常说 economic boom / baby boom / fitness boom。",
-     "paraIdx": 3,
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-15"
-     },
-     "hl": "boom",
-     "phonetic": "[buːm]"
-    },
-    {
-     "id": "a5-5",
-     "text": "aspirational",
-     "understanding": "令人向往的、代表理想生活方式的。原文 'athletic gear have become aspirational styles'。形容一种‘让人看了想拥有/想变成’的东西，比 popular 更精准。",
-     "paraIdx": 4,
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-15"
-     },
-     "hl": "aspirational",
-     "phonetic": "[ˌæspəˈreɪʃənl]"
-    },
-    {
-     "id": "a5-6",
-     "text": "trace something to something",
-     "understanding": "将……归因于 / 追溯到。原文 'trace the fitness trend to a postpandemic cultural shift'。写分析因果时很顺手：trace X to Y。",
-     "paraIdx": 6,
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-15"
-     },
-     "hl": "trace the fitness trend to",
-     "phonetic": "[treɪs]"
-    },
-    {
-     "id": "a5-n1",
-     "text": "pricey",
-     "understanding": "adj. 昂贵的、价格不菲的",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-16"
-     },
-     "paraIdx": 0,
-     "phonetic": "[ˈpraɪsi]",
-     "hl": "Pricey"
-    },
-    {
-     "id": "a5-n2",
-     "text": "destination",
-     "understanding": "n.（本文）圣地、向往之地；目的地  例：skiing destination 滑雪胜地",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-17"
-     },
-     "paraIdx": 1,
-     "phonetic": "[ˌdestɪˈneɪʃən]",
-     "hl": "destination"
-    },
-    {
-     "id": "a5-n3",
-     "text": "demographic",
-     "understanding": "n. 群体，人群（带有统计分析色彩）  例：The brand is targeted at a younger demographic.这个品牌瞄准的是更年轻的人群。",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-18"
-     },
-     "paraIdx": 1,
-     "phonetic": "[ˌdeməˈɡræfɪk]",
-     "hl": "demographic"
-    },
-    {
-     "id": "a5-n4",
-     "text": "limestone",
-     "understanding": "n. 石灰岩",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-19"
-     },
-     "paraIdx": 1,
-     "phonetic": "[ˈlaɪmstəʊn]",
-     "hl": "limestone"
-    },
-    {
-     "id": "a5-n5",
-     "text": "auditor",
-     "understanding": "n. 审计师",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-20"
-     },
-     "paraIdx": 2,
-     "phonetic": "[ˈɔːdɪtə]",
-     "hl": "auditor"
-    },
-    {
-     "id": "a5-n6",
-     "text": "craze",
-     "understanding": "n. 狂热，风潮，热潮  例：fitness craze 健身狂热",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-21"
-     },
-     "paraIdx": 3,
-     "phonetic": "[kreɪz]",
-     "hl": "craze"
-    },
-    {
-     "id": "a5-n7",
-     "text": "gear",
-     "understanding": "n. 装备，行头（比equipment 更口语化，更“酷”一点）  例：camping gear 露营装备camera gear 摄影器材athletic gear 运动装备",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-22"
-     },
-     "paraIdx": 4,
-     "phonetic": "[ɡɪər]",
-     "hl": "gear"
-    },
-    {
-     "id": "a5-n8",
-     "text": "automaker",
-     "understanding": "n. 汽车制造商（automobile manufacturer）",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-23"
-     },
-     "paraIdx": 4,
-     "phonetic": "[ˈɔːtəʊˌmeɪkər]",
-     "hl": "automaker"
-    },
-    {
-     "id": "a5-n9",
-     "text": "domestic competition",
-     "understanding": "本土竞争，国内竞争  例：international competition 国际竞争",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-24"
-     },
-     "paraIdx": 4,
-     "phonetic": "[dəˈmestɪk]",
-     "hl": "domestic competition"
-    },
-    {
-     "id": "a5-n10",
-     "text": "apparel",
-     "understanding": "n. 服装的统称（比clothing 更正式，常用于商业和时尚领域）  例：athletic apparel 运动类服装",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-25"
-     },
-     "paraIdx": 4,
-     "phonetic": "[əˈpærəl]",
-     "hl": "apparel"
-    },
-    {
-     "id": "a5-n11",
-     "text": "kind of",
-     "understanding": "有点，某种程度上",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-26"
-     },
-     "paraIdx": 5,
-     "hl": "kind"
-    },
-    {
-     "id": "a5-n12",
-     "text": "premium",
-     "understanding": "adj. 高端的，优质的，高价的  例：premium segment 高端细分市场premium pricing 高端定价premium running shoe brand 高端跑鞋品牌",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-27"
-     },
-     "paraIdx": 5,
-     "phonetic": "[ˈpriːmiəm]",
-     "hl": "premium"
-    },
-    {
-     "id": "a5-n13",
-     "text": "postpandemic",
-     "understanding": "adj. 后疫情时代的  例：前缀 post-表示在……之后pandemic n. 大流行，疫情postwar adj. 战后的post-truth n. 后真相",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-28"
-     },
-     "paraIdx": 6,
-     "hl": "postpandemic"
-    },
-    {
-     "id": "a5-n14",
-     "text": "cultural shift",
-     "understanding": "文化转变，文化变迁",
-     "review": {
-      "reviews": 0,
-      "lapses": 0,
-      "last": null,
-      "strength": "weak",
-      "nextDue": "2026-08-29"
-     },
-     "paraIdx": 6,
-     "hl": "cultural shift"
-    }
-   ]
-  }
- ]
+  ]
 }
