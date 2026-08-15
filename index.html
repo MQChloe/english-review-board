@@ -192,7 +192,7 @@
   <div id="kb-view" style="display:none"></div>
 
   <div class="note">
-    你在手机/电脑上点「记住 / 模糊 / 忘了」，结果会<b>自动回写</b>到看板数据（经由服务端，无需再单独告诉我）。
+    你在手机/电脑上点「记住 / 模糊 / 忘了」，结果会<b>自动回写并多端同步</b>——手机点完，电脑打开或切回标签页即同步，无需手动刷新。
     断网时会先存在本机，联网后自动补传。<br>
     每日往 GetNote 补 1–2 篇后，跟我说"同步"，我会拉新笔记 → AI 提取 → 更新看板。
   </div>
@@ -201,6 +201,10 @@
 const LS_KEY = "eng_review_fb_v2";
 const ENDPOINT = "https://english-review-board.mqchloe-eng-review.workers.dev";  // Cloudflare Worker
 const SECRET  = "eng-review-shared-2026";  // 与 Worker 端一致（仅防随意调用，非敏感）
+const GITHUB_API = "https://api.github.com/repos/MQChloe/english-review-board/contents/data.json"; // 公开仓库最新 data.json（B 方案部署前的多端同步回退源）
+
+let progressSrc = "unknown";   // "worker" = 即时(DO)；"github" = 兼容回退
+let pollTimer = null;
 
 let DATA = null, currentCat = "all", TODAY = "";
 let mode = "study";   // "study" = 全部/外刊/播客 视图；"kb" = 知识库目录视图
@@ -224,18 +228,31 @@ function todayStr(){
 function parse(s){ return new Date(s + "T00:00:00"); }
 function addDays(s, n){ const d = parse(s); d.setDate(d.getDate()+n); return d.toISOString().slice(0,10); }
 
-function itemNextDue(it){ return it.review ? it.review.nextDue : null; }
-function itemStrength(it){ return it.review ? it.review.strength : "weak"; }
-function itemReviews(it){ return it.review ? it.review.reviews : 0; }
+function defaultReview(){ return {reviews:0,lapses:0,level:0,strength:"weak",last:null,nextDue:null,history:[]}; }
+/* 合并本地 pending 的"乐观"状态：自己刚点的按钮立刻正确显示，不必等服务端回包 */
+function liveReview(it){
+  const base = it.review || defaultReview();
+  const loc = pending[it.id];
+  if (!loc) return base;
+  const r = {...base};
+  if (loc === "remember"){ r.reviews=(base.reviews||0)+1; r.strength=(base.level||0)>=2?"strong":"learning"; r.nextDue=addDays(TODAY,7); r.last=TODAY; }
+  else if (loc === "fuzzy"){ r.strength="learning"; r.nextDue=addDays(TODAY,2); }
+  else if (loc === "forget"){ r.strength="weak"; r.nextDue=addDays(TODAY,1); }
+  return r;
+}
+function itemNextDue(it){ return liveReview(it).nextDue; }
+function itemStrength(it){ return liveReview(it).strength; }
+function itemReviews(it){ return liveReview(it).reviews; }
 
-/* 一个 item 当前是否算"已掌握/本次完成"：本地标过 remember，或服务端已复习且下次到期在未来 */
+/* 是否已掌握/本次完成：本地标过 remember，或服务端已复习且下次到期在未来 */
 function itemDone(it){
   const loc = pending[it.id];
   if (loc === "remember") return true;
   if (loc === "forget")   return false;
-  return it.review && it.review.reviews > 0 && itemNextDue(it) > TODAY;
+  const r = liveReview(it);
+  return r.reviews > 0 && r.nextDue && r.nextDue > TODAY;
 }
-function itemDue(it){ return itemNextDue(it) && itemNextDue(it) <= TODAY && !itemDone(it); }
+function itemDue(it){ const nd=itemNextDue(it); return nd && nd <= TODAY && !itemDone(it); }
 function articleDue(a){ return a.items.some(itemDue); }
 
 function strengthOfArticle(a){
@@ -458,9 +475,13 @@ async function flushPending(){
       body: JSON.stringify({ secret: SECRET, today: TODAY, feedback: batch })
     });
     if (r.ok){
+      try { const j = await r.json(); if (j && j.progress) applyProgress(j.progress); } catch(e){}
       for (const id of ids) delete pending[id];
       localStorage.setItem(LS_KEY, JSON.stringify(pending));
-      document.getElementById("sync-state").textContent = "已自动回写";
+      document.getElementById("sync-state").textContent = "已自动回写 · 多端同步";
+      renderAll();
+    } else if (r.status === 401){
+      document.getElementById("sync-state").textContent = "服务端鉴权失败";
     } else {
       document.getElementById("sync-state").textContent = "回写失败，稍后重试";
     }
@@ -508,13 +529,78 @@ document.getElementById("tabs2").addEventListener("click", e=>{
 });
 
 TODAY = todayStr();
-fetch("data.json").then(r=>r.json()).then(d=>{
-  DATA = d; renderAll();
+fetch("data.json").then(r=>r.json()).then(async d=>{
+  DATA = d;
+  const n = applyProgress(await loadRemoteProgress());   // 合并多端进度（Worker 即时 / GitHub 回退）
+  document.getElementById("sync-state").textContent =
+    progressSrc === "worker" ? "多端同步·即时"
+    : progressSrc === "github" ? `多端同步·兼容(${n>=0?"已合并":""})`
+    : "已连接";
+  renderAll();
   flushPending();   // 加载时补传离线期间的标记
+  startSync();      // 标签页重新可见 / 轮询时拉取多端进度
 }).catch(()=>{
   document.body.insertAdjacentHTML("afterbegin",
     '<p style="color:red">data.json 加载失败，请通过本地服务(http://localhost:8123)打开。</p>');
 });
+
+/* ── 多端进度同步 ── */
+/* 优先从 Worker(Durable Object) 读取即时进度；未部署 B 方案时回退到公开仓库最新 data.json */
+async function loadRemoteProgress(){
+  // 1) B 方案：Worker 即时读取（部署后自动启用，无速率限制，可轮询）
+  try {
+    const r = await fetch(ENDPOINT + "/progress", { cache:"no-store" });
+    if (r.ok){ const j = await r.json(); if (j && j.progress){ progressSrc = "worker"; return j.progress; } }
+  } catch(e){}
+  // 2) 回退：公开仓库最新 data.json（无需部署，约提交后 1–2 秒生效；受 60 次/小时限制，仅在打开/切回时读取）
+  try {
+    const r = await fetch(GITHUB_API, { cache:"no-store" });
+    if (r.ok){
+      const j = await r.json();
+      const b64 = (j.content || "").replace(/\s/g, "");
+      const bin = atob(b64);
+      const bytes = new Uint8Array(bin.length);
+      for (let i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+      const d = JSON.parse(new TextDecoder("utf-8").decode(bytes));
+      progressSrc = "github";
+      return buildReviewMap(d);
+    }
+  } catch(e){}
+  progressSrc = "unknown";
+  return null;
+}
+function buildReviewMap(d){
+  const map = {};
+  (d.articles || []).forEach(a => (a.items || []).forEach(it => { if (it.id && it.review) map[it.id] = it.review; }));
+  return map;
+}
+/* 把远端进度按 item id 合并进本地 DATA（覆盖 review 字段） */
+function applyProgress(map){
+  if (!map || !DATA) return 0;
+  let n = 0;
+  for (const a of (DATA.articles||[])) for (const it of (a.items||[])){
+    if (it.id && map[it.id]){ it.review = map[it.id]; n++; }
+  }
+  return n;
+}
+
+/* 多端同步：标签页切回前台时拉取；走 Worker 时用 15s 轮询，实现近实时 */
+function startSync(){
+  if (pollTimer) clearInterval(pollTimer);
+  document.addEventListener("visibilitychange", onVisible);
+  if (progressSrc === "worker"){
+    pollTimer = setInterval(async ()=>{
+      const map = await loadRemoteProgress();
+      if (map){ applyProgress(map); renderAll(); }
+      flushPending();
+    }, 15000);
+  }
+}
+function onVisible(){
+  if (document.visibilityState === "visible"){
+    loadRemoteProgress().then(map=>{ if (map){ applyProgress(map); renderAll(); } flushPending(); });
+  }
+}
 </script>
 </body>
 </html>
