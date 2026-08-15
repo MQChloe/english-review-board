@@ -457,7 +457,8 @@
             "last": null,
             "strength": "weak",
             "nextDue": "2026-08-14"
-          }
+          },
+          "hl": "crank up"
         },
         {
           "id": "a2-2",
@@ -470,7 +471,8 @@
             "last": null,
             "strength": "weak",
             "nextDue": "2026-08-14"
-          }
+          },
+          "hl": "trigger"
         },
         {
           "id": "a2-3",
@@ -483,7 +485,8 @@
             "last": null,
             "strength": "weak",
             "nextDue": "2026-08-14"
-          }
+          },
+          "hl": "optimize"
         },
         {
           "id": "a2-4",
@@ -496,7 +499,8 @@
             "last": null,
             "strength": "weak",
             "nextDue": "2026-08-14"
-          }
+          },
+          "hl": "photon"
         },
         {
           "id": "a2-5",
@@ -509,7 +513,8 @@
             "last": null,
             "strength": "weak",
             "nextDue": "2026-08-14"
-          }
+          },
+          "hl": "want to get outside"
         },
         {
           "id": "a2-6",
@@ -522,7 +527,8 @@
             "last": null,
             "strength": "weak",
             "nextDue": "2026-08-21"
-          }
+          },
+          "hl": "mess up"
         },
         {
           "id": "a2-7",
@@ -535,7 +541,8 @@
             "last": null,
             "strength": "weak",
             "nextDue": "2026-08-22"
-          }
+          },
+          "hl": "mechanism"
         },
         {
           "id": "a2-8",
@@ -548,7 +555,8 @@
             "last": null,
             "strength": "weak",
             "nextDue": "2026-08-16"
-          }
+          },
+          "hl": "woo-woo"
         },
         {
           "id": "a2-9",
@@ -561,7 +569,8 @@
             "last": null,
             "strength": "weak",
             "nextDue": "2026-08-16"
-          }
+          },
+          "hl": "grounded in"
         },
         {
           "id": "a2-10",
@@ -574,7 +583,8 @@
             "last": null,
             "strength": "weak",
             "nextDue": "2026-08-16"
-          }
+          },
+          "hl": "peer-reviewed papers"
         }
       ]
     },
@@ -1342,7 +1352,8 @@
             "strength": "weak",
             "nextDue": "2026-08-29"
           },
-          "paraIdx": 0
+          "paraIdx": 0,
+          "hl": "friendship"
         },
         {
           "id": "a4-n7",
@@ -1488,8 +1499,9 @@
             "strength": "weak",
             "nextDue": "2026-08-25"
           },
-          "paraIdx": 0,
-          "phonetic": "[ɪˈlɪməneɪt]"
+          "paraIdx": 6,
+          "phonetic": "[ɪˈlɪməneɪt]",
+          "hl": "eliminating"
         },
         {
           "id": "a4-n17",
@@ -2002,7 +2014,8 @@
             "last": null,
             "strength": "weak",
             "nextDue": "2026-08-16"
-          }
+          },
+          "hl": "sugar consumption"
         },
         {
           "id": "a6-2",
@@ -2015,7 +2028,8 @@
             "last": null,
             "strength": "weak",
             "nextDue": "2026-08-16"
-          }
+          },
+          "hl": "blood glucose"
         },
         {
           "id": "a6-3",
@@ -2028,7 +2042,8 @@
             "last": null,
             "strength": "weak",
             "nextDue": "2026-08-16"
-          }
+          },
+          "hl": "pathway"
         },
         {
           "id": "a6-4",
@@ -2041,7 +2056,8 @@
             "last": null,
             "strength": "weak",
             "nextDue": "2026-08-16"
-          }
+          },
+          "hl": "but rather"
         },
         {
           "id": "a6-5",
@@ -2054,7 +2070,8 @@
             "last": null,
             "strength": "weak",
             "nextDue": "2026-08-16"
-          }
+          },
+          "hl": "satiety"
         },
         {
           "id": "a6-6",
@@ -2067,7 +2084,8 @@
             "last": null,
             "strength": "weak",
             "nextDue": "2026-08-16"
-          }
+          },
+          "hl": "indulge"
         },
         {
           "id": "a6-7",
@@ -2080,7 +2098,8 @@
             "last": null,
             "strength": "weak",
             "nextDue": "2026-08-16"
-          }
+          },
+          "hl": "craving"
         },
         {
           "id": "a6-8",
@@ -2093,7 +2112,8 @@
             "last": null,
             "strength": "weak",
             "nextDue": "2026-08-16"
-          }
+          },
+          "hl": "ingest"
         },
         {
           "id": "a6-9",
@@ -2106,7 +2126,8 @@
             "last": null,
             "strength": "weak",
             "nextDue": "2026-08-16"
-          }
+          },
+          "hl": "would be better off"
         },
         {
           "id": "a6-10",
@@ -2119,7 +2140,8 @@
             "last": null,
             "strength": "weak",
             "nextDue": "2026-08-16"
-          }
+          },
+          "hl": "blunt"
         },
         {
           "id": "a6-11",
@@ -2132,7 +2154,8 @@
             "last": null,
             "strength": "weak",
             "nextDue": "2026-08-16"
-          }
+          },
+          "hl": "spike"
         }
       ]
     }
