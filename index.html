@@ -238,6 +238,7 @@ let mode = "study";   // "study" = 全部/外刊/播客 视图；"kb" = 知识�
 let memFilter = "all";   // 语料库视图的筛选：all / weak / learning / strong
 let cnOpen = {};
 let pending = {};   // id -> verdict，尚未成功回写服务端
+let acked = {};     // id -> verdict，已回写成功的判定（仅内存，用于持久显示按钮高亮与状态）
 try { pending = JSON.parse(localStorage.getItem(LS_KEY) || "{}"); } catch(e){}
 let collapsedMap = {};   // articleId -> true(折叠) / false(展开)；默认折叠
 try { collapsedMap = JSON.parse(localStorage.getItem("eng_review_collapse_v1") || "{}"); } catch(e){}
@@ -264,7 +265,7 @@ function defaultReview(){ return {reviews:0,lapses:0,level:0,strength:"weak",las
 /* 合并本地 pending 的"乐观"状态：自己刚点的按钮立刻正确显示，不必等服务端回包 */
 function liveReview(it){
   const base = it.review || defaultReview();
-  const loc = pending[it.id];
+  const loc = pending[it.id] || acked[it.id];
   if (!loc) return base;
   const r = {...base};
   if (loc === "remember"){ const nl=(base.level||0)+1; r.level=nl; r.reviews=(base.reviews||0)+1; r.strength= nl>=3?"strong":"learning"; r.nextDue=addDays(TODAY,7); r.last=TODAY; }
@@ -333,7 +334,7 @@ document.addEventListener("click", function(e){
   if (b) speakWord(b.dataset.spk);
 });
 function itemHTML(it, withBtns, aid){
-  const loc = pending[it.id];
+  const loc = pending[it.id] || acked[it.id];
   const done = itemDone(it);
   const f = loc || (done ? "remember" : null);
   const doneTag = done ? `<span class="done">✓ 已记住</span>` : "";
@@ -510,6 +511,7 @@ function toggleCard(el){
 /* ── 标记 + 自动回写 ── */
 function markItem(aid, iid, val){
   const k = iid;                       // 用全局 item id 作为回写键
+  delete acked[k];                     // 新判定覆盖旧的已确认状态
   pending[k] = (pending[k]===val) ? undefined : val;
   if (!pending[k]) delete pending[k];
   localStorage.setItem(LS_KEY, JSON.stringify(pending));
@@ -537,7 +539,7 @@ async function flushPending(){
     clearTimeout(to);
     if (r.ok){
       try { const j = await r.json(); if (j && j.progress) applyProgress(j.progress); } catch(e){}
-      for (const id of ids) delete pending[id];
+      for (const id of ids){ acked[id] = pending[id]; delete pending[id]; } // 回写成功后保留判定用于显示
       localStorage.setItem(LS_KEY, JSON.stringify(pending));
       document.getElementById("sync-state").textContent = "已自动回写 · 即时同步";
       renderAll();
