@@ -316,18 +316,43 @@ function renderStats(){
 
 function escAttr(s){ return String(s==null?"":s).replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
 /* 点击喇叭朗读英文：浏览器内置 Web Speech API，无需后端/音频文件 */
+let _spkVoices = [];
+function _loadSpkVoices(){
+  try { _spkVoices = (window.speechSynthesis && window.speechSynthesis.getVoices()) || []; }
+  catch(e){ _spkVoices = []; }
+  return _spkVoices;
+}
 function speakWord(text){
   if (!text || typeof text !== "string") return;
-  try {
-    if (!("speechSynthesis" in window)) return;
-    window.speechSynthesis.cancel();   // 打断上一条，避免排队
+  if (!("speechSynthesis" in window)) return;
+  const synth = window.speechSynthesis;
+  const trySpeak = ()=>{
+    const voices = _loadSpkVoices();
+    synth.cancel();                       // 打断上一条，避免排队
     const u = new SpeechSynthesisUtterance(text);
-    u.lang = "en-US"; u.rate = 0.95;
-    const vs = window.speechSynthesis.getVoices();
-    const en = vs.find(v => /en[-_]US/i.test(v.lang)) || vs.find(v => /^en/i.test(v.lang));
-    if (en) u.voice = en;
-    window.speechSynthesis.speak(u);
-  } catch(e){}
+    u.lang = "en-US"; u.rate = 0.95; u.volume = 1; u.pitch = 1;
+    // 优先 en-US，其次任意英文 voice，再退回到第一个可用 voice（保证至少发声）
+    const en = voices.find(v => /en[-_]US/i.test(v.lang))
+            || voices.find(v => /^en/i.test(v.lang))
+            || voices[0];
+    if (en){ u.voice = en; u.lang = en.lang || "en-US"; }
+    u.onerror = (ev)=> console.warn("[speak] error:", ev && ev.error);
+    synth.speak(u);
+  };
+  // Chrome 首次：语音列表异步加载，未就绪时等 voiceschanged 再朗读（否则第一声静默）
+  if (_loadSpkVoices().length === 0){
+    let done = false;
+    const onReady = ()=>{ if (done) return; done = true; synth.removeEventListener("voiceschanged", onReady); trySpeak(); };
+    synth.addEventListener("voiceschanged", onReady);
+    setTimeout(onReady, 1000);            // 兜底：超时也尝试一次
+  } else {
+    trySpeak();
+  }
+}
+// 预热：页面加载即触发语音列表加载，避免首次点击静默
+if ("speechSynthesis" in window){
+  _loadSpkVoices();
+  window.speechSynthesis.onvoiceschanged = _loadSpkVoices;
 }
 document.addEventListener("click", function(e){
   const b = e.target.closest(".spk");
