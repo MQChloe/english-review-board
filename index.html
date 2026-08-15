@@ -167,8 +167,8 @@
 
   <div class="tabs tabs2" id="tabs2">
     <div class="tab active" data-view="study">今日复习</div>
-    <div class="tab" data-view="kb">知识库</div>
-    <div class="tab" data-view="memory">语料库</div>
+    <div class="tab" data-view="kb">语料库</div>
+    <div class="tab" data-view="memory">单词库</div>
   </div>
 
   <div id="study-view">
@@ -388,6 +388,7 @@ function wordCard(a, it){
       <span class="w-term">${it.text}</span>
       ${ph}${str}
     </div>
+    <div class="w-u">${it.understanding || ""}</div>
     <div class="w-sent"><b>例句</b><span class="en">${enHtml}</span></div>
     <div class="w-from">来自：《${a.source}》</div>
   </div>`;
