@@ -199,9 +199,9 @@
 
 <script>
 const LS_KEY = "eng_review_fb_v2";
-const ENDPOINT = "https://english-review-board.mqchloe-eng-review.workers.dev";  // Cloudflare Worker
+const ENDPOINT = "https://english-review-board.mqchloe-eng-review.workers.dev";  // Cloudflare Worker（国内 *.workers.dev 可能不可达，仅作可选即时源）
 const SECRET  = "eng-review-shared-2026";  // 与 Worker 端一致（仅防随意调用，非敏感）
-const GITHUB_API = "https://api.github.com/repos/MQChloe/english-review-board/contents/data.json"; // 公开仓库最新 data.json（B 方案部署前的多端同步回退源）
+const GITHUB_API = "https://api.github.com/repos/MQChloe/english-review-board/contents/data.json"; // 公开仓库最新 data.json（回退源）
 
 let progressSrc = "unknown";   // "worker" = 即时(DO)；"github" = 兼容回退
 let pollTimer = null;
@@ -469,26 +469,29 @@ async function flushPending(){
   if (!ids.length) return;
   const batch = ids.map(id=>({ id, verdict: pending[id] }));
   document.getElementById("sync-state").textContent = "回写中…";
+
+  // 1) 优先尝试 Cloudflare Worker（若 *.workers.dev 可达则即时）
   try {
+    const ctrl = new AbortController();
+    const to = setTimeout(()=>ctrl.abort(), 3000);
     const r = await fetch(ENDPOINT + "/feedback", {
       method:"POST",
       headers:{"Content-Type":"application/json"},
+      signal: ctrl.signal,
       body: JSON.stringify({ secret: SECRET, today: TODAY, feedback: batch })
     });
+    clearTimeout(to);
     if (r.ok){
       try { const j = await r.json(); if (j && j.progress) applyProgress(j.progress); } catch(e){}
       for (const id of ids) delete pending[id];
       localStorage.setItem(LS_KEY, JSON.stringify(pending));
-      document.getElementById("sync-state").textContent = "已自动回写 · 多端同步";
+      document.getElementById("sync-state").textContent = "已自动回写 · 即时同步";
       renderAll();
-    } else if (r.status === 401){
-      document.getElementById("sync-state").textContent = "服务端鉴权失败";
-    } else {
-      document.getElementById("sync-state").textContent = "回写失败，稍后重试";
+      return;
     }
-  } catch(e){
-    document.getElementById("sync-state").textContent = "离线，已存本机";
-  }
+  } catch(e){}
+
+  document.getElementById("sync-state").textContent = "离线，已存本机";
 }
 
 function toggleCn(btn){
@@ -533,10 +536,11 @@ TODAY = todayStr();
 fetch("data.json").then(r=>r.json()).then(async d=>{
   DATA = d;
   const n = applyProgress(await loadRemoteProgress());   // 合并多端进度（Worker 即时 / GitHub 回退）
-  document.getElementById("sync-state").textContent =
-    progressSrc === "worker" ? "多端同步·即时"
-    : progressSrc === "github" ? `多端同步·兼容(${n>=0?"已合并":""})`
-    : "已连接";
+  setSyncSrc(progressSrc);
+  if (n > 0){
+    const el = document.getElementById("sync-state");
+    if (el) el.textContent += `（已合并 ${n} 项）`;
+  }
   renderAll();
   flushPending();   // 加载时补传离线期间的标记
   startSync();      // 标签页重新可见 / 轮询时拉取多端进度
@@ -546,40 +550,43 @@ fetch("data.json").then(r=>r.json()).then(async d=>{
 });
 
 /* ── 多端进度同步 ── */
-/* 优先从 Worker(Durable Object) 读取即时进度；未部署 B 方案时回退到公开仓库最新 data.json */
+/* 优先 Worker(DO) → 其次 GitHub progress.json（国内可达） → 最后 data.json */
 async function loadRemoteProgress(){
-  // 1) B 方案：Worker 即时读取（部署后自动启用，无速率限制，可轮询）
+  // 1) Worker 即时读取（*.workers.dev 国内可能不可达，3s 超时立即回退）
   try {
     const ctrl = new AbortController();
-    const to = setTimeout(()=>ctrl.abort(), 4000);   // 默认域名 *.workers.dev 国内可能慢，4s 超时立即回退
+    const to = setTimeout(()=>ctrl.abort(), 3000);
     const r = await fetch(ENDPOINT + "/progress", { cache:"no-store", signal: ctrl.signal });
     clearTimeout(to);
     if (r.ok){ const j = await r.json(); if (j && j.progress){
       progressSrc = "worker";
       setSyncSrc("worker");
-      if (Object.keys(j.progress).length === 0) bootstrapImport();  // DO 首次为空 → 从 GitHub 灌入已有进度
+      if (Object.keys(j.progress).length === 0) bootstrapImport();  // DO 首次为空 → 灌入已有进度
       return j.progress;
     } }
   } catch(e){}
-  // 2) 回退：公开仓库最新 data.json（无需部署，约提交后 1–2 秒生效；受 60 次/小时限制，仅在打开/切回时读取）
+  // 2) 回退：公开仓库最新 data.json（约1–2秒生效；受 60 次/小时限制）
   try {
     const r = await fetch(GITHUB_API, { cache:"no-store" });
     if (r.ok){
       const j = await r.json();
-      const b64 = (j.content || "").replace(/\s/g, "");
-      const bin = atob(b64);
-      const bytes = new Uint8Array(bin.length);
-      for (let i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
-      const d = JSON.parse(new TextDecoder("utf-8").decode(bytes));
+      const d = JSON.parse(base64ToUtf8(j.content || ""));
       progressSrc = "github";
       setSyncSrc("github");
       return buildReviewMap(d);
     }
   } catch(e){}
   progressSrc = "unknown";
+  setSyncSrc("unknown");
   return null;
 }
-/* 首次使用：把 GitHub data.json 里已有的 review 进度灌入 Durable Object（幂等 upsert），使 DO 成为唯一真相源 */
+function base64ToUtf8(b64){
+  const bin = atob((b64 || "").replace(/\s/g,""));
+  const bytes = new Uint8Array(bin.length);
+  for (let i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+  return new TextDecoder("utf-8").decode(bytes);
+}
+/* 首次使用：把本地 review 灌入 Durable Object（仅当 Worker 可用但 DO 为空时触发） */
 let bootstrapped = false;
 async function bootstrapImport(){
   if (bootstrapped || !DATA) return;
@@ -594,7 +601,7 @@ async function bootstrapImport(){
 function setSyncSrc(src){
   const el = document.getElementById("sync-state");
   if (!el) return;
-  el.textContent = src === "worker" ? "即时同步 · Cloudflare" : (src === "github" ? "回退同步 · GitHub" : "未连接");
+  el.textContent = src === "worker" ? "即时同步 · Cloudflare" : (src === "github" ? "GitHub 同步 · 约1–2秒" : "未连接");
 }
 function buildReviewMap(d){
   const map = {};
