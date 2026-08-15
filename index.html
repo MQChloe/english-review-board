@@ -105,9 +105,10 @@
     transition:transform .2s;flex-shrink:0;}
   .card.collapsed .card-body{display:none;}
   .card:not(.collapsed) .card-head .chev{transform:rotate(90deg);}
-  .sec-count{font-size:12px;font-weight:600;color:var(--muted);margin-left:6px;letter-spacing:0;}
-
-  /* ── 第二行 Tab（知识库 / 语料库），大小与第一行统一 ── */
+  .card-actions{display:flex;justify-content:flex-end;margin-top:10px;}
+  .collapse-btn{font-size:11px;line-height:1;padding:5px 10px;border-radius:999px;border:1px solid var(--line);
+    background:#fff;color:var(--muted);cursor:pointer;transition:.15s;font-weight:600;}
+  .collapse-btn:hover{border-color:var(--accent);color:var(--accent);box-shadow:0 2px 6px rgba(124,108,240,.12);}
   .tabs2{margin:2px 0 20px;}
 
   /* ── 词语卡片（语料库 视图） ── */
@@ -327,25 +328,26 @@ function cardHTML(a, withBtns, opts){
     const btn = hasCn ? `<button class="cn-toggle" onclick="toggleCn(this)">${cnShown?'隐藏':'翻译'}</button>` : "";
     const cnHtml = hasCn ? `<div class="cn" style="display:${cnShown?'':'none'}">${pg.cn}</div>` : "";
     body += `<div class="para" data-pidx="${pi}"><span class="en">${enHtml}</span>${btn}${cnHtml}</div>`;
-    if (its.length){
+    if (its.length && withBtns){
       body += `<div class="para-items">` +
               its.map(it=>itemHTML(it, withBtns, a.id)).join("") + `</div>`;
     }
   });
   // 兜底：无对应段落的词汇点放到末尾
   const orphan = byPara[a.paragraphs.length] || [];
-  if (orphan.length){
+  if (orphan.length && withBtns){
     body += `<div class="para-items">` +
             orphan.map(it=>itemHTML(it, withBtns, a.id)).join("") + `</div>`;
   }
   if (opts.bodyTop) body = opts.bodyTop + body;
+  const collapseBtn = `<div class="card-actions"><button class="collapse-btn" onclick="toggleCard('${a.id}');event.stopPropagation();">收起</button></div>`;
   return `<div class="card ${due?'due':''} ${isCol?'collapsed':''}" data-bid="${a.id}">
     <div class="card-head" onclick="toggleCard('${a.id}')">
       <span class="cat ${a.category}">${a.category}</span>
       <span class="title">${a.source}</span>
       <span class="chev">▸</span>
     </div>
-    <div class="card-body">${body}</div>
+    <div class="card-body">${body}${collapseBtn}</div>
   </div>`;
 }
 
@@ -369,7 +371,6 @@ function wordCard(a, it){
       <span class="w-term">${it.text}</span>
       ${ph}${str}
     </div>
-    <div class="w-u">${it.understanding}</div>
     <div class="w-sent"><b>例句</b><span class="en">${enHtml}</span></div>
     <div class="w-from">来自：《${a.source}》</div>
   </div>`;
