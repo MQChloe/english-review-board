@@ -1,0 +1,823 @@
+{
+  "progress": {
+    "a1-1": {
+      "reviews": 1,
+      "lapses": 0,
+      "last": "2026-08-13",
+      "strength": "weak",
+      "nextDue": "2026-08-15"
+    },
+    "a1-2": {
+      "reviews": 1,
+      "lapses": 0,
+      "last": "2026-08-13",
+      "strength": "weak",
+      "nextDue": "2026-08-15"
+    },
+    "a1-3": {
+      "reviews": 1,
+      "lapses": 0,
+      "last": "2026-08-13",
+      "strength": "weak",
+      "nextDue": "2026-08-15"
+    },
+    "a1-4": {
+      "reviews": 1,
+      "lapses": 0,
+      "last": "2026-08-13",
+      "strength": "weak",
+      "nextDue": "2026-08-15"
+    },
+    "a1-5": {
+      "reviews": 1,
+      "lapses": 0,
+      "last": "2026-08-13",
+      "strength": "weak",
+      "nextDue": "2026-08-15"
+    },
+    "a1-6": {
+      "reviews": 1,
+      "lapses": 0,
+      "last": "2026-08-13",
+      "strength": "weak",
+      "nextDue": "2026-08-15"
+    },
+    "a1-n1": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-16"
+    },
+    "a1-n2": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-17"
+    },
+    "a1-n3": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-18"
+    },
+    "a1-n4": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-19"
+    },
+    "a1-n5": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-20"
+    },
+    "a1-n6": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-21"
+    },
+    "a1-n7": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-22"
+    },
+    "a1-n8": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-23"
+    },
+    "a1-n9": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-24"
+    },
+    "a1-n10": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-25"
+    },
+    "a1-n11": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-26"
+    },
+    "a1-n12": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-27"
+    },
+    "a1-n13": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-28"
+    },
+    "a1-n14": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-29"
+    },
+    "a1-n15": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-16"
+    },
+    "a1-n16": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-17"
+    },
+    "a1-n17": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-18"
+    },
+    "a1-n18": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-19"
+    },
+    "a1-n19": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-20"
+    },
+    "a2-1": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-14"
+    },
+    "a2-2": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-14"
+    },
+    "a2-3": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-14"
+    },
+    "a2-4": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-14"
+    },
+    "a2-5": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-14"
+    },
+    "a2-n1": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-21"
+    },
+    "a2-n2": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-22"
+    },
+    "a3-1": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-14"
+    },
+    "a3-2": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-14"
+    },
+    "a3-3": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-14"
+    },
+    "a3-4": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-14"
+    },
+    "a3-5": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-14"
+    },
+    "a3-n1": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-23"
+    },
+    "a3-n2": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-24"
+    },
+    "a3-n3": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-25"
+    },
+    "a3-n4": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-26"
+    },
+    "a3-n5": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-27"
+    },
+    "a3-n6": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-28"
+    },
+    "a3-n7": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-29"
+    },
+    "a3-n8": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-16"
+    },
+    "a3-n9": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-17"
+    },
+    "a3-n10": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-18"
+    },
+    "a3-n11": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-19"
+    },
+    "a3-n12": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-20"
+    },
+    "a3-n13": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-21"
+    },
+    "a3-n14": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-22"
+    },
+    "a3-n15": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-23"
+    },
+    "a3-n16": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-24"
+    },
+    "a3-n17": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-25"
+    },
+    "a3-n18": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-26"
+    },
+    "a3-n19": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-27"
+    },
+    "a3-n20": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-28"
+    },
+    "a3-n21": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-29"
+    },
+    "a3-n22": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-16"
+    },
+    "a3-n23": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-17"
+    },
+    "a3-n24": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-18"
+    },
+    "a3-n25": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-19"
+    },
+    "a3-n26": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-20"
+    },
+    "a3-n27": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-21"
+    },
+    "a3-n28": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-22"
+    },
+    "a3-n29": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-23"
+    },
+    "a4-1": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-15"
+    },
+    "a4-2": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-15"
+    },
+    "a4-3": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-15"
+    },
+    "a4-4": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-15"
+    },
+    "a4-5": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-15"
+    },
+    "a4-6": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-15"
+    },
+    "a4-n1": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-24"
+    },
+    "a4-n2": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-25"
+    },
+    "a4-n3": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-26"
+    },
+    "a4-n4": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-27"
+    },
+    "a4-n5": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-28"
+    },
+    "a4-n6": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-29"
+    },
+    "a4-n7": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-16"
+    },
+    "a4-n8": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-17"
+    },
+    "a4-n9": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-18"
+    },
+    "a4-n10": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-19"
+    },
+    "a4-n11": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-20"
+    },
+    "a4-n12": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-21"
+    },
+    "a4-n13": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-22"
+    },
+    "a4-n14": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-23"
+    },
+    "a4-n15": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-24"
+    },
+    "a4-n16": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-25"
+    },
+    "a4-n17": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-26"
+    },
+    "a4-n18": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-27"
+    },
+    "a4-n19": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-28"
+    },
+    "a4-n20": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-29"
+    },
+    "a4-n21": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-16"
+    },
+    "a4-n22": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-17"
+    },
+    "a4-n23": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-18"
+    },
+    "a4-n24": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-19"
+    },
+    "a4-n25": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-20"
+    },
+    "a5-1": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-15"
+    },
+    "a5-2": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-15"
+    },
+    "a5-3": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-15"
+    },
+    "a5-4": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-15"
+    },
+    "a5-5": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-15"
+    },
+    "a5-6": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-15"
+    },
+    "a5-n1": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-16"
+    },
+    "a5-n2": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-17"
+    },
+    "a5-n3": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-18"
+    },
+    "a5-n4": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-19"
+    },
+    "a5-n5": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-20"
+    },
+    "a5-n6": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-21"
+    },
+    "a5-n7": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-22"
+    },
+    "a5-n8": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-23"
+    },
+    "a5-n9": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-24"
+    },
+    "a5-n10": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-25"
+    },
+    "a5-n11": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-26"
+    },
+    "a5-n12": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-27"
+    },
+    "a5-n13": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-28"
+    },
+    "a5-n14": {
+      "reviews": 0,
+      "lapses": 0,
+      "last": null,
+      "strength": "weak",
+      "nextDue": "2026-08-29"
+    }
+  }
+}
