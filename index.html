@@ -118,6 +118,7 @@
   .w-term{font-weight:700;color:var(--accent);font-size:16px;}
   .spk{margin-left:6px;border:1px solid var(--line,#e3e6ec);background:transparent;color:var(--accent,#3a7afe);cursor:pointer;font-size:13px;line-height:1;padding:3px 6px;border-radius:7px;transition:.15s;}
   .spk:hover{background:var(--hover,#f0f4ff);transform:scale(1.06);}
+  .spk-hint{font-size:11px;color:#d9480f;margin-left:5px;white-space:nowrap;vertical-align:middle;}
   .login-bar{display:flex;gap:8px;align-items:center;margin:4px 0 12px;flex-wrap:wrap;font-size:13px;}
   .login-bar input{padding:6px 9px;border:1px solid var(--line,#e3e6ec);border-radius:8px;font-size:13px;outline:none;}
   .login-bar input:focus{border-color:var(--accent,#3a7afe);}
@@ -322,9 +323,23 @@ function _loadSpkVoices(){
   catch(e){ _spkVoices = []; }
   return _spkVoices;
 }
-function speakWord(text){
+/* 在喇叭按钮旁显示短暂的诊断提示，避免静默失败让用户摸不着头脑 */
+function spkHint(btn, msg){
+  if (!btn) return;
+  const old = btn.parentNode && btn.parentNode.querySelector(".spk-hint");
+  if (old) old.remove();
+  const s = document.createElement("span");
+  s.className = "spk-hint";
+  s.textContent = " ⚠ " + msg;
+  btn.insertAdjacentElement("afterend", s);
+  setTimeout(()=> s.remove(), 5000);
+}
+function speakWord(text, btn){
   if (!text || typeof text !== "string") return;
-  if (!("speechSynthesis" in window)) return;
+  if (!("speechSynthesis" in window)){
+    spkHint(btn, "浏览器不支持语音朗读");
+    return;
+  }
   const synth = window.speechSynthesis;
   const trySpeak = ()=>{
     const voices = _loadSpkVoices();
@@ -336,8 +351,10 @@ function speakWord(text){
             || voices.find(v => /^en/i.test(v.lang))
             || voices[0];
     if (en){ u.voice = en; u.lang = en.lang || "en-US"; }
-    u.onerror = (ev)=> console.warn("[speak] error:", ev && ev.error);
+    u.onerror = (ev)=>{ spkHint(btn, "朗读失败：" + ((ev && ev.error) || "未知")); console.warn("[speak] error:", ev && ev.error); };
     synth.speak(u);
+    // 检测是否真的开始朗读；未开始多半是设备无语音包或被禁用
+    setTimeout(()=>{ if (!synth.speaking) spkHint(btn, "未启动朗读：可能本设备缺语音包/被浏览器禁用，建议用电脑 Chrome 或安装系统英语语音"); }, 600);
   };
   // Chrome 首次：语音列表异步加载，未就绪时等 voiceschanged 再朗读（否则第一声静默）
   if (_loadSpkVoices().length === 0){
@@ -356,7 +373,7 @@ if ("speechSynthesis" in window){
 }
 document.addEventListener("click", function(e){
   const b = e.target.closest(".spk");
-  if (b) speakWord(b.dataset.spk);
+  if (b) speakWord(b.dataset.spk, b);
 });
 function itemHTML(it, withBtns, aid){
   const loc = pending[it.id] || acked[it.id];
