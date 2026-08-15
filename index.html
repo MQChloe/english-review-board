@@ -393,9 +393,9 @@ function cardHTML(a, withBtns, opts){
             orphan.map(it=>itemHTML(it, withBtns, a.id)).join("") + `</div>`;
   }
   if (opts.bodyTop) body = opts.bodyTop + body;
-  const collapseBtn = `<div class="card-actions"><button class="collapse-btn" onclick="toggleCard('${a.id}');event.stopPropagation();">收起</button></div>`;
+  const collapseBtn = `<div class="card-actions"><button class="collapse-btn" onclick="toggleCard(this);event.stopPropagation();">收起</button></div>`;
   return `<div class="card ${due?'due':''} ${isCol?'collapsed':''}" data-bid="${a.id}">
-    <div class="card-head" onclick="toggleCard('${a.id}')">
+    <div class="card-head" onclick="toggleCard(this)">
       <span class="cat ${a.category}">${a.category}</span>
       <span class="title">${a.source}</span>
       <span class="chev">▸</span>
@@ -480,12 +480,16 @@ function renderKBDir(){
 function renderAll(){ renderStats(); if (mode==="study"){ renderDue(); } else if (mode==="kb"){ renderKBDir(); } else { renderWords(); } }
 
 /* ── 卡片折叠（记住状态） ── */
-function toggleCard(bid){
-  const card = document.querySelector(`.card[data-bid="${bid}"]`);
+function toggleCard(el){
+  // 优先用被点击的元素自身定位卡片，避免多视图存在相同 data-bid 时误选到隐藏卡片
+  let card = el;
+  if (typeof el === "string") card = document.querySelector(`.card[data-bid="${el}"]`);
+  else if (card && card.classList && !card.classList.contains("card")) card = card.closest(".card");
   if (!card) return;
-  const nowCol = !card.classList.contains("collapsed");
-  card.classList.toggle("collapsed", nowCol);
-  collapsedMap[bid] = nowCol;
+  const willCol = !card.classList.contains("collapsed");   // 当前展开→收起；当前折叠→展开
+  card.classList.toggle("collapsed", willCol);
+  const bid = card.dataset.bid;
+  collapsedMap[bid] = willCol;
   localStorage.setItem("eng_review_collapse_v1", JSON.stringify(collapsedMap));
 }
 
