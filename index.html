@@ -476,6 +476,7 @@ function cardHTML(a, withBtns, opts){
   // 按段归集词汇点（paraIdx 对应 paragraphs 下标）
   const byPara = {};
   a.items.forEach(it=>{
+    if (mode === "study" && itemDone(it)) return;   // 今日复习：已记住的单词不再展示
     const pi = (typeof it.paraIdx === "number") ? it.paraIdx : a.paragraphs.length;
     (byPara[pi] = byPara[pi] || []).push(it);
   });
