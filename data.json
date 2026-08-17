@@ -2158,6 +2158,249 @@
           "hl": "spike"
         }
       ]
+    },
+    {
+      "id": "a7",
+      "source": "人形机器人第一股宇树上市，谁在疯狂押注？",
+      "category": "外刊",
+      "date": "2026-08-17",
+      "paragraphs": [
+        {
+          "en": "Unitree’s IPO May Be Just the Beginning of an Investor Frenzy Over Humanoid-Robot Stocks",
+          "cn": "宇树科技的首次公开募股（IPO）可能只是投资者对人形机器人股票狂热追捧的开始"
+        },
+        {
+          "en": "Unitree Robotics is set to become the first public humanoid-robotics company in mainland China, and it’s riding the robotics hype straight to the bank. Last week, the Hangzhou-based company priced its shares at about $22, seeking to raise about $900 million in an initial public offering on the Shanghai Stock Exchange. On Monday, it said the IPO was more than 8,000 times oversubscribed by retail investors, a sign that interest in the burgeoning industry is strong.",
+          "cn": "宇树机器人即将成为中国大陆首家上市的人形机器人公司，并正借助机器人领域的市场热潮大举融资。上周，这家总部位于杭州的公司将股票定价定在22美元左右，计划在于上海证券交易所首次进行的公开募股（IPO）中筹集约9亿美元。周一，该公司表示，此次IPO获得了散户投资者超过8000倍的超额认购，这表明市场对这一蓬勃发展的新兴行业兴趣浓厚。"
+        },
+        {
+          "en": "The market for humanoid robots is still pretty small — just 15,000 or so units were deployed last year — but advocates like Tesla CEO Elon Musk say the potential is massive. For now, Unitree sits near the top of the food chain.",
+          "cn": "人形机器人的市场规模目前仍然很小——去年仅部署了约1.5万台——但特斯拉首席执行官埃隆·马斯克等支持者认为，其市场潜力巨大。就目前而言，宇树科技处于该行业食物链的顶端。"
+        },
+        {
+          "en": "Unitree was the single biggest supplier of humanoid robots last year, although it was outsold in the first half of 2026 by Chinese rival Agibot, according to a report from Smart Analytics Global. The top five suppliers were all Chinese firms. That’s largely because of how cheap Chinese robots are compared with rival products.",
+          "cn": "根据Smart Analytics Global的一份报告，宇树科技是去年人形机器人的最大单一供应商，尽管在2026年上半年，其销量被中国竞争对手智元机器人（Agibot）超越。前五大供应商均为中国企业。这很大程度上是因为中国机器人相较于竞争对手价格更为低廉。"
+        },
+        {
+          "en": "Unitree is profitable, a relatively uncommon feat in the world of humanoid-robotics companies. Overseas sales accounted for over 40% of Unitree’s revenue in 2025, although the company has warned that geopolitical tensions could hamper its expansion. Last month, the U.S. Federal Communications Commission banned new foreign-made humanoid and quadruped robots.",
+          "cn": "宇树科技已实现盈利，这在人形机器人行业中是难得的成就。2025年，海外销售额占宇树科技营收的40%以上，不过该公司已发出预警，地缘政治的紧张局势可能会阻碍其扩大规模。上个月，美国联邦通信委员会（FCC, Federal Communications Commission）开始禁止新的国外制造的人形机器人和四足机器人。"
+        },
+        {
+          "en": "Unitree is not the only such firm seeking to go public. “Listing is a must,” LimX Dynamics founder Will Zhang told reporters in July.",
+          "cn": "宇树科技并非唯一一家寻求上市的公司。今年7月，逐际动力（LimX Dynamics）创始人张巍（Will Zhang）对记者表示：“上市是必须的。”"
+        },
+        {
+          "en": "Agility Robotics plans to become the first pure-play public humanoid-robotics company in the U.S. The firm’s Digit robots are operating in commercial environments with GXO Logistics. “We have not achieved \\[return on investment\\] on humanoids yet,” Patrick Kelleher, the CEO of GXO, told investors last week.",
+          "cn": "Agility Robotics计划成为美国第一家纯做人形机器人业务的上市公司。该公司的Digit机器人已经在GXO Logistics的商业环境里投入运行。GXO首席执行官帕特里克·凯莱赫（Patrick Kelleher）上周对投资者表示：“我们尚未在人形机器人上实现投资回报。”"
+        }
+      ],
+      "items": [
+        {
+          "id": "a7-1",
+          "text": "frenzy",
+          "understanding": "狂热。原文说宇树 IPO 点燃了投资者对人形机器人股票的 frenzy。看市场情绪可用 a buying frenzy（抢购潮）。提醒自己：frenzy 往往伴着泡沫，别被 hype 带节奏。",
+          "paraIdx": 0,
+          "hl": "frenzy",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-18"
+          },
+          "phonetic": "[ˈfrenzi]"
+        },
+        {
+          "id": "a7-2",
+          "text": "riding the robotics hype straight to the bank",
+          "understanding": "蹭热度、一路赚大钱。宇树借着机器人 hype 大举融资。口语可用 laugh all the way to the bank（轻松发大财）。夸一家趁势而起的公司：it rode the AI hype to a record valuation。",
+          "paraIdx": 1,
+          "hl": "riding the robotics hype straight to the bank",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-18"
+          }
+        },
+        {
+          "id": "a7-3",
+          "text": "oversubscribe",
+          "understanding": "超额认购。宇树 IPO 获散户超 8000 倍 oversubscribed，需求火爆。相关：subscribe 订阅 / 认购；subscribe for shares 认购股份。看新股热度时常用。",
+          "paraIdx": 1,
+          "hl": "oversubscribed",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-18"
+          },
+          "phonetic": "[ˌoʊvərsəbˈskraɪb]"
+        },
+        {
+          "id": "a7-4",
+          "text": "burgeoning",
+          "understanding": "新兴的、快速冒头的。the burgeoning industry 新兴产业，可替换 an emerging industry。写趋势文高频：a burgeoning market for X。",
+          "paraIdx": 1,
+          "hl": "burgeoning",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-18"
+          },
+          "phonetic": "[ˈbɝːdʒənɪŋ]"
+        },
+        {
+          "id": "a7-5",
+          "text": "deploy",
+          "understanding": "（本文）部署、投放。去年全球才 deploy 了约 1.5 万台人形机器人。广义也指调派人手 / 资金：The bank deployed 200 staff。看规模落地时用。",
+          "paraIdx": 2,
+          "hl": "deployed",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-18"
+          },
+          "phonetic": "[dɪˈplɔɪ]"
+        },
+        {
+          "id": "a7-6",
+          "text": "advocate",
+          "understanding": "主张者、鼓吹者。马斯克等 advocates 看好机器人潜力。作动词 advocate (doing) 主张（做）。表达立场观点时可用。",
+          "paraIdx": 2,
+          "hl": "advocates",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-18"
+          },
+          "phonetic": "[ˈædvəkət]"
+        },
+        {
+          "id": "a7-7",
+          "text": "outsell",
+          "understanding": "卖得比……多。宇树上半年被对手 Agibot outsold。out- 前缀表“胜过”：outperform 表现更好、outnumber 数量更多。读行业报告常用。",
+          "paraIdx": 3,
+          "hl": "outsold",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-18"
+          },
+          "phonetic": "[ˌaʊtˈsel]"
+        },
+        {
+          "id": "a7-8",
+          "text": "feat",
+          "understanding": "需要本事才能做成的事。宇树已盈利，在这行是 uncommon feat。辨析：achievement 偏中性，feat 暗含“这可不容易”的赞叹。夸人可用 no small feat。",
+          "paraIdx": 4,
+          "hl": "feat",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-18"
+          },
+          "phonetic": "[fiːt]"
+        },
+        {
+          "id": "a7-9",
+          "text": "account for",
+          "understanding": "占比。2025 年海外销售 accounted for 超 40% 营收。句型：A accounted for X% of B。写数据论证时高频。",
+          "paraIdx": 4,
+          "hl": "accounted for",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-18"
+          }
+        },
+        {
+          "id": "a7-10",
+          "text": "hamper",
+          "understanding": "阻碍、拖累。地缘紧张可能 hamper 其扩张。近义 hinder / impede。写风险段常用：Poor roads hamper aid delivery。",
+          "paraIdx": 4,
+          "hl": "hamper",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-18"
+          },
+          "phonetic": "[ˈhæmpər]"
+        },
+        {
+          "id": "a7-11",
+          "text": "go public",
+          "understanding": "上市。宇树不是唯一一家 seeking to go public 的公司。同义 list / list on an exchange。财经新闻高频。",
+          "paraIdx": 5,
+          "hl": "go public",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-18"
+          }
+        },
+        {
+          "id": "a7-12",
+          "text": "list",
+          "understanding": "（本文）挂牌上市。创始人说“Listing is a must”。拓展：listed in Hong Kong 在港上市；IPO 首次公开发行。比 go public 更书面。",
+          "paraIdx": 5,
+          "hl": "Listing",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-18"
+          },
+          "phonetic": "[lɪst]"
+        },
+        {
+          "id": "a7-13",
+          "text": "pure-play",
+          "understanding": "单一业务的。Agility 想做美国首家 pure-play 人形机器人公司。投资语境：a pure-play bet on lithium 纯押注锂，而非什么都做的巨头。看赛道纯度时用。",
+          "paraIdx": 6,
+          "hl": "pure-play",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-18"
+          }
+        },
+        {
+          "id": "a7-14",
+          "text": "return on investment",
+          "understanding": "投资回报（ROI）。GXO 坦言人形机器人尚未实现 ROI。缩写 ROI 高频。评估任何投入都绕不开：what’s the ROI?",
+          "paraIdx": 6,
+          "hl": "return on investment",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-18"
+          }
+        }
+      ]
     }
   ]
 }
