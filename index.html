@@ -552,8 +552,19 @@ function wordCard(a, it){
     <div class="w-from">来自：《${a.source}》</div>
   </div>`;
 }
+function ensureKBShell(){
+  const root = document.getElementById("kb-view");
+  if (root.querySelector("#memSearchInput")) return;   // 已构建则不再重建，避免每次按键销毁/重建输入框导致光标错乱、字符重复
+  const search = `<div class="mem-search">
+    <span class="mem-search-icon">⌕</span>
+    <input id="memSearchInput" type="search" autocomplete="off" placeholder="搜索词条或释义，如 proclaim / 宣告"
+      value="${escAttr(memSearch)}" oninput="setMemSearch(this.value)" />
+    <span class="mem-search-clear" id="memSearchClear" onclick="setMemSearch('')" style="${memSearch ? '' : 'display:none'}">×</span>
+  </div>`;
+  root.innerHTML = `<div class="mem-filter" id="mem-filter-bar"></div>${search}<div id="kb-results"></div>`;
+}
 function renderWords(){
-  const el = document.getElementById("kb-view");
+  ensureKBShell();   // 仅首次/被语料库视图清空时构建外壳；之后输入框稳定，不再重建
   let rows = [];
   DATA.articles.forEach(a=>{ a.items.forEach(it=> rows.push({a, it})); });
   const order = {"weak":0,"learning":1,"strong":2};
@@ -562,13 +573,7 @@ function renderWords(){
   const cnt = {weak:0, learning:0, strong:0};
   rows.forEach(r=> cnt[itemStrength(r.it)]++);
   const mf = (k, lbl) => `<div class="mf ${memFilter===k?'active':''}" onclick="setMemFilter('${k}')">${lbl}<span class="cnt">${k==='all' ? rows.length : cnt[k]}</span></div>`;
-  const bar = `<div class="mem-filter">${mf('all','全部')}${mf('weak','快忘了')}${mf('learning','巩固中')}${mf('strong','牢固')}</div>`;
-  const search = `<div class="mem-search">
-    <span class="mem-search-icon">⌕</span>
-    <input id="memSearchInput" type="search" autocomplete="off" placeholder="搜索词条或释义，如 proclaim / 宣告"
-      value="${escAttr(memSearch)}" oninput="setMemSearch(this.value)" />
-    ${memSearch ? `<span class="mem-search-clear" onclick="setMemSearch('')">×</span>` : ``}
-  </div>`;
+  document.getElementById("mem-filter-bar").innerHTML = `${mf('all','全部')}${mf('weak','快忘了')}${mf('learning','巩固中')}${mf('strong','牢固')}`;
   const shown = (memFilter === "all") ? rows : rows.filter(r=> itemStrength(r.it) === memFilter);
   const fShown = shown.filter(r=>{
     const q = memSearch.trim().toLowerCase();
@@ -579,9 +584,9 @@ function renderWords(){
     const und = (r.it.understanding || "").toLowerCase();
     return txt.includes(q) || und.includes(q);           // 含中文：词条 + 中文释义都查
   });
-  el.innerHTML = bar + search + (fShown.length
+  document.getElementById("kb-results").innerHTML = fShown.length
     ? fShown.map(r=>wordCard(r.a, r.it)).join("")
-    : `<div class="empty">${memSearch ? `没有匹配「${escAttr(memSearch)}」的词条` : `这个分类暂时还没有词`}</div>`);
+    : `<div class="empty">${memSearch ? `没有匹配「${escAttr(memSearch)}」的词条` : `这个分类暂时还没有词`}</div>`;
 }
 function setMemFilter(k){
   memFilter = k;
@@ -589,9 +594,9 @@ function setMemFilter(k){
 }
 function setMemSearch(v){
   memSearch = v || "";
-  renderWords();
-  const inp = document.getElementById("memSearchInput");
-  if (inp && document.activeElement !== inp) inp.focus();
+  renderWords();   // 只刷新结果列表 #kb-results，输入框不重建，光标与输入法均稳定
+  const clr = document.getElementById("memSearchClear");
+  if (clr) clr.style.display = memSearch ? "" : "none";
 }
 
 /* ── 知识库：文件夹目录 + 完整文章卡 ── */
