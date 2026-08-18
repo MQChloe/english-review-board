@@ -6,7 +6,7 @@
     14,
     30
   ],
-  "today": "2026-08-14",
+  "today": "2026-08-18",
   "articles": [
     {
       "id": "a1",
@@ -2398,6 +2398,253 @@
             "last": null,
             "strength": "weak",
             "nextDue": "2026-08-18"
+          }
+        }
+      ]
+    },
+    {
+      "id": "a8",
+      "source": "镜像时代：我们看自己越多，为什么反而越不自在？",
+      "category": "外刊",
+      "date": "2026-08-18",
+      "paragraphs": [
+        {
+          "en": "All This Staring at Our Faces Is Messing With Our Heads",
+          "cn": "总盯着自己的面孔看，正在扰乱我们的心智"
+        },
+        {
+          "en": "Everything is strange. We socialize online. Our private lives are increasingly public. People pretend to be brands; brands pretend to be people. We optimize our bodies until they break. And the more we know, the less secure we feel.",
+          "cn": "一切都变得怪异。我们在网上社交，私人生活却日益公开化。个人把自己包装成品牌，品牌却要打造自己的“人”感。我们不断优化自己的身体，直至把身体搞垮。我们知道得越来越多，内心反而越来越没有安全感。"
+        },
+        {
+          "en": "To know the truth of ourselves, we begin at what feels like a natural place: the mirror. We are constantly confronted with our own image: on our phones, front-facing videos, public spaces, our social media profiles, Zoom calls. But we can forget that mirrors both duplicate reality and reverse it. None show you exactly as you are.",
+          "cn": "为了认清真实的自我，我们会从一个看似理所当然的地方着手：镜子。我们不断看见自己的影像：手机屏幕、前置摄像头录制的视频、公共场合、社交媒体个人主页、线上视频会议。但我们有时会忘记，镜子既复刻现实，也会颠倒现实。没有一面镜子能呈现你真实的模样。"
+        },
+        {
+          "en": "The historian Christopher Lasch wrote that “for the narcissist, the world is a mirror.” Almost 50 years later, this remains a tidy diagnosis, but it doesn’t quite capture the extent of the spiritual crisis that we’re now facing.",
+          "cn": "历史学家克里斯托弗・拉斯奇（Christopher Lasch）曾写道：“对自恋者而言，整个世界就是一面镜子。” 近五十年过去，这依旧是一个精辟的论断，但它已然没法涵盖我们当下面临的这场精神危机的严重程度。"
+        },
+        {
+          "en": "I believe the room of mirrors that constantly surrounds us conjures something unsettling, something dark. It is a spiritual trap in which the imagined displaces the real: We choose a fantasy of ourselves over the reality of others. And that trap is baited and facilitated by technology.",
+          "cn": "我认为时刻将我们包围的镜像空间，会催生出某种令人不安、阴郁的东西。这是一处精神陷阱：想象取代了现实，我们宁愿沉溺于自我幻想，也不愿接纳他人的真实。而科技为这个陷阱设置诱饵，并推波助澜。"
+        },
+        {
+          "en": "As more and more of our lives take place in a virtual realm, and we increasingly identify with the fantasies of our digital doppelgängers, we begin to dehumanize ourselves, and when we do this, it is undoubtedly easier to dehumanize others.",
+          "cn": "随着我们越来越多地活在虚拟世界里，我们会愈发认同自己数字化“分身”所承载的幻想，我们开始剥离自身的人性；一旦如此，我们无疑也更容易去漠视他人的人性。"
+        },
+        {
+          "en": "When we look solely at ourselves, we fail to encounter anything that resists us; there are no contradictions, no interruptions. We need the honest gaze: the gaze of others and the gaze toward others. To see ourselves clearly, we don’t use mirrors. We use relationships.",
+          "cn": "当我们只盯着自身，就遇不到任何与自己相悖的事物；没有矛盾，也没有来自外界的打断。我们需要真诚的注视：来自他人的注视，以及投向他人的注视。想要看清自我，依靠的不是镜子，而是人与人之间的关系。"
+        },
+        {
+          "en": "Mirrors encourage us to choose the fantasies of ourselves over the realities of others. It’s best we look away.",
+          "cn": "镜子怂恿我们沉溺自我幻想，无视他人的真实。我们最好移开目光。"
+        }
+      ],
+      "items": [
+        {
+          "id": "a8-1",
+          "text": "stare at",
+          "understanding": "凝视、长时间盯着看（带过度感）。原文标题 “All This Staring at Our Faces Is Messing With Our Heads”——总盯着自己的脸看，反而扰乱心智。手机前置摄像头让我们天天都在 stare at 自己，适度就好。",
+          "paraIdx": 0,
+          "hl": "Staring at",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-19"
+          }
+        },
+        {
+          "id": "a8-2",
+          "text": "mess with",
+          "understanding": "扰乱、干扰、把……搞乱。原文 “messing with our heads”（扰乱我们的心智）。也常说 Too much screen time can mess with your sleep（刷太多手机影响睡眠）。",
+          "paraIdx": 0,
+          "hl": "Messing With",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-19"
+          }
+        },
+        {
+          "id": "a8-3",
+          "text": "optimize",
+          "understanding": "优化、使尽可能好。原文 “We optimize our bodies until they break”——不断优化身体直至搞垮。提醒自己：optimize 也要有度，别为优化把自己累垮。",
+          "paraIdx": 1,
+          "hl": "optimize",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-19"
+          },
+          "phonetic": "[ˈɒptɪmaɪz] 美 [ˈɑːptɪmaɪz]"
+        },
+        {
+          "id": "a8-4",
+          "text": "be confronted with",
+          "understanding": "面临、遭遇（带躲不开的强迫感）。原文 “We are constantly confronted with our own image”——不断面对自己的影像。比 face 多一层“避无可避”的意味。",
+          "paraIdx": 2,
+          "hl": "confronted with",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-19"
+          }
+        },
+        {
+          "id": "a8-5",
+          "text": "duplicate",
+          "understanding": "复制。原文 “mirrors both duplicate reality and reverse it”——镜子既复刻现实也颠倒现实。注意它还有“重复、雷同”的引申义。",
+          "paraIdx": 2,
+          "hl": "duplicate",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-19"
+          },
+          "phonetic": "[ˈdjuːplɪkeɪt] 美 [ˈduːplɪkeɪt]"
+        },
+        {
+          "id": "a8-6",
+          "text": "reverse",
+          "understanding": "反转、逆转。原文 “mirrors… reverse it”（颠倒现实）。常见 reverse the decline（扭转下滑）。",
+          "paraIdx": 2,
+          "hl": "reverse",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-19"
+          },
+          "phonetic": "[rɪˈvɜːs] 美 [rɪˈvɜːrs]"
+        },
+        {
+          "id": "a8-7",
+          "text": "narcissist",
+          "understanding": "自恋者。原文引拉斯奇 “for the narcissist, the world is a mirror”（对自恋者，世界就是一面镜子）。词源是希腊神话美少年 Narcissus。",
+          "paraIdx": 3,
+          "hl": "narcissist",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-19"
+          },
+          "phonetic": "[ˈnɑːsɪsɪst] 美 [ˈnɑːrsɪsɪst]"
+        },
+        {
+          "id": "a8-8",
+          "text": "capture",
+          "understanding": "描绘、捕捉（强调准确呈现）。原文 “doesn’t quite capture the extent of the spiritual crisis”——没能完全捕捉这场精神危机的程度。Words can’t capture how I feel（言语无法表达我的感受）。",
+          "paraIdx": 3,
+          "hl": "capture",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-19"
+          },
+          "phonetic": "[ˈkæptʃə] 美 [ˈkæptʃər]"
+        },
+        {
+          "id": "a8-9",
+          "text": "conjure",
+          "understanding": "唤起、引发（像用魔法变出）。原文 “conjures something unsettling”——催生出某种令人不安的东西。The magician conjured up a dove（魔术师变出一只鸽子）。",
+          "paraIdx": 4,
+          "hl": "conjures",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-19"
+          },
+          "phonetic": "[ˈkʌndʒə] 美 [ˈkʌndʒər]"
+        },
+        {
+          "id": "a8-10",
+          "text": "displace",
+          "understanding": "取代、使离开原位。原文 “the imagined displaces the real”——想象取代了现实。Convenience displaces quality（便利取代了质量）。",
+          "paraIdx": 4,
+          "hl": "displaces",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-19"
+          },
+          "phonetic": "[dɪsˈpleɪs] 美 [dɪsˈpleɪs]"
+        },
+        {
+          "id": "a8-11",
+          "text": "facilitate",
+          "understanding": "使便利、促进。原文 “baited and facilitated by technology”——由科技设置诱饵并推波助澜。比 help 更正式，常用于“促进某事发生”。",
+          "paraIdx": 4,
+          "hl": "facilitated",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-19"
+          },
+          "phonetic": "[fəˈsɪlɪteɪt] 美 [fəˈsɪlɪteɪt]"
+        },
+        {
+          "id": "a8-12",
+          "text": "identify with",
+          "understanding": "认同、自我代入、产生共鸣。原文 “identify with the fantasies of our digital doppelgängers”——认同数字化分身的幻想。Children identify with characters on screen（孩子会代入银幕角色）。",
+          "paraIdx": 5,
+          "hl": "identify with",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-19"
+          }
+        },
+        {
+          "id": "a8-13",
+          "text": "doppelgänger",
+          "understanding": "（本文）电子分身、另一个自己。原文 “digital doppelgängers”。来自德语，指“长得一模一样的另一个自己”，传说中是不祥之兆。",
+          "paraIdx": 5,
+          "hl": "doppelgängers",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-19"
+          },
+          "phonetic": "[ˈdɒplɡeŋə] 美 [ˈdɑːplɡeŋər]"
+        },
+        {
+          "id": "a8-14",
+          "text": "look away",
+          "understanding": "把目光移开。原文结尾 “It’s best we look away”——我们最好移开目光。呼应主题：看清自己不能靠镜子，而要靠与他人的关系。",
+          "paraIdx": 7,
+          "hl": "look away",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-19"
           }
         }
       ]
