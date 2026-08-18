@@ -569,6 +569,7 @@ function renderWords(){
       value="${escAttr(memSearch)}" oninput="setMemSearch(this.value)" />
     ${memSearch ? `<span class="mem-search-clear" onclick="setMemSearch('')">×</span>` : ``}
   </div>`;
+  const shown = (memFilter === "all") ? rows : rows.filter(r=> itemStrength(r.it) === memFilter);
   const fShown = shown.filter(r=>{
     const q = memSearch.trim().toLowerCase();
     if (!q) return true;
