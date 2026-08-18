@@ -36,6 +36,20 @@
   .mf.active{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;
     border-color:transparent;box-shadow:0 4px 12px rgba(124,108,240,.3);}
   .mf .cnt{opacity:.7;font-size:12px;margin-left:4px;}
+  .mem-search{position:relative;margin:-8px 0 16px;}
+  .mem-search input{width:100%;box-sizing:border-box;padding:9px 36px 9px 36px;
+    border-radius:999px;border:1px solid var(--line);background:var(--card);
+    color:var(--ink);font-size:14px;box-shadow:var(--shadow);outline:none;
+    transition:border-color .2s,box-shadow .2s;font-family:inherit;}
+  .mem-search input::placeholder{color:var(--muted);}
+  .mem-search input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(124,108,240,.18);}
+  .mem-search-icon{position:absolute;left:14px;top:50%;transform:translateY(-50%);
+    color:var(--muted);font-size:16px;line-height:1;pointer-events:none;}
+  .mem-search-clear{position:absolute;right:10px;top:50%;transform:translateY(-50%);
+    width:22px;height:22px;display:flex;align-items:center;justify-content:center;
+    border-radius:50%;background:var(--line);color:var(--ink);font-size:16px;line-height:1;
+    cursor:pointer;user-select:none;}
+  .mem-search-clear:hover{background:var(--accent);color:#fff;}
   .sec-title{font-size:13px;font-weight:700;margin:24px 0 12px;letter-spacing:.6px;
     display:flex;align-items:center;gap:8px;color:#79748a;}
   .sec-title .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);}
@@ -237,6 +251,7 @@ let pollTimer = null;
 let DATA = null, currentCat = "all", TODAY = "";
 let mode = "study";   // "study" = 全部/外刊/播客 视图；"kb" = 知识库目录视图
 let memFilter = "all";   // 语料库视图的筛选：all / weak / learning / strong
+let memSearch = "";      // 单词库视图的模糊搜索词（匹配 text/understanding）
 let cnOpen = {};
 let pending = {};   // id -> verdict，尚未成功回写服务端
 let acked = {};     // id -> verdict，已回写成功的判定（仅内存，用于持久显示按钮高亮与状态）
@@ -548,14 +563,31 @@ function renderWords(){
   rows.forEach(r=> cnt[itemStrength(r.it)]++);
   const mf = (k, lbl) => `<div class="mf ${memFilter===k?'active':''}" onclick="setMemFilter('${k}')">${lbl}<span class="cnt">${k==='all' ? rows.length : cnt[k]}</span></div>`;
   const bar = `<div class="mem-filter">${mf('all','全部')}${mf('weak','快忘了')}${mf('learning','巩固中')}${mf('strong','牢固')}</div>`;
-  const shown = (memFilter === "all") ? rows : rows.filter(r=> itemStrength(r.it) === memFilter);
-  el.innerHTML = bar + (shown.length
-    ? shown.map(r=>wordCard(r.a, r.it)).join("")
-    : `<div class="empty">这个分类暂时还没有词</div>`);
+  const search = `<div class="mem-search">
+    <span class="mem-search-icon">⌕</span>
+    <input id="memSearchInput" type="search" autocomplete="off" placeholder="搜索词条或释义，如 proclaim / 宣告"
+      value="${escAttr(memSearch)}" oninput="setMemSearch(this.value)" />
+    ${memSearch ? `<span class="mem-search-clear" onclick="setMemSearch('')">×</span>` : ``}
+  </div>`;
+  const fShown = shown.filter(r=>{
+    const q = memSearch.trim().toLowerCase();
+    if (!q) return true;
+    return (r.it.text || "").toLowerCase().includes(q)
+        || (r.it.understanding || "").toLowerCase().includes(q);
+  });
+  el.innerHTML = bar + search + (fShown.length
+    ? fShown.map(r=>wordCard(r.a, r.it)).join("")
+    : `<div class="empty">${memSearch ? `没有匹配「${escAttr(memSearch)}」的词条` : `这个分类暂时还没有词`}</div>`);
 }
 function setMemFilter(k){
   memFilter = k;
   renderWords();
+}
+function setMemSearch(v){
+  memSearch = v || "";
+  renderWords();
+  const inp = document.getElementById("memSearchInput");
+  if (inp && document.activeElement !== inp) inp.focus();
 }
 
 /* ── 知识库：文件夹目录 + 完整文章卡 ── */
