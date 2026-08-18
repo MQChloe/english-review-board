@@ -573,8 +573,11 @@ function renderWords(){
   const fShown = shown.filter(r=>{
     const q = memSearch.trim().toLowerCase();
     if (!q) return true;
-    return (r.it.text || "").toLowerCase().includes(q)
-        || (r.it.understanding || "").toLowerCase().includes(q);
+    const txt = (r.it.text || "").toLowerCase();
+    const hasCJK = /[一-鿿]/.test(q);
+    if (!hasCJK) return txt.includes(q);                 // 纯英文/字母查询：只匹配词条本身
+    const und = (r.it.understanding || "").toLowerCase();
+    return txt.includes(q) || und.includes(q);           // 含中文：词条 + 中文释义都查
   });
   el.innerHTML = bar + search + (fShown.length
     ? fShown.map(r=>wordCard(r.a, r.it)).join("")
