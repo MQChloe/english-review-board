@@ -2648,6 +2648,248 @@
           }
         }
       ]
+    },
+    {
+      "id": "a9",
+      "source": "身心健康E03 减脂，原来并没有那么难",
+      "category": "播客",
+      "date": "2026-08-19",
+      "paragraphs": [
+        {
+          "en": "Lose Fat with Science-based Tools",
+          "cn": ""
+        },
+        {
+          "en": "So a calorie is a calorie as a unit of energy, and we need to accept and acknowledge this calories in, meaning calories ingested versus calories burned formula, but the calories burned portion is strongly influenced by a number of things that you can control that can greatly accelerate or increase the amount of adipose tissue or the proportion of adipose tissue that you burn in response to exercise and food.",
+          "cn": "· 表达：词汇和短语"
+        },
+        {
+          "en": "To mobilize fat, you got to break the backbone between glycerol and these fatty acids, okay? That’s accomplished by an enzyme called lipase, but you can forget all that if you want. Remember, we’re just trying to mobilize fat. So the first step is to get those fatty acids moving around in the bloodstream, to get them out of those fat cells, and then they can travel and be used for energy.",
+          "cn": "· 表达：词汇和短语"
+        },
+        {
+          "en": "They’re going to go into cells that can use them for energy. And once they are inside those cells, they’re still not burned up. You need to oxidize them. They need to be moved into the mitochondria and then they can be converted into ATP into energy. So just to really zoom out again to make sure I don’t lose anybody, you got to mobilize the fat, then you have to oxidize the fat.",
+          "cn": "· 表达：词汇和短语"
+        },
+        {
+          "en": "What they did was they examined people who overate and did not gain weight. And what they observed was that those people engaged in lots of subtle movement throughout the day. In other words, they were fidgeters and that’s what they call them. And in 2015, and again in 2017, there’ve been studies that have explored this using some modern metabolic tracking. And indeed, simply moving a lot, being a fidgeter, bouncing your knee, standing up and pacing several times or many times throughout the day, led to considerable amounts of fat loss and weight loss when people were ingesting the same amount of food.",
+          "cn": "· 表达：词汇和短语"
+        },
+        {
+          "en": "Those subtle movements of our core musculature, not just the core, but all our limbs and our musculature, those low level movements, they trigger epinephrine release from these neurons and they stimulate the mobilization of fat. And then that fat is oxidized at higher rates. So what’s the protocol? Fidget.",
+          "cn": ""
+        },
+        {
+          "en": "If you’re really interested in burning calories and you already exercise, you want to burn more, or you don’t have the opportunity to exercise or you’re averse to exercise for whatever reason, fidgeting movements, staccato movements, standing up, walking around, pacing, all the sort of nervous activities that we’re so critical of in other people and sometimes in ourselves are actually mobilizing and oxidizing a lot of fat and a lot of energy. And while this probably won’t compensate for chronic overeating, the caloric burn from this is considerable, and very likely can offset a meal that had excessive calories or a kind of steady state of eating too much.",
+          "cn": "· 表达：词汇和短语"
+        },
+        {
+          "en": "Caffeine can enhance the amount of fat that you burn in any duration of exercise, and it can shift the percentage of fat that you oxidize compared to glycogen. Unless you take that caffeine and it ramps you up so much that you’re training really, really intensely. The bottom line is if you like caffeine and you can use it safely, ingesting somewhere between 100 and 400 milligrams of caffeine prior to exercise, somewhere between 30 to 40 minutes before exercise can be beneficial if we’re talking about fat oxidation, burning more body fat.",
+          "cn": "-   身心管理小结  \n    第二个减脂小建议：运动前喝一些含有咖啡因的饮料，可能有助于燃脂，但切记谨慎操作。因为对于使用咖啡因减脂，还有两个关键的前提条件：一，you like caffeine，你的确喜欢咖啡因，喝了之后没有难受的感觉；二，you can use it safely，你能合理、安全地使用它。因为咖啡因摄入过量可能引起不适，且因人而异。"
+        },
+        {
+          "en": "There is really solid evidence from the Gardner Lab at Stanford and from other labs showing that when you look at different types, you look at low fat diets, high fat diets, keto diets, intermittent fasting, provided people stick to their particular diet, it doesn’t really matter which diet you follow. You can still get a caloric deficit and you get weight loss. Adherence, however, is always an issue. And so what I always say is that you want to use the eating plan that is obviously beneficial to your health, but the one that allows you to adhere to whatever it is that the particular nutrition protocol is, right? If you can’t stick with something, then it’s not very worthwhile.",
+          "cn": "· 表达：词汇和短语"
+        }
+      ],
+      "items": [
+        {
+          "id": "a9-1",
+          "text": "calorie",
+          "understanding": "n. 卡路里（能量单位）。减脂的本质是 calories burned > calories in（消耗 > 摄入）。",
+          "paraIdx": 1,
+          "hl": "calorie",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-20"
+          }
+        },
+        {
+          "id": "a9-2",
+          "text": "adipose tissue",
+          "understanding": "n. 脂肪组织。运动与饮食能影响你燃烧的 adipose tissue 比例。",
+          "paraIdx": 1,
+          "hl": "adipose tissue",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-20"
+          }
+        },
+        {
+          "id": "a9-3",
+          "text": "accelerate",
+          "understanding": "v. 加速（强调速度）。文中与 increase 并列：accelerate / increase the amount of adipose tissue you burn。",
+          "paraIdx": 1,
+          "hl": "accelerate",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-20"
+          }
+        },
+        {
+          "id": "a9-4",
+          "text": "mobilize",
+          "understanding": "v. 调动、使……动起来。减脂第一步是 mobilize fat（让脂肪从细胞里“动”出来）。",
+          "paraIdx": 2,
+          "hl": "mobilize",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-20"
+          }
+        },
+        {
+          "id": "a9-5",
+          "text": "fatty acids",
+          "understanding": "n. 脂肪酸。脂肪要先变成 fatty acids 进入血液才能被利用。",
+          "paraIdx": 2,
+          "hl": "fatty acids",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-20"
+          }
+        },
+        {
+          "id": "a9-6",
+          "text": "enzyme",
+          "understanding": "n. 酶。分解甘油与脂肪酸靠一种叫 lipase 的 enzyme（记不住细节也没关系）。",
+          "paraIdx": 2,
+          "hl": "enzyme",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-20"
+          }
+        },
+        {
+          "id": "a9-7",
+          "text": "oxidize",
+          "understanding": "v. 氧化。脂肪“动”出来后还要 oxidize（氧化）才能真正燃掉。",
+          "paraIdx": 3,
+          "hl": "oxidize",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-20"
+          }
+        },
+        {
+          "id": "a9-8",
+          "text": "mitochondria",
+          "understanding": "n. 线粒体。脂肪被送进 mitochondria 才转化为 ATP / 能量。",
+          "paraIdx": 3,
+          "hl": "mitochondria",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-20"
+          }
+        },
+        {
+          "id": "a9-9",
+          "text": "zoom out",
+          "understanding": "（口语）拉远镜头 → 引申为“跳出细节看主线”。主播说 let's zoom out 就是在帮听众回顾全景。",
+          "paraIdx": 3,
+          "hl": "zoom out",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-20"
+          }
+        },
+        {
+          "id": "a9-10",
+          "text": "fidgeter",
+          "understanding": "n. 总爱动来动去的人（fidget v. 做小动作）。研究发现不胖的人多是 fidgeters，常动更燃脂。",
+          "paraIdx": 4,
+          "hl": "fidgeters",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-20"
+          }
+        },
+        {
+          "id": "a9-11",
+          "text": "musculature",
+          "understanding": "n. 肌肉系统 / 肌肉群（区别于单块 muscle）。core musculature 的低强度活动能促脂肪动员。",
+          "paraIdx": 5,
+          "hl": "musculature",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-20"
+          }
+        },
+        {
+          "id": "a9-12",
+          "text": "averse to",
+          "understanding": "adj. 不想做、抵触（比 don't like 更正式强烈）。Some people are averse to exercise. 有人特别不愿运动。",
+          "paraIdx": 6,
+          "hl": "averse to",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-20"
+          }
+        },
+        {
+          "id": "a9-13",
+          "text": "intermittent fasting",
+          "understanding": "n. 间歇性断食。keto / low-fat / high-fat diets / intermittent fasting——只要能坚持，哪种都行。",
+          "paraIdx": 8,
+          "hl": "intermittent fasting",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-20"
+          }
+        },
+        {
+          "id": "a9-14",
+          "text": "stick to",
+          "understanding": "v. 坚持（某事）。provided you stick to a diet, 具体哪种饮食法不重要，能 stick to 才关键。",
+          "paraIdx": 8,
+          "hl": "stick to",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-20"
+          }
+        }
+      ]
     }
   ]
 }
