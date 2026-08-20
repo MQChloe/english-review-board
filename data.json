@@ -2890,6 +2890,243 @@
           }
         }
       ]
+    },
+    {
+      "id": "a10",
+      "source": "越来越多夫妻，把“全职带娃补偿”写进了“婚前协议”",
+      "category": "外刊",
+      "date": "2026-08-20",
+      "paragraphs": [
+        {
+          "en": "The Trigger Clause More Couples Want in Their Prenups",
+          "cn": "越来越多情侣希望在婚前协议中加入的“触发条款”"
+        },
+        {
+          "en": "From her perch in Midtown Manhattan, divorce attorney Lisa Zeiderman has seen every imaginable marital horror story. Near the top of the list: Divorces where the spouse who stays home with the children is left with very little after decades of marriage.",
+          "cn": "在位于曼哈顿中城的办公室里，离婚律师丽莎·扎伊德曼（Lisa Zeiderman）见识过各种各样你能想象到的婚姻恐怖故事。其中最恐怖的莫过于：当数十年的婚姻走到尽头，留在家中抚养孩子的一方最终落得几乎一无所有。"
+        },
+        {
+          "en": "But over the last couple of years, she is increasingly being asked to craft prenuptial agreements that include a “leaving the workforce” trigger. It activates if one spouse decides to stay at home and give up a career.",
+          "cn": "但过去几年中，越来越多的人找她起草包含“退出职场”触发条款的婚前协议。如果婚姻中的一方决定照顾家庭并放弃事业，该条款就会生效。"
+        },
+        {
+          "en": "Anna Morgenstern, 40 years old, and Zach Spiess, 45, used an online platform to create their own agreements. The trigger they agreed on ensured the working spouse—whoever it would be—would provide additional financial support if one of them left the workforce, except in the case of infidelity.",
+          "cn": "40岁的安娜·莫根施特恩（Anna Morgenstern）和45岁的扎克·斯皮斯（Zach Spiess）选择使用一个在线平台来创建自己的婚前协议。他们商定的触发条款约定，如果其中一方退出职场，继续工作的另一方——无论具体是谁——将为对方提供额外的财务支持，除非存在婚姻不忠行为。"
+        },
+        {
+          "en": "“It was a good opportunity to get a view into how he thinks about our future,” Morgenstern said. The process became a kind of financial planning exercise.",
+          "cn": "“这是一次很好的机会，让我了解他如何看待我们的未来，” 莫根施特恩说道。整个过程某种程度上变成了一次财务规划演习。"
+        },
+        {
+          "en": "One way to structure the provision is to have the working spouse set aside money that would reflect the stay-at-home parent’s previous salary, as well as 3% to 5% annual raises. Or the working spouse could contribute regularly to an investment account that goes solely to the other parent in a divorce.",
+          "cn": "构建该条款的方式之一是让工作的配偶预留一笔资金，该资金应反映全职在家一方先前的薪水外加每年3%至5%的涨幅。或者，工作的配偶可以定期向一个投资账户存钱，一旦离婚，该账户的资金将完全归另一方所有。"
+        }
+      ],
+      "items": [
+        {
+          "id": "a10-1",
+          "text": "trigger clause",
+          "understanding": "触发条款：合同中某个特定事件或条件一旦满足，相应的权利义务便自动生效。前缀 trigger 本义是“扳机/引发后续结果的事件”。",
+          "paraIdx": 2,
+          "hl": "trigger",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-21"
+          }
+        },
+        {
+          "id": "a10-2",
+          "text": "prenup",
+          "understanding": "n. 婚前协议（prenuptial agreement 的简称）；prenuptial 意为“婚前的”，nuptial 意为“婚姻的”。",
+          "paraIdx": 2,
+          "hl": "prenuptial",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-21"
+          },
+          "phonetic": "[ˈpriːnʌp]"
+        },
+        {
+          "id": "a10-3",
+          "text": "perch",
+          "understanding": "（本文）n. 居高临下的位置、有利的观察点；本义指鸟类栖息的高枝。文中 From her perch in Midtown Manhattan 形容律师身处曼哈顿中城、俯瞰全局的视角。",
+          "paraIdx": 1,
+          "hl": "perch",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-21"
+          },
+          "phonetic": "[pɜːtʃ]"
+        },
+        {
+          "id": "a10-4",
+          "text": "over the last couple of years",
+          "understanding": "在过去几年中。over 强调某段时间内持续、渐进的变化或积累，区别于 during 的静态贯穿。",
+          "paraIdx": 2,
+          "hl": "over the last couple of years",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-21"
+          }
+        },
+        {
+          "id": "a10-5",
+          "text": "craft",
+          "understanding": "（本文）v. 精心起草、拟定；本义 n. 手工艺。近义词 draft（起草）。",
+          "paraIdx": 2,
+          "hl": "craft",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-21"
+          },
+          "phonetic": "[krɑːft]"
+        },
+        {
+          "id": "a10-6",
+          "text": "leave the workforce",
+          "understanding": "全面而长期地退出劳动力市场（为照顾家庭而放弃事业）。",
+          "paraIdx": 2,
+          "hl": "leaving the workforce",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-21"
+          }
+        },
+        {
+          "id": "a10-7",
+          "text": "activate",
+          "understanding": "v.（条款/机制）生效、激活——使预先订立却处于休眠状态的安排，在特定条件满足后转入生效状态。",
+          "paraIdx": 2,
+          "hl": "activates",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-21"
+          },
+          "phonetic": "[ˈæktɪveɪt]"
+        },
+        {
+          "id": "a10-8",
+          "text": "ensure",
+          "understanding": "v. 确保……发生（to make sure that something happens）。",
+          "paraIdx": 3,
+          "hl": "ensured",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-21"
+          },
+          "phonetic": "[ɪnˈʃɔːr]"
+        },
+        {
+          "id": "a10-9",
+          "text": "except in the case of",
+          "understanding": "除……情况之外（unless it is a case of …）。",
+          "paraIdx": 3,
+          "hl": "except in the case of",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-21"
+          }
+        },
+        {
+          "id": "a10-10",
+          "text": "get a view into",
+          "understanding": "深入了解、得以窥见（get insight into）。",
+          "paraIdx": 4,
+          "hl": "get a view into",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-21"
+          }
+        },
+        {
+          "id": "a10-11",
+          "text": "provision",
+          "understanding": "n. 条款（侧重条款所表达的实质内容）；区别于 clause——clause 指法律文件结构上的单元（如第 3.1 条）。",
+          "paraIdx": 5,
+          "hl": "provision",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-21"
+          },
+          "phonetic": "[prəˈvɪʒən]"
+        },
+        {
+          "id": "a10-12",
+          "text": "set aside",
+          "understanding": "为特定目的留出（资金、时间等）；reserve or keep for a particular purpose。",
+          "paraIdx": 5,
+          "hl": "set aside",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-21"
+          }
+        },
+        {
+          "id": "a10-13",
+          "text": "contribute",
+          "understanding": "v. 与他人一道支付（部分或全部）资金，以划入共同基金或用于共同目的。",
+          "paraIdx": 5,
+          "hl": "contribute",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-21"
+          },
+          "phonetic": "[kənˈtrɪbjuːt]"
+        },
+        {
+          "id": "a10-14",
+          "text": "go to",
+          "understanding": "（财产、资金、收益）归属、流向（belong to / be directed to）。",
+          "paraIdx": 5,
+          "hl": "goes",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-21"
+          }
+        }
+      ]
     }
   ]
 }
