@@ -6,7 +6,7 @@
     14,
     30
   ],
-  "today": "2026-08-18",
+  "today": "2026-08-21",
   "articles": [
     {
       "id": "a1",
@@ -3125,6 +3125,258 @@
             "strength": "weak",
             "nextDue": "2026-08-21"
           }
+        }
+      ]
+    },
+    {
+      "id": "a11",
+      "source": "2026.8.21-英语正在“通货膨胀”：Very贬值后，下一个是谁？",
+      "category": "外刊",
+      "date": "2026-08-21",
+      "paragraphs": [
+        {
+          "en": "How We Speak Has Gotten Extravagant. Literally.",
+          "cn": "我们说话的方式，变得越来越浮夸了。简直了。"
+        },
+        {
+          "en": "What was once a single exclamation point now has to be (at least) two. Instead of just saying, “It was insane,” someone will say, “It was actually insane,” or, to the dismay of many, “It was literally insane.”",
+          "cn": "曾经一个感叹号就足以表达情绪，如今至少要用上两个。人们不再只说“这太离谱了”，有的人会说“这真的太离谱了”，或者，更让人看不下去的是，还有人会说，“这简直太离谱啦”。"
+        },
+        {
+          "en": "Why can’t we just tamp it down and relax? The reason is that human conversation is not only about making statements, but about making statements worth your interlocutor’s attention.",
+          "cn": "我们为什么不能收敛一点、放松一点？原因在于，人类的交谈不只是为了陈述，更是为了做出值得你对话者注意的陈述。"
+        },
+        {
+          "en": "This means that language is always drawing new things into the churn to keep us sounding urgent, committed. The linguist Martin Haspelmath calls this “extravagance,” where we operate according to the maxim “Talk in such a way that you will be noticed.”",
+          "cn": "这意味着，语言总在把新东西卷进这台搅拌机，好让我们听起来热切、恳切。语言学家马丁· 哈斯佩尔马特把这种现象称为“浮夸”——我们的说话方式遵循着这样一条准则：“以会被注意到的方式说话。”"
+        },
+        {
+          "en": "This extravagance is behind much of what can sound like jittery filler. “Yeah, no” is a great example. The “no” does not contradict the “yeah” but complements it. “Yeah, no” is a stronger version of “yeah.”",
+          "cn": "许多听起来像是紧张兮兮的口头禅，背后都是这种浮夸。“Yeah, no”（是，不）就是个绝佳的例子。这个“不”并不否定那个“是”，而是在为它加码。“Yeah, no”是“yeah”的加强版。"
+        },
+        {
+          "en": "In this vein, English is always and forever seeking new ways of saying “truly” in an emphatic, collar-clutching manner. In the 1300s “very” was the one to beat, but over time it lost its semantic punch.",
+          "cn": "循着这条脉络，英语永远都在寻找新的方式，以一种激烈的、揪住人衣领般的姿态来说“真的”。14世纪，“very”是无人能敌的那一个，但随着时间流逝，它的语义力道也消磨殆尽。"
+        },
+        {
+          "en": "Or, yes, “literally insane,” or “I was literally dying of thirst so we stopped at a 7-Eleven.” Because in this usage of “literally,” we do not actually mean that we were about to perish from clinical dehydration. But words often have contradictory meanings with no one batting an eye. A chair is stuck fast to the floor, but a rabbit runs fast. The figurative use of “literally” is never confusing. It’s just one more way of having a “truly” that pops.",
+          "cn": "或者，这么说没错（literally insane）“简直离谱”，又或者（I was literally dying of thirst）“我简直要渴死了，所以我们在一家711停了一下”，这么说也没错。因为在“literally”的这种用法里，我们并不真的在说：我们快要因为临床意义上的脱水而丧命了。而词语还常常自带相互矛盾的含义，却没有谁为此眨一下眼。椅子纹丝不动（fast）地钉在地上，兔子跑得飞快（fast）。“Literally”的比喻用法从来不会造成误解。它不过是又一个让“（truly）真的”这个词砰然作响的方式罢了。"
+        },
+        {
+          "en": "Not long ago I heard someone praising my tween daughter’s new hair color as “tuff.” OK, that one is weird to me — but in the end, it’s a more extravagant way of saying “cool.” “Cool,” after all, is a tad elderly now to get the job done.",
+          "cn": "前不久，我听到有人夸我十来岁女儿的新发色“tuff”。好吧，这个用法对我来说是有点怪——但说到底，它不过是“cool”的一种更浮夸的说法。毕竟，“cool”如今上了年纪，已经有点干不动这份活了。"
+        }
+      ],
+      "items": [
+        {
+          "id": "a11-1",
+          "text": "extravagant",
+          "understanding": "浮夸的、过度铺张的。原文标题 “How We Speak Has Gotten Extravagant” ——我们的说话方式变浮夸了。形容超出必要的华丽或夸张，可说 The party was extravagant（排场太大）。提醒自己：表达到位就好，别为强调而 extravagant。",
+          "paraIdx": 0,
+          "hl": "Extravagant",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-22"
+          },
+          "phonetic": "[ɪkˈstrævəɡənt]"
+        },
+        {
+          "id": "a11-2",
+          "text": "literally",
+          "understanding": "字面上；口语里常作夸张强调，约等于“简直”。原文 “It was literally insane” 并不是真疯，而是“简直离谱”。母语者现在满嘴 literally 加强语气，理解成“简直 / 说真的”即可，不必较真字面义。",
+          "paraIdx": 0,
+          "hl": "Literally",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-22"
+          },
+          "phonetic": "[ˈlɪtərəli]"
+        },
+        {
+          "id": "a11-3",
+          "text": "insane",
+          "understanding": "疯狂的、离谱的（口语高频）。原文 “It was insane” = 这太离谱了。比 crazy 稍正式，年轻人爱用 That’s insane 表惊叹。注意它本义是“精神失常”，口语里已弱化为程度副词。",
+          "paraIdx": 1,
+          "hl": "insane",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-22"
+          },
+          "phonetic": "[ɪnˈseɪn]"
+        },
+        {
+          "id": "a11-4",
+          "text": "actually",
+          "understanding": "实际上；此处用于给语气“加码”——“It was actually insane” 比 “It was insane” 多一层强调。聊天里 actually 常被当加强语而非真正转折，别误读成“然而”。",
+          "paraIdx": 1,
+          "hl": "actually",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-22"
+          },
+          "phonetic": "[ˈæktʃuəli]"
+        },
+        {
+          "id": "a11-5",
+          "text": "dismay",
+          "understanding": "沮丧、惊愕。原文 “to the dismay of many”（令许多人侧目 / 无语）。常用 to one’s dismay 表“让人失望的是”。写作可用：To my dismay, it rained.（糟糕，下雨了。）",
+          "paraIdx": 1,
+          "hl": "dismay",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-22"
+          },
+          "phonetic": "[dɪsˈmeɪ]"
+        },
+        {
+          "id": "a11-6",
+          "text": "tamp down",
+          "understanding": "收敛、压低（情绪或表达）。原文 “tamp it down and relax” ——收一收、放松点。tamp 本义“捣实、夯实”，tamp down 引申为把过头的表达“压下去”。想劝人别太用力表达时可用。",
+          "paraIdx": 2,
+          "hl": "tamp it down",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-22"
+          },
+          "phonetic": "[tæmp]"
+        },
+        {
+          "id": "a11-7",
+          "text": "interlocutor",
+          "understanding": "对话者、交谈对象（较正式）。原文 “worth your interlocutor’s attention” ——值得你对话方的注意。词根 locu- 与 locution（措辞）同源。口语可换 conversation partner，正式 / 写作场合用 interlocutor 更准。",
+          "paraIdx": 2,
+          "hl": "interlocutor’s",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-22"
+          },
+          "phonetic": "[ˌɪntərˈlɑːkjətər]"
+        },
+        {
+          "id": "a11-8",
+          "text": "churn",
+          "understanding": "（此处）搅拌、翻腾。原文 “drawing new things into the churn” 把语言比作搅拌机，不断搅进新词。本义指搅奶油（churn butter），引申“剧烈翻动”，如 churn out（大量炮制）。",
+          "paraIdx": 3,
+          "hl": "churn",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-22"
+          },
+          "phonetic": "[tʃɜːrn]"
+        },
+        {
+          "id": "a11-9",
+          "text": "urgent",
+          "understanding": "紧急的、热切的。原文 “sounding urgent, committed” ——听起来急切又恳切。形容需优先处理的事用 urgent；也指语气上的“急迫感”，比 emergency 更偏感受层面。",
+          "paraIdx": 3,
+          "hl": "urgent",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-22"
+          },
+          "phonetic": "[ˈɜːrdʒənt]"
+        },
+        {
+          "id": "a11-10",
+          "text": "extravagance",
+          "understanding": "浮夸、铺张（名词）。原文语言学家称这种现象为 “extravagance”。对应形容词 extravagant。形容语言或消费上的“过度加码”都可用，如 the extravagance of his language。",
+          "paraIdx": 3,
+          "hl": "extravagance",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-22"
+          },
+          "phonetic": "[ɪkˈstrævəɡəns]"
+        },
+        {
+          "id": "a11-11",
+          "text": "jittery",
+          "understanding": "紧张不安的、神经质的。原文 “jittery filler” ——紧张兮兮的口头禅。形容人焦虑手抖可用 feel jittery；形容话语 / 行为不稳也可用。jitter 本义“抖动”。",
+          "paraIdx": 4,
+          "hl": "jittery",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-22"
+          },
+          "phonetic": "[ˈdʒɪtəri]"
+        },
+        {
+          "id": "a11-12",
+          "text": "filler",
+          "understanding": "填充物；（此处）口头禅、filler word。原文 “sound like jittery filler” ——听着像紧张填充语。“Yeah, no” 这类就是 filler。口语里 um / like 也算 filler，演讲想干净就少放。",
+          "paraIdx": 4,
+          "hl": "filler",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-22"
+          },
+          "phonetic": "[ˈfɪlər]"
+        },
+        {
+          "id": "a11-13",
+          "text": "emphatic",
+          "understanding": "强调的、有力的。原文 “in an emphatic, collar-clutching manner” ——以一种揪住衣领般用力强调的姿态。emphatic statement = 掷地有声的声明。比 strong 更突出“着重”。",
+          "paraIdx": 5,
+          "hl": "emphatic",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-22"
+          },
+          "phonetic": "[ɪmˈfætɪk]"
+        },
+        {
+          "id": "a11-14",
+          "text": "semantic",
+          "understanding": "语义的。原文 “lost its semantic punch” ——“very” 失去了语义上的力道。semantic 指“意义层面”，semantic difference = 意义上的差别。和 grammatical（语法）相对。",
+          "paraIdx": 5,
+          "hl": "semantic",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-22"
+          },
+          "phonetic": "[sɪˈmæntɪk]"
         }
       ]
     }
