@@ -6,11 +6,11 @@
     14,
     30
   ],
-  "today": "2026-08-21",
+  "today": "2026-08-22",
   "articles": [
     {
       "id": "a1",
-      "source": "AI 究竟是企业的魔法，还是一场自欺欺人的表演？",
+      "source": "2026.8.12-AI 究竟是企业的魔法，还是一场自欺欺人的表演？",
       "category": "外刊",
       "date": "2026-08-12",
       "paragraphs": [
@@ -590,7 +590,7 @@
     },
     {
       "id": "a3",
-      "source": "“救命，我可能是个传统主妇”：一个职业女性的厨房自白",
+      "source": "2026.8.13-“救命，我可能是个传统主妇”：一个职业女性的厨房自白",
       "category": "外刊",
       "date": "2026-08-13",
       "paragraphs": [
@@ -1131,7 +1131,7 @@
     },
     {
       "id": "a4",
-      "source": "哈佛教授的“友谊经济学”：为什么我们交不到朋友了",
+      "source": "2026.8.14-哈佛教授的“友谊经济学”：为什么我们交不到朋友了",
       "category": "外刊",
       "date": "2026-08-14",
       "paragraphs": [
@@ -1638,7 +1638,7 @@
     },
     {
       "id": "a5",
-      "source": "消费普遍谨慎的当下，中国人为什么愿意为运动买单？",
+      "source": "2026.8.11-消费普遍谨慎的当下，中国人为什么愿意为运动买单？",
       "category": "外刊",
       "date": "2026-08-14",
       "paragraphs": [
@@ -2161,7 +2161,7 @@
     },
     {
       "id": "a7",
-      "source": "人形机器人第一股宇树上市，谁在疯狂押注？",
+      "source": "2026.8.17-人形机器人第一股宇树上市，谁在疯狂押注？",
       "category": "外刊",
       "date": "2026-08-17",
       "paragraphs": [
@@ -2404,7 +2404,7 @@
     },
     {
       "id": "a8",
-      "source": "镜像时代：我们看自己越多，为什么反而越不自在？",
+      "source": "2026.8.18-镜像时代：我们看自己越多，为什么反而越不自在？",
       "category": "外刊",
       "date": "2026-08-18",
       "paragraphs": [
@@ -2893,7 +2893,7 @@
     },
     {
       "id": "a10",
-      "source": "越来越多夫妻，把“全职带娃补偿”写进了“婚前协议”",
+      "source": "2026.8.20-越来越多夫妻，把“全职带娃补偿”写进了“婚前协议”",
       "category": "外刊",
       "date": "2026-08-20",
       "paragraphs": [
@@ -3377,6 +3377,245 @@
             "nextDue": "2026-08-22"
           },
           "phonetic": "[sɪˈmæntɪk]"
+        }
+      ]
+    },
+    {
+      "id": "a12",
+      "source": "2026.8.22-AI 垃圾内容刷屏，谁能吃到这波红利？",
+      "category": "外刊",
+      "date": "2026-08-22",
+      "paragraphs": [
+        {
+          "en": "Can You Get Rich Quick Off A.I. Slop?",
+          "cn": "你能靠 AI 垃圾内容快速致富吗？"
+        },
+        {
+          "en": "If you’re aware of slop, you probably see it everywhere. If you aren’t, you probably still see it everywhere and just don’t know it.",
+          "cn": "如果你知道“垃圾内容”是什么，你大概随处都能看到它；如果你不知道，你可能同样随处都能看到它，只是没意识到罢了。"
+        },
+        {
+          "en": "Ambiguous content, quick scenes, cutting off the final speaker — these techniques are as essential to A.I. slop as the iamb and rhyme scheme are to a sonnet.",
+          "cn": "内容含糊不清、场景切换飞快、最后一位说话的人还没讲完就被切断——这些技巧之于AI垃圾内容的重要性，就像抑扬格和押韵格式之于十四行诗一样。"
+        },
+        {
+          "en": "Once, slop was just what was fed to pigs: scraps of unwanted food and refuse. To understand modern slop, you have to think of humans as consuming content in the same way that pigs consume food. The goal of pig slop is to maximize nutrient intake while minimizing cost; the goal of A.I. slop is to maximize time spent consuming content while minimizing cost.",
+          "cn": "曾经，slop只指喂猪的东西：没人要的剩饭剩菜和垃圾。要理解现代意义上的slop（垃圾内容），你得把人类消费内容的状态看成猪吃食物一样。猪食的目标是在最大限度提高营养摄入量的同时，将制作成本降至最低；而AI泔水的目标，则是在最大限度提高人们花在内容上的时间的同时，将制作成本降至最低。"
+        },
+        {
+          "en": "As a creator, once you join the network, you can apply to work on specific campaigns (most of which are based on A.I. slop), and your application will be evaluated by a campaign manager. Posts are submitted to an oversight team. Although most creators make very little money in this way — Roman Khaves, the founder of Affiliate Network, told me that the top 10 percent of creators on his platform make 90 percent of the money.",
+          "cn": "作为创作者，一旦加入这个平台，你就可以申请参与特定的推广项目（其中大多数都建立在 AI 垃圾内容之上），你的申请会由项目经理评估。发布的内容还要提交给审核团队。不过，绝大多数创作者靠这种方式赚不到多少钱——联盟网络（Affiliate Network）创始人罗曼·凯夫斯（Roman Khaves）告诉我，在他的平台上，排名前 10% 的创作者赚走了 90% 的钱。"
+        },
+        {
+          "en": "There are, of course, other criticisms that can be leveled at A.I. slop: its contribution to reduced attention spans, a lack of human connection, an increasingly fuzzy border between advertising and entertainment, the eternal return of Tung Tung Tung Sahur. But, when I brought these things up with Khaves and his team, I heard a kind of social critique echoed back to me. Slop, they said, is the art of democracy. Khaves kept mentioning that “a guy in his parents’ basement” could now influence a large part of the culture.",
+          "cn": "当然，人们对 AI 垃圾内容还有其他方面的批评：导致注意力持续时间缩短，人际连接减少，使广告与娱乐之间的界限日益模糊，以及总会回到“Tung Tung Tung Sahur”之流上。然而，当我和凯夫斯及其团队提出这些问题时，他们却向我反馈了某种社会批判式的论调。他们认为，垃圾内容是一种民主的艺术。凯夫斯反复提到，如今哪怕只是“一个住在父母家地下室里的家伙”也有机会影响相当大一部分的文化潮流。"
+        }
+      ],
+      "items": [
+        {
+          "id": "a12-1",
+          "text": "off",
+          "understanding": "从……，靠……。标题 “Get Rich Quick Off A.I. Slop” 里的 off = “靠 / 从……获利”，类似 live off something（靠某物生存）。别只记“离开”，在金钱 / 来源语境里它常表“凭借、依靠”。",
+          "paraIdx": 0,
+          "hl": "Off",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-23"
+          },
+          "phonetic": "[ɒf] / [ɔːf]"
+        },
+        {
+          "id": "a12-2",
+          "text": "slop",
+          "understanding": "泔水、剩饭、猪食；本文指低质 AI 生成的“垃圾内容”。原文 “A.I. slop” 就是喂给用户的低成本内容。可联想 workslop：看起来完成了，却没什么原创思考的工作成果。",
+          "paraIdx": 1,
+          "hl": "slop",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-23"
+          },
+          "phonetic": "[slɒp] / [slɑːp]"
+        },
+        {
+          "id": "a12-3",
+          "text": "aware of",
+          "understanding": "知道、觉察到。原文 “If you’re aware of slop, you probably see it everywhere.” ——一旦注意到垃圾内容，你会发现它无处不在。反义 be unaware of，常用搭配 be aware of / become aware of。",
+          "paraIdx": 1,
+          "hl": "aware of",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-23"
+          }
+        },
+        {
+          "id": "a12-4",
+          "text": "cut off",
+          "understanding": "打断（说话）、切断。原文 “cutting off the final speaker” ——还没讲完就被切断。电话、对话里常用：Sorry, we got cut off. 别打断我：Don’t cut me off.",
+          "paraIdx": 2,
+          "hl": "cutting off",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-23"
+          }
+        },
+        {
+          "id": "a12-5",
+          "text": "iamb",
+          "understanding": "抑扬格（诗歌节奏单位：轻-重）。原文把 AI 垃圾内容的制作技巧比作十四行诗里的 iamb。读诗、文学评论会碰到，口语里几乎不用，但知道它比“韵律单位”更专业。",
+          "paraIdx": 2,
+          "hl": "iamb",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-23"
+          },
+          "phonetic": "[ˈaɪæm]"
+        },
+        {
+          "id": "a12-6",
+          "text": "rhyme scheme",
+          "understanding": "韵律 / 韵法。原文 “rhyme scheme are to a sonnet” ——就像押韵格式之于十四行诗。scheme 这里不是“阴谋”，而是“安排、格式”。写诗歌分析可用。",
+          "paraIdx": 2,
+          "hl": "rhyme scheme",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-23"
+          }
+        },
+        {
+          "id": "a12-7",
+          "text": "scraps",
+          "understanding": "剩菜剩饭；废料。原文 “scraps of unwanted food and refuse” ——没人要的食物残渣。引申义：metal scrap 金属废料；a few scraps of information 零星信息。普通人只分到 scraps = 残羹剩饭。",
+          "paraIdx": 3,
+          "hl": "scraps",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-23"
+          },
+          "phonetic": "[skræps]"
+        },
+        {
+          "id": "a12-8",
+          "text": "refuse",
+          "understanding": "废物、垃圾（本文义）；也读 /rɪˈfjuːz/ 表“拒绝”。原文和 scraps 并列：unwanted food and refuse。注意同一个词两种读音两种意思，读作 /ˈrefjuːs/ 时是名词“垃圾”。",
+          "paraIdx": 3,
+          "hl": "refuse",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-23"
+          },
+          "phonetic": "[ˈrefjuːs]"
+        },
+        {
+          "id": "a12-9",
+          "text": "consume",
+          "understanding": "大量地吃、消耗、吞噬。原文 “humans as consuming content” 把人类消费内容比作猪吃食。社交媒体 consume time without you noticing ——不知不觉吞噬时间。比 use / eat 更有“被吞掉”的画面感。",
+          "paraIdx": 3,
+          "hl": "consume",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-23"
+          },
+          "phonetic": "[kənˈsjuːm] / [kənˈsuːm]"
+        },
+        {
+          "id": "a12-10",
+          "text": "campaign",
+          "understanding": "推广营销项目、专项活动。原文 “work on specific campaigns” ——参与特定推广项目。也可指政治竞选：presidential campaign；营销活动：sales campaign。",
+          "paraIdx": 4,
+          "hl": "campaigns",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-23"
+          },
+          "phonetic": "[kæmˈpeɪn]"
+        },
+        {
+          "id": "a12-11",
+          "text": "oversight",
+          "understanding": "监督、监管。原文 “submitted to an oversight team” ——提交给审核团队监管。over-（在上面）+ sight（看）= 从上往下看 =  oversight。注意它也可以指“疏忽、漏看”，但本文是“监管”。",
+          "paraIdx": 4,
+          "hl": "oversight",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-23"
+          },
+          "phonetic": "[ˈəʊvəsaɪt] / [ˈoʊvərsaɪt]"
+        },
+        {
+          "id": "a12-12",
+          "text": "level at",
+          "understanding": "瞄准、对准；引申为“对……提出（批评/指控）”。原文 “criticisms that can be leveled at A.I. slop” ——可以对 AI 垃圾内容提出的批评。常见搭配 level accusations at / level criticism at。",
+          "paraIdx": 5,
+          "hl": "leveled at",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-23"
+          }
+        },
+        {
+          "id": "a12-13",
+          "text": "contribution",
+          "understanding": "（本文）导致、促成；也表贡献。原文 “its contribution to reduced attention spans” ——它对注意力缩短所起的作用。注意“做出贡献”是 make a contribution to，这里的 to 后面接名词或动名词。",
+          "paraIdx": 5,
+          "hl": "contribution",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-23"
+          },
+          "phonetic": "[ˌkɒntrɪˈbjuːʃn] / [ˌkɑːntrɪˈbjuːʃn]"
+        },
+        {
+          "id": "a12-14",
+          "text": "attention span",
+          "understanding": "注意力集中的时长。原文 “reduced attention spans” ——注意力持续时间缩短。span 指一段时间，concentration span 同理。短视频刷多了，attention span 就会变短。",
+          "paraIdx": 5,
+          "hl": "attention spans",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-23"
+          }
         }
       ]
     }
