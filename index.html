@@ -98,6 +98,28 @@
   .item.remembered{opacity:.55;}
   .item.remembered .t{color:var(--strong);}
   .item .done{font-size:11px;color:var(--strong);margin-left:6px;font-weight:400;}
+  /* ── 段落内词汇点击弹窗（参照 .item 样式，去掉记住/模糊/忘了按钮，固定宽度） ── */
+  .vocab-mask{position:fixed;inset:0;background:rgba(40,30,80,.32);z-index:9999;
+    display:flex;align-items:center;justify-content:center;padding:24px;animation:vocabFade .15s ease-out;}
+  @keyframes vocabFade{from{opacity:0}to{opacity:1}}
+  .vocab-popover{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:18px 22px;width:480px;max-width:100%;box-shadow:0 10px 32px rgba(40,30,80,.18);
+    position:relative;}
+  .vocab-popover .t{font-weight:600;color:var(--accent);font-size:18px;
+    display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
+  .vocab-popover .ph{font-size:14px;color:var(--muted);margin-left:8px;font-style:italic;
+    font-family:"Verdana","Geneva",sans-serif;font-weight:400;flex-basis:100%;}
+  .vocab-popover .u{font-size:14px;color:#5b5660;margin-top:12px;line-height:1.7;
+    white-space:pre-wrap;word-break:break-word;}
+  .vocab-popover .close{position:absolute;top:10px;right:12px;width:28px;height:28px;
+    border:none;background:transparent;color:var(--muted);font-size:20px;line-height:1;
+    cursor:pointer;border-radius:50%;transition:.15s;}
+  .vocab-popover .close:hover{background:var(--line);color:var(--ink);}
+  .vocab-popover .src{font-size:11px;color:var(--muted);margin-top:14px;padding-top:10px;
+    border-top:1px solid var(--line);text-align:right;}
+  /* 在段落里的 hl 词加可点击态 */
+  .para .en mark.hl{cursor:pointer;transition:transform .12s,box-shadow .12s;}
+  .para .en mark.hl:hover{transform:translateY(-1px);box-shadow:0 2px 6px rgba(124,108,240,.25);}
   .btns{display:flex;gap:8px;margin-top:10px;}
   .btn{flex:1;padding:5px 0;border-radius:10px;border:1px solid var(--line);
     background:#fff;font-size:11px;cursor:pointer;transition:.15s;color:var(--ink);font-weight:600;}
@@ -331,6 +353,7 @@ function renderStats(){
 }
 
 function escAttr(s){ return String(s==null?"":s).replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+function escHtml(s){ return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
 /* 点击喇叭朗读英文：浏览器内置 Web Speech API，无需后端/音频文件 */
 let _spkVoices = [];
 function _loadSpkVoices(){
@@ -398,8 +421,15 @@ if ("speechSynthesis" in window){
   window.speechSynthesis.onvoiceschanged = _loadSpkVoices;
 }
 document.addEventListener("click", function(e){
+  // 弹窗卡片内部点击不触发关闭（由卡片本身的按钮/喇叭各自处理）
   const b = e.target.closest(".spk");
-  if (b) speakWord(b.dataset.spk, b);
+  if (b) { speakWord(b.dataset.spk, b); return; }
+  const m = e.target.closest("mark.hl[data-item-id]");
+  if (m) {
+    const iid = m.dataset.itemId;
+    const found = findItemById(iid);
+    if (found) showVocabPopover(found, m);
+  }
 });
 function itemHTML(it, withBtns, aid){
   const loc = pending[it.id] || acked[it.id];
@@ -428,19 +458,19 @@ function highlight(en, items){
       const re = new RegExp("\\b" + escapeRe(tok) + "\\b", "gi");
       let m;
       while ((m = re.exec(en)) !== null){
-        matches.push([m.index, m.index + tok.length]);
+        matches.push({s: m.index, e: m.index + tok.length, iid: it.id});
         if (m.index === re.lastIndex) re.lastIndex++;  // 防止零宽死循环
       }
     });
   });
   if (!matches.length) return en;
-  matches.sort((a,b)=> b[0] - a[0]);   // 从后往前插
+  matches.sort((a,b)=> b.s - a.s);   // 从后往前插
   const taken = [];
   let out = en;
-  for (const [s,e] of matches){
-    if (taken.some(t => s < t[1] && e > t[0])) continue;  // 重叠则跳过
-    taken.push([s,e]);
-    out = out.slice(0,s) + '<mark class="hl">' + out.slice(s,e) + '</mark>' + out.slice(e);
+  for (const m of matches){
+    if (taken.some(t => m.s < t[1] && m.e > t[0])) continue;  // 重叠则跳过
+    taken.push([m.s, m.e]);
+    out = out.slice(0, m.s) + `<mark class="hl" data-item-id="${m.iid}">` + out.slice(m.s, m.e) + '</mark>' + out.slice(m.e);
   }
   return out;
 }
@@ -534,6 +564,47 @@ function renderDue(){
     : `<div class="empty">这一类今天没有到期内容 🎉</div>`;
 }
 function strengthLabel(s){ return s==="strong"?"牢固":s==="learning"?"巩固中":"快忘了"; }
+
+/* ── 段落内词汇点击弹窗：根据 item.id 反查 article + item，渲染与每日复习卡一致的样式 ── */
+function findItemById(iid){
+  for (const a of (DATA && DATA.articles) || []){
+    const it = (a.items || []).find(x => x.id === iid);
+    if (it) return {a, it};
+  }
+  return null;
+}
+function showVocabPopover(found, anchor){
+  const {a, it} = found;
+  // 移除已有弹窗
+  const old = document.getElementById("vocab-mask");
+  if (old) old.remove();
+  const ph = it.phonetic ? `<span class="ph">${escHtml(it.phonetic)}</span>` : "";
+  const spk = `<button class="spk" type="button" title="朗读发音" data-spk="${escAttr(it.text)}">🔊</button>`;
+  const u = (it.understanding || "").trim();
+  const src = a ? `来自：《${escHtml(a.source)}》` : "";
+  const mask = document.createElement("div");
+  mask.className = "vocab-mask";
+  mask.id = "vocab-mask";
+  mask.innerHTML = `<div class="vocab-popover" role="dialog" aria-label="词汇详情">
+    <button class="close" type="button" aria-label="关闭" onclick="closeVocabPopover()">×</button>
+    <div class="t">${escHtml(it.text)}${spk}${ph}</div>
+    <div class="u">${escHtml(u)}</div>
+    <div class="src">${src}</div>
+  </div>`;
+  // 点击蒙层关闭（但卡片内部点击不冒泡到蒙层，因为 mask 只在最外层）
+  mask.addEventListener("click", (e) => {
+    if (e.target === mask) closeVocabPopover();
+  });
+  document.body.appendChild(mask);
+}
+function closeVocabPopover(){
+  const m = document.getElementById("vocab-mask");
+  if (m) m.remove();
+}
+// ESC 关闭弹窗
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeVocabPopover();
+});
 
 function wordCard(a, it){
   const para = (typeof it.paraIdx === "number" && a.paragraphs[it.paraIdx]) ? a.paragraphs[it.paraIdx] : a.paragraphs[0];
