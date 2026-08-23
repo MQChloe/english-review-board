@@ -111,12 +111,15 @@
     font-family:"Verdana","Geneva",sans-serif;font-weight:400;flex-basis:100%;}
   .vocab-popover .u{font-size:14px;color:#5b5660;margin-top:12px;line-height:1.7;
     white-space:pre-wrap;word-break:break-word;}
+  .vocab-popover .examples{margin-top:8px;padding:6px 0 2px 12px;border-left:2px solid var(--line);}
+  .vocab-popover .examples .ex{font-size:13px;color:#6b6470;line-height:1.65;
+    margin:4px 0;word-break:break-word;}
+  .vocab-popover .examples .ex:first-child{margin-top:0;}
+  .vocab-popover .examples .ex:last-child{margin-bottom:0;}
   .vocab-popover .close{position:absolute;top:10px;right:12px;width:28px;height:28px;
     border:none;background:transparent;color:var(--muted);font-size:20px;line-height:1;
     cursor:pointer;border-radius:50%;transition:.15s;}
   .vocab-popover .close:hover{background:var(--line);color:var(--ink);}
-  .vocab-popover .src{font-size:11px;color:var(--muted);margin-top:14px;padding-top:10px;
-    border-top:1px solid var(--line);text-align:right;}
   /* 在段落里的 hl 词加可点击态 */
   .para .en mark.hl{cursor:pointer;transition:transform .12s,box-shadow .12s;}
   .para .en mark.hl:hover{transform:translateY(-1px);box-shadow:0 2px 6px rgba(124,108,240,.25);}
@@ -580,16 +583,24 @@ function showVocabPopover(found, anchor){
   if (old) old.remove();
   const ph = it.phonetic ? `<span class="ph">${escHtml(it.phonetic)}</span>` : "";
   const spk = `<button class="spk" type="button" title="朗读发音" data-spk="${escAttr(it.text)}">🔊</button>`;
+  // understanding 解析：把"  例："切成 [主释义, 例1, 例2, ...]，每个"例"独占一行
   const u = (it.understanding || "").trim();
-  const src = a ? `来自：《${escHtml(a.source)}》` : "";
+  const parts = u.split(/\s{2,}例[：:]/);   // 双空格以上 + 例：
+  let body;
+  if (parts.length <= 1) {
+    body = `<div class="u">${escHtml(u)}</div>`;
+  } else {
+    const main = parts.shift();
+    const examples = parts.map(p => `<div class="ex">例：${escHtml(p)}</div>`).join("");
+    body = `<div class="u">${escHtml(main)}</div><div class="examples">${examples}</div>`;
+  }
   const mask = document.createElement("div");
   mask.className = "vocab-mask";
   mask.id = "vocab-mask";
   mask.innerHTML = `<div class="vocab-popover" role="dialog" aria-label="词汇详情">
     <button class="close" type="button" aria-label="关闭" onclick="closeVocabPopover()">×</button>
     <div class="t">${escHtml(it.text)}${spk}${ph}</div>
-    <div class="u">${escHtml(u)}</div>
-    <div class="src">${src}</div>
+    ${body}
   </div>`;
   // 点击蒙层关闭（但卡片内部点击不冒泡到蒙层，因为 mask 只在最外层）
   mask.addEventListener("click", (e) => {
