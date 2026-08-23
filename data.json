@@ -6,7 +6,7 @@
     14,
     30
   ],
-  "today": "2026-08-22",
+  "today": "2026-08-23",
   "articles": [
     {
       "id": "a1",
@@ -3615,6 +3615,259 @@
             "last": null,
             "strength": "weak",
             "nextDue": "2026-08-23"
+          }
+        }
+      ]
+    },
+    {
+      "id": "a13",
+      "source": "2026.8.23-虎妈时代落幕，Beta妈妈登场",
+      "category": "外刊",
+      "date": "2026-08-23",
+      "paragraphs": [
+        {
+          "en": "The Era of the Tiger Mom Is Over. Enter the Beta Mom.",
+          "cn": "虎妈时代落幕，Beta妈妈登场"
+        },
+        {
+          "en": "Welcome to the life of a beta mother.",
+          "cn": "欢迎走进beta妈妈的日常。"
+        },
+        {
+          "en": "After decades where the dominant expectation for high-achieving parents was to intensively helicopter, a new generation of moms is saying “enough.” They’re reclaiming date night, saying no to schlepping to 17 different after-school activities and making peace with dirty dishes in the sink.",
+          "cn": "数十年来，社会对高成就家长的主流期待一直是高强度的“直升机式”育儿。新一代妈妈们则表示\"够了\"：她们要重新拥有二人世界的夜晚，不再奔波接送孩子参加17种课外活动，并与水槽里没洗的碗筷达成和解。"
+        },
+        {
+          "en": "Women have always shouldered the bulk of household and child-rearing responsibilities. But it’s only recently that mothers were also expected to be project managers for their kids’ futures.",
+          "cn": "长久以来，家务与育儿重担大多压在女性身上。而就在近些年，母亲们还被要求兼任孩子人生规划的项目经理。"
+        },
+        {
+          "en": "The rise of gentle parenting added emotional complexity to this labor, turning every toddler tantrum into an opportunity for a measured lesson in self-regulation. Suddenly, it wasn’t enough to optimize a child’s chance for success. Mothers had to follow a set of guidelines that required superhuman patience, too.",
+          "cn": "温和育儿理念的兴起，进一步加重了这种育儿在情感层面的复杂性，就连幼儿发脾气，都被视作引导孩子学会情绪自控的教学契机。突然间，帮孩子铺就成功之路早已不够，妈妈们还得恪守一套育儿准则，而这套准则几乎要求她们拥有超人般的耐心。"
+        },
+        {
+          "en": "Paradoxically, the social pressure to overachieve as a parent only seems to intensify with mothers’ increased participation in the labor market.",
+          "cn": "矛盾的是，随着女性在职场参与度的提高，要求其成为“全能家长”的社会压力反而变本加厉。"
+        },
+        {
+          "en": "The beta mom backlash is a response to several converging realities: A blunter cultural dialogue around maternal mental health and a shifting economic landscape. The return on investment for a childhood designed to slot people into white-collar jobs has been shaken by a stagnating labor market and the seeming inevitability of AI.",
+          "cn": "Beta妈妈风潮的反弹，源于多重现实因素叠加：全社会开始直白探讨母亲的心理健康问题，宏观经济环境也在发生转变。受就业市场低迷、人工智能普及影响，苦心栽培、只为让孩子跻身白领的育儿投入，回报率大幅缩水。"
+        },
+        {
+          "en": "Moms are exhausted, unsure what all their extra effort is for, and desperate for a change.",
+          "cn": "妈妈们身心俱疲，看不清无休止付出的意义，迫切想要改变现状。"
+        },
+        {
+          "en": "“It’s a reaction to a trend that has reached its practical limits,” said Emily Oster, an economist at Brown University who researches parenting. “Parents are realizing that maybe going to Harvard isn’t going to deliver success on a silver platter.”",
+          "cn": "布朗大学研究育儿课题的经济学家埃米莉・奥斯特（Emily Oster）表示：“这是内卷育儿走到瓶颈后的必然反弹。家长渐渐明白，就算考上哈佛，成功也不会凭空送到手上。”"
+        }
+      ],
+      "items": [
+        {
+          "id": "a13-1",
+          "text": "dominant",
+          "understanding": "主要的、主导的。原文 “the dominant expectation for high-achieving parents” ——高成就家长被期待的主流模式。dominant 强调占据支配地位，比 main 更突出“压倒性优势”。",
+          "paraIdx": 2,
+          "hl": "dominant",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-24"
+          },
+          "phonetic": "[ˈdɒmɪnənt] / [ˈdɑːmɪnənt]"
+        },
+        {
+          "id": "a13-2",
+          "text": "intensively",
+          "understanding": "高强度地、全力以赴地。原文 “intensively helicopter” ——高强度地直升机式育儿。intensive care 重症监护；intensive course 强化课程。提醒：intensively 修饰动作，表示“密集地、高强度地”。",
+          "paraIdx": 2,
+          "hl": "intensively",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-24"
+          },
+          "phonetic": "[ɪnˈtensɪvli]"
+        },
+        {
+          "id": "a13-3",
+          "text": "helicopter",
+          "understanding": "直升机式育儿；像直升机一样盘旋监督。原文作动词用：intensively helicopter。helicopter parent 是经典表达，指过度干预、时刻盯梢的父母。Beta mom 是它的反面。",
+          "paraIdx": 2,
+          "hl": "helicopter",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-24"
+          },
+          "phonetic": "[ˈhelɪkɒptə(r)] / [ˈhelɪkɑːptər]"
+        },
+        {
+          "id": "a13-4",
+          "text": "reclaim",
+          "understanding": "取回、拿回、重新拥有。原文 “They’re reclaiming date night” ——她们重新夺回二人世界夜晚。reclaim 有“失而复得”的意味：reclaim time / reclaim oneself / reclaim peace。",
+          "paraIdx": 2,
+          "hl": "reclaiming",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-24"
+          },
+          "phonetic": "[rɪˈkleɪm]"
+        },
+        {
+          "id": "a13-5",
+          "text": "schlep",
+          "understanding": "（口语）费力地拖、拉、搬运；奔波。原文 “saying no to schlepping to 17 different after-school activities” ——不再奔波于 17 个课外班。schlep 自带疲惫感，形容带着一堆东西赶路最传神。",
+          "paraIdx": 2,
+          "hl": "schlepping",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-24"
+          },
+          "phonetic": "[ʃlep]"
+        },
+        {
+          "id": "a13-6",
+          "text": "make peace with",
+          "understanding": "与某事和平相处、接受不完美。原文 “making peace with dirty dishes in the sink” ——接受水槽里没洗的碗。表示不再较劲、接受现状，可用 make peace with your past / with failure。",
+          "paraIdx": 2,
+          "hl": "making peace with",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-24"
+          }
+        },
+        {
+          "id": "a13-7",
+          "text": "shoulder",
+          "understanding": "（本文）承担；也指肩膀。原文 “Women have always shouldered the bulk of household and child-rearing responsibilities” ——女性一直承担着大部分家务和育儿责任。shoulder the responsibility/blame 是正式搭配。",
+          "paraIdx": 3,
+          "hl": "shouldered",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-24"
+          },
+          "phonetic": "[ˈʃəʊldə(r)] / [ˈʃoʊldər]"
+        },
+        {
+          "id": "a13-8",
+          "text": "the bulk of",
+          "understanding": "大部分、绝大多数。原文 “shouldered the bulk of household and child-rearing responsibilities” ——承担了大部分家务和育儿责任。bulk 本义体积、主体；the bulk of + 名词，强调“大头”。",
+          "paraIdx": 3,
+          "hl": "the bulk of",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-24"
+          }
+        },
+        {
+          "id": "a13-9",
+          "text": "toddler",
+          "understanding": "学步期幼儿（约 1-3 岁）。原文 “every toddler tantrum” ——每个幼儿发脾气的时刻。你家右子马上就到 toddler 阶段，这个词 parenting 内容里超高频。",
+          "paraIdx": 4,
+          "hl": "toddler",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-24"
+          },
+          "phonetic": "[ˈtɒdlə(r)] / [ˈtɑːdlər]"
+        },
+        {
+          "id": "a13-10",
+          "text": "tantrum",
+          "understanding": "大发脾气、情绪崩溃（尤指小孩）。原文 “toddler tantrum” ——幼儿闹脾气。固定搭配 throw a tantrum = 撒泼打滚。带娃场景极常用。",
+          "paraIdx": 4,
+          "hl": "tantrum",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-24"
+          },
+          "phonetic": "[ˈtæntrəm]"
+        },
+        {
+          "id": "a13-11",
+          "text": "self-regulation",
+          "understanding": "自我调节能力、情绪管理能力。原文 “a measured lesson in self-regulation” ——引导孩子学会自我调节。gentle parenting 核心词，指孩子自己平复情绪，而不是被父母压制。",
+          "paraIdx": 4,
+          "hl": "self-regulation",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-24"
+          },
+          "phonetic": "[ˌself reɡjuˈleɪʃn]"
+        },
+        {
+          "id": "a13-12",
+          "text": "paradoxically",
+          "understanding": "矛盾的是、吊诡的是。原文 “Paradoxically, the social pressure... only seems to intensify with mothers’ increased participation in the labor market.” ——女性越进职场，当完美家长的压力反而越大。用于引出反直觉现象。",
+          "paraIdx": 5,
+          "hl": "paradoxically",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-24"
+          },
+          "phonetic": "[ˌpærəˈdɒksɪkli] / [ˌpærəˈdɑːksɪkli]"
+        },
+        {
+          "id": "a13-13",
+          "text": "backlash",
+          "understanding": "反弹、强烈反对。原文 “The beta mom backlash is a response to...” ——Beta 妈妈风潮是对内卷育儿的反弹。社会运动 / 舆论反转常用：a public backlash against...",
+          "paraIdx": 6,
+          "hl": "backlash",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-24"
+          },
+          "phonetic": "[ˈbæklæʃ]"
+        },
+        {
+          "id": "a13-14",
+          "text": "on a silver platter",
+          "understanding": "不费吹灰之力、轻而易举到手。原文 “going to Harvard isn’t going to deliver success on a silver platter.” ——上哈佛也不会把成功自动送到手上。常和 hand/deliver/give 连用，提醒成功不会白给。",
+          "paraIdx": 8,
+          "hl": "on a silver platter",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-24"
           }
         }
       ]
