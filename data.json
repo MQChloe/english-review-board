@@ -6,7 +6,7 @@
     14,
     30
   ],
-  "today": "2026-08-23",
+  "today": "2026-08-24",
   "articles": [
     {
       "id": "a1",
@@ -3869,6 +3869,244 @@
             "strength": "weak",
             "nextDue": "2026-08-24"
           }
+        }
+      ]
+    },
+    {
+      "id": "a14",
+      "source": "2026.8.24-“朱雀三号”成功回收，中国要有自己的SpaceX了吗？",
+      "category": "外刊",
+      "date": "2026-08-24",
+      "paragraphs": [
+        {
+          "en": "Chinese Start-Up Lands Reusable Rocket for the First Time",
+          "cn": "中国初创公司首次实现重复使用火箭的陆地回收"
+        },
+        {
+          "en": "For the first time, a Chinese aerospace company landed the bottom part of a rocket that went to space, state media reported on Wednesday, marking an advance for the country in its ability to partly reuse rockets for future missions.",
+          "cn": "据官方媒体周三报道，中国一家航天公司首次完成对一枚从太空返回的火箭末端箭体的陆地回收，标志着中国在火箭部分重复使用能力方面取得进展，并有望将其用于未来的发射任务。"
+        },
+        {
+          "en": "The success follows the recovery of a different rocket’s booster stage, or first stage, which returned upright to a platform at sea last month. That vehicle was operated by a state-owned corporation, while Tuesday’s breakthrough was achieved by a private start-up, LandSpace.",
+          "cn": "此次成功之前，中国上个月刚刚完成另一枚火箭助推级，也即一子级回收：当时，火箭一子级垂直返回海上回收平台。那次的火箭由一家国有企业运营，而周二取得的突破则由民营初创企业蓝箭航天实现。"
+        },
+        {
+          "en": "“China is already prepped and primed to scale different space capabilities, like satellite communications, but they just needed reusable launch to really unlock the economics of that,” Kathleen Curlee, a senior research analyst at Georgetown University’s Center for Security and Emerging Technology, said in an interview on Wednesday.",
+          "cn": "“在将卫星通信等不同航天能力规模化方面，中国已做好充分准备。但要真正释放其中的经济效益，他们还需要具备重复使用发射技术。”乔治城大学安全与新兴技术中心高级研究分析师凯瑟琳·柯莉（Kathleen Curlee）周三接受采访时表示。"
+        },
+        {
+          "en": "In the morning, approximately 2 minutes and 20 seconds after liftoff, the first and second stages of the reusable rocket, Zhuque-3, separated, the Chinese state news agency Xinhua reported. The first stage of the rocket touched down “smoothly,” Xinhua said, at the designated recovery site in Gansu Province in northwest China. The second stage continued to fly and deployed a satellite into orbit.",
+          "cn": "据中国国家通讯社新华社报道，那天早上，“朱雀三号”重复使用运载火箭升空约2分20秒后，一、二子级成功分离。新华社表示，一子级在位于中国西北部的甘肃省预定回收场坪“顺利”着陆。二子级继续飞行，并把一颗卫星成功送入预定轨道。"
+        },
+        {
+          "en": "China is aiming to match the United States as a space power, with an ambitious program to put astronauts on the moon. It is also building a pair of satellite constellations that it hopes will rival SpaceX’s Starlink satellites in orbit. Ms. Curlee said that once a Chinese company fields internet satellite constellations, other countries may think of it as an “alternative Starlink.”",
+          "cn": "中国正力求成为与美国匹敌的航天大国，制定了一项雄心勃勃的载人登月计划。同时，中国还在建设两套卫星星座，希望未来能与太空探索技术公司（SpaceX）的“星链”卫星网络抗衡。柯莉女士表示，一旦中国企业将卫星星座网投入使用，其他国家或许会将其视为“星链的替代方案”。"
+        }
+      ],
+      "items": [
+        {
+          "id": "a14-1",
+          "text": "reusable",
+          "understanding": "可复用的。原文标题 “Lands Reusable Rocket” ——回收可复用火箭。反义 expendable（一次性的、可消耗的），传统火箭就叫 expendable launch vehicle。SpaceX 的核心卖点就是 reusable。",
+          "paraIdx": 0,
+          "hl": "Reusable",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-25"
+          },
+          "phonetic": "[ˌriːˈjuːzəbl]"
+        },
+        {
+          "id": "a14-2",
+          "text": "land",
+          "understanding": "着陆、陆地回收；引申为“拿下”。原文 “landed the bottom part of a rocket” ——回收火箭下端箭体。land 在商业语境里高频：land a client（签下客户）/ land a deal（谈成生意）/ land a role（拿到角色）。",
+          "paraIdx": 1,
+          "hl": "landed",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-25"
+          },
+          "phonetic": "[lænd]"
+        },
+        {
+          "id": "a14-3",
+          "text": "bottom part of a rocket",
+          "understanding": "火箭的下半截。行业正式叫法是 first stage（一子级）或 booster（助推级）。原文用口语化的 bottom part 开头，后面段落才给专业说法，是新闻写作由浅入深的手法。",
+          "paraIdx": 1,
+          "hl": "bottom part of a rocket",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-25"
+          }
+        },
+        {
+          "id": "a14-4",
+          "text": "mark an advance",
+          "understanding": "标志着向前迈了一步。原文 “marking an advance for the country” ——marking 现在分词挂在句尾，对整句做总结性判断，是英文新闻最常用的收尾结构。类似：marking a milestone（纪念重要事件）/ marking the end of an era（标志一个时代终结）。",
+          "paraIdx": 1,
+          "hl": "marking an advance",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-25"
+          }
+        },
+        {
+          "id": "a14-5",
+          "text": "recovery",
+          "understanding": "（航天/军事语境）回收；康复、复苏。原文 “the recovery of a different rocket's booster stage” ——另一枚火箭助推级的回收。经济语境是 economic recovery（经济复苏）。航天新闻里 recovery 超高频。",
+          "paraIdx": 2,
+          "hl": "recovery",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-25"
+          },
+          "phonetic": "[rɪˈkʌvəri]"
+        },
+        {
+          "id": "a14-6",
+          "text": "upright",
+          "understanding": "直立的；也指正直的。原文 “returned upright to a platform at sea” ——一子级垂直落回海上平台。stand upright（站直）、an upright piano（立式钢琴）。火箭垂直降落叫 upright landing。",
+          "paraIdx": 2,
+          "hl": "upright",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-25"
+          },
+          "phonetic": "[ˈʌpraɪt]"
+        },
+        {
+          "id": "a14-7",
+          "text": "state-owned corporation",
+          "understanding": "国有企业。原文 “operated by a state-owned corporation” ——由国有企业运营。民营则是 private start-up。中国的航天背景，这两个词对读最有用：state-owned vs private。",
+          "paraIdx": 2,
+          "hl": "state-owned corporation",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-25"
+          }
+        },
+        {
+          "id": "a14-8",
+          "text": "prepped and primed",
+          "understanding": "万事俱备、一切就绪（押头韵的双动词组合）。原文 “China is already prepped and primed to scale different space capabilities” ——中国已做好规模化航天能力的万全准备。prep=prepare 的缩写；prime 是“使就绪”。",
+          "paraIdx": 3,
+          "hl": "prepped and primed",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-25"
+          }
+        },
+        {
+          "id": "a14-9",
+          "text": "scale",
+          "understanding": "（动词）规模化、规模扩张。原文 “scale different space capabilities” ——把不同航天能力规模化。科技/商业高频词：scalable（可规模化的），scale up（扩大规模）。比 grow 更强调“体量系统性地扩大”。",
+          "paraIdx": 3,
+          "hl": "scale",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-25"
+          },
+          "phonetic": "[skeɪl]"
+        },
+        {
+          "id": "a14-10",
+          "text": "unlock the economics of",
+          "understanding": "打开…的经济账，让…在经济上变得划算。原文 “unlock the economics of that” ——释放可复用火箭的经济效益。经典例句：Cheap batteries unlocked the economics of electric cars.（便宜的电池让电动车在经济上划算了。）",
+          "paraIdx": 3,
+          "hl": "unlock the economics of",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-25"
+          }
+        },
+        {
+          "id": "a14-11",
+          "text": "liftoff",
+          "understanding": "起飞、火箭发射升空。原文 “2 minutes and 20 seconds after liftoff” ——升空后 2 分 20 秒。飞机用 takeoff，火箭/航天器用 liftoff。发射口令：We have a liftoff!",
+          "paraIdx": 4,
+          "hl": "liftoff",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-25"
+          },
+          "phonetic": "[ˈlɪftɒf] / [ˈlɪftɔːf]"
+        },
+        {
+          "id": "a14-12",
+          "text": "touch down",
+          "understanding": "（着陆/降落）接地。原文 “The first stage of the rocket touched down smoothly” ——一子级顺利着陆。名词形式 touchdown（美式橄榄球的“达阵”也用它）。飞机降落可以说 touch down，比 land 更强调“触地那一刻”。",
+          "paraIdx": 4,
+          "hl": "touched down",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-25"
+          }
+        },
+        {
+          "id": "a14-13",
+          "text": "deploy",
+          "understanding": "（航天语境）把卫星从火箭释放入轨；部署。原文 “deployed a satellite into orbit” ——把卫星送入轨道。deploy 比 release 讲究，自带“按计划投放到位”的意思；科技语境也常说 deploy a system（部署系统）。",
+          "paraIdx": 4,
+          "hl": "deployed",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-25"
+          },
+          "phonetic": "[dɪˈplɔɪ]"
+        },
+        {
+          "id": "a14-14",
+          "text": "constellation",
+          "understanding": "星座；卫星星座。原文 “a pair of satellite constellations” ——两套卫星星座。航天/通信行业 hot word：Starlink constellation。本义是天文星座，行业里指一组协同工作的卫星网络。",
+          "paraIdx": 5,
+          "hl": "constellations",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-25"
+          },
+          "phonetic": "[ˌkɒnstəˈleɪʃn] / [ˌkɑːnstəˈleɪʃn]"
         }
       ]
     }
