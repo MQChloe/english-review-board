@@ -6,7 +6,7 @@
     14,
     30
   ],
-  "today": "2026-08-24",
+  "today": "2026-08-25",
   "articles": [
     {
       "id": "a1",
@@ -4107,6 +4107,250 @@
             "nextDue": "2026-08-25"
           },
           "phonetic": "[ˌkɒnstəˈleɪʃn] / [ˌkɑːnstəˈleɪʃn]"
+        }
+      ]
+    },
+    {
+      "id": "a15",
+      "source": "2026.8.25-约会软件刷累了，越来越多人开始在“领英”上找对象",
+      "category": "外刊",
+      "date": "2026-08-25",
+      "paragraphs": [
+        {
+          "en": "LinkedIn Has Accidentally Become a Dating Site—Despite Its No-Romance Rules",
+          "cn": "尽管明令禁止用于恋爱，“领英”却阴差阳错成了一个“约会网站”"
+        },
+        {
+          "en": "Tired of the endless roulette of online dating, more people are looking for love on LinkedIn.",
+          "cn": "厌倦了线上约会没完没了的“轮盘赌”，越来越多的人开始在领英上寻找爱情。"
+        },
+        {
+          "en": "While the platform’s guidelines strictly forbid any kind of romantic advances, it’s increasingly common for the networking site to feature—directly or indirectly—in users’ dating lives.",
+          "cn": "尽管该平台的准则严格禁止任何形式的求爱示好，但它却正在用户的恋爱生活中越来越频繁地扮演重要角色——无论是直接地还是间接地。"
+        },
+        {
+          "en": "A deepening exhaustion with dating apps has pushed many to look beyond swiping. Singles are trying speed dating, connecting through shared real-world interests and even using spreadsheets to break their dating algorithm. It shouldn’t be a surprise that a public-facing platform with clear headshots and ample information about a person’s path in life—everything dating apps today seem to lack—has become a go-to tool in the modern search for love.",
+          "cn": "人们对约会软件越来越深的倦怠，正促使许多人开始寻求右滑左滑之外的途径。单身一族正尝试速配约会，通过现实生活中的共同兴趣来建立联系，甚至有人自制电子表格，从而打破约会算法的束缚。所以领英这样一个用户头像清晰、有着详细个人生平信息的公开平台成为现代人寻找爱情的首选工具，就并不令人意外了，因为这些特征恰恰是如今的约会软件没有的。"
+        },
+        {
+          "en": "Dating coach Jaime Bronstein is a proponent of using LinkedIn with ulterior motives. But a first message should always be platform appropriate, and never obviously romantic.",
+          "cn": "约会教练杰米·布朗斯坦（Jaime Bronstein）主张带着“别有用心”的目的使用领英。但第一条消息必须符合该平台的规范，一定不能流露明显的浪漫意味。"
+        },
+        {
+          "en": "She suggests crafting messages that offer the pretense of networking while preserving ambiguity. Three pickup lines to avoid: “Are you single?” (Aggressive, potentially creepy); “I hope this isn’t too weird, but…” (Don’t plant any ideas); “You’re gorgeous!” (Also potentially creepy; don’t lead with physical appearance on a professional platform).",
+          "cn": "她建议打磨既像在职业社交、又能保持模糊性的信息。以下三句搭讪用语应避免使用：“你单身吗？”（有侵略性，可能让人感到不适）；“希望不会让你觉得太奇怪，但是……”（不要留下想象空间）；“你真漂亮！”（同样可能让人感到不适；在职业社交平台上，不要以外貌评价作为开场白）。"
+        },
+        {
+          "en": "Of course, none of this is condoned by the networking app itself. “Our focus is on making sure that people are safe from unwanted romantic advances,” a LinkedIn spokesperson said.",
+          "cn": "当然，领英这个职场社交应用并不认可这些操作。领英的一位发言人表示：“我们的重点是确保用户不会遭到不受欢迎的示爱行为的骚扰。”"
+        }
+      ],
+      "items": [
+        {
+          "id": "a15-1",
+          "text": "roulette",
+          "understanding": "随机性强、风险很高的事；轮盘赌。原文 \"the endless roulette of online dating\" ——线上约会没完没了的轮盘赌（配不配都靠随机）。Every blind date feels like a game of roulette. 每次相亲都像在玩轮盘赌。Russian roulette 俄罗斯轮盘赌。",
+          "paraIdx": 1,
+          "hl": "roulette",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-26"
+          },
+          "phonetic": "[ruːˈlet]"
+        },
+        {
+          "id": "a15-2",
+          "text": "guideline",
+          "understanding": "准则、指导原则。原文 \"the platform's guidelines strictly forbid\" ——平台准则严格禁止。guideline 常作复数用，指一套规则或指引，比 rules 更偏\"建议性指导\"，公司政策/平台规则里高频。",
+          "paraIdx": 2,
+          "hl": "guidelines",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-26"
+          },
+          "phonetic": "[ˈɡaɪdlaɪn]"
+        },
+        {
+          "id": "a15-3",
+          "text": "forbid",
+          "understanding": "禁止。原文 \"guidelines strictly forbid any kind of romantic advances\" ——严格禁止任何求爱示好。比 ban 更书面。常用 forbid sb. to do sth. / forbid sth.。过去式 forbade，过去分词 forbidden。",
+          "paraIdx": 2,
+          "hl": "forbid",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-26"
+          },
+          "phonetic": "[fəˈbɪd] / [fərˈbɪd]"
+        },
+        {
+          "id": "a15-4",
+          "text": "advance",
+          "understanding": "（本文）求爱、追求；也指前进。原文 \"romantic advances\" ——求爱示好。She politely declined his romantic advances. 她客气地拒绝了他的追求。作动词有\"推进\"义，作名词复数在情感语境指\"示好\"。",
+          "paraIdx": 2,
+          "hl": "advances",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-26"
+          },
+          "phonetic": "[ədˈvɑːns] / [ədˈvæns]"
+        },
+        {
+          "id": "a15-5",
+          "text": "feature in",
+          "understanding": "成为重要部分、占据一席之地。原文 \"for the networking site to feature—directly or indirectly—in users' dating lives\" ——平台在用户恋爱生活中扮演重要角色。feature 作名词是\"特征\"，作动词表\"扮演重要角色/被收录\"，如 feature in a movie。",
+          "paraIdx": 2,
+          "hl": "feature",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-26"
+          }
+        },
+        {
+          "id": "a15-6",
+          "text": "exhaustion",
+          "understanding": "倦怠、疲惫。原文 \"A deepening exhaustion with dating apps\" ——对约会软件越来越深的倦怠。形容词 exhausted（精疲力竭的）、动词 exhaust（耗尽）。区别于 tired：exhaustion 是深层次的、持续的耗尽感。",
+          "paraIdx": 3,
+          "hl": "exhaustion",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-26"
+          },
+          "phonetic": "[ɪɡˈzɔːstʃən]"
+        },
+        {
+          "id": "a15-7",
+          "text": "push somebody to do",
+          "understanding": "促使某人做某事。原文 \"has pushed many to look beyond swiping\" ——促使许多人寻找右滑之外的方式。push 本义\"推\"，引申\"逼迫/促使\"。The smell of pizza pushed him to abandon his diet. 披萨香味逼他放弃了节食。",
+          "paraIdx": 3,
+          "hl": "pushed many to",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-26"
+          }
+        },
+        {
+          "id": "a15-8",
+          "text": "look beyond",
+          "understanding": "把目光放得更远、超出普通范围。原文 \"look beyond swiping\" ——越过左滑右滑找别的途径。look beyond sth. = 不局限于眼前。beyond my understanding 超出我的理解，同样是 beyond 的抽象用法。",
+          "paraIdx": 3,
+          "hl": "look beyond",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-26"
+          }
+        },
+        {
+          "id": "a15-9",
+          "text": "speed dating",
+          "understanding": "速配（相亲形式）。原文 \"Singles are trying speed dating\" ——单身族尝试速配。由 speed（速度）+ dating（约会）合成，同族：speed reading 速读、speed shopping 快速购物。",
+          "paraIdx": 3,
+          "hl": "speed dating",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-26"
+          }
+        },
+        {
+          "id": "a15-10",
+          "text": "go-to",
+          "understanding": "首选的、必找的。原文 \"a go-to tool in the modern search for love\" ——现代人找对象的首选工具。go-to person = 有事先找的人；go-to app = 首选 App。小红书是年轻人 go-to 的搜索平台。",
+          "paraIdx": 3,
+          "hl": "go-to",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-26"
+          },
+          "phonetic": "[ˈɡəʊ tuː] / [ˈɡoʊ tuː]"
+        },
+        {
+          "id": "a15-11",
+          "text": "ulterior",
+          "understanding": "隐秘的、不可告人的。原文 \"using LinkedIn with ulterior motives\" ——带着不可告人的动机用领英。几乎只出现在 ulterior motive（不可告人的动机）这个搭配里。I'm helping you without an ulterior motive. 我帮你没别的意思。",
+          "paraIdx": 4,
+          "hl": "ulterior",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-26"
+          },
+          "phonetic": "[ʌlˈtɪəriər] / [ʌlˈtɪriər]"
+        },
+        {
+          "id": "a15-12",
+          "text": "proponent",
+          "understanding": "支持者、倡导者。原文 \"Dating coach Jaime Bronstein is a proponent of using LinkedIn\" ——约会教练是\"用领英找对象\"的倡导者。反义 opponent（反对者）。比 supporter 更正式，常见于观点评论。",
+          "paraIdx": 4,
+          "hl": "proponent",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-26"
+          },
+          "phonetic": "[prəˈpəʊnənt] / [prəˈpoʊnənt]"
+        },
+        {
+          "id": "a15-13",
+          "text": "craft",
+          "understanding": "（动词）精心制作。原文 \"crafting messages that offer the pretense of networking\" ——精心打磨一条看起来像在职业社交的信息。craft 作动词比 make 更强调\"用心打磨\"。She carefully crafted her Instagram caption. 精心琢磨了文案。",
+          "paraIdx": 5,
+          "hl": "crafting",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-26"
+          },
+          "phonetic": "[krɑːft] / [kræft]"
+        },
+        {
+          "id": "a15-14",
+          "text": "condone",
+          "understanding": "容忍、纵容（错误行为）。原文 \"none of this is condoned by the networking app itself\" ——平台并不认可这些操作。语气偏\"默许/包庇\"：Violence shouldn't be condoned. 暴力不能被纵容。",
+          "paraIdx": 6,
+          "hl": "condoned",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-26"
+          },
+          "phonetic": "[kənˈdəʊn] / [kənˈdoʊn]"
         }
       ]
     }
