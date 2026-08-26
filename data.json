@@ -6,7 +6,7 @@
     14,
     30
   ],
-  "today": "2026-08-25",
+  "today": "2026-08-26",
   "articles": [
     {
       "id": "a1",
@@ -4351,6 +4351,247 @@
             "nextDue": "2026-08-26"
           },
           "phonetic": "[kənˈdəʊn] / [kənˈdoʊn]"
+        }
+      ]
+    },
+    {
+      "id": "a16",
+      "source": "2026.8.26-职场博主吹捧的“高能动性”，正在批量制造差劲的人",
+      "category": "外刊",
+      "date": "2026-08-26",
+      "paragraphs": [
+        {
+          "en": "All the Worst People Seem to Want to Be ‘High Agency’",
+          "cn": "所有最差劲的人似乎都想拥有“高主体性/能动性”"
+        },
+        {
+          "en": "I first noticed the phrase when it cropped up in conversations among my friends, as a dichotomy: Were we “high agency” or “low agency”? Was inertia or timidity keeping us in a city, a job or a relationship? Or were we the captains of the ships of our own lives?",
+          "cn": "我头一次听见这个说法是朋友们聊天时，它以一种二元对立的标签出现：我们是“高主体性（能动性）”还是“主体性（能动性）”的人？我们是出于惰性或胆怯才留在某个城市、某份工作，或某段关系中吗？还是说我们是自己人生真正的主宰呢？"
+        },
+        {
+          "en": "The basic idea of “agency” has long been theorized and debated in philosophy, in relation to free will and the human capacity for action. It caught on in Silicon Valley. And then “high agency” wormed its way out of tech and into the broader lexicon, cycling through viral X threads, LinkedIn posts, and podcasts with self-help leanings.",
+          "cn": "“主体性（能动性）”这一基本概念在哲学领域早已被广泛探讨和辩论，其核心在于自由意志与人类的行动能力。这个概念最先在硅谷火起来。后来，“高主体性（能动性）”从科技圈悄悄扩散出来，渗透进了大众话语体系：在X的热门讨论里、在领英的帖子里、在教你自我提升的播客里，不停地反复出现。"
+        },
+        {
+          "en": "The slow, incremental buildup of a life and a career, the accumulation of savings and experience — this seems to hold less appeal to younger generations. And why would it? The future feels volatile and the rewards of labor are unequal, even absurd. Why not have a little agency and bet it all on red?",
+          "cn": "生活与事业的缓慢建造，积蓄与经验的积累——这些对年轻一代似乎已不再具有吸引力。这是为何呢？未来充满变数，劳动的回报不仅不公平，甚至十分荒诞。何不掌握一点主动权，来一场豪赌呢？"
+        },
+        {
+          "en": "The valorization of “high agency” is emblematic of a moment when risk-taking is overvalued. Agency is about action, but it tells us nothing of direction. To valorize agency without also emphasizing its purpose allows us to ignore harder questions like: How do I live a good life? And what about the collective good?",
+          "cn": "对“主体性（能动性）”的推崇，恰恰反映了当下社会对冒险行为的过度推崇。主体性（能动性）关乎行动，却未能揭示行动的方向。如果只是推崇主体性（能动性）而忽视其目的，会让我们忽略更棘手的问题，例如：我该如何过上美好的人生？而集体的福祉又是什么？"
+        },
+        {
+          "en": "People often refer to “agency” as an A.I.-proof trait. And yet, ironically, we also talk about A.I. in terms of agency. A.I. can act—without its own direction, but with incredible efficiency and effectiveness. Maybe this is the endpoint of all this “high agency”: constant hamster wheels of action, unmoored from any values, no compass to be found.",
+          "cn": "人们常将“主体性（能动性）”视为一种“人工智能无法拥有”的特质。然而，颇具讽刺意味的是，我们谈论人工智能时，却也常以“主体性（能动性）”为参照。虽然缺乏方向，但人工智能能够行动，而且是以惊人的效率和效果行动。或许，这正是所谓“高主体性（能动性）”的终极归宿：如同永不停歇的仓鼠轮一直保持行动，不锚定任何价值观，也没有任何指引方向的罗盘。"
+        }
+      ],
+      "items": [
+        {
+          "id": "a16-1",
+          "text": "agency",
+          "understanding": "（本文）主观能动性、主体性；也指中介/政府机构。原文 \"high agency or low agency\" ——高能动性还是低能动性。agency 源自拉丁语 agere（行动），后缀 -ency 表\"性质/状态\"。日常更常见的是 housing agency（房产中介）/ law enforcement agency（执法机关）。",
+          "paraIdx": 1,
+          "hl": "agency",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-27"
+          },
+          "phonetic": "[ˈeɪdʒənsi]"
+        },
+        {
+          "id": "a16-2",
+          "text": "crop up",
+          "understanding": "（某个东西在对话/讨论中）被提到、冒出来。原文 \"when it cropped up in conversations\" ——这个词出现在朋友聊天里。Your name kept cropping up in the meeting. 你在会上被反复提及。比 appear 更口语、更\"不经意的出现\"。",
+          "paraIdx": 1,
+          "hl": "cropped up",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-27"
+          }
+        },
+        {
+          "id": "a16-3",
+          "text": "dichotomy",
+          "understanding": "二元对立。原文 \"as a dichotomy: high agency or low agency\" ——以\"高/低能动性\"这种二元对立的方式出现。学术/评论高频词，指非黑即白的划分，常含\"这种二分法过于简单\"的暗示。",
+          "paraIdx": 1,
+          "hl": "dichotomy",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-27"
+          },
+          "phonetic": "[daɪˈkɒtəmi] / [daɪˈkɑːtəmi]"
+        },
+        {
+          "id": "a16-4",
+          "text": "inertia",
+          "understanding": "惰性、缺乏动力。原文 \"Was inertia or timidity keeping us in a city\" ——是惰性还是胆怯让我们留在某座城市。物理上指\"惯性\"，人事上指\"安于现状、不愿改变\"。和 timidity（胆怯）是两种不同的\"不动\"。",
+          "paraIdx": 1,
+          "hl": "inertia",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-27"
+          },
+          "phonetic": "[ɪˈnɜːʃə] / [ɪˈnɜːrʃə]"
+        },
+        {
+          "id": "a16-5",
+          "text": "theorize",
+          "understanding": "理论化、提出理论。原文 \"has long been theorized and debated in philosophy\" ——在哲学里被反复理论化、辩论。Many scientists theorize that a meteor strike caused the extinction of dinosaurs. 主流理论认为是陨石撞地球导致恐龙灭绝。",
+          "paraIdx": 2,
+          "hl": "theorized",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-27"
+          },
+          "phonetic": "[ˈθɪəraɪz] / [ˈθɪəraɪz]"
+        },
+        {
+          "id": "a16-6",
+          "text": "catch on",
+          "understanding": "变得火爆、流行起来。原文 \"It caught on in Silicon Valley\" ——这个概念先在硅谷火起来。catch on 还有\"理解\"义（很快跟上），这里指流行。Something catches on = 一种趋势/说法被广泛接受。",
+          "paraIdx": 2,
+          "hl": "caught on",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-27"
+          }
+        },
+        {
+          "id": "a16-7",
+          "text": "lexicon",
+          "understanding": "（某个群体或领域使用的）全部词汇。原文 \"into the broader lexicon\" ——渗透进更广泛的话语体系。the lexicon of finance 金融圈词汇。比 vocabulary 更正式，强调\"某个圈子/行业的语言\"。",
+          "paraIdx": 2,
+          "hl": "lexicon",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-27"
+          },
+          "phonetic": "[ˈleksɪkən] / [ˈleksɪkɑːn]"
+        },
+        {
+          "id": "a16-8",
+          "text": "incremental",
+          "understanding": "逐步的、递增的。原文 \"The slow, incremental buildup of a life and a career\" ——生活和事业的缓慢、渐进式积累。a process of incremental change 逐步改变的过程。科技/产品语境高频（增量更新），这里指\"一点一点来\"。",
+          "paraIdx": 3,
+          "hl": "incremental",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-27"
+          },
+          "phonetic": "[ˌɪŋkrəˈmentl] / [ˌɪŋkrəˈmentl]"
+        },
+        {
+          "id": "a16-9",
+          "text": "accumulation",
+          "understanding": "积累。原文 \"the accumulation of savings and experience\" ——积蓄与经验的积累。动词 accumulate（积累），形容词 accumulative。和 incremental 同段出现，都是\"慢功夫\"的意象——正是被年轻人嫌弃的东西。",
+          "paraIdx": 3,
+          "hl": "accumulation",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-27"
+          },
+          "phonetic": "[əˌkjuːmjəˈleɪʃn] / [əˌkjuːmjəˈleɪʃn]"
+        },
+        {
+          "id": "a16-10",
+          "text": "volatile",
+          "understanding": "变化无常的、动荡不定的。原文 \"The future feels volatile\" ——未来充满变数。an increasingly volatile situation 日益动荡的局势。金融市场也用 volatile（波动大）。比 unstable 更强调\"随时可能剧烈变化\"。",
+          "paraIdx": 3,
+          "hl": "volatile",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-27"
+          },
+          "phonetic": "[ˈvɒlətaɪl] / [ˈvɑːlətl]"
+        },
+        {
+          "id": "a16-11",
+          "text": "valorization",
+          "understanding": "推崇、歌颂。原文 \"The valorization of high agency\" ——对高能动性的推崇。词根 valor（英勇）。The critics' valorization of her talents helped boost her confidence. 评论家对她才华的赞赏让她信心大增。注意这是正式的学术/评论用词。",
+          "paraIdx": 4,
+          "hl": "valorization",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-27"
+          },
+          "phonetic": "[ˌvæləraɪˈzeɪʃn] / [ˌvælərəˈzeɪʃn]"
+        },
+        {
+          "id": "a16-12",
+          "text": "emblematic",
+          "understanding": "象征性的、标志性的。原文 \"is emblematic of a moment when risk-taking is overvalued\" ——是这个\"冒险被过度高估\"时代的典型标志。A is emblematic of B 是书面表达：The dove is emblematic of peace. 鸽子象征和平。",
+          "paraIdx": 4,
+          "hl": "emblematic",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-27"
+          }
+        },
+        {
+          "id": "a16-13",
+          "text": "A.I.-proof",
+          "understanding": "AI 无法替代或拥有的（特质）。原文 \"an A.I.-proof trait\" ——一种 AI 无法拥有的特质。XX-proof 构词=防…的：waterproof 防水、bullet-proof 防弹。这里讽刺地指\"能动性\"被当成 AI 取代不了的护城河。",
+          "paraIdx": 5,
+          "hl": "A.I.-proof",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-27"
+          },
+          "phonetic": "[ˌeɪ aɪ pruːf]"
+        },
+        {
+          "id": "a16-14",
+          "text": "unmoored",
+          "understanding": "没有锚点、漂泊无依的。原文 \"constant hamster wheels of action, unmoored from any values\" ——不停运转的仓鼠轮，不锚定任何价值观。moor 本义\"泊船\"，unmoored 引申为\"失去价值指引的漂流状态\"。文章用它形容无方向的忙碌。",
+          "paraIdx": 5,
+          "hl": "unmoored",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-27"
+          },
+          "phonetic": "[ʌnˈmʊəd] / [ʌnˈmʊrd]"
         }
       ]
     }
