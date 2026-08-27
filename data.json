@@ -6,7 +6,7 @@
     14,
     30
   ],
-  "today": "2026-08-26",
+  "today": "2026-08-27",
   "articles": [
     {
       "id": "a1",
@@ -4592,6 +4592,245 @@
             "nextDue": "2026-08-27"
           },
           "phonetic": "[ʌnˈmʊəd] / [ʌnˈmʊrd]"
+        }
+      ]
+    },
+    {
+      "id": "a17",
+      "source": "2026.8.27-中国美妆杀入美国：珀莱雅押注“C-Beauty”时代",
+      "category": "外刊",
+      "date": "2026-08-27",
+      "paragraphs": [
+        {
+          "en": "K-Beauty Has Conquered the World. China’s Proya Wants C-Beauty to Be Next.",
+          "cn": "继韩式美妆征服全球，中国品牌珀莱雅想让“中式美妆”接棒"
+        },
+        {
+          "en": "Korean face masks and serums promising radiant, glass-like skin have made “K-Beauty” a multibillion-dollar industry. A potential play by China’s biggest cosmetics company could signal the arrival of “C-Beauty.”",
+          "cn": "韩国面膜和精华液以打造透亮的玻璃肌为卖点，把韩式美妆打造为一个价值数十亿美元的产业。如今，中国最大的化妆品公司可能正在着手新的布局，这或许意味着“中式美妆”时代即将到来。"
+        },
+        {
+          "en": "According to people familiar with the matter, Proya Cosmetics will start selling its flagship brand in the U.S. via a partnership with Illinois-based retailer Ulta Beauty.",
+          "cn": "据知情人士透露，珀莱雅将与总部位于伊利诺伊州的零售商Ulta Beauty合作，通过后者在美国销售其旗舰品牌。"
+        },
+        {
+          "en": "The partnership would give the Proya brand access to a major U.S. retail channel at a time when Chinese beauty labels are looking to move beyond cross-border e-commerce and viral marketing to building a lasting presence overseas.",
+          "cn": "这一合作将让珀莱雅获得进入美国主要零售渠道的机会。与此同时，中国美妆品牌正纷纷寻求超越跨境电商和病毒式营销，转而在海外建立长期市场存在。"
+        },
+        {
+          "en": "In the first quarter, Proya’s revenue fell 2.3% on the year while net profit dropped 6.1% as sales of its core brand remained under pressure in China, Jefferies said.",
+          "cn": "据杰富瑞（Jefferies）报告，今年第一季度，珀莱雅营收同比下降2.3%，净利润下降6.1%，原因是其核心品牌在中国市场的销量依然承压。"
+        },
+        {
+          "en": "To counter that, Proya Cosmetics has been branching out. It also took a controlling stake in a Chinese beauty brand Flower Knows, which has a growing presence overseas, including in the U.S.",
+          "cn": ""
+        }
+      ],
+      "items": [
+        {
+          "id": "a17-1",
+          "text": "promise",
+          "understanding": "承诺、声称；预示。原文 \"serums promising radiant, glass-like skin\" ——声称能让皮肤透亮如玻璃的精华液。promise younger-looking skin 声称让皮肤更年轻。商业广告里 promise 就是\"卖点承诺\"。",
+          "paraIdx": 1,
+          "hl": "promising",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-28"
+          },
+          "phonetic": "[ˈprɒmɪs] / [ˈprɑːmɪs]"
+        },
+        {
+          "id": "a17-2",
+          "text": "radiant",
+          "understanding": "容光焕发的、光芒四射的。原文 \"promising radiant, glass-like skin\" ——透亮发光的\"玻璃肌\"。radiant skin 是美妆界高频卖点词。比 glowing 更强烈，带\"从内向外发光\"的感觉。",
+          "paraIdx": 1,
+          "hl": "radiant",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-28"
+          },
+          "phonetic": "[ˈreɪdiənt]"
+        },
+        {
+          "id": "a17-3",
+          "text": "glass-like",
+          "understanding": "像玻璃一样的。原文 \"glass-like skin\" ——玻璃肌（韩式美妆招牌概念）。后缀 -like 表\"像…一样\"：childlike（孩子气的）、dreamlike（如梦般的）。K-Beauty 的 glass skin 就是这种通透感。",
+          "paraIdx": 1,
+          "hl": "glass-like",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-28"
+          },
+          "phonetic": "[ˈɡlɑːs laɪk] / [ˈɡlæs laɪk]"
+        },
+        {
+          "id": "a17-4",
+          "text": "a potential play",
+          "understanding": "（商业语境）一个潜在的动作/布局/押注。原文 \"A potential play by China's biggest cosmetics company\" ——中国最大化妆品公司的一个潜在布局。play 在此是名词\"策略动作\"：The acquisition was a key play to enter the European market. 收购是进欧洲市场的关键一步。",
+          "paraIdx": 1,
+          "hl": "potential play",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-28"
+          }
+        },
+        {
+          "id": "a17-5",
+          "text": "signal",
+          "understanding": "释放信号、预示。原文 \"could signal the arrival of C-Beauty\" ——可能预示着中式美妆时代的到来。signal a storm 预示暴风雨。商业报道里 signal 后面常接某个趋势/时代名词，非常高频。",
+          "paraIdx": 1,
+          "hl": "signal",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-28"
+          },
+          "phonetic": "[ˈsɪɡnəl]"
+        },
+        {
+          "id": "a17-6",
+          "text": "flagship brand",
+          "understanding": "旗舰品牌。原文 \"start selling its flagship brand in the U.S.\" ——在美国销售其旗舰品牌。flagship 本义\"舰队旗舰\"，引申\"最能代表门面的东西\"：flagship store 旗舰店、flagship product 王牌产品。",
+          "paraIdx": 2,
+          "hl": "flagship brand",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-28"
+          }
+        },
+        {
+          "id": "a17-7",
+          "text": "via",
+          "understanding": "通过、经由。原文 \"via a partnership with Illinois-based retailer\" ——通过与 Ulta Beauty 合作。via 在新闻和商业报道里比 through 更干练，一句带过中间环节。",
+          "paraIdx": 2,
+          "hl": "via",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-28"
+          },
+          "phonetic": "[ˈvaɪə]"
+        },
+        {
+          "id": "a17-8",
+          "text": "give access to",
+          "understanding": "让某人获得进入/使用某物的机会。原文 \"give the Proya brand access to a major U.S. retail channel\" ——让珀莱雅获得进入美国主流零售渠道的机会。The course gives students access to a large digital library. 课程让学生用上大型数字图书馆。",
+          "paraIdx": 3,
+          "hl": "access to",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-28"
+          }
+        },
+        {
+          "id": "a17-9",
+          "text": "retail",
+          "understanding": "零售。原文 \"a major U.S. retail channel\" ——美国主要零售渠道。retail vs wholesale（批发）；retail store 零售店、e-commerce retail 电商零售。珀莱雅这波是线下 retail 出海。",
+          "paraIdx": 3,
+          "hl": "retail",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-28"
+          },
+          "phonetic": "[ˈriːteɪl]"
+        },
+        {
+          "id": "a17-10",
+          "text": "label",
+          "understanding": "品牌（常用于服装/音乐/美妆行业）。原文 \"Chinese beauty labels\" ——中国美妆品牌。label 本义\"标签\"，行业里作 brand 的同义替换词，fashion label / record label 都是这个用法。",
+          "paraIdx": 3,
+          "hl": "labels",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-28"
+          },
+          "phonetic": "[ˈleɪbl]"
+        },
+        {
+          "id": "a17-11",
+          "text": "viral",
+          "understanding": "（本文）像病毒一样迅速扩散的。原文 \"viral marketing\" ——病毒式营销。go viral = 突然爆红（尤其指网络内容）。a viral video 爆款视频。和 cross-border e-commerce 并列，指中国美妆出海的老路径。",
+          "paraIdx": 3,
+          "hl": "viral",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-28"
+          },
+          "phonetic": "[ˈvaɪrəl]"
+        },
+        {
+          "id": "a17-12",
+          "text": "presence",
+          "understanding": "存在、在场；（市场）立足。原文 \"building a lasting presence overseas\" ——在海外建立长期市场存在。She has a strong presence in the room. 存在感很强。The brand has almost no online presence. 在线上几乎没声量。",
+          "paraIdx": 3,
+          "hl": "presence",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-28"
+          },
+          "phonetic": "[ˈprezns]"
+        },
+        {
+          "id": "a17-13",
+          "text": "on the year",
+          "understanding": "与去年同期相比（商业报道常见，≈ year over year）。原文 \"revenue fell 2.3% on the year\" ——营收同比下降 2.3%。New home sales fell 12% on the year. 新房销量同比降 12%。读财报/商业新闻必备表达。",
+          "paraIdx": 4,
+          "hl": "on the year",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-28"
+          }
+        },
+        {
+          "id": "a17-14",
+          "text": "branch out",
+          "understanding": "拓展新的业务/领域/市场。原文 \"Proya Cosmetics has been branching out\" ——珀莱雅一直在拓展新领域。branch 本义\"树枝\"，引申\"分岔出去\"：The coffee chain is branching out into bottled drinks. 连锁咖啡店开始卖瓶装饮料。",
+          "paraIdx": 5,
+          "hl": "branching out",
+          "review": {
+            "reviews": 0,
+            "lapses": 0,
+            "last": null,
+            "strength": "weak",
+            "nextDue": "2026-08-28"
+          }
         }
       ]
     }
